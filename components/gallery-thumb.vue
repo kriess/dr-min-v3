@@ -64,7 +64,7 @@ const changeView = (type) => {
           </div>
           <v-img
             cover
-            :src="`/img/photo-gallery/face/${currentView.url}`"
+            :src="`/img/photo-gallery/before-after/${currentView.url}`"
           ></v-img>
           <div class="caption-text">
             {{ currentView.label }}: {{ currentView.caption }}
