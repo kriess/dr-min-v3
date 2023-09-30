@@ -8,7 +8,7 @@ useHead({
 <template>
   <section class="home page">
     <AboutDrMin></AboutDrMin>
-    <services-carousel></services-carousel>
+    <ServicesCarousel></ServicesCarousel>
   </section>
 </template>
 
