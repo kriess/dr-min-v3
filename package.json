@@ -10,8 +10,7 @@
     "lint": "yarn lint:js && yarn lint:prettier",
     "lintfix": "prettier --write --list-different . && yarn lint:js --fix",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare",
-    "prepare": "husky install"
+    "postinstall": "nuxt prepare"
   },
   "lint-staged": {
     "*.{ts,vue}": [
@@ -22,10 +21,7 @@
     "@iconify/vue": "^4.1.1",
     "@kevinmarrec/nuxt-pwa": "^0.17.0",
     "@nuxt/devtools": "^0.8.5",
-    "@nuxtjs/google-fonts": "^3.0.2",
-    "nuxt": "3.7.4",
-    "sass": "^1.68.0",
-    "vuetify": "^3.3.19"
+    "@nuxtjs/google-fonts": "^3.0.2"
   },
   "config": {
     "commitizen": {
