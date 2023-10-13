@@ -105,7 +105,6 @@ onMounted(() => {
                 ? 'btn-sub-section active'
                 : 'btn-sub-section'
             "
-            :color="isSelected ? 'primary' : ''"
             @click="goToNewProcedure(procedure.slug)"
           >
             {{ procedure.title }}

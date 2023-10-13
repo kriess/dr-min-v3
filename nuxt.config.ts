@@ -27,8 +27,8 @@ export default defineNuxtConfig({
           vuetify({
             autoImport: true,
             styles: { configFile: './assets/styles/vuetify.scss' },
-          })
-        )
+          }),
+        ),
       )
     },
   ],
@@ -40,6 +40,13 @@ export default defineNuxtConfig({
       'acceptHMRUpdate',
       ['defineStore', 'definePiniaStore'], // import { defineStore as definePiniaStore } from 'pinia'
     ],
+  },
+
+  // https://pwa.nuxtjs.org/icon
+  pwa: {
+    meta: {
+      name: 'Dr. Caroline Min',
+    },
   },
 
   runtimeConfig: {},

@@ -5,14 +5,14 @@ const props = defineProps<{
 }>()
 const gallery = useGallery()
 
-console.log('gallery grid - gallery', gallery)
-console.log('gallery grid - props', props)
+// console.log('gallery grid - gallery', gallery)
+// console.log('gallery grid - props', props)
 
 const galleries = computed(() => {
   const sections = gallery.sections.find((i) => i.slug === props.section)
   const procedure = sections.procedures.find((i) => i.slug === props.subSection)
-  console.log('gallery grid - sections', sections)
-  console.log('gallery grid - procedure', procedure)
+  // console.log('gallery grid - sections', sections)
+  // console.log('gallery grid - procedure', procedure)
   return procedure?.galleries
 })
 </script>

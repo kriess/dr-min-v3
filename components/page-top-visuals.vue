@@ -4,7 +4,7 @@ const props = defineProps<{
   imageSrc: string
 }>()
 
-console.log(props)
+// console.log(props)
 </script>
 
 <template>
@@ -12,7 +12,13 @@ console.log(props)
     <div class="visuals">
       <div class="color-band"></div>
       <div class="title-image-container">
-        <v-img width="50%" cover :src="imageSrc" class="main-img"></v-img>
+        <v-img
+          v-if="imageSrc"
+          width="50%"
+          cover
+          :src="imageSrc"
+          class="main-img"
+        ></v-img>
         <v-sheet color="primary" class="page-title-visual">
           <div class="page-title-text">{{ title }}</div>
         </v-sheet>
