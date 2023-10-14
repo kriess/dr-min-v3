@@ -1,4 +1,8 @@
+// you can override variables defined in this file
+// node_modules/vuetify/lib/styles/settings/_variables.scss
+
 @forward 'vuetify/settings' with (
+  $font-size-root: 1.1rem,
   $button-font-weight: 700,
   $body-font-family: 'Cormorant Garamond',
   $heading-font-family: 'Cormorant Garamond'
