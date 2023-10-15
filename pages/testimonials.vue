@@ -10,7 +10,7 @@ const appConfig = useAppConfig()
   <section class="testimonials page">
     <PageTopVisuals
       :title="pageTitle"
-      image-src="/img/misc/patient-reviews.jpg"
+      image-src="/img/headshots/min-casual.jpg"
     ></PageTopVisuals>
 
     <div class="testimonials-container content-area">
@@ -28,6 +28,7 @@ const appConfig = useAppConfig()
 <style lang="scss" scoped>
 .testimonials {
   width: auto;
+  padding-top: 10px;
   .testimonials-container {
     width: auto;
     display: grid;

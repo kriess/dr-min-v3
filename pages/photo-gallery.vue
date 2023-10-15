@@ -66,7 +66,8 @@ onMounted(() => {
   <section class="photo-gallery page">
     <PageTopVisuals
       :title="pageTitle"
-      image-src="/img/headshots/dr-min-suit.jpg"
+      image-src="/img/headshots/photogallery.jpg"
+      image-width="60%"
     ></PageTopVisuals>
 
     <v-btn-toggle

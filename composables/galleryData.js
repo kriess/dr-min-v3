@@ -13,14 +13,14 @@ export default {
               beforeAfter: [
                 {
                   label: 'Front View',
-                  url: 'facelift-p01-front-lrg.jpeg',
+                  url: 'facelift-p01-front-lrg.jpg',
                   slug: 'front',
                   caption:
                     'This patient is shown 4 months after facelift and fat transfer to the lips.',
                 },
                 {
                   label: 'Side View',
-                  url: 'facelift-p01-side-lrg.jpeg',
+                  url: 'facelift-p01-side-lrg.jpg',
                   slug: 'side',
                   caption:
                     'This patient is shown 4 months after facelift and fat transfer to the lips.',
@@ -31,14 +31,14 @@ export default {
               beforeAfter: [
                 {
                   label: 'Front View',
-                  url: 'facelift-p02-front-lrg.jpeg',
+                  url: 'facelift-p02-front-lrg.jpg',
                   slug: 'front',
                   caption:
                     'This patient wanted to look younger to match her vibrant personality and lifestyle. She is shown 4 months after facelift surgery.',
                 },
                 {
                   label: 'Side View',
-                  url: 'facelift-p02-side-lrg.jpeg',
+                  url: 'facelift-p02-side-lrg.jpg',
                   slug: 'side',
                   caption:
                     'This patient wanted to look younger to match her vibrant personality and lifestyle. She is shown 4 months after facelift surgery.',
@@ -49,14 +49,14 @@ export default {
               beforeAfter: [
                 {
                   label: 'Front View',
-                  url: 'facelift-p03-front-lrg.jpeg',
+                  url: 'facelift-p03-front-lrg.jpg',
                   slug: 'front',
                   caption:
                     'This patient is shown 4 months after face and necklift.',
                 },
                 {
                   label: 'Side View',
-                  url: 'facelift-p03-side-lrg.jpeg',
+                  url: 'facelift-p03-side-lrg.jpg',
                   slug: 'side',
                   caption:
                     'This patient is shown 4 months after face and necklift.',
@@ -67,14 +67,14 @@ export default {
               beforeAfter: [
                 {
                   label: 'Front View',
-                  url: 'facelift-p04-front-lrg.jpeg',
+                  url: 'facelift-p04-front-lrg.jpg',
                   slug: 'front',
                   caption:
                     'This is woman in her late 40s who had a short scar facelift to improve the aging appearance of her face. She is shown 4 months after surgery.',
                 },
                 {
                   label: 'Side View',
-                  url: 'facelift-p04-side-lrg.jpeg',
+                  url: 'facelift-p04-side-lrg.jpg',
                   slug: 'side',
                   caption:
                     'This is woman in her late 40s who had a short scar facelift to improve the aging appearance of her face. She is shown 4 months after surgery.',
@@ -91,7 +91,7 @@ export default {
               beforeAfter: [
                 {
                   label: 'Front View',
-                  url: 'browlift-p01-front-lrg.jpeg',
+                  url: 'browlift-p01-front-lrg.jpg',
                   slug: 'front',
                   caption:
                     'This patient had an upper eyelid lift years ago but the low position of her eyebrows was not addressed. She is shown 3 months after undergoing endoscopic browlift.',
@@ -102,14 +102,14 @@ export default {
               beforeAfter: [
                 {
                   label: 'Front View',
-                  url: 'browlift-p02-front-lrg.jpeg',
+                  url: 'browlift-p02-front-lrg.jpg',
                   slug: 'front',
                   caption:
                     'This is a 54 year old woman who is shown 3 months after undergoing endoscopic browlift.',
                 },
                 {
                   label: 'Front View - Eyes Closed',
-                  url: 'browlift-p02-front2-lrg.jpeg',
+                  url: 'browlift-p02-front2-lrg.jpg',
                   slug: 'front-closed',
                   caption:
                     'This is a 54 year old woman who is shown 3 months after undergoing endoscopic browlift.',
@@ -120,14 +120,14 @@ export default {
               beforeAfter: [
                 {
                   label: 'Front View',
-                  url: 'browlift-p03-front-lrg.gif',
+                  url: 'browlift-p03-front-lrg.jpg',
                   slug: 'front',
                   caption:
                     'This is a 64 year old female who underwent upper and lower eyelid lift and endoscopic browlift. She is shown 6 weeks after her surgery.',
                 },
                 {
                   label: 'Side View',
-                  url: 'browlift-p03-side-lrg.jpeg',
+                  url: 'browlift-p03-side-lrg.jpg',
                   slug: 'side',
                   caption:
                     'This is a 64 year old female who underwent upper and lower eyelid lift and endoscopic browlift. She is shown 6 weeks after her surgery.',
@@ -144,7 +144,7 @@ export default {
               beforeAfter: [
                 {
                   label: 'Front View',
-                  url: 'blepharoplasty-p01-front-lrg.jpeg',
+                  url: 'blepharoplasty-p01-front-lrg.jpg',
                   slug: 'front',
                   caption:
                     'This is a 53 year old patient who is shown approximately 3 months after upper eyelid lift (blepharoplasty).',
@@ -155,7 +155,7 @@ export default {
               beforeAfter: [
                 {
                   label: 'Front View',
-                  url: 'blepharoplasty-p02-front-lrg.jpeg',
+                  url: 'blepharoplasty-p02-front-lrg.jpg',
                   slug: 'front',
                   caption:
                     'This patient is shown 3 months after undergoing upper and lower eyelid lift (blepharoplasty).',
@@ -166,7 +166,7 @@ export default {
               beforeAfter: [
                 {
                   label: 'Front View',
-                  url: 'blepharoplasty-p03-front-lrg.jpeg',
+                  url: 'blepharoplasty-p03-front-lrg.jpg',
                   slug: 'front',
                   caption:
                     'This is a 64 year old female patient who is shown 3 months after undergoing upper eyelid lift (blepharoplasty).',
@@ -177,7 +177,7 @@ export default {
               beforeAfter: [
                 {
                   label: 'Front View',
-                  url: 'blepharoplasty-p04-front-lrg.jpeg',
+                  url: 'blepharoplasty-p04-front-lrg.jpg',
                   slug: 'front',
                   caption:
                     'This is a 48 year old patient who had a large amount of excess upper eyelid skin. She is shown 2 months after undergoing upper eyelid lift (blepharoplasty).',
@@ -188,7 +188,7 @@ export default {
               beforeAfter: [
                 {
                   label: 'Front View',
-                  url: 'blepharoplasty-p05-front-lrg.jpeg',
+                  url: 'blepharoplasty-p05-front-lrg.jpg',
                   slug: 'front',
                   caption:
                     'This is a 46 year old patient who desired improvement in the appearance of her lower eyelids. She disliked the puffy bags and the hollow grooving (known as the "tear through") underneath the eyes. She underwent lower eyelid lift and several sessions of fat grafting to fill out the hollow areas.',
@@ -200,14 +200,14 @@ export default {
               beforeAfter: [
                 {
                   label: 'Front View',
-                  url: 'blepharoplasty-p06-front-lrg.gif',
+                  url: 'blepharoplasty-p06-front-lrg.jpg',
                   slug: 'front',
                   caption:
                     'This is a 40 year old woman who is shown 6 months after undergoing upper eyelid lift.',
                 },
                 {
                   label: 'Side View',
-                  url: 'blepharoplasty-p06-side-lrg.jpeg',
+                  url: 'blepharoplasty-p06-side-lrg.jpg',
                   slug: 'side',
                   caption:
                     'This is a 64 year old female who underwent upper and lower eyelid lift and endoscopic browlift. She is shown 6 weeks after her surgery.',
@@ -218,14 +218,14 @@ export default {
               beforeAfter: [
                 {
                   label: 'Front View',
-                  url: 'blepharoplasty-p07-front-lrg.gif',
+                  url: 'blepharoplasty-p07-front-lrg.jpg',
                   slug: 'front',
                   caption:
                     'This is a 64 year old female who underwent upper and lower eyelid lift and endoscopic browlift. She is shown 6 weeks after her surgery.',
                 },
                 {
                   label: 'Side View',
-                  url: 'blepharoplasty-p07-side-lrg.jpeg',
+                  url: 'blepharoplasty-p07-side-lrg.jpg',
                   slug: 'side',
                   caption:
                     'This is a 64 year old female who underwent upper and lower eyelid lift and endoscopic browlift. She is shown 6 weeks after her surgery.',
@@ -236,14 +236,14 @@ export default {
               beforeAfter: [
                 {
                   label: 'Front View',
-                  url: 'blepharoplasty-p08-front-lrg.gif',
+                  url: 'blepharoplasty-p08-front-lrg.jpg',
                   slug: 'front',
                   caption:
                     'This is a 49 year old female who is shown approximately 6 months after undergoing bilateral upper and lower eyelid lift.',
                 },
                 {
                   label: 'Side View',
-                  url: 'blepharoplasty-p08-side-lrg.jpeg',
+                  url: 'blepharoplasty-p08-side-lrg.jpg',
                   slug: 'side',
                   caption:
                     'This is a 49 year old female who is shown approximately 6 months after undergoing bilateral upper and lower eyelid lift.',
@@ -254,7 +254,7 @@ export default {
               beforeAfter: [
                 {
                   label: 'Front View',
-                  url: 'blepharoplasty-p09-front-lrg.gif',
+                  url: 'blepharoplasty-p09-front-lrg.jpg',
                   slug: 'front',
                   caption:
                     'This is a 57 year old female who is shown approximately 3 months after undergoing bilateral lower eyelid lift.',
@@ -271,7 +271,7 @@ export default {
               beforeAfter: [
                 {
                   label: 'Side View',
-                  url: 'rhinoplasty-p01-side-lrg.jpeg',
+                  url: 'rhinoplasty-p01-side-lrg.jpg',
                   slug: 'side',
                   caption:
                     'This patient disliked the downturned appearance of the tip of her nose on her profile. She underwent tip rhinoplasty and is shown 3 months after surgery.',
@@ -282,28 +282,28 @@ export default {
               beforeAfter: [
                 {
                   label: 'Front View',
-                  url: 'rhinoplasty-p02-front-lrg.jpeg',
+                  url: 'rhinoplasty-p02-front-lrg.jpg',
                   slug: 'front',
                   caption:
                     'This is a 31 year old woman who disliked the appearance of her nose, particularly the hump on her profile. She underwent rhinoplasty with dorsal hump reduction and is shown 9 months after surgery.',
                 },
                 {
                   label: 'Side View',
-                  url: 'rhinoplasty-p02-side-lrg.jpeg',
+                  url: 'rhinoplasty-p02-side-lrg.jpg',
                   slug: 'side',
                   caption:
                     'This is a 31 year old woman who disliked the appearance of her nose, particularly the hump on her profile. She underwent rhinoplasty with dorsal hump reduction and is shown 9 months after surgery.',
                 },
                 {
                   label: 'Oblique L View',
-                  url: 'rhinoplasty-p02-oblique1-lrg.jpeg',
+                  url: 'rhinoplasty-p02-oblique1-lrg.jpg',
                   slug: 'oblique',
                   caption:
                     'This is a 31 year old woman who disliked the appearance of her nose, particularly the hump on her profile. She underwent rhinoplasty with dorsal hump reduction and is shown 9 months after surgery.',
                 },
                 {
                   label: 'Oblique R View',
-                  url: 'rhinoplasty-p02-oblique2-lrg.jpeg',
+                  url: 'rhinoplasty-p02-oblique2-lrg.jpg',
                   slug: 'oblique2',
                   caption:
                     'This is a 31 year old woman who disliked the appearance of her nose, particularly the hump on her profile. She underwent rhinoplasty with dorsal hump reduction and is shown 9 months after surgery.',
@@ -314,7 +314,7 @@ export default {
               beforeAfter: [
                 {
                   label: 'Front View',
-                  url: 'rhinoplasty-p03-front-lrg.jpeg',
+                  url: 'rhinoplasty-p03-front-lrg.jpg',
                   slug: 'front',
                   caption:
                     ' This is a woman who had previously had nasal surgery but was unhappy with the outcome. She wished to have a thinner and narrower nose. She is shown 11 months after undergoing secondary rhinoplasty.',
@@ -325,14 +325,14 @@ export default {
               beforeAfter: [
                 {
                   label: 'Front View',
-                  url: 'rhinoplasty-p04-front-lrg.jpeg',
+                  url: 'rhinoplasty-p04-front-lrg.jpg',
                   slug: 'front',
                   caption:
                     'This patient disliked the appearance of her nose, particularly on profile view. She underwent rhinoplasty with reshaping of the tip and dorsum. She is shown 2 months after surgery.',
                 },
                 {
                   label: 'Side View',
-                  url: 'rhinoplasty-p04-side-lrg.jpeg',
+                  url: 'rhinoplasty-p04-side-lrg.jpg',
                   slug: 'side',
                   caption:
                     'This patient disliked the appearance of her nose, particularly on profile view. She underwent rhinoplasty with reshaping of the tip and dorsum. She is shown 2 months after surgery.',
@@ -343,21 +343,21 @@ export default {
               beforeAfter: [
                 {
                   label: 'Front View',
-                  url: 'rhinoplasty-p05-front-lrg.jpeg',
+                  url: 'rhinoplasty-p05-front-lrg.jpg',
                   slug: 'front',
                   caption:
                     'This is a 26 year old woman who desired a change in the appearance of her nose, particularly her hump on profile view and the slightly droopy tip. She underwent rhinoplasty surgery with reduction of the dorsal hump and refinement of her nasal tip. She is shown 10 months after surgery.',
                 },
                 {
                   label: 'Below View',
-                  url: 'rhinoplasty-p05-below-lrg.jpeg',
+                  url: 'rhinoplasty-p05-below-lrg.jpg',
                   slug: 'below',
                   caption:
                     'This is a 26 year old woman who desired a change in the appearance of her nose, particularly her hump on profile view and the slightly droopy tip. She underwent rhinoplasty surgery with reduction of the dorsal hump and refinement of her nasal tip. She is shown 10 months after surgery.',
                 },
                 {
                   label: 'Side View',
-                  url: 'rhinoplasty-p05-side-lrg.jpeg',
+                  url: 'rhinoplasty-p05-side-lrg.jpg',
                   slug: 'side',
                   caption:
                     'This is a 26 year old woman who desired a change in the appearance of her nose, particularly her hump on profile view and the slightly droopy tip. She underwent rhinoplasty surgery with reduction of the dorsal hump and refinement of her nasal tip. She is shown 10 months after surgery.',
@@ -374,21 +374,21 @@ export default {
               beforeAfter: [
                 {
                   label: 'Front View',
-                  url: 'otoplasty-p01-front-lrg.jpeg',
+                  url: 'otoplasty-p01-front-lrg.jpg',
                   slug: 'front',
                   caption:
                     ' This 15 year old patient disliked the protruding appearance of her ears that made her self conscious in school. She is shown 2 months after otoplasty (ear pinning) surgery.',
                 },
                 {
                   label: 'Rear View',
-                  url: 'otoplasty-p01-rear-lrg.jpeg',
+                  url: 'otoplasty-p01-rear-lrg.jpg',
                   slug: 'rear',
                   caption:
                     ' This 15 year old patient disliked the protruding appearance of her ears that made her self conscious in school. She is shown 2 months after otoplasty (ear pinning) surgery.',
                 },
                 {
                   label: 'Side View',
-                  url: 'otoplasty-p01-side-lrg.jpeg',
+                  url: 'otoplasty-p01-side-lrg.jpg',
                   slug: 'side',
                   caption:
                     ' This 15 year old patient disliked the protruding appearance of her ears that made her self conscious in school. She is shown 2 months after otoplasty (ear pinning) surgery.',
@@ -399,21 +399,21 @@ export default {
               beforeAfter: [
                 {
                   label: 'Front View',
-                  url: 'otoplasty-p02-front-lrg.jpeg',
+                  url: 'otoplasty-p02-front-lrg.jpg',
                   slug: 'front',
                   caption:
                     'This is a young man who wished to have his ears pinned back slightly. His ears were only minimally protrusive but he liked to wear his hair very short and felt that the shorter hair made his ears look more prominent. He is shown 6 months after surgery.',
                 },
                 {
                   label: 'Rear View',
-                  url: 'otoplasty-p02-rear-lrg.jpeg',
+                  url: 'otoplasty-p02-rear-lrg.jpg',
                   slug: 'rear',
                   caption:
                     'This is a young man who wished to have his ears pinned back slightly. His ears were only minimally protrusive but he liked to wear his hair very short and felt that the shorter hair made his ears look more prominent. He is shown 6 months after surgery.',
                 },
                 {
                   label: 'Side View',
-                  url: 'otoplasty-p02-side-lrg.jpeg',
+                  url: 'otoplasty-p02-side-lrg.jpg',
                   slug: 'side',
                   caption:
                     'This is a young man who wished to have his ears pinned back slightly. His ears were only minimally protrusive but he liked to wear his hair very short and felt that the shorter hair made his ears look more prominent. He is shown 6 months after surgery.',
@@ -424,21 +424,21 @@ export default {
               beforeAfter: [
                 {
                   label: 'Front View',
-                  url: 'otoplasty-p03-front-lrg.jpeg',
+                  url: 'otoplasty-p03-front-lrg.jpg',
                   slug: 'front',
                   caption:
                     'This is a 13 year old girl who disliked the appearance of her protruding ears. She underwent otoplasty and is shown 7 months after surgery.',
                 },
                 {
                   label: 'Rear View',
-                  url: 'otoplasty-p03-rear-lrg.jpeg',
+                  url: 'otoplasty-p03-rear-lrg.jpg',
                   slug: 'rear',
                   caption:
                     'This is a 13 year old girl who disliked the appearance of her protruding ears. She underwent otoplasty and is shown 7 months after surgery.',
                 },
                 {
                   label: 'Side View',
-                  url: 'otoplasty-p03-side-lrg.jpeg',
+                  url: 'otoplasty-p03-side-lrg.jpg',
                   slug: 'side',
                   caption:
                     'This is a 13 year old girl who disliked the appearance of her protruding ears. She underwent otoplasty and is shown 7 months after surgery.',
@@ -455,7 +455,7 @@ export default {
               beforeAfter: [
                 {
                   label: 'Front View',
-                  url: 'fillers-p01-front-lrg.jpeg',
+                  url: 'fillers-p01-front-lrg.jpg',
                   slug: 'front',
                   caption:
                     'This patient disliked the lines around her lips and lower face. This was improved by injection of restylane and perlane into the lips, nasolabial folds, and mouth corners.',
@@ -466,7 +466,7 @@ export default {
               beforeAfter: [
                 {
                   label: 'Front View',
-                  url: 'fillers-p02-front-lrg.jpeg',
+                  url: 'fillers-p02-front-lrg.jpg',
                   slug: 'front',
                   caption:
                     'This is a 55 year old woman who had a combination of restylane and perlane injected into the nasolabial folds and mouth corners.',
@@ -484,14 +484,14 @@ export default {
               beforeAfter: [
                 {
                   label: 'Front View',
-                  url: 'facial-liposuction-p01-front-lrg.jpeg',
+                  url: 'facial-liposuction-p01-front-lrg.jpg',
                   slug: 'front',
                   caption:
                     'This is a 21 year old patient who disliked the roundness of her face and excess fat underneath the chin. She underwent liposuction of the neck and excision of buccal (cheek) fat. Post-operatively, her face appears thinner, although she did not lose weight.',
                 },
                 {
                   label: 'Side View',
-                  url: 'facial-liposuction-p01-side-lrg.jpeg',
+                  url: 'facial-liposuction-p01-side-lrg.jpg',
                   slug: 'side',
                   caption:
                     'This is a 21 year old patient who disliked the roundness of her face and excess fat underneath the chin. She underwent liposuction of the neck and excision of buccal (cheek) fat. Post-operatively, her face appears thinner, although she did not lose weight.',
@@ -508,14 +508,14 @@ export default {
               beforeAfter: [
                 {
                   label: 'Front View',
-                  url: 'necklift-p01-front-lrg.jpeg',
+                  url: 'necklift-p01-front-lrg.jpg',
                   slug: 'front',
                   caption:
                     'This patient disliked the appearance of her "turkey gobbler" neck. She wished to have her neck improved but did not want to change her face. She is shown 7 weeks after undergoing necklift surgery.',
                 },
                 {
                   label: 'Side View',
-                  url: 'necklift-p01-side-lrg.jpeg',
+                  url: 'necklift-p01-side-lrg.jpg',
                   slug: 'side',
                   caption:
                     'This patient disliked the appearance of her "turkey gobbler" neck. She wished to have her neck improved but did not want to change her face. She is shown 7 weeks after undergoing necklift surgery.',
@@ -526,14 +526,14 @@ export default {
               beforeAfter: [
                 {
                   label: 'Front View',
-                  url: 'necklift-p02-front-lrg.jpeg',
+                  url: 'necklift-p02-front-lrg.jpg',
                   slug: 'front',
                   caption:
                     'This is an 80 year old woman who was unhappy with the appearance of loose hanging skin in her neck. Due to her age, she wanted to undergo a minimally invasive procedure with a quicker recovery than a traditional neck lift. She had the excess neck skin directly excised. This is an approach that may be used for elderly patients with thin skin and in men with facial hair. She is shown approximately 5 months after surgery and is quite pleased with the improvement in her neck contour.',
                 },
                 {
                   label: 'Side View',
-                  url: 'necklift-p02-side-lrg.jpeg',
+                  url: 'necklift-p02-side-lrg.jpg',
                   slug: 'side',
                   caption:
                     'This is an 80 year old woman who was unhappy with the appearance of loose hanging skin in her neck. Due to her age, she wanted to undergo a minimally invasive procedure with a quicker recovery than a traditional neck lift. She had the excess neck skin directly excised. This is an approach that may be used for elderly patients with thin skin and in men with facial hair. She is shown approximately 5 months after surgery and is quite pleased with the improvement in her neck contour.',
@@ -556,14 +556,14 @@ export default {
               beforeAfter: [
                 {
                   label: 'Front View',
-                  url: 'breastaug-p01-front-lrg.jpeg',
+                  url: 'breastaug-p01-front-lrg.jpg',
                   slug: 'front',
                   caption:
                     'This is a patient in her 30s who was an AA/A cup and wished to be augmented to a small C cup. She underwent breast augmentation with 350 cc saline implants that were placed beneath the pectoralis muscle using an incision at the breast fold. She is shown 2 months after surgery.',
                 },
                 {
                   label: 'Oblique View',
-                  url: 'breastaug-p01-oblique-lrg.jpeg',
+                  url: 'breastaug-p01-oblique-lrg.jpg',
                   slug: 'oblique',
                   caption:
                     'This is a patient in her 30s who was an AA/A cup and wished to be augmented to a small C cup. She underwent breast augmentation with 350 cc saline implants that were placed beneath the pectoralis muscle using an incision at the breast fold. She is shown 2 months after surgery.',
@@ -571,7 +571,7 @@ export default {
 
                 {
                   label: 'Side View',
-                  url: 'breastaug-p01-side-lrg.jpeg',
+                  url: 'breastaug-p01-side-lrg.jpg',
                   slug: 'side',
                   caption:
                     'This is a patient in her 30s who was an AA/A cup and wished to be augmented to a small C cup. She underwent breast augmentation with 350 cc saline implants that were placed beneath the pectoralis muscle using an incision at the breast fold. She is shown 2 months after surgery.',
@@ -582,14 +582,14 @@ export default {
               beforeAfter: [
                 {
                   label: 'Front View',
-                  url: 'breastaug-p02-front-lrg.jpeg',
+                  url: 'breastaug-p02-front-lrg.jpg',
                   slug: 'front',
                   caption:
                     'This is a young mother whose breasts became smaller and droopier after breast feeding 2 children. She underwent breast augmentation with 375 cc saline implants placed underneath the pectoralis muscle. The incision is at the areolar border and is barely visible. She is shown 2 months after surgery.',
                 },
                 {
                   label: 'Oblique View',
-                  url: 'breastaug-p02-oblique-l-lrg.jpeg',
+                  url: 'breastaug-p02-oblique-l-lrg.jpg',
                   slug: 'oblique',
                   caption:
                     'This is a young mother whose breasts became smaller and droopier after breast feeding 2 children. She underwent breast augmentation with 375 cc saline implants placed underneath the pectoralis muscle. The incision is at the areolar border and is barely visible. She is shown 2 months after surgery.',
@@ -597,7 +597,7 @@ export default {
 
                 {
                   label: 'Side View',
-                  url: 'breastaug-p02-side-lrg.jpeg',
+                  url: 'breastaug-p02-side-lrg.jpg',
                   slug: 'side',
                   caption:
                     'This is a young mother whose breasts became smaller and droopier after breast feeding 2 children. She underwent breast augmentation with 375 cc saline implants placed underneath the pectoralis muscle. The incision is at the areolar border and is barely visible. She is shown 2 months after surgery.',
@@ -608,14 +608,14 @@ export default {
               beforeAfter: [
                 {
                   label: 'Front View',
-                  url: 'breastaug-p07-front-lrg.jpeg',
+                  url: 'breastaug-p07-front-lrg.jpg',
                   slug: 'front',
                   caption:
                     'This is a 25 year old patient whose preoperative bra size was 34 A. She underwent breast augmentation with saline implants placed under the muscle through an incision at the inframammary fold. Because she was smaller on one side, the left side was filled to 370 cc and the right side was filled to 340 cc. She is shown 2 months after surgery.',
                 },
                 {
                   label: 'Oblique View',
-                  url: 'breastaug-p07-oblique-lrg.jpeg',
+                  url: 'breastaug-p07-oblique-lrg.jpg',
                   slug: 'oblique',
                   caption:
                     'This is a 25 year old patient whose preoperative bra size was 34 A. She underwent breast augmentation with saline implants placed under the muscle through an incision at the inframammary fold. Because she was smaller on one side, the left side was filled to 370 cc and the right side was filled to 340 cc. She is shown 2 months after surgery.',
@@ -623,7 +623,7 @@ export default {
 
                 {
                   label: 'Side View',
-                  url: 'breastaug-p07-side-lrg.jpeg',
+                  url: 'breastaug-p07-side-lrg.jpg',
                   slug: 'side',
                   caption:
                     'This is a 25 year old patient whose preoperative bra size was 34 A. She underwent breast augmentation with saline implants placed under the muscle through an incision at the inframammary fold. Because she was smaller on one side, the left side was filled to 370 cc and the right side was filled to 340 cc. She is shown 2 months after surgery.',
@@ -636,18 +636,18 @@ export default {
               beforeAfter: [
                 {
                   label: 'Front View',
-                  url: 'breastaug-p04-front-lrg.jpeg',
+                  url: 'breastaug-p04-front-lrg.jpg',
                   slug: 'front',
                 },
                 {
                   label: 'Oblique View',
-                  url: 'breastaug-p04-oblique-lrg.jpeg',
+                  url: 'breastaug-p04-oblique-lrg.jpg',
                   slug: 'oblique',
                 },
 
                 {
                   label: 'Side View',
-                  url: 'breastaug-p04-side-lrg.jpeg',
+                  url: 'breastaug-p04-side-lrg.jpg',
                   slug: 'side',
                 },
               ],
@@ -658,18 +658,18 @@ export default {
               beforeAfter: [
                 {
                   label: 'Front View',
-                  url: 'breastaug-p05-front-lrg.jpeg',
+                  url: 'breastaug-p05-front-lrg.jpg',
                   slug: 'front',
                 },
                 {
                   label: 'Oblique View',
-                  url: 'breastaug-p05-oblique-lrg.jpeg',
+                  url: 'breastaug-p05-oblique-lrg.jpg',
                   slug: 'oblique',
                 },
 
                 {
                   label: 'Side View',
-                  url: 'breastaug-p05-side-lrg.jpeg',
+                  url: 'breastaug-p05-side-lrg.jpg',
                   slug: 'side',
                 },
               ],
@@ -680,18 +680,18 @@ export default {
               beforeAfter: [
                 {
                   label: 'Front View',
-                  url: 'breastaug-p12-front-lrg.jpeg',
+                  url: 'breastaug-p12-front-lrg.jpg',
                   slug: 'front',
                 },
                 {
                   label: 'Oblique View',
-                  url: 'breastaug-p12-oblique-lrg.jpeg',
+                  url: 'breastaug-p12-oblique-lrg.jpg',
                   slug: 'oblique',
                 },
 
                 {
                   label: 'Side View',
-                  url: 'breastaug-p12-side-lrg.jpeg',
+                  url: 'breastaug-p12-side-lrg.jpg',
                   slug: 'side',
                 },
               ],
@@ -702,18 +702,18 @@ export default {
               beforeAfter: [
                 {
                   label: 'Front View',
-                  url: 'breastaug-p09-front-lrg.jpeg',
+                  url: 'breastaug-p09-front-lrg.jpg',
                   slug: 'front',
                 },
                 {
                   label: 'Oblique View',
-                  url: 'breastaug-p09-oblique-lrg.jpeg',
+                  url: 'breastaug-p09-oblique-lrg.jpg',
                   slug: 'oblique',
                 },
 
                 {
                   label: 'Side View',
-                  url: 'breastaug-p09-side-lrg.jpeg',
+                  url: 'breastaug-p09-side-lrg.jpg',
                   slug: 'side',
                 },
               ],
@@ -724,18 +724,18 @@ export default {
               beforeAfter: [
                 {
                   label: 'Front View',
-                  url: 'breastaug-p10-front-lrg.jpeg',
+                  url: 'breastaug-p10-front-lrg.jpg',
                   slug: 'front',
                 },
                 {
                   label: 'Oblique View',
-                  url: 'breastaug-p10-oblique-lrg.jpeg',
+                  url: 'breastaug-p10-oblique-lrg.jpg',
                   slug: 'oblique',
                 },
 
                 {
                   label: 'Side View',
-                  url: 'breastaug-p10-side-lrg.jpeg',
+                  url: 'breastaug-p10-side-lrg.jpg',
                   slug: 'side',
                 },
               ],
@@ -746,18 +746,18 @@ export default {
               beforeAfter: [
                 {
                   label: 'Front View',
-                  url: 'breastaug-p11-front-lrg.jpeg',
+                  url: 'breastaug-p11-front-lrg.jpg',
                   slug: 'front',
                 },
                 {
                   label: 'Oblique View',
-                  url: 'breastaug-p11-oblique-lrg.jpeg',
+                  url: 'breastaug-p11-oblique-lrg.jpg',
                   slug: 'oblique',
                 },
 
                 {
                   label: 'Side View',
-                  url: 'breastaug-p11-side-lrg.jpeg',
+                  url: 'breastaug-p11-side-lrg.jpg',
                   slug: 'side',
                 },
               ],
@@ -768,18 +768,18 @@ export default {
               beforeAfter: [
                 {
                   label: 'Front View',
-                  url: 'breastaug-p13-front-lrg.jpeg',
+                  url: 'breastaug-p13-front-lrg.jpg',
                   slug: 'front',
                 },
                 {
                   label: 'Oblique View',
-                  url: 'breastaug-p13-oblique-lrg.jpeg',
+                  url: 'breastaug-p13-oblique-lrg.jpg',
                   slug: 'oblique',
                 },
 
                 {
                   label: 'Side View',
-                  url: 'breastaug-p13-side-lrg.jpeg',
+                  url: 'breastaug-p13-side-lrg.jpg',
                   slug: 'side',
                 },
               ],
@@ -790,18 +790,18 @@ export default {
               beforeAfter: [
                 {
                   label: 'Front View',
-                  url: 'breastaug-p14-front-lrg.jpeg',
+                  url: 'breastaug-p14-front-lrg.jpg',
                   slug: 'front',
                 },
                 {
                   label: 'Oblique View',
-                  url: 'breastaug-p14-oblique-lrg.jpeg',
+                  url: 'breastaug-p14-oblique-lrg.jpg',
                   slug: 'oblique',
                 },
 
                 {
                   label: 'Side View',
-                  url: 'breastaug-p14-side-lrg.jpeg',
+                  url: 'breastaug-p14-side-lrg.jpg',
                   slug: 'side',
                 },
               ],
@@ -812,18 +812,18 @@ export default {
               beforeAfter: [
                 {
                   label: 'Front View',
-                  url: 'breastaug-p15-front-lrg.jpeg',
+                  url: 'breastaug-p15-front-lrg.jpg',
                   slug: 'front',
                 },
                 {
                   label: 'Oblique View',
-                  url: 'breastaug-p15-oblique-lrg.jpeg',
+                  url: 'breastaug-p15-oblique-lrg.jpg',
                   slug: 'oblique',
                 },
 
                 {
                   label: 'Side View',
-                  url: 'breastaug-p15-side-lrg.jpeg',
+                  url: 'breastaug-p15-side-lrg.jpg',
                   slug: 'side',
                 },
               ],
@@ -833,18 +833,18 @@ export default {
               beforeAfter: [
                 {
                   label: 'Front View',
-                  url: 'breastaug-p16-front-lrg.jpeg',
+                  url: 'breastaug-p16-front-lrg.jpg',
                   slug: 'front',
                 },
                 {
                   label: 'Oblique View',
-                  url: 'breastaug-p16-oblique-lrg.jpeg',
+                  url: 'breastaug-p16-oblique-lrg.jpg',
                   slug: 'oblique',
                 },
 
                 {
                   label: 'Side View',
-                  url: 'breastaug-p16-side-lrg.jpeg',
+                  url: 'breastaug-p16-side-lrg.jpg',
                   slug: 'side',
                 },
               ],
@@ -861,17 +861,17 @@ export default {
               beforeAfter: [
                 {
                   label: 'Front View',
-                  url: 'breastaug-lift-p01-front-lrg.jpeg',
+                  url: 'breastaug-lift-p01-front-lrg.jpg',
                   slug: 'front',
                 },
                 {
                   label: 'Oblique View',
-                  url: 'breastaug-lift-p01-oblique-lrg.jpeg',
+                  url: 'breastaug-lift-p01-oblique-lrg.jpg',
                   slug: 'oblique',
                 },
                 {
                   label: 'Side View',
-                  url: 'breastaug-lift-p01-side-lrg.jpeg',
+                  url: 'breastaug-lift-p01-side-lrg.jpg',
                   slug: 'side',
                 },
               ],
@@ -882,12 +882,12 @@ export default {
               beforeAfter: [
                 {
                   label: 'Front View',
-                  url: 'breastaug-lift-p02-front-lrg.jpeg',
+                  url: 'breastaug-lift-p02-front-lrg.jpg',
                   slug: 'front',
                 },
                 {
                   label: 'Side View',
-                  url: 'breastaug-lift-p02-side-lrg.jpeg',
+                  url: 'breastaug-lift-p02-side-lrg.jpg',
                   slug: 'side',
                 },
               ],
@@ -898,18 +898,18 @@ export default {
               beforeAfter: [
                 {
                   label: 'Front View',
-                  url: 'breastaug-lift-p03-front-lrg.jpeg',
+                  url: 'breastaug-lift-p03-front-lrg.jpg',
                   slug: 'front',
                 },
                 {
                   label: 'Oblique View',
-                  url: 'breastaug-lift-p03-oblique-lrg.jpeg',
+                  url: 'breastaug-lift-p03-oblique-lrg.jpg',
                   slug: 'oblique',
                 },
 
                 {
                   label: 'Side View',
-                  url: 'breastaug-lift-p03-side-lrg.jpeg',
+                  url: 'breastaug-lift-p03-side-lrg.jpg',
                   slug: 'side',
                 },
               ],
@@ -920,18 +920,18 @@ export default {
               beforeAfter: [
                 {
                   label: 'Front View',
-                  url: 'breastaug-lift-p04-front-lrg.jpeg',
+                  url: 'breastaug-lift-p04-front-lrg.jpg',
                   slug: 'front',
                 },
                 {
                   label: 'Oblique View',
-                  url: 'breastaug-lift-p04-oblique-lrg.jpeg',
+                  url: 'breastaug-lift-p04-oblique-lrg.jpg',
                   slug: 'oblique',
                 },
 
                 {
                   label: 'Side View',
-                  url: 'breastaug-lift-p04-side-lrg.jpeg',
+                  url: 'breastaug-lift-p04-side-lrg.jpg',
                   slug: 'side',
                 },
               ],
@@ -948,7 +948,7 @@ export default {
               beforeAfter: [
                 {
                   label: 'Front View',
-                  url: 'breastlift-p01-front-lrg.jpeg',
+                  url: 'breastlift-p01-front-lrg.jpg',
                   slug: 'front',
                 },
               ],
@@ -959,12 +959,12 @@ export default {
               beforeAfter: [
                 {
                   label: 'Front View',
-                  url: 'breastlift-p02-front-lrg.jpeg',
+                  url: 'breastlift-p02-front-lrg.jpg',
                   slug: 'front',
                 },
                 {
                   label: 'Side View',
-                  url: 'breastlift-p02-side-lrg.jpeg',
+                  url: 'breastlift-p02-side-lrg.jpg',
                   slug: 'side',
                 },
               ],
@@ -975,18 +975,18 @@ export default {
               beforeAfter: [
                 {
                   label: 'Front View',
-                  url: 'breastlift-p03-front-lrg.jpeg',
+                  url: 'breastlift-p03-front-lrg.jpg',
                   slug: 'front',
                 },
                 {
                   label: 'Oblique View',
-                  url: 'breastlift-p03-oblique-lrg.jpeg',
+                  url: 'breastlift-p03-oblique-lrg.jpg',
                   slug: 'oblique',
                 },
 
                 {
                   label: 'Side View',
-                  url: 'breastlift-p03-side-lrg.jpeg',
+                  url: 'breastlift-p03-side-lrg.jpg',
                   slug: 'side',
                 },
               ],
@@ -997,12 +997,12 @@ export default {
               beforeAfter: [
                 {
                   label: 'Front View',
-                  url: 'breastlift-p04-front-lrg.jpeg',
+                  url: 'breastlift-p04-front-lrg.jpg',
                   slug: 'front',
                 },
                 {
                   label: 'Side View',
-                  url: 'breastlift-p04-side-lrg.jpeg',
+                  url: 'breastlift-p04-side-lrg.jpg',
                   slug: 'side',
                 },
               ],
@@ -1013,13 +1013,13 @@ export default {
               beforeAfter: [
                 {
                   label: 'Front View',
-                  url: 'breastlift-p05-front-lrg.jpeg',
+                  url: 'breastlift-p05-front-lrg.jpg',
                   slug: 'front',
                 },
 
                 {
                   label: 'Side View',
-                  url: 'breastlift-p05-side-lrg.jpeg',
+                  url: 'breastlift-p05-side-lrg.jpg',
                   slug: 'side',
                 },
               ],
@@ -1030,12 +1030,12 @@ export default {
               beforeAfter: [
                 {
                   label: 'Front View',
-                  url: 'breastlift-p06-front-lrg.jpeg',
+                  url: 'breastlift-p06-front-lrg.jpg',
                   slug: 'front',
                 },
                 {
                   label: 'Side View',
-                  url: 'breastlift-p06-side-lrg.jpeg',
+                  url: 'breastlift-p06-side-lrg.jpg',
                   slug: 'side',
                 },
               ],
@@ -1045,18 +1045,18 @@ export default {
               beforeAfter: [
                 {
                   label: 'Front View',
-                  url: 'breastlift-p10-front-lrg.jpeg',
+                  url: 'breastlift-p10-front-lrg.jpg',
                   slug: 'front',
                 },
                 {
                   label: 'Oblique View',
-                  url: 'breastlift-p10-oblique-lrg.jpeg',
+                  url: 'breastlift-p10-oblique-lrg.jpg',
                   slug: 'oblique',
                 },
 
                 {
                   label: 'Side View',
-                  url: 'breastlift-p10-side-lrg.jpeg',
+                  url: 'breastlift-p10-side-lrg.jpg',
                   slug: 'side',
                 },
               ],
@@ -1067,12 +1067,12 @@ export default {
               beforeAfter: [
                 {
                   label: 'Front View',
-                  url: 'breastlift-p08-front-lrg.jpeg',
+                  url: 'breastlift-p08-front-lrg.jpg',
                   slug: 'front',
                 },
                 {
                   label: 'Side View',
-                  url: 'breastlift-p08-side-lrg.jpeg',
+                  url: 'breastlift-p08-side-lrg.jpg',
                   slug: 'side',
                 },
               ],
@@ -1082,18 +1082,18 @@ export default {
               beforeAfter: [
                 {
                   label: 'Front View',
-                  url: 'breastlift-p11-front-lrg.jpeg',
+                  url: 'breastlift-p11-front-lrg.jpg',
                   slug: 'front',
                 },
                 {
                   label: 'Oblique View',
-                  url: 'breastlift-p11-oblique-lrg.jpeg',
+                  url: 'breastlift-p11-oblique-lrg.jpg',
                   slug: 'oblique',
                 },
 
                 {
                   label: 'Side View',
-                  url: 'breastlift-p11-side-lrg.jpeg',
+                  url: 'breastlift-p11-side-lrg.jpg',
                   slug: 'side',
                 },
               ],
@@ -1110,12 +1110,12 @@ export default {
               beforeAfter: [
                 {
                   label: 'Front View',
-                  url: 'breastred-p01-front-lrg.jpeg',
+                  url: 'breastred-p01-front-lrg.jpg',
                   slug: 'front',
                 },
                 {
                   label: 'Side View',
-                  url: 'breastred-p01-side-lrg.jpeg',
+                  url: 'breastred-p01-side-lrg.jpg',
                   slug: 'side',
                 },
               ],
@@ -1126,18 +1126,18 @@ export default {
               beforeAfter: [
                 {
                   label: 'Front View',
-                  url: 'breastred-p02-front-lrg.jpeg',
+                  url: 'breastred-p02-front-lrg.jpg',
                   slug: 'front',
                 },
                 {
                   label: 'Oblique View',
-                  url: 'breastred-p02-oblique-lrg.jpeg',
+                  url: 'breastred-p02-oblique-lrg.jpg',
                   slug: 'oblique',
                 },
 
                 {
                   label: 'Side View',
-                  url: 'breastred-p02-side-lrg.jpeg',
+                  url: 'breastred-p02-side-lrg.jpg',
                   slug: 'side',
                 },
               ],
@@ -1148,18 +1148,18 @@ export default {
               beforeAfter: [
                 {
                   label: 'Front View',
-                  url: 'breastred-p03-front-lrg.jpeg',
+                  url: 'breastred-p03-front-lrg.jpg',
                   slug: 'front',
                 },
                 {
                   label: 'Oblique View',
-                  url: 'breastred-p03-oblique-lrg.jpeg',
+                  url: 'breastred-p03-oblique-lrg.jpg',
                   slug: 'oblique',
                 },
 
                 {
                   label: 'Side View',
-                  url: 'breastred-p03-side-lrg.jpeg',
+                  url: 'breastred-p03-side-lrg.jpg',
                   slug: 'side',
                 },
               ],
@@ -1170,18 +1170,18 @@ export default {
               beforeAfter: [
                 {
                   label: 'Front View',
-                  url: 'breastred-p04-front-lrg.jpeg',
+                  url: 'breastred-p04-front-lrg.jpg',
                   slug: 'front',
                 },
                 {
                   label: 'Oblique View',
-                  url: 'breastred-p04-oblique-lrg.jpeg',
+                  url: 'breastred-p04-oblique-lrg.jpg',
                   slug: 'oblique',
                 },
 
                 {
                   label: 'Side View',
-                  url: 'breastred-p04-side-lrg.jpeg',
+                  url: 'breastred-p04-side-lrg.jpg',
                   slug: 'side',
                 },
               ],
@@ -1192,18 +1192,18 @@ export default {
               beforeAfter: [
                 {
                   label: 'Front View',
-                  url: 'breastred-p05-front-lrg.jpeg',
+                  url: 'breastred-p05-front-lrg.jpg',
                   slug: 'front',
                 },
                 {
                   label: 'Oblique View',
-                  url: 'breastred-p05-oblique-lrg.jpeg',
+                  url: 'breastred-p05-oblique-lrg.jpg',
                   slug: 'oblique',
                 },
 
                 {
                   label: 'Side View',
-                  url: 'breastred-p05-side-lrg.jpeg',
+                  url: 'breastred-p05-side-lrg.jpg',
                   slug: 'side',
                 },
               ],
@@ -1214,12 +1214,12 @@ export default {
               beforeAfter: [
                 {
                   label: 'Front View',
-                  url: 'breastred-p06-front-lrg.jpeg',
+                  url: 'breastred-p06-front-lrg.jpg',
                   slug: 'front',
                 },
                 {
                   label: 'Side View',
-                  url: 'breastred-p06-side-lrg.jpeg',
+                  url: 'breastred-p06-side-lrg.jpg',
                   slug: 'side',
                 },
               ],
@@ -1230,18 +1230,18 @@ export default {
               beforeAfter: [
                 {
                   label: 'Front View',
-                  url: 'breastred-p07-front-lrg.jpeg',
+                  url: 'breastred-p07-front-lrg.jpg',
                   slug: 'front',
                 },
                 {
                   label: 'Oblique View',
-                  url: 'breastred-p07-oblique-lrg.jpeg',
+                  url: 'breastred-p07-oblique-lrg.jpg',
                   slug: 'oblique',
                 },
 
                 {
                   label: 'Side View',
-                  url: 'breastred-p07-side-lrg.jpeg',
+                  url: 'breastred-p07-side-lrg.jpg',
                   slug: 'side',
                 },
               ],
@@ -1252,18 +1252,18 @@ export default {
               beforeAfter: [
                 {
                   label: 'Front View',
-                  url: 'breastred-p08-front-lrg.jpeg',
+                  url: 'breastred-p08-front-lrg.jpg',
                   slug: 'front',
                 },
                 {
                   label: 'Oblique View',
-                  url: 'breastred-p08-oblique-lrg.jpeg',
+                  url: 'breastred-p08-oblique-lrg.jpg',
                   slug: 'oblique',
                 },
 
                 {
                   label: 'Side View',
-                  url: 'breastred-p08-side-lrg.jpeg',
+                  url: 'breastred-p08-side-lrg.jpg',
                   slug: 'side',
                 },
               ],
@@ -1274,18 +1274,18 @@ export default {
               beforeAfter: [
                 {
                   label: 'Front View',
-                  url: 'breastred-p09-front-lrg.jpeg',
+                  url: 'breastred-p09-front-lrg.jpg',
                   slug: 'front',
                 },
                 {
                   label: 'Oblique View',
-                  url: 'breastred-p09-oblique-lrg.jpeg',
+                  url: 'breastred-p09-oblique-lrg.jpg',
                   slug: 'oblique',
                 },
 
                 {
                   label: 'Side View',
-                  url: 'breastred-p09-side-lrg.jpeg',
+                  url: 'breastred-p09-side-lrg.jpg',
                   slug: 'side',
                 },
               ],
@@ -1295,18 +1295,18 @@ export default {
               beforeAfter: [
                 {
                   label: 'Front View',
-                  url: 'breastred-p10-front-lrg.jpeg',
+                  url: 'breastred-p10-front-lrg.jpg',
                   slug: 'front',
                 },
                 {
                   label: 'Oblique View',
-                  url: 'breastred-p10-oblique-lrg.jpeg',
+                  url: 'breastred-p10-oblique-lrg.jpg',
                   slug: 'oblique',
                 },
 
                 {
                   label: 'Side View',
-                  url: 'breastred-p10-side-lrg.jpeg',
+                  url: 'breastred-p10-side-lrg.jpg',
                   slug: 'side',
                 },
               ],
@@ -1323,18 +1323,18 @@ export default {
               beforeAfter: [
                 {
                   label: 'Front View',
-                  url: 'breastrevision-p01-front-lrg.jpeg',
+                  url: 'breastrevision-p01-front-lrg.jpg',
                   slug: 'front',
                 },
                 {
                   label: 'Oblique L View',
-                  url: 'breastrevision-p01-oblique-l-lrg.jpeg',
+                  url: 'breastrevision-p01-oblique-l-lrg.jpg',
                   slug: 'oblique',
                 },
 
                 {
                   label: 'Oblique R View',
-                  url: 'breastrevision-p01-oblique-r-lrg.jpeg',
+                  url: 'breastrevision-p01-oblique-r-lrg.jpg',
                   slug: 'side',
                 },
               ],
@@ -1345,18 +1345,18 @@ export default {
               beforeAfter: [
                 {
                   label: 'Front View',
-                  url: 'breastrevision-p02-front-lrg.jpeg',
+                  url: 'breastrevision-p02-front-lrg.jpg',
                   slug: 'front',
                 },
                 {
                   label: 'Oblique View',
-                  url: 'breastrevision-p02-oblique-lrg.jpeg',
+                  url: 'breastrevision-p02-oblique-lrg.jpg',
                   slug: 'oblique',
                 },
 
                 {
                   label: 'Side View',
-                  url: 'breastrevision-p02-side-lrg.jpeg',
+                  url: 'breastrevision-p02-side-lrg.jpg',
                   slug: 'side',
                 },
               ],
@@ -1367,7 +1367,7 @@ export default {
               beforeAfter: [
                 {
                   label: 'Front View',
-                  url: 'breastrevision-p03-front-lrg.jpeg',
+                  url: 'breastrevision-p03-front-lrg.jpg',
                   slug: 'front',
                 },
               ],
@@ -1384,18 +1384,18 @@ export default {
               beforeAfter: [
                 {
                   label: 'Front View',
-                  url: 'breastlift-p07-front-lrg.jpeg',
+                  url: 'breastlift-p07-front-lrg.jpg',
                   slug: 'front',
                 },
                 {
                   label: 'Oblique View',
-                  url: 'breastlift-p07-oblique-lrg.jpeg',
+                  url: 'breastlift-p07-oblique-lrg.jpg',
                   slug: 'oblique',
                 },
 
                 {
                   label: 'Side View',
-                  url: 'breastlift-p07-side-lrg.jpeg',
+                  url: 'breastlift-p07-side-lrg.jpg',
                   slug: 'side',
                 },
               ],
@@ -1406,18 +1406,18 @@ export default {
               beforeAfter: [
                 {
                   label: 'Front View',
-                  url: 'breastlift-p09-front-lrg.jpeg',
+                  url: 'breastlift-p09-front-lrg.jpg',
                   slug: 'front',
                 },
                 {
                   label: 'Oblique View',
-                  url: 'breastlift-p09-oblique-lrg.jpeg',
+                  url: 'breastlift-p09-oblique-lrg.jpg',
                   slug: 'oblique',
                 },
 
                 {
                   label: 'Side View',
-                  url: 'breastlift-p09-side-lrg.jpeg',
+                  url: 'breastlift-p09-side-lrg.jpg',
                   slug: 'side',
                 },
               ],
@@ -1427,7 +1427,7 @@ export default {
               beforeAfter: [
                 {
                   label: 'Front View',
-                  url: 'breastrecon-p01-front-lrg.jpeg',
+                  url: 'breastrecon-p01-front-lrg.jpg',
                   slug: 'front',
                 },
               ],
@@ -1437,18 +1437,18 @@ export default {
               beforeAfter: [
                 {
                   label: 'Front View',
-                  url: 'breastrecon-p02-front-lrg.jpeg',
+                  url: 'breastrecon-p02-front-lrg.jpg',
                   slug: 'front',
                 },
                 {
                   label: 'Oblique View',
-                  url: 'breastrecon-p02-oblique-lrg.jpeg',
+                  url: 'breastrecon-p02-oblique-lrg.jpg',
                   slug: 'oblique',
                 },
 
                 {
                   label: 'Side View',
-                  url: 'breastrecon-p02-side-lrg.jpeg',
+                  url: 'breastrecon-p02-side-lrg.jpg',
                   slug: 'side',
                 },
               ],
@@ -1458,18 +1458,18 @@ export default {
               beforeAfter: [
                 {
                   label: 'Front View',
-                  url: 'breastrecon-p03-front-lrg.jpeg',
+                  url: 'breastrecon-p03-front-lrg.jpg',
                   slug: 'front',
                 },
                 {
                   label: 'Oblique View',
-                  url: 'breastrecon-p03-oblique-lrg.jpeg',
+                  url: 'breastrecon-p03-oblique-lrg.jpg',
                   slug: 'oblique',
                 },
 
                 {
                   label: 'Side View',
-                  url: 'breastrecon-p03-side-lrg.jpeg',
+                  url: 'breastrecon-p03-side-lrg.jpg',
                   slug: 'side',
                 },
               ],
@@ -1492,18 +1492,18 @@ export default {
               beforeAfter: [
                 {
                   label: 'Front View',
-                  url: 'abdominoplasty-p01-front-lrg.jpeg',
+                  url: 'abdominoplasty-p01-front-lrg.jpg',
                   slug: 'front',
                 },
                 {
                   label: 'Oblique View',
-                  url: 'abdominoplasty-p01-oblique-lrg.jpeg',
+                  url: 'abdominoplasty-p01-oblique-lrg.jpg',
                   slug: 'oblique',
                 },
 
                 {
                   label: 'Side View',
-                  url: 'abdominoplasty-p01-side-lrg.jpeg',
+                  url: 'abdominoplasty-p01-side-lrg.jpg',
                   slug: 'side',
                 },
               ],
@@ -1514,12 +1514,12 @@ export default {
               beforeAfter: [
                 {
                   label: 'Front View',
-                  url: 'abdominoplasty-p02-front-lrg.jpeg',
+                  url: 'abdominoplasty-p02-front-lrg.jpg',
                   slug: 'front',
                 },
                 {
                   label: 'Side View',
-                  url: 'abdominoplasty-p02-side-lrg.jpeg',
+                  url: 'abdominoplasty-p02-side-lrg.jpg',
                   slug: 'side',
                 },
               ],
@@ -1530,17 +1530,17 @@ export default {
               beforeAfter: [
                 {
                   label: 'Front View',
-                  url: 'abdominoplasty-p03-front-lrg.jpeg',
+                  url: 'abdominoplasty-p03-front-lrg.jpg',
                   slug: 'front',
                 },
                 {
                   label: 'Oblique View',
-                  url: 'abdominoplasty-p03-oblique-lrg.jpeg',
+                  url: 'abdominoplasty-p03-oblique-lrg.jpg',
                   slug: 'oblique',
                 },
                 {
                   label: 'Side View',
-                  url: 'abdominoplasty-p03-side-lrg.jpeg',
+                  url: 'abdominoplasty-p03-side-lrg.jpg',
                   slug: 'side',
                 },
               ],
@@ -1551,12 +1551,12 @@ export default {
               beforeAfter: [
                 {
                   label: 'Front View',
-                  url: 'abdominoplasty-p04-front-lrg.jpeg',
+                  url: 'abdominoplasty-p04-front-lrg.jpg',
                   slug: 'front',
                 },
                 {
                   label: 'Side View',
-                  url: 'abdominoplasty-p04-side-lrg.jpeg',
+                  url: 'abdominoplasty-p04-side-lrg.jpg',
                   slug: 'side',
                 },
               ],
@@ -1567,18 +1567,18 @@ export default {
               beforeAfter: [
                 {
                   label: 'Front View',
-                  url: 'abdominoplasty-p05-front-lrg.jpeg',
+                  url: 'abdominoplasty-p05-front-lrg.jpg',
                   slug: 'front',
                 },
                 {
                   label: 'Oblique View',
-                  url: 'abdominoplasty-p05-oblique-lrg.jpeg',
+                  url: 'abdominoplasty-p05-oblique-lrg.jpg',
                   slug: 'oblique',
                 },
 
                 {
                   label: 'Side View',
-                  url: 'abdominoplasty-p05-side-lrg.jpeg',
+                  url: 'abdominoplasty-p05-side-lrg.jpg',
                   slug: 'side',
                 },
               ],
@@ -1589,18 +1589,18 @@ export default {
               beforeAfter: [
                 {
                   label: 'Front View',
-                  url: 'abdominoplasty-p06-front-lrg.jpeg',
+                  url: 'abdominoplasty-p06-front-lrg.jpg',
                   slug: 'front',
                 },
                 {
                   label: 'Oblique View',
-                  url: 'abdominoplasty-p06-oblique-lrg.jpeg',
+                  url: 'abdominoplasty-p06-oblique-lrg.jpg',
                   slug: 'oblique',
                 },
 
                 {
                   label: 'Side View',
-                  url: 'abdominoplasty-p06-side-lrg.jpeg',
+                  url: 'abdominoplasty-p06-side-lrg.jpg',
                   slug: 'side',
                 },
               ],
@@ -1611,18 +1611,18 @@ export default {
               beforeAfter: [
                 {
                   label: 'Front View',
-                  url: 'abdominoplasty-p07-front-lrg.gif',
+                  url: 'abdominoplasty-p07-front-lrg.jpg',
                   slug: 'front',
                 },
                 {
                   label: 'Oblique View',
-                  url: 'abdominoplasty-p07-oblique-lrg.gif',
+                  url: 'abdominoplasty-p07-oblique-lrg.jpg',
                   slug: 'oblique',
                 },
 
                 {
                   label: 'Side View',
-                  url: 'abdominoplasty-p07-side-lrg.jpeg',
+                  url: 'abdominoplasty-p07-side-lrg.jpg',
                   slug: 'side',
                 },
               ],
@@ -1632,18 +1632,18 @@ export default {
               beforeAfter: [
                 {
                   label: 'Front View',
-                  url: 'abdominoplasty-p08-front-lrg.jpeg',
+                  url: 'abdominoplasty-p08-front-lrg.jpg',
                   slug: 'front',
                 },
                 {
                   label: 'Oblique View',
-                  url: 'abdominoplasty-p08-oblique-lrg.jpeg',
+                  url: 'abdominoplasty-p08-oblique-lrg.jpg',
                   slug: 'oblique',
                 },
 
                 {
                   label: 'Side View',
-                  url: 'abdominoplasty-p08-side-lrg.jpeg',
+                  url: 'abdominoplasty-p08-side-lrg.jpg',
                   slug: 'side',
                 },
               ],
@@ -1653,18 +1653,18 @@ export default {
               beforeAfter: [
                 {
                   label: 'Front View',
-                  url: 'abdominoplasty-p09-front-lrg.jpeg',
+                  url: 'abdominoplasty-p09-front-lrg.jpg',
                   slug: 'front',
                 },
                 {
                   label: 'Oblique View',
-                  url: 'abdominoplasty-p09-oblique-lrg.jpeg',
+                  url: 'abdominoplasty-p09-oblique-lrg.jpg',
                   slug: 'oblique',
                 },
 
                 {
                   label: 'Side View',
-                  url: 'abdominoplasty-p09-side-lrg.jpeg',
+                  url: 'abdominoplasty-p09-side-lrg.jpg',
                   slug: 'side',
                 },
               ],
@@ -1681,12 +1681,12 @@ export default {
               beforeAfter: [
                 {
                   label: 'Front View',
-                  url: 'liposuction-p01-front-lrg.jpeg',
+                  url: 'liposuction-p01-front-lrg.jpg',
                   slug: 'front',
                 },
                 {
                   label: 'Rear View',
-                  url: 'liposuction-p01-rear-lrg.jpeg',
+                  url: 'liposuction-p01-rear-lrg.jpg',
                   slug: 'rear',
                 },
               ],
@@ -1697,12 +1697,12 @@ export default {
               beforeAfter: [
                 {
                   label: 'Rear View',
-                  url: 'liposuction-p01-rear-lrg.jpeg',
+                  url: 'liposuction-p01-rear-lrg.jpg',
                   slug: 'rear',
                 },
                 {
                   label: 'Oblique View',
-                  url: 'liposuction-p01-oblique-lrg.jpeg',
+                  url: 'liposuction-p01-oblique-lrg.jpg',
                   slug: 'oblique',
                 },
               ],
@@ -1713,7 +1713,7 @@ export default {
               beforeAfter: [
                 {
                   label: 'Front View',
-                  url: 'liposuction-p01-front-lrg.jpeg',
+                  url: 'liposuction-p01-front-lrg.jpg',
                   slug: 'front',
                 },
               ],
@@ -1724,7 +1724,7 @@ export default {
               beforeAfter: [
                 {
                   label: 'Rear View',
-                  url: 'liposuction-p01-rear-lrg.jpeg',
+                  url: 'liposuction-p01-rear-lrg.jpg',
                   slug: 'rear',
                 },
               ],
@@ -1735,17 +1735,17 @@ export default {
               beforeAfter: [
                 {
                   label: 'Front View',
-                  url: 'liposuction-p01-front-lrg.jpeg',
+                  url: 'liposuction-p01-front-lrg.jpg',
                   slug: 'front',
                 },
                 {
                   label: 'Rear View',
-                  url: 'liposuction-p01-rear-lrg.jpeg',
+                  url: 'liposuction-p01-rear-lrg.jpg',
                   slug: 'rear',
                 },
                 {
                   label: 'Side View',
-                  url: 'liposuction-p01-side-lrg.jpeg',
+                  url: 'liposuction-p01-side-lrg.jpg',
                   slug: 'side',
                 },
               ],
@@ -1762,7 +1762,7 @@ export default {
               beforeAfter: [
                 {
                   label: 'Front View',
-                  url: 'armlift-p01-front-lrg.jpeg',
+                  url: 'armlift-p01-front-lrg.jpg',
                   slug: 'front',
                 },
               ],
@@ -1779,12 +1779,12 @@ export default {
               beforeAfter: [
                 {
                   label: 'Rear View',
-                  url: 'buttaug-p01-rear-lrg.jpeg',
+                  url: 'buttaug-p01-rear-lrg.jpg',
                   slug: 'rear',
                 },
                 {
                   label: 'Side View',
-                  url: 'buttaug-p01-side-lrg.jpeg',
+                  url: 'buttaug-p01-side-lrg.jpg',
                   slug: 'side',
                 },
               ],
@@ -1801,7 +1801,7 @@ export default {
               beforeAfter: [
                 {
                   label: 'Front View',
-                  url: 'labiaplasty-p01-front-lrg.jpeg',
+                  url: 'labiaplasty-p01-front-lrg.jpg',
                   slug: 'front',
                 },
               ],
@@ -1812,7 +1812,7 @@ export default {
               beforeAfter: [
                 {
                   label: 'Front View',
-                  url: 'labiaplasty-p02-front-lrg.jpeg',
+                  url: 'labiaplasty-p02-front-lrg.jpg',
                   slug: 'front',
                 },
               ],

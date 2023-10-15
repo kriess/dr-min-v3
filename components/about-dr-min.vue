@@ -12,7 +12,7 @@
             class="headshot"
             width="100%"
             cover
-            src="/img/headshots/dr-min.jpg"
+            src="/img/headshots/min-white-coat.jpg"
           ></v-img>
         </v-col>
         <v-col cols="12" sm="12" md="1"></v-col>

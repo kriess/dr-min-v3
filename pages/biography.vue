@@ -9,7 +9,7 @@ useHead({
   <section class="biography page">
     <PageTopVisuals
       :title="pageTitle"
-      image-src="/img/headshots/dr-min-suit.jpg"
+      image-src="/img/headshots/min-suit.jpg"
     ></PageTopVisuals>
     <div class="content-area">
       <div class="text-descriptions text-body-1">

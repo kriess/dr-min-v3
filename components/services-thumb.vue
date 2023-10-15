@@ -50,6 +50,7 @@ const dialog = ref(false)
     outline: 1px solid #eee;
     margin-bottom: 15px;
     aspect-ratio: 16/12;
+    border-radius: $main-border-radius;
   }
   .procedure-title {
     font-size: 130%;

@@ -50,7 +50,7 @@ export default {
         {
           title: 'Facial Liposuction',
           slug: 'facelipo',
-          thumbUrl: 'temp.jpg',
+          thumbUrl: 'neckliposuction.jpg',
           summary:
             'Facial liposuction sculpts the face by removing areas of fat from the lower cheek, jawline, chin or neck. ',
         },
@@ -91,13 +91,14 @@ export default {
         {
           title: 'Breast Reduction',
           slug: 'breast-reduction',
+          thumbUrl: 'breastreduction.jpg',
           summary:
             'Large breasts can cause pain, improper posture, rashes, breathing problems, skeletal deformities, and low self-esteem.',
         },
         {
           title: 'Breast Revision',
           slug: 'breast-revision',
-          thumbUrl: 'temp.jpg',
+          thumbUrl: 'breastrevision.jpg',
           summary:
             'Revision breast augmentation is performed for patients who are not satisfied with their results after previously undergoing breast augmentation.',
         },
@@ -157,7 +158,7 @@ export default {
         {
           title: 'Body Contouring after Weight Loss',
           slug: 'body-contouring',
-          thumbUrl: 'temp.jpg',
+          thumbUrl: 'bodycontouringweightloss.jpg',
           summary:
             'Candidates for body contouring typically suffer from loose (inelastic) skin on many or most areas of the body usually as a result of significant weight loss due to diet, exercise or bariatric surgery.',
         },
@@ -171,7 +172,7 @@ export default {
         {
           title: 'Mommy Makeover',
           slug: 'mommy-makeover',
-          thumbUrl: 'temp.jpg',
+          thumbUrl: 'mommymakeover.jpg',
           summary:
             "One of our practice's increasingly popular programs addresses the changes to the female breasts and midsection after childbirth.",
         },
@@ -192,7 +193,7 @@ export default {
         {
           title: 'Fillers',
           slug: 'fillers',
-          thumbUrl: 'botox-fillers.jpg',
+          thumbUrl: 'filler.jpg',
           summary:
             'Facial fillers are designed to smooth wrinkles, sculpt lips and shape facial contours.',
         },

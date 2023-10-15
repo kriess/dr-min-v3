@@ -43,6 +43,7 @@ onMounted(() => {
     <PageTopVisuals
       :title="pageTitle"
       image-src="/img/headshots/ourservices.jpg"
+      image-width="60%"
     ></PageTopVisuals>
 
     <v-btn-toggle

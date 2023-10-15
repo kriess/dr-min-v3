@@ -1,8 +1,15 @@
 <script lang="ts" setup>
-const props = defineProps<{
+interface Props {
   title: string
-  imageSrc: string
-}>()
+  imageSrc?: string
+  imageWidth?: string
+}
+
+// props
+const props = withDefaults(defineProps<Props>(), {
+  title: 'Page Title',
+  imageWidth: '50%',
+})
 
 // console.log(props)
 </script>
@@ -14,7 +21,7 @@ const props = defineProps<{
       <div class="title-image-container">
         <v-img
           v-if="imageSrc"
-          width="50%"
+          :width="imageWidth"
           cover
           :src="imageSrc"
           class="main-img"

@@ -43,7 +43,7 @@ const changeView = (type) => {
       <v-card-text>
         <v-img
           cover
-          :src="`/img/photo-gallery/before-after/${beforeAfter[0].url}`"
+          :src="`/img/photo-gallery/optimized/${beforeAfter[0].url}`"
         ></v-img>
         <div class="case-number text-center">Case {{ props.caseNumber }}</div>
         <!-- {{ props.gallery }} -->
@@ -64,7 +64,7 @@ const changeView = (type) => {
           </div>
           <v-img
             cover
-            :src="`/img/photo-gallery/before-after/${currentView.url}`"
+            :src="`/img/photo-gallery/optimized/${currentView.url}`"
           ></v-img>
           <div class="caption-text">
             {{ currentView.label }}: {{ currentView.caption }}
