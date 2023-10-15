@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 const props = defineProps<{
   procedure: object
+  section: string
 }>()
 
 // reactive data
@@ -14,7 +15,7 @@ const dialog = ref(false)
         <v-img
           class="thumb"
           cover
-          :src="`/img/services/thumbs/${procedure.thumbUrl}`"
+          :src="`/img/services/thumbs/${procedure.thumbUrl || 'temp.jpg'}`"
         ></v-img>
         <div class="procedure-title">{{ procedure.title }}</div>
         <div class="summary">{{ procedure.summary }}</div>
@@ -24,7 +25,10 @@ const dialog = ref(false)
     <v-dialog v-model="dialog" width="800" class="">
       <v-card>
         <v-card-text>
-          <services-details></services-details>
+          <services-details
+            :section="section"
+            :procedure="procedure.slug"
+          ></services-details>
         </v-card-text>
         <v-card-actions>
           <v-btn color="primary" block @click="dialog = false">Close</v-btn>

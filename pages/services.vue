@@ -42,9 +42,8 @@ onMounted(() => {
   <section class="services page">
     <PageTopVisuals
       :title="pageTitle"
-      image-src="/img/headshots/dr-min-suit.jpg"
+      image-src="/img/headshots/ourservices.jpg"
     ></PageTopVisuals>
-    <!--    <services-index></services-index>-->
 
     <v-btn-toggle
       v-model="activeSection"

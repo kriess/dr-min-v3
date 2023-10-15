@@ -4,11 +4,16 @@
 
 <template>
   <div class="about-dr-min">
-    <h1 class="text-h2 text-center mb-10">About Dr. Min</h1>
+    <h1 class="text-h2 text-center mb-10">Meet Dr. Min</h1>
     <div class="container">
       <v-row>
         <v-col cols="12" sm="12" md="4">
-          <v-img width="100%" cover src="/img/headshots/dr-min.jpg"></v-img>
+          <v-img
+            class="headshot"
+            width="100%"
+            cover
+            src="/img/headshots/dr-min.jpg"
+          ></v-img>
         </v-col>
         <v-col cols="12" sm="12" md="1"></v-col>
         <v-col cols="12" sm="12" md="7">
@@ -24,7 +29,7 @@
 
           <p class="mt-10 pt-10">
             <v-btn color="primary" class="text-h6" to="/biography">
-              Read More
+              Read More About Dr. Min
             </v-btn>
           </p>
         </v-col>
@@ -44,6 +49,10 @@
   .container {
     margin: 0 auto;
     max-width: 800px;
+  }
+  .headshot {
+    outline: 1px solid #ccc;
+    filter: drop-shadow(3px 3px 4px #ccc);
   }
 }
 </style>

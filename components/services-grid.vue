@@ -11,7 +11,10 @@ const props = defineProps<{
   <div class="services-grid">
     <div class="services-thumb-container">
       <template v-for="procedure in services.procedures">
-        <services-thumb :procedure="procedure"></services-thumb>
+        <services-thumb
+          :procedure="procedure"
+          :section="section"
+        ></services-thumb>
       </template>
     </div>
   </div>
@@ -31,9 +34,15 @@ const props = defineProps<{
   padding-bottom: 5vw;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 1100px) {
   .services-thumb-container {
     grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .services-thumb-container {
+    grid-template-columns: 1fr 1fr;
   }
 }
 </style>

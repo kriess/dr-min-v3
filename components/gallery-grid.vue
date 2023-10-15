@@ -51,9 +51,15 @@ const galleries = computed(() => {
   padding-bottom: 5vw;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 1100px) {
   .gallery-thumb-container {
     grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .gallery-thumb-container {
+    grid-template-columns: 1fr 1fr;
   }
 }
 </style>

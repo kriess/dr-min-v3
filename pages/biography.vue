@@ -52,7 +52,10 @@ useHead({
       </div>
       <div class="education content-width">
         <div class="text-h2 text-center title-text">Education & Training</div>
-        <div class="education--item text-h4">MD, New York University</div>
+        <div class="education--item text-h4">MIT / Stanford</div>
+        <div class="education--item text-h4">
+          New York University School of Medicine
+        </div>
 
         <div class="education--item text-h4">
           Plastic Surgery Residency, Montefiore Medical Center

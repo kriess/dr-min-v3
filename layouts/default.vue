@@ -30,10 +30,10 @@ useHead({
 <template>
   <v-app class="dr-min-app">
     <v-toolbar color="white" flat>
-      <v-app-bar-nav-icon
-        class="hidden-md-and-up"
-        @click="drawer = !drawer"
-      ></v-app-bar-nav-icon>
+      <div class="hidden-md-and-up mobile-meni-icon">
+        <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
+      </div>
+
       <v-toolbar-items
         class="hidden-sm-and-down justify-space-between"
         style="width: 100%"
@@ -76,7 +76,12 @@ useHead({
       </v-col>
     </v-row>
 
-    <v-navigation-drawer v-model="drawer" temporary color="primary">
+    <v-navigation-drawer
+      v-model="drawer"
+      temporary
+      location="right"
+      color="primary"
+    >
       <v-btn
         v-for="item in navItems"
         :key="item.href"
@@ -187,6 +192,13 @@ useHead({
   .banner-item {
     padding-top: min(3vw, 30px);
     padding-bottom: min(3vw, 30px);
+  }
+
+  .mobile-meni-icon {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding-right: 10px;
   }
 }
 </style>

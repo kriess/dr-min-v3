@@ -43,7 +43,7 @@ const cycleInterval = ref(6000)
     </VCarousel>
 
     <p class="mt-1 pt-10 text-center">
-      <v-btn color="" class="text-h6" to="/services">View All</v-btn>
+      <v-btn color="" class="text-h6" to="/services">View All Services</v-btn>
     </p>
   </div>
 </template>
