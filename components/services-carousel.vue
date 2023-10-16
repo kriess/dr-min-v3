@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 // https://vuejs.org/guide/typescript/composition-api.html#typing-component-props
+const router = useRouter()
 
 // reactive data
 const colors = ref([
@@ -9,7 +10,28 @@ const colors = ref([
   'red lighten-1',
   'deep-purple accent-4',
 ])
-const slides = ref(['First', 'Second', 'Third', 'Fourth', 'Fifth'])
+const slides = ref([
+  {
+    text: 'Facial Plastic & Lifting',
+    imageSrc: '/img/services/carousel/face.webp',
+    href: '/services?section=face',
+  },
+  {
+    text: 'Breast Lifting & Augmentation',
+    imageSrc: '/img/services/carousel/breast.webp',
+    href: '/services?section=breast',
+  },
+  {
+    text: 'Body Body Body Body Body',
+    imageSrc: '/img/services/carousel/body.webp',
+    href: '/services?section=body',
+  },
+  {
+    text: 'Restorative & Cosmetic',
+    imageSrc: '/img/services/carousel/skin.webp',
+    href: '/services?section=skin',
+  },
+])
 const cycleInterval = ref(6000)
 
 // computed
@@ -18,9 +40,9 @@ const cycleInterval = ref(6000)
 // })
 
 // methods
-// const changeView = (view) => {
-//   console.log(view)
-// }
+const goTo = (view: string) => {
+  router.push(view)
+}
 </script>
 
 <template>
@@ -29,16 +51,20 @@ const cycleInterval = ref(6000)
     <VCarousel
       cycle
       :interval="cycleInterval"
-      height="400"
+      height="auto"
       hide-delimiter-background
       show-arrows
     >
       <VCarouselItem v-for="(slide, i) in slides" :key="i">
-        <VSheet :color="colors[i]" height="100%">
-          <div class="d-flex fill-height justify-center align-center">
-            <div class="text-h2">{{ slide }} Slides</div>
-          </div>
-        </VSheet>
+        <div class="carousel-item" @click="goTo(slide.href)">
+          <img
+            class="slide-img"
+            :src="slide.imageSrc"
+            style=""
+            :alt="slide.text"
+          />
+          <div class="slide-text">{{ slide.text }}</div>
+        </div>
       </VCarouselItem>
     </VCarousel>
 
@@ -50,9 +76,24 @@ const cycleInterval = ref(6000)
 
 <style lang="scss" scoped>
 .sevices-carousel {
-  padding: 50px 100px;
+  padding: 5vw;
   background-color: $primary;
   width: auto;
+  .slide-img {
+    width: 100%;
+  }
+  .carousel-item {
+    position: relative;
+  }
+  .slide-text {
+    position: absolute;
+    top: 12%;
+    left: 2%;
+    max-width: 40%;
+    color: #fff;
+    font-size: clamp(20px, 3vw, 50px);
+    line-height: clamp(20px, 3vw, 50px);
+  }
 }
 .section-title {
   color: $text-on-dark;

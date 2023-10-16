@@ -7,7 +7,7 @@
     <h1 class="text-h2 text-center mb-10">Meet Dr. Min</h1>
     <div class="container">
       <v-row>
-        <v-col cols="12" sm="12" md="4">
+        <v-col cols="12" sm="12" md="4" class="text-center">
           <v-img
             class="headshot"
             width="100%"
@@ -53,6 +53,9 @@
   .headshot {
     outline: 1px solid #ccc;
     filter: drop-shadow(3px 3px 4px #ccc);
+    border-radius: $main-border-radius;
+    max-width: 500px;
+    margin: 0 auto;
   }
 }
 </style>

@@ -1,5 +1,7 @@
 <script lang="ts" setup>
-const pageTitle = 'Contact'
+import ContactUsForm from '~/components/contact-us-form.vue'
+
+const pageTitle = 'Contact Us'
 useHead({
   title: pageTitle,
 })
@@ -7,10 +9,12 @@ useHead({
 
 <template>
   <section class="news page">
-    <!-- <PageTopVisuals
+    <PageTopVisuals
       :title="pageTitle"
-      image-src="/img/headshots/dr-min.jpg"
-    ></PageTopVisuals> -->
+      image-src="/img/headshots/min-white-coat.jpg"
+    ></PageTopVisuals>
+
+    <contact-us-form></contact-us-form>
   </section>
 </template>
 

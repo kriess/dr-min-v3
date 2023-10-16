@@ -11,7 +11,7 @@ export const mainLightTheme: ThemeDefinition = {
     surface: '#FFFFFF',
     primary: '#00796B',
     secondary: '#26A69A',
-    error: '#ef4444',
+    error: '#ffcc00',
     info: '#3b82f6',
     success: '#22c55e',
     warning: '#f59e0b',
