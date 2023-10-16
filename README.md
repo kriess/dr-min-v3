@@ -5,6 +5,16 @@ The frontend codebase using nuxt 3, vue 3, and vuetify 3.
 - [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction)
 - [Vuetify 3 documentation](https://vuetifyjs.com/en/)
 
+## Generate static site
+
+https://nuxt.com/docs/getting-started/deployment#crawl-based-pre-rendering
+
+```bash 
+npx nuxi generate
+
+npx serve .output/public
+```
+
 ## Setup
 
 Make sure to install the dependencies:
