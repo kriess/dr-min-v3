@@ -2,7 +2,7 @@
 // https://vuejs.org/guide/typescript/composition-api.html#typing-component-props
 interface Props {
   section: string
-  procedure: string
+  procedure: object
 }
 
 // props
@@ -15,9 +15,9 @@ const props = withDefaults(defineProps<Props>(), {
 <template>
   <div class="services-details">
     <template v-if="section === 'face'">
-      <template v-if="procedure === 'blepharoplasty'">
+      <template v-if="procedure.slug === 'blepharoplasty'">
         <div class="services-section">
-          <div class="services-title">Eyelid Lift (Blepharoplasty)</div>
+          <div class="services-title">{{ procedure.title }}</div>
           <v-img
             class="thumb"
             cover
@@ -152,13 +152,13 @@ const props = withDefaults(defineProps<Props>(), {
           </dl>
         </div>
       </template>
-      <template v-if="procedure === 'browlift'">
+      <template v-if="procedure.slug === 'browlift'">
         <div class="services-section">
-          <div class="services-title">Brow Lift (Forehead Lift)</div>
+          <div class="services-title">{{ procedure.title }}</div>
           <v-img
             class="thumb"
             cover
-            src="/img/services/thumbs/temp.jpg"
+            :src="`/img/services/thumbs/${procedure.thumbUrl || 'temp.jpg'}`"
           ></v-img>
           <p>
             A brow lift can revitalize the upper face by lifting sagging
@@ -247,13 +247,13 @@ const props = withDefaults(defineProps<Props>(), {
           </p>
         </div>
       </template>
-      <template v-if="procedure === 'facelift'">
+      <template v-if="procedure.slug === 'facelift'">
         <div class="services-section">
-          <div class="services-title">Face Lift (Rhytidectomy)</div>
+          <div class="services-title">{{ procedure.title }}</div>
           <v-img
             class="thumb"
             cover
-            src="/img/services/thumbs/temp.jpg"
+            :src="`/img/services/thumbs/${procedure.thumbUrl || 'temp.jpg'}`"
           ></v-img>
 
           <p>
@@ -409,13 +409,13 @@ const props = withDefaults(defineProps<Props>(), {
           </p>
         </div>
       </template>
-      <template v-if="procedure === 'otoplasty'">
+      <template v-if="procedure.slug === 'otoplasty'">
         <div class="services-section">
-          <div class="services-title">Otoplasty (Ear Surgery)</div>
+          <div class="services-title">{{ procedure.title }}</div>
           <v-img
             class="thumb"
             cover
-            src="/img/services/thumbs/temp.jpg"
+            :src="`/img/services/thumbs/${procedure.thumbUrl || 'temp.jpg'}`"
           ></v-img>
 
           <p>
@@ -473,13 +473,13 @@ const props = withDefaults(defineProps<Props>(), {
           </p>
         </div>
       </template>
-      <template v-if="procedure === 'necklift'">
+      <template v-if="procedure.slug === 'necklift'">
         <div class="services-section">
-          <div class="services-title">Neck Lift</div>
+          <div class="services-title">{{ procedure.title }}</div>
           <v-img
             class="thumb"
             cover
-            src="/img/services/thumbs/temp.jpg"
+            :src="`/img/services/thumbs/${procedure.thumbUrl || 'temp.jpg'}`"
           ></v-img>
 
           <p>
@@ -490,13 +490,13 @@ const props = withDefaults(defineProps<Props>(), {
           </p>
         </div>
       </template>
-      <template v-if="procedure === 'facelipo'">
+      <template v-if="procedure.slug === 'facelipo'">
         <div class="services-section">
-          <div class="services-title">Facial Liposuction</div>
+          <div class="services-title">{{ procedure.title }}</div>
           <v-img
             class="thumb"
             cover
-            src="/img/services/thumbs/temp.jpg"
+            :src="`/img/services/thumbs/${procedure.thumbUrl || 'temp.jpg'}`"
           ></v-img>
 
           <p>
@@ -509,13 +509,13 @@ const props = withDefaults(defineProps<Props>(), {
           </p>
         </div>
       </template>
-      <template v-if="procedure === 'buccal'">
+      <template v-if="procedure.slug === 'buccal'">
         <div class="services-section">
-          <div class="services-title">Buccal Fat Removal</div>
+          <div class="services-title">{{ procedure.title }}</div>
           <v-img
             class="thumb"
             cover
-            src="/img/services/thumbs/temp.jpg"
+            :src="`/img/services/thumbs/${procedure.thumbUrl || 'temp.jpg'}`"
           ></v-img>
 
           <p>
@@ -535,13 +535,13 @@ const props = withDefaults(defineProps<Props>(), {
     </template>
 
     <template v-if="section === 'breast'">
-      <template v-if="procedure === 'breast-augmentation'">
+      <template v-if="procedure.slug === 'breast-augmentation'">
         <div class="services-section">
-          <div class="services-title">Breast Augmentation</div>
+          <div class="services-title">{{ procedure.title }}</div>
           <v-img
             class="thumb"
             cover
-            src="/img/services/thumbs/temp.jpg"
+            :src="`/img/services/thumbs/${procedure.thumbUrl || 'temp.jpg'}`"
           ></v-img>
           <p>
             Breast augmentation is one of the most popular cosmetic surgery
@@ -742,13 +742,13 @@ const props = withDefaults(defineProps<Props>(), {
           </p>
         </div>
       </template>
-      <template v-if="procedure === 'breast-lift'">
+      <template v-if="procedure.slug === 'breast-lift'">
         <div class="services-section">
-          <div class="services-title">Breast Lift</div>
+          <div class="services-title">{{ procedure.title }}</div>
           <v-img
             class="thumb"
             cover
-            src="/img/services/thumbs/temp.jpg"
+            :src="`/img/services/thumbs/${procedure.thumbUrl || 'temp.jpg'}`"
           ></v-img>
           <p>
             A breast lift, or mastopexy, is performed to return youthful shape
@@ -762,13 +762,13 @@ const props = withDefaults(defineProps<Props>(), {
           </p>
         </div>
       </template>
-      <template v-if="procedure === 'breast-reduction'">
+      <template v-if="procedure.slug === 'breast-reduction'">
         <div class="services-section">
-          <div class="services-title">Breast Reduction</div>
+          <div class="services-title">{{ procedure.title }}</div>
           <v-img
             class="thumb"
             cover
-            src="/img/services/thumbs/temp.jpg"
+            :src="`/img/services/thumbs/${procedure.thumbUrl || 'temp.jpg'}`"
           ></v-img>
           <p>
             Large breasts can cause pain, improper posture, rashes, breathing
@@ -782,13 +782,13 @@ const props = withDefaults(defineProps<Props>(), {
           </p>
         </div>
       </template>
-      <template v-if="procedure === 'breast-revision'">
+      <template v-if="procedure.slug === 'breast-revision'">
         <div class="services-section">
-          <div class="services-title">Breast Revision</div>
+          <div class="services-title">{{ procedure.title }}</div>
           <v-img
             class="thumb"
             cover
-            src="/img/services/thumbs/temp.jpg"
+            :src="`/img/services/thumbs/${procedure.thumbUrl || 'temp.jpg'}`"
           ></v-img>
           <p>
             Revision breast augmentation is performed for patients who are not
@@ -802,13 +802,13 @@ const props = withDefaults(defineProps<Props>(), {
           </p>
         </div>
       </template>
-      <template v-if="procedure === 'inverted-nipples'">
+      <template v-if="procedure.slug === 'inverted-nipples'">
         <div class="services-section">
-          <div class="services-title">Correction of Inverted Nipples</div>
+          <div class="services-title">{{ procedure.title }}</div>
           <v-img
             class="thumb"
             cover
-            src="/img/services/thumbs/temp.jpg"
+            :src="`/img/services/thumbs/${procedure.thumbUrl || 'temp.jpg'}`"
           ></v-img>
           <p>
             Nipple and areola reconstruction can provide a boost in
@@ -818,13 +818,13 @@ const props = withDefaults(defineProps<Props>(), {
           </p>
         </div>
       </template>
-      <template v-if="procedure === 'breast-reduction-male'">
+      <template v-if="procedure.slug === 'breast-reduction-male'">
         <div class="services-section">
-          <div class="services-title">Male Breast Reduction</div>
+          <div class="services-title">{{ procedure.title }}</div>
           <v-img
             class="thumb"
             cover
-            src="/img/services/thumbs/temp.jpg"
+            :src="`/img/services/thumbs/${procedure.thumbUrl || 'temp.jpg'}`"
           ></v-img>
           <p>
             Enlarged male breasts (gynecomastia) affect nearly 40-60% of men,
@@ -840,13 +840,40 @@ const props = withDefaults(defineProps<Props>(), {
     </template>
 
     <template v-if="section === 'body'">
-      <template v-if="procedure === 'liposuction'">
+      <template v-if="procedure.slug === 'abdominoplasty'">
         <div class="services-section">
-          <div class="services-title">Liposuction</div>
+          <div class="services-title">Abdominoplasty (Tummy Tuck)</div>
           <v-img
             class="thumb"
             cover
-            src="/img/services/thumbs/eyelid-adobe-2.jpg"
+            :src="`/img/services/thumbs/${procedure.thumbUrl || 'temp.jpg'}`"
+          ></v-img>
+          <p>
+            Sometimes, diet and exercise just aren't enough to give you the flat
+            tummy that you desire. Especially if you've been pregnant or
+            experienced significant weight loss, you may have loose skin and
+            stretch marks that don't go away no matter what you do. Tummy tuck
+            surgery, also known as abdominoplasty, removes unwanted excess fat
+            and skin. If you have weakness in your abdominal muscles or
+            separation of the muscles in the midline (known as rectus
+            diastasis), this will be repaired during surgery. The result is a
+            smooth flat abdomen. The scar will be placed as low as possible so
+            that it remains hidden by your underwear or bathing suit.
+          </p>
+          <p>
+            Liposuction is often combined with abdominoplasty to contour the
+            waistline and other areas.
+          </p>
+        </div>
+      </template>
+
+      <template v-if="procedure.slug === 'liposuction'">
+        <div class="services-section">
+          <div class="services-title">{{ procedure.title }}</div>
+          <v-img
+            class="thumb"
+            cover
+            :src="`/img/services/thumbs/${procedure.thumbUrl || 'temp.jpg'}`"
           ></v-img>
           <p>
             Liposuction (also known as liposculpture) is one of the most popular
@@ -978,13 +1005,13 @@ const props = withDefaults(defineProps<Props>(), {
           </p>
         </div>
       </template>
-      <template v-if="procedure === 'arm-lift'">
+      <template v-if="procedure.slug === 'arm-lift'">
         <div class="services-section">
           <div class="services-title">Arm Lift (Brachioplasty)</div>
           <v-img
             class="thumb"
             cover
-            src="/img/services/thumbs/temp.jpg"
+            :src="`/img/services/thumbs/${procedure.thumbUrl || 'temp.jpg'}`"
           ></v-img>
           <p>
             After substantial weight loss, weight gain or simply from the
@@ -995,13 +1022,13 @@ const props = withDefaults(defineProps<Props>(), {
           </p>
         </div>
       </template>
-      <template v-if="procedure === 'thigh-lift'">
+      <template v-if="procedure.slug === 'thigh-lift'">
         <div class="services-section">
-          <div class="services-title">Thigh Lift</div>
+          <div class="services-title">{{ procedure.title }}</div>
           <v-img
             class="thumb"
             cover
-            src="/img/services/thumbs/temp.jpg"
+            :src="`/img/services/thumbs/${procedure.thumbUrl || 'temp.jpg'}`"
           ></v-img>
           <p>
             A thigh lift is performed to remove excess skin and fat from the
@@ -1020,13 +1047,13 @@ const props = withDefaults(defineProps<Props>(), {
           </p>
         </div>
       </template>
-      <template v-if="procedure === 'buttock-augmentation'">
+      <template v-if="procedure.slug === 'buttock-augmentation'">
         <div class="services-section">
-          <div class="services-title">Buttock Augmentation</div>
+          <div class="services-title">{{ procedure.title }}</div>
           <v-img
             class="thumb"
             cover
-            src="/img/services/thumbs/temp.jpg"
+            :src="`/img/services/thumbs/${procedure.thumbUrl || 'temp.jpg'}`"
           ></v-img>
           <p>
             For patients who desire larger, fuller buttocks, fat from other
@@ -1035,13 +1062,13 @@ const props = withDefaults(defineProps<Props>(), {
           </p>
         </div>
       </template>
-      <template v-if="procedure === 'body-contouring'">
+      <template v-if="procedure.slug === 'body-contouring'">
         <div class="services-section">
-          <div class="services-title">Body Contouring</div>
+          <div class="services-title">{{ procedure.title }}</div>
           <v-img
             class="thumb"
             cover
-            src="/img/services/thumbs/temp.jpg"
+            :src="`/img/services/thumbs/${procedure.thumbUrl || 'temp.jpg'}`"
           ></v-img>
           <p>
             Candidates for body contouring typically suffer from loose
@@ -1056,13 +1083,13 @@ const props = withDefaults(defineProps<Props>(), {
           </p>
         </div>
       </template>
-      <template v-if="procedure === 'labiaplasty'">
+      <template v-if="procedure.slug === 'labiaplasty'">
         <div class="services-section">
-          <div class="services-title">Labiaplasty</div>
+          <div class="services-title">{{ procedure.title }}</div>
           <v-img
             class="thumb"
             cover
-            src="/img/services/thumbs/temp.jpg"
+            :src="`/img/services/thumbs/${procedure.thumbUrl || 'temp.jpg'}`"
           ></v-img>
 
           <p>
@@ -1107,13 +1134,13 @@ const props = withDefaults(defineProps<Props>(), {
           </p>
         </div>
       </template>
-      <template v-if="procedure === 'mommy-makeover'">
+      <template v-if="procedure.slug === 'mommy-makeover'">
         <div class="services-section">
-          <div class="services-title">Mommy Makeover</div>
+          <div class="services-title">{{ procedure.title }}</div>
           <v-img
             class="thumb"
             cover
-            src="/img/services/thumbs/temp.jpg"
+            :src="`/img/services/thumbs/${procedure.thumbUrl || 'temp.jpg'}`"
           ></v-img>
 
           <p>
@@ -1146,9 +1173,9 @@ const props = withDefaults(defineProps<Props>(), {
     </template>
 
     <template v-if="section === 'skin'">
-      <template v-if="procedure === 'botox'">
+      <template v-if="procedure.slug === 'botox'">
         <div class="services-section">
-          <div class="services-title">BOTOX® Cosmetic</div>
+          <div class="services-title">{{ procedure.title }}</div>
           <v-img
             class="thumb"
             cover
@@ -1167,13 +1194,13 @@ const props = withDefaults(defineProps<Props>(), {
           </p>
         </div>
       </template>
-      <template v-if="procedure === 'fillers'">
+      <template v-if="procedure.slug === 'fillers'">
         <div class="services-section">
-          <div class="services-title">Fillers</div>
+          <div class="services-title">{{ procedure.title }}</div>
           <v-img
             class="thumb"
             cover
-            src="/img/services/thumbs/temp.jpg"
+            :src="`/img/services/thumbs/${procedure.thumbUrl || 'temp.jpg'}`"
           ></v-img>
           <p>
             Facial fillers are designed to smooth wrinkles, sculpt lips and

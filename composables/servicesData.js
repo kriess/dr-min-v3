@@ -126,6 +126,8 @@ export default {
           title: 'Abdominoplasty (Tummy Tuck)',
           slug: 'abdominoplasty',
           thumbUrl: 'abdominoplasty.jpg',
+          summary:
+            "Sometimes, diet and exercise just aren't enough to give you the flat tummy that you desire.",
         },
         {
           title: 'Liposuction',

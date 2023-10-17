@@ -27,7 +27,7 @@ const dialog = ref(false)
         <v-card-text>
           <services-details
             :section="section"
-            :procedure="procedure.slug"
+            :procedure="procedure"
           ></services-details>
         </v-card-text>
         <v-card-actions>

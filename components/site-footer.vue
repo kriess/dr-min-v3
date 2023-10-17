@@ -24,33 +24,28 @@ const year = computed(() => {
           <v-col cols="12" sm="12" md="7" class="bio__right-col">
             <div class="bio__address">
               <div class="bio__contact">
-                <div class="text-h6">
-                  Practice
-                  <br />
-                  Locations
-                </div>
+                <div class="text-h6">Practice Location</div>
                 <div>
                   <ul>
-                    <li>Saint Francis Hospital</li>
-                    <li>500 Terry Francine Street</li>
-                    <li>San Francisco, CA 94158</li>
+                    <li>547 E Union St.</li>
+                    <li>Pasadena, California 91101</li>
                     <li>info@mysite.com</li>
                     <li class="separator"></li>
                     <li>Tel: 123-456-7890</li>
                     <li>Fax: 123-456-7890</li>
                   </ul>
                 </div>
-                <div>
-                  <ul>
-                    <li>Saint Francis Hospital</li>
-                    <li>500 Terry Francine Street</li>
-                    <li>San Francisco, CA 94158</li>
-                    <li>info@mysite.com</li>
-                    <li class="separator"></li>
-                    <li>Tel: 123-456-7890</li>
-                    <li>Fax: 123-456-7890</li>
-                  </ul>
-                </div>
+                <!--                <div>-->
+                <!--                  <ul>-->
+                <!--                    <li>Saint Francis Hospital</li>-->
+                <!--                    <li>500 Terry Francine Street</li>-->
+                <!--                    <li>San Francisco, CA 94158</li>-->
+                <!--                    <li>info@mysite.com</li>-->
+                <!--                    <li class="separator"></li>-->
+                <!--                    <li>Tel: 123-456-7890</li>-->
+                <!--                    <li>Fax: 123-456-7890</li>-->
+                <!--                  </ul>-->
+                <!--                </div>-->
               </div>
             </div>
           </v-col>
