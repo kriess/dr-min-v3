@@ -1,7 +1,7 @@
 export default defineAppConfig({
   testimonials: [
     {
-      text: 'You did a breast lift on me at about 2 years ago. I just wanted to let you know that when I went for my yearly mammography the technician said, and I quote  &quot;I see a lot of breasts  and that is the best breast lift I have seen&quot;....... Needless to say that  made me very happy and I owe it to you!!!   Thanks again.',
+      text: 'You did a breast lift on me at about 2 years ago. I just wanted to let you know that when I went for my yearly mammography the technician said, and I quote  "I see a lot of breasts  and that is the best breast lift I have seen";....... Needless to say that  made me very happy and I owe it to you!!!   Thanks again.',
       initials: 'KC',
       procedures: ['Breast Lift'],
     },
