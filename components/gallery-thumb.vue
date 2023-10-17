@@ -10,15 +10,15 @@ const view = ref('initial')
 
 // computed
 const currentView = computed(() => {
-  console.log('computed current view')
+  // console.log('computed current view')
   let selectedView = {}
   if (view.value === 'initial') {
     selectedView = props.gallery.beforeAfter[0]
   } else {
     selectedView = props.gallery.beforeAfter.find((i) => i.slug === view.value)
   }
-  console.log('selected view', selectedView)
-  console.log('caption', props.gallery.caption)
+  // console.log('selected view', selectedView)
+  // console.log('caption', props.gallery.caption)
   if (!selectedView.caption) {
     selectedView.caption = props.gallery.caption
   }
