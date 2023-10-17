@@ -50,7 +50,12 @@ const changeView = (type) => {
       </v-card-text>
     </v-card>
 
-    <v-dialog v-model="dialog" width="800" class="photo-gallery-dialog">
+    <v-dialog
+      v-if="dialog"
+      v-model="dialog"
+      width="800"
+      class="photo-gallery-dialog"
+    >
       <v-card>
         <v-card-text>
           <div v-if="beforeAfter.length > 1" class="change-view-btns">
@@ -81,5 +86,14 @@ const changeView = (type) => {
 <style lang="scss" scoped>
 .gallery-thumb {
   width: 100%;
+  :deep(.v-img__img--cover) {
+    transition: 0.6s;
+    filter: grayscale(100%);
+  }
+}
+.gallery-thumb:hover {
+  :deep(.v-img__img--cover) {
+    filter: grayscale(0%);
+  }
 }
 </style>

@@ -22,7 +22,7 @@ const dialog = ref(false)
       </v-card-text>
     </v-card>
 
-    <v-dialog v-model="dialog" width="800" class="">
+    <v-dialog v-if="dialog" v-model="dialog" width="800" class="">
       <v-card>
         <v-card-text>
           <services-details
