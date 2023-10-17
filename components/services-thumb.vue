@@ -52,11 +52,20 @@ const dialog = ref(false)
     aspect-ratio: 16/12;
     border-radius: $main-border-radius;
   }
+  :deep(.v-img__img--cover) {
+    transition: 0.6s;
+    filter: grayscale(100%);
+  }
   .procedure-title {
     font-size: 130%;
     color: $primary;
     font-weight: bold;
     margin-bottom: 5px;
+  }
+}
+.services-thumb:hover {
+  :deep(.v-img__img--cover) {
+    filter: grayscale(0%);
   }
 }
 </style>
