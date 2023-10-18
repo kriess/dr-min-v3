@@ -18,6 +18,7 @@ const props = defineProps<{
 */
 
 // reactive data
+const dialog = ref(false)
 const isValid = ref(false)
 const lastName = ref('')
 const firstName = ref('')
@@ -42,6 +43,7 @@ const changeView = (view) => {
   console.log(view)
 }
 const sendEmail = async (e) => {
+  e.preventDefault()
   console.log('submit form', e)
   const formValues = {
     lastName: lastName.value,
@@ -50,7 +52,7 @@ const sendEmail = async (e) => {
     phone: phone.value,
     message: message.value,
   }
-  console.log(formValues)
+  console.log('data to post', formValues)
 
   const requestOptions = {
     method: 'POST',
@@ -59,7 +61,12 @@ const sendEmail = async (e) => {
   }
   const response = await fetch('/cgi-bin/send-email.php', requestOptions)
   const data = await response.json()
-  console.log(data)
+  console.log('res data', data)
+
+  if (response.ok) {
+    message.value = ''
+    dialog.value = true
+  }
 }
 </script>
 
@@ -165,6 +172,22 @@ const sendEmail = async (e) => {
         -->
       </div>
     </v-form>
+
+    <v-dialog
+      v-if="dialog"
+      v-model="dialog"
+      width="200"
+      class="photo-gallery-dialog"
+    >
+      <v-card>
+        <v-card-text>
+          You're email was successfully sent. Thank you!
+        </v-card-text>
+        <v-card-actions>
+          <v-btn color="primary" block @click="dialog = false">Close</v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
   </div>
 </template>
 
