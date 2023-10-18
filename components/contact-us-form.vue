@@ -41,6 +41,26 @@ const galleries = computed(() => {
 const changeView = (view) => {
   console.log(view)
 }
+const sendEmail = async (e) => {
+  console.log('submit form', e)
+  const formValues = {
+    lastName: lastName.value,
+    firstName: firstName.value,
+    email: email.value,
+    phone: phone.value,
+    message: message.value,
+  }
+  console.log(formValues)
+
+  const requestOptions = {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(formValues),
+  }
+  const response = await fetch('/cgi-bin/send-email.php', requestOptions)
+  const data = await response.json()
+  console.log(data)
+}
 </script>
 
 <template>
@@ -49,7 +69,7 @@ const changeView = (view) => {
       <img src="/img/misc/contact-us-bg.webp" class="contact-us-bg" />
     </div>
 
-    <v-form ref="form" v-model="isValid">
+    <v-form ref="form" v-model="isValid" @submit="sendEmail">
       <div class="form-fields-grid">
         <v-text-field
           base-color="#fff"
@@ -95,7 +115,54 @@ const changeView = (view) => {
           :rules="[rules.length(10)]"
           auto-grow
         ></v-textarea>
+        <v-btn type="submit">Submit</v-btn>
+        <!--
+        <v-text-field
+          base-color="#fff"
+          v-model="firstName"
+          label="First Name*"
+          placeholder="First Name"
+          persistent-placeholder
+          variant="outlined"
+          :rules="[rules.required]"
+        ></v-text-field>
+        <v-text-field
+          v-model="lastName"
+          label="Last Name*"
+          placeholder="Last Name"
+          persistent-placeholder
+          variant="outlined"
+          :rules="[rules.required]"
+        ></v-text-field>
+        <v-text-field
+          v-model="email"
+          label="Email*"
+          placeholder="Email"
+          persistent-placeholder
+          variant="outlined"
+          :rules="[rules.email]"
+          color="primary"
+          type="email"
+        ></v-text-field>
+        <v-text-field
+          v-model="phone"
+          label="Phone"
+          placeholder="Phone"
+          persistent-placeholder
+          variant="outlined"
+        ></v-text-field>
+        <v-textarea
+          class="message-container"
+          v-model="message"
+          label="Message*"
+          placeholder="Message"
+          persistent-placeholder
+          variant="outlined"
+          :rules="[rules.length(10)]"
+          auto-grow
+        ></v-textarea>
         <v-btn :disabled="!isValid">Submit</v-btn>
+        -->
       </div>
     </v-form>
   </div>
