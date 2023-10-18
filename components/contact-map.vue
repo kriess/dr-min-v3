@@ -1,28 +1,47 @@
 <script lang="ts" setup>
+const mapRef = ref<HTMLElement | null>(null)
+let config = useRuntimeConfig()
+let map
+let marker
+
 // lifecycle hooks
-onMounted(() => {
-  let map
-  async function initMap() {
-    const latLong = { lat: 34.4099, lng: -118.55489 }
-    const { Map } = await google.maps.importLibrary('maps')
-    map = new Map(document.getElementById('map'), {
-      center: latLong,
-      zoom: 18,
-    })
-    new google.maps.Marker({
-      position: latLong,
-      map,
-      title: 'Hello World!',
-    })
-  }
-  initMap()
+onMounted(async () => {
+  setTimeout(() => {
+    async function initMap() {
+      const domEl = mapRef.value // document.getElementById('map')
+      console.log('initMap: dom el', domEl)
+
+      const position = { lat: 34.14752, lng: -118.139075 }
+      // Request needed libraries.
+      //@ts-ignore
+      const { Map } = await google.maps.importLibrary('maps')
+      const { AdvancedMarkerElement } =
+        await google.maps.importLibrary('marker')
+
+      map = new Map(domEl, {
+        zoom: 16,
+        center: position,
+        mapId: 'drcarolinemin',
+      })
+      marker = new AdvancedMarkerElement({
+        map: map,
+        position: position,
+        title: 'essentia ESTHETICS',
+      })
+    }
+    initMap()
+  }, 1000)
+})
+onUnmounted(() => {
+  map = null
+  marker = null
 })
 </script>
 
 <template>
   <div class="contact-map">
-    <div class="mb-20">
-      <div id="map" ref="map" class="map"></div>
+    <div class="map-container">
+      <div id="map" ref="mapRef" class="map"></div>
     </div>
   </div>
 </template>
@@ -30,10 +49,15 @@ onMounted(() => {
 <style lang="scss" scoped>
 .contact-map {
   position: relative;
-  min-height: 500px;
-  border: 1px solid #c00;
+  min-height: 400px;
+  .map-container {
+    background-color: $primary;
+    padding: 0 5vw 5vw 5vw;
+  }
   .map {
-    aspect-ratio: 1/1;
+    aspect-ratio: 16/9;
+    border-radius: $main-border-radius;
+    overflow: hidden;
   }
 }
 </style>

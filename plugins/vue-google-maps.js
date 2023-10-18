@@ -1,15 +1,20 @@
 export default defineNuxtPlugin((nuxtApp) => {
-  let config = useRuntimeConfig()
   useHead({
+    style: [
+      {
+        src: '/styles/google.css',
+      },
+    ],
     script: [
       {
         src: '/scripts/map-init.js',
         async: false,
       },
       {
-        src: `https://maps.googleapis.com/maps/api/js?key=${config.public.GOOGLE_MAPS_API_KEY}&libraries=places,drawing,geometry&callback=initMap`,
+        src: 'https://www.google.com/recaptcha/api.js',
         async: false,
       },
+      { src: 'https://use.fontawesome.com/releases/v6.2.0/js/all.js' },
     ],
   })
 })

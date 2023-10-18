@@ -1,23 +1,13 @@
 <script lang="ts" setup>
-// https://vuejs.org/guide/typescript/composition-api.html#typing-component-props
 interface Props {
   title?: string
 }
-
-// props
 const props = withDefaults(defineProps<Props>(), {
   title: 'Page Title',
 })
 
-/*
-Another props
-const props = defineProps<{
-  gallery: object
-  caseNumber: number
-}>()
-*/
-
 // reactive data
+const recaptchaRef = ref<HTMLElement | null>(null)
 const dialog = ref(false)
 const isValid = ref(false)
 const lastName = ref('')
@@ -31,6 +21,8 @@ const rules = ref({
     (v || '').length >= len ||
     `Invalid character length, at least ${len} characters required.`,
   required: (v) => (v || '').length >= 1 || `This field is required.`,
+  max: (len) => (v) =>
+    (v || '').length < 50 || `This field must be less than ${len} characters.`,
 })
 
 // computed
@@ -46,6 +38,7 @@ const sendEmail = async (e) => {
   e.preventDefault()
   console.log('submit form', e)
   const formValues = {
+    random: '987654321',
     lastName: lastName.value,
     firstName: firstName.value,
     email: email.value,
@@ -68,6 +61,18 @@ const sendEmail = async (e) => {
     dialog.value = true
   }
 }
+
+// lifecycle hooks
+onMounted(async () => {
+  setTimeout(() => {
+    console.log('render recaptcha')
+    const domEl = recaptchaRef.value
+    console.log(domEl)
+    grecaptcha.render(domEl, {
+      sitekey: '6LdLkK8oAAAAAMdq0ylLL9-qvGvBsKZugMxxdzzp',
+    })
+  }, 1000)
+})
 </script>
 
 <template>
@@ -85,7 +90,7 @@ const sendEmail = async (e) => {
           placeholder="First Name"
           persistent-placeholder
           variant="outlined"
-          :rules="[rules.required]"
+          :rules="[rules.required, rules.max(30)]"
         ></v-text-field>
         <v-text-field
           v-model="lastName"
@@ -93,7 +98,7 @@ const sendEmail = async (e) => {
           placeholder="Last Name"
           persistent-placeholder
           variant="outlined"
-          :rules="[rules.required]"
+          :rules="[rules.required, rules.max(30)]"
         ></v-text-field>
         <v-text-field
           v-model="email"
@@ -101,8 +106,7 @@ const sendEmail = async (e) => {
           placeholder="Email"
           persistent-placeholder
           variant="outlined"
-          :rules="[rules.email]"
-          color="primary"
+          :rules="[rules.email, rules.max(50)]"
           type="email"
         ></v-text-field>
         <v-text-field
@@ -110,6 +114,7 @@ const sendEmail = async (e) => {
           label="Phone"
           placeholder="Phone"
           persistent-placeholder
+          :rules="[rules.required, rules.max(20)]"
           variant="outlined"
         ></v-text-field>
         <v-textarea
@@ -119,10 +124,24 @@ const sendEmail = async (e) => {
           placeholder="Message"
           persistent-placeholder
           variant="outlined"
-          :rules="[rules.length(10)]"
+          :rules="[rules.length(10), rules.max(500)]"
           auto-grow
         ></v-textarea>
-        <v-btn type="submit">Submit</v-btn>
+        <v-btn type="submit" :disabled="!isValid">Submit</v-btn>
+        <!--
+        https://developers.google.com/recaptcha/docs/invisible#js_api
+        -->
+        <!--
+        <div
+          id="recaptcha"
+          class="g-recaptcha"
+          data-sitekey="6LdLkK8oAAAAAMdq0ylLL9-qvGvBsKZugMxxdzzp"
+          data-callback="onSubmit"
+          data-size="invisible"
+        ></div>
+        -->
+
+        <div id="html_element" ref="recaptchaRef"></div>
       </div>
     </v-form>
 
