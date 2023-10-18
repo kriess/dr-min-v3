@@ -54,9 +54,8 @@ useHead({
       <v-col class="hidden-sm-and-down" cols="12" sm="4">
         <v-sheet class="banner-item">
           <ul>
-            <li>Hospital Name</li>
-            <li>50 Bellefontaine Street, Suite #104</li>
-            <li>Pasadena, CA 91105</li>
+            <li>547 E Union St.</li>
+            <li>Pasadena, California 91101</li>
           </ul>
         </v-sheet>
       </v-col>
@@ -70,7 +69,7 @@ useHead({
         <v-sheet class="banner-item">
           <ul>
             <li>Tel: 626-304-6300</li>
-            <li>info@mysite.com</li>
+            <li>info@drcarolinemin.com</li>
           </ul>
         </v-sheet>
       </v-col>
@@ -104,14 +103,13 @@ useHead({
       </div>
 
       <ul class="mt-10 text-center">
-        <li>Hospital Name</li>
-        <li>50 Bellefontaine Street, Suite #104</li>
-        <li>Pasadena, CA 91105</li>
+        <li>547 E Union St.</li>
+        <li>Pasadena, California 91101</li>
       </ul>
 
       <ul class="mt-10 text-center">
         <li>Tel: 626-304-6300</li>
-        <li>info@mysite.com</li>
+        <li>info@drcarolinemin.com</li>
       </ul>
     </v-navigation-drawer>
 

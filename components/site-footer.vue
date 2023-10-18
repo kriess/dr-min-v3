@@ -29,7 +29,7 @@ const year = computed(() => {
                   <ul>
                     <li>547 E Union St.</li>
                     <li>Pasadena, California 91101</li>
-                    <li>info@mysite.com</li>
+                    <li>info@drcarolinemin.com</li>
                     <li class="separator"></li>
                     <li>Tel: 123-456-7890</li>
                     <li>Fax: 123-456-7890</li>
@@ -40,7 +40,7 @@ const year = computed(() => {
                 <!--                    <li>Saint Francis Hospital</li>-->
                 <!--                    <li>500 Terry Francine Street</li>-->
                 <!--                    <li>San Francisco, CA 94158</li>-->
-                <!--                    <li>info@mysite.com</li>-->
+                <!--                    <li>info@drcarolinemin.com</li>-->
                 <!--                    <li class="separator"></li>-->
                 <!--                    <li>Tel: 123-456-7890</li>-->
                 <!--                    <li>Fax: 123-456-7890</li>-->
