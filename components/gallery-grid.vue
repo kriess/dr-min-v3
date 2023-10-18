@@ -46,7 +46,7 @@ const galleries = computed(() => {
   width: auto;
   display: grid;
   grid-gap: 20px;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto;
   padding-bottom: 5vw;
 }

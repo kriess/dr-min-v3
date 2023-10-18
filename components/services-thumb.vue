@@ -55,6 +55,7 @@ const dialog = ref(false)
   :deep(.v-img__img--cover) {
     transition: 0.6s;
     filter: grayscale(100%);
+    opacity: 0.7;
   }
   .procedure-title {
     font-size: 130%;
@@ -66,6 +67,7 @@ const dialog = ref(false)
 .services-thumb:hover {
   :deep(.v-img__img--cover) {
     filter: grayscale(0%);
+    opacity: 1;
   }
 }
 </style>
