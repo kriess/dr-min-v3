@@ -81,6 +81,7 @@ const goTo = (view: string) => {
   width: auto;
   .slide-img {
     width: 100%;
+    border-radius: $main-border-radius;
   }
   .carousel-item {
     position: relative;
