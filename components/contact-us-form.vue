@@ -123,53 +123,6 @@ const sendEmail = async (e) => {
           auto-grow
         ></v-textarea>
         <v-btn type="submit">Submit</v-btn>
-        <!--
-        <v-text-field
-          base-color="#fff"
-          v-model="firstName"
-          label="First Name*"
-          placeholder="First Name"
-          persistent-placeholder
-          variant="outlined"
-          :rules="[rules.required]"
-        ></v-text-field>
-        <v-text-field
-          v-model="lastName"
-          label="Last Name*"
-          placeholder="Last Name"
-          persistent-placeholder
-          variant="outlined"
-          :rules="[rules.required]"
-        ></v-text-field>
-        <v-text-field
-          v-model="email"
-          label="Email*"
-          placeholder="Email"
-          persistent-placeholder
-          variant="outlined"
-          :rules="[rules.email]"
-          color="primary"
-          type="email"
-        ></v-text-field>
-        <v-text-field
-          v-model="phone"
-          label="Phone"
-          placeholder="Phone"
-          persistent-placeholder
-          variant="outlined"
-        ></v-text-field>
-        <v-textarea
-          class="message-container"
-          v-model="message"
-          label="Message*"
-          placeholder="Message"
-          persistent-placeholder
-          variant="outlined"
-          :rules="[rules.length(10)]"
-          auto-grow
-        ></v-textarea>
-        <v-btn :disabled="!isValid">Submit</v-btn>
-        -->
       </div>
     </v-form>
 
@@ -193,6 +146,7 @@ const sendEmail = async (e) => {
 
 <style lang="scss" scoped>
 .contact-us-form {
+  overflow: hidden;
   position: relative;
   padding: 3vw 10vw;
   color: #fff;

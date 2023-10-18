@@ -29,6 +29,9 @@ const galleries = computed(() => {
 const changeView = (view) => {
   console.log(view)
 }
+
+// lifecycle hooks
+onMounted(() => {})
 </script>
 
 <template>

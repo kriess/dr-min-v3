@@ -49,7 +49,9 @@ export default defineNuxtConfig({
     },
   },
 
-  runtimeConfig: {},
+  runtimeConfig: {
+    public: { GOOGLE_MAPS_API_KEY: 'AIzaSyDQZDKJBwh9Z3JDV5dVTzUgFx3Ok-Oeysk' },
+  },
 
   sourcemap: {
     server: false,

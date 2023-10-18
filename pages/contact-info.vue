@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import ContactUsForm from '~/components/contact-us-form.vue'
+import ContactMap from '~/components/contact-map.vue'
 
 const pageTitle = 'Contact Us'
 useHead({
@@ -15,6 +16,7 @@ useHead({
     ></PageTopVisuals>
 
     <contact-us-form></contact-us-form>
+    <contact-map></contact-map>
   </section>
 </template>
 

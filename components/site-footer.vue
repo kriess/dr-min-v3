@@ -53,16 +53,6 @@ const year = computed(() => {
         <v-row no-gutters class="copyright">
           <v-col cols="12" sm="12">
             <div class="copy">
-              <!-- <p>
-          Plastic Surgeon Dr. Caroline Min, M.D., serving Pasadena, Los Angeles,
-          Beverly Hills, Glendale, Burbank, Studio City, La Canada, Arcadia,
-          Altadena, San Gabriel, Alhambra, Monrovia, Duarte, Glendora, Covina,
-          Azusa, and the surrounding areas.
-        </p>
-        <p>
-          Dr. Caroline Min, M.D. | 50 Bellefontaine Street, Suite #104 Pasadena,
-          CA 91105 | Tel: 626-304-6300 | www.drcarolinemin.com
-        </p> -->
               &copy; {{ year }}
               Caroline Min, M.D. All Rights Reserved.
             </div>
