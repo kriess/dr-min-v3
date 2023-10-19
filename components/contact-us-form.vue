@@ -36,43 +36,57 @@ const changeView = (view) => {
 }
 const sendEmail = async (e) => {
   e.preventDefault()
-  console.log('submit form', e)
-  const formValues = {
-    random: '987654321',
-    lastName: lastName.value,
-    firstName: firstName.value,
-    email: email.value,
-    phone: phone.value,
-    message: message.value,
-  }
-  console.log('data to post', formValues)
 
-  const requestOptions = {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(formValues),
-  }
-  const response = await fetch('/cgi-bin/send-email.php', requestOptions)
-  const data = await response.json()
-  console.log('res data', data)
+  grecaptcha.enterprise.ready(async () => {
+    const token = await grecaptcha.enterprise.execute(
+      '6LepurAoAAAAAAO-f4JhmuJ5P7JA3uZ2N347jn0Q',
+      { action: 'SUBMIT_EMAIL' },
+    )
+    // IMPORTANT: The 'token' that results from execute is an encrypted response sent by
+    // reCAPTCHA Enterprise to the end user's browser.
+    // This token must be validated by creating an assessment.
+    // See https://cloud.google.com/recaptcha-enterprise/docs/create-assessment
+    console.log('token', token)
 
-  if (response.ok) {
-    message.value = ''
-    dialog.value = true
-  }
+    console.log('submit form', e)
+    const formValues = {
+      token: token,
+      random: '987654321',
+      lastName: lastName.value,
+      firstName: firstName.value,
+      email: email.value,
+      phone: phone.value,
+      message: message.value,
+    }
+    console.log('data to post', formValues)
+
+    const requestOptions = {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(formValues),
+    }
+    const response = await fetch('/cgi-bin/send-email.php', requestOptions)
+    const data = await response.json()
+    console.log('res data', data)
+
+    if (response.ok) {
+      message.value = ''
+      dialog.value = true
+    }
+  })
 }
 
 // lifecycle hooks
-onMounted(async () => {
-  setTimeout(() => {
-    console.log('render recaptcha')
-    const domEl = recaptchaRef.value
-    console.log(domEl)
-    grecaptcha.render(domEl, {
-      sitekey: '6LdLkK8oAAAAAMdq0ylLL9-qvGvBsKZugMxxdzzp',
-    })
-  }, 1000)
-})
+// onMounted(async () => {
+//   setTimeout(() => {
+//     console.log('render recaptcha')
+//     const domEl = recaptchaRef.value
+//     console.log(domEl)
+//     grecaptcha.render(domEl, {
+//       sitekey: '6LdLkK8oAAAAAMdq0ylLL9-qvGvBsKZugMxxdzzp',
+//     })
+//   }, 1000)
+// })
 </script>
 
 <template>
@@ -127,7 +141,8 @@ onMounted(async () => {
           :rules="[rules.length(10), rules.max(500)]"
           auto-grow
         ></v-textarea>
-        <v-btn type="submit" :disabled="!isValid">Submit</v-btn>
+        <v-btn type="submit">Submit</v-btn>
+        <!--        <v-btn type="submit" :disabled="!isValid">Submit</v-btn>-->
         <!--
         https://developers.google.com/recaptcha/docs/invisible#js_api
         -->

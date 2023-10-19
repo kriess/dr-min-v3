@@ -11,10 +11,9 @@ export default defineNuxtPlugin((nuxtApp) => {
         async: false,
       },
       {
-        src: 'https://www.google.com/recaptcha/api.js',
-        async: false,
+        src: 'https://www.google.com/recaptcha/enterprise.js?render=6LepurAoAAAAAAO-f4JhmuJ5P7JA3uZ2N347jn0Q',
+        async: true,
       },
-      { src: 'https://use.fontawesome.com/releases/v6.2.0/js/all.js' },
     ],
   })
 })

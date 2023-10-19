@@ -38,3 +38,21 @@
   // Use the 'v' parameter to indicate the version to use (weekly, beta, alpha, etc.).
   // Add other bootstrap parameters as needed, using camel case.
 })
+
+/**
+POST https://recaptchaenterprise.googleapis.com/v1/projects/PROJECT_ID/assessments?key=API_KEY
+
+{
+  "event": {
+    "token": "TOKEN",
+    "siteKey": "6LepurAoAAAAAAO-f4JhmuJ5P7JA3uZ2N347jn0Q",
+    "expectedAction": "SUBMIT_EMAIL"
+  }
+}
+
+  curl -X POST \
+    -H "Content-Type: application/json; charset=utf-8" \
+    -d @request.json \
+    "https://recaptchaenterprise.googleapis.com/v1/projects/PROJECT_ID/assessments?key=API_KEY"
+
+ **/

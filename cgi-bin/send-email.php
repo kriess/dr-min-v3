@@ -3,7 +3,8 @@ $referrer = $_SERVER['HTTP_REFERER'];
 $domain = "drcarolinemin.com";
 $ua = $_SERVER['HTTP_USER_AGENT'];
 
-function is_bot($sistema){
+function is_bot($sistema)
+{
     $bots = array(
          'Googlebot'
         , 'Baiduspider'
@@ -859,7 +860,32 @@ function is_bot($sistema){
     return false;
 }
 
-if ( strpos( $referrer, $domain ) !== false && !is_bot($ua) ) {
+function httpPost($data)
+{
+    $url = 'https://www.google.com/recaptcha/api/siteverify';
+    $post = [
+        'secret' => '6LepurAoAAAAAOMLoueYY0w0cmeqR5yuxKSo4Kc3',
+        'response' => $data->token
+    ];
+    $curl = curl_init();
+    curl_setopt($curl, CURLOPT_URL, $url);
+    curl_setopt($curl, CURLOPT_POST, true);
+    curl_setopt($curl, CURLOPT_POSTFIELDS, $post);
+    curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+    $response = curl_exec($curl);
+    curl_close($curl);
+    return json_decode( $response );
+}
+//
+function createGoogleJson($data)
+{
+    $object = new stdClass();
+    $object->secret = "6LepurAoAAAAAOMLoueYY0w0cmeqR5yuxKSo4Kc3";
+    $object->response =  $data->token;
+    return json_encode( $object );
+}
+
+if ( strpos( $referrer, $domain ) !== false && !is_bot($ua)) {
     $error = '';
     $sendToEmail = 'contact.us@drcarolinemin.com';
     // $sendToEmail = 'ken_riess@yahoo.com';
@@ -869,8 +895,10 @@ if ( strpos( $referrer, $domain ) !== false && !is_bot($ua) ) {
     if ($data->random !== '987654321') {
         $data->error = 'Random failed';
     }
+    $data->postRes = httpPost($data);
     $data->sendToEmail  = $sendToEmail;
     $data->referrer     = $referrer;
+    $data-> g-recaptcha-response;
     $data->isBot = is_bot($ua);
     $data->ua   = $ua;
     $firstName  = htmlspecialchars(stripslashes(trim( $data->firstName )));
@@ -897,7 +925,7 @@ if ( strpos( $referrer, $domain ) !== false && !is_bot($ua) ) {
     }
 
     // validation
-    if (strlen($error) > 0) {
+    if (strlen($error) > 0 || ) {
         $data->error = $error;
     } else {
         // use wordwrap() if lines are longer than 70 characters
@@ -911,7 +939,7 @@ if ( strpos( $referrer, $domain ) !== false && !is_bot($ua) ) {
         $bdy .= "Message: " . $message . "\n\n";
 
         // send email
-        // mail($sendToEmail, "Message from drcarolinemin.com", $bdy, $headers);
+        mail($sendToEmail, "Message from drcarolinemin.com", $bdy, $headers);
     }
 
     header('Content-Type: application/json; charset=utf-8');
