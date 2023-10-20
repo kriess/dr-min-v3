@@ -24,6 +24,18 @@ useHead({
       href: 'https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap',
     },
   ],
+  meta: [
+    {
+      name: 'description',
+      content:
+        'Plastic Surgery Pasadena - Dr. Caroline Min, M.D., specializes in plastic surgery procedures serving Pasadena, Los Angeles, Beverly Hills, and the surrounding areas.',
+    },
+    {
+      name: 'keywords',
+      content:
+        'Pasadena, Plastic Surgery, Plastic Surgeon, Dr Caroline Min MD, Facelift, Tummy Tuck, Abdominoplasty, Eyelid Surgery, Eyelid Lift, Brow Lift, Blepharoplasty, Breast Augmentation, Liposuction, Facial Liposuction, Chin Surgery, Buccal Fat Removal, Inverted Nipple Correction, Labiaplasty, Mommy Makeover, Arm Lift, Thigh Lift, Otoplasty, Rhinoplasty, Nose Surgery,  Breast Lift, Breast Reduction, Male Breast Reduction, BOTOX, Microdermabrasion, Neck Lift, Buttock Augmentation, Body Contouring, Laser Hair Removal, Female Plastic Surgeon',
+    },
+  ],
 })
 </script>
 

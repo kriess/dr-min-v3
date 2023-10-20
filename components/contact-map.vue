@@ -19,7 +19,7 @@ onMounted(async () => {
         await google.maps.importLibrary('marker')
 
       map = new Map(domEl, {
-        zoom: 16,
+        zoom: 14,
         center: position,
         mapId: 'drcarolinemin',
       })

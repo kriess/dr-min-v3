@@ -37,6 +37,12 @@ const changeView = (view) => {
 const sendEmail = async (e) => {
   e.preventDefault()
 
+  const clientId = grecaptcha.render('inline-badge', {
+    sitekey: '',
+    badge: 'inline',
+    size: 'invisible',
+  })
+
   grecaptcha.enterprise.ready(async () => {
     const token = await grecaptcha.enterprise.execute(
       '6LepurAoAAAAAAO-f4JhmuJ5P7JA3uZ2N347jn0Q',
@@ -148,17 +154,6 @@ const sendEmail = async (e) => {
         <!--
         https://developers.google.com/recaptcha/docs/invisible#js_api
         -->
-        <!--
-        <div
-          id="recaptcha"
-          class="g-recaptcha"
-          data-sitekey="6LdLkK8oAAAAAMdq0ylLL9-qvGvBsKZugMxxdzzp"
-          data-callback="onSubmit"
-          data-size="invisible"
-        ></div>
-        -->
-
-        <div id="html_element" ref="recaptchaRef"></div>
       </div>
     </v-form>
 

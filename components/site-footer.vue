@@ -52,12 +52,26 @@ const year = computed(() => {
             </div>
           </v-col>
         </v-row>
-        <v-row no-gutters class="copyright">
-          <v-col cols="12" sm="12">
+        <v-row no-gutters class="copyright" align="center">
+          <v-col cols="12" sm="12" md="9">
             <div class="copy">
-              &copy; {{ year }}
-              Caroline Min, M.D. All Rights Reserved.
+              <p>
+                Plastic Surgery Pasadena - Dr. Caroline Min, M.D., specializes
+                in plastic surgery procedures serving Pasadena, Los Angeles,
+                Beverly Hills, and the surrounding areas.
+              </p>
+              <!--              <p>-->
+              <!--                Plastic Surgeon Dr. Caroline Min, M.D., serving Pasadena, Los-->
+              <!--                Angeles, Beverly Hills, Glendale, Burbank, Studio City, La-->
+              <!--                Canada, Arcadia, Altadena, San Gabriel, Alhambra, Monrovia,-->
+              <!--                Duarte, Glendora, Covina, Azusa, and the surrounding areas.-->
+              <!--              </p>-->
+              &copy;
+              {{ year }} Dr. Caroline Min, M.D. All Rights Reserved.
             </div>
+          </v-col>
+          <v-col cols="12" sm="12" md="3">
+            <div id="inline-badge"></div>
           </v-col>
         </v-row>
       </v-container>
@@ -116,12 +130,13 @@ const year = computed(() => {
   padding: 20px;
 }
 .copy {
+  font-size: 90%;
+  line-height: 1.1em;
   margin: 0 auto;
   max-width: $page-max-width;
-  text-align: center;
   width: 100%;
   p {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 }
 </style>

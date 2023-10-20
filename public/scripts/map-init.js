@@ -39,6 +39,14 @@
   // Add other bootstrap parameters as needed, using camel case.
 })
 
+function onRecaptchaLoadCallback() {
+  const clientId = grecaptcha.render('inline-badge', {
+    sitekey: '6LepurAoAAAAAAO-f4JhmuJ5P7JA3uZ2N347jn0Q',
+    badge: 'inline',
+    size: 'invisible',
+  })
+}
+
 /**
 POST https://recaptchaenterprise.googleapis.com/v1/projects/PROJECT_ID/assessments?key=API_KEY
 

@@ -23,7 +23,7 @@ const testimonials = appConfig.testimonials.slice(0, 2)
         variant="elevated"
         rounded="sm"
         size="small"
-        class="text-h6"
+        class="main-button temptext-h6"
         to="/testimonials"
       >
         Read More Testimonials

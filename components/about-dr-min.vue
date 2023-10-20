@@ -35,7 +35,7 @@
               variant="elevated"
               rounded="sm"
               size="small"
-              class="text-h6"
+              class="main-button temptext-h6"
               to="/biography"
             >
               Read More About Dr. Min
