@@ -93,14 +93,14 @@ useHead({
       >
         {{ item.title }}
       </v-btn>
-      <div class="px-4 py-2">
-        <v-icon v-if="themeIndex === 0" @click="setTheme(1)">
-          mdi-weather-sunny
-        </v-icon>
-        <v-icon v-if="themeIndex === 1" @click="setTheme(0)">
-          mdi-weather-night
-        </v-icon>
-      </div>
+      <!--      <div class="px-4 py-2">-->
+      <!--        <v-icon v-if="themeIndex === 0" @click="setTheme(1)">-->
+      <!--          mdi-weather-sunny-->
+      <!--        </v-icon>-->
+      <!--        <v-icon v-if="themeIndex === 1" @click="setTheme(0)">-->
+      <!--          mdi-weather-night-->
+      <!--        </v-icon>-->
+      <!--      </div>-->
 
       <ul class="mt-10 text-center">
         <li>547 E Union St.</li>
