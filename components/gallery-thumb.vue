@@ -60,6 +60,9 @@ const changeView = (type) => {
         <v-card-text>
           <div v-if="beforeAfter.length > 1" class="change-view-btns">
             <v-btn
+              variant="flat"
+              rounded="sm"
+              size="small"
               v-for="pic in beforeAfter"
               :key="pic.slug"
               @click="changeView(pic.slug)"

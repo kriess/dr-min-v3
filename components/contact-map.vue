@@ -49,14 +49,12 @@ onUnmounted(() => {
 <style lang="scss" scoped>
 .contact-map {
   position: relative;
-  min-height: 400px;
   .map-container {
-    background-color: $primary;
-    padding: 3vw 3vw 0 3vw;
+    padding: 0;
   }
   .map {
-    aspect-ratio: 16/9;
-    border-radius: $main-border-radius;
+    aspect-ratio: 16/14;
+    //border-radius: $main-border-radius;
     overflow: hidden;
   }
 }

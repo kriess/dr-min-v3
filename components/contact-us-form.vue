@@ -22,7 +22,7 @@ const rules = ref({
     `Invalid character length, at least ${len} characters required.`,
   required: (v) => (v || '').length >= 1 || `This field is required.`,
   max: (len) => (v) =>
-    (v || '').length < 50 || `This field must be less than ${len} characters.`,
+    (v || '').length < len || `This field must be less than ${len} characters.`,
 })
 
 // computed
@@ -138,10 +138,12 @@ const sendEmail = async (e) => {
           placeholder="Message"
           persistent-placeholder
           variant="outlined"
-          :rules="[rules.length(10), rules.max(500)]"
+          :rules="[rules.length(10), rules.max(1000)]"
           auto-grow
         ></v-textarea>
-        <v-btn type="submit">Submit</v-btn>
+        <v-btn type="submit" variant="elevated" rounded="sm" size="small">
+          Submit
+        </v-btn>
         <!--        <v-btn type="submit" :disabled="!isValid">Submit</v-btn>-->
         <!--
         https://developers.google.com/recaptcha/docs/invisible#js_api

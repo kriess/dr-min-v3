@@ -30,7 +30,14 @@
           with an exceptional experience in a warm, caring environment.
 
           <p class="mt-2 pt-10">
-            <v-btn color="primary" class="text-h6" to="/biography">
+            <v-btn
+              color="primary"
+              variant="elevated"
+              rounded="sm"
+              size="small"
+              class="text-h6"
+              to="/biography"
+            >
               Read More About Dr. Min
             </v-btn>
           </p>
@@ -44,6 +51,7 @@
 .about-dr-min {
   width: auto;
   // background-color: $light-primary;
+  background-image: url('/img/misc/rotatesliders.webp');
   padding: 50px;
   .sub-title {
     font-weight: 100;

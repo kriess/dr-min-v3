@@ -14,7 +14,6 @@ useHead({
       :title="pageTitle"
       image-src="/img/headshots/min-white-coat.jpg"
     ></PageTopVisuals>
-    <contact-map></contact-map>
     <contact-us-form></contact-us-form>
   </section>
 </template>

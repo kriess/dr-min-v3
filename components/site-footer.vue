@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import ContactMap from '~/components/contact-map.vue'
+
 const year = computed(() => {
   const today = new Date()
   return today.getFullYear()
@@ -10,7 +12,7 @@ const year = computed(() => {
     <v-footer class="site-footer">
       <v-container>
         <v-row no-gutters class="bio">
-          <v-col cols="12" sm="12" md="5" class="bio__left-col">
+          <v-col cols="12" sm="12" md="4" class="bio__left-col">
             <div class="bio__name">
               <h3 class="text-h4">Caroline Min M.D.</h3>
               <h4 class="text-h6">Board Certified Plastic Surgeon</h4>
@@ -21,31 +23,31 @@ const year = computed(() => {
               ></v-img>
             </div>
           </v-col>
-          <v-col cols="12" sm="12" md="7" class="bio__right-col">
+          <v-col cols="12" sm="12" md="4" class="bio__mid-col">
+            <div class="bio__address">
+              <div class="bio__location">
+                <!--                <div class="text-h6 text-center mb-3">Practice Location</div>-->
+                <contact-map></contact-map>
+              </div>
+            </div>
+          </v-col>
+          <v-col cols="12" sm="12" md="4" class="bio__right-col">
             <div class="bio__address">
               <div class="bio__contact">
-                <div class="text-h6">Practice Location</div>
                 <div>
                   <ul>
                     <li>547 E Union St.</li>
                     <li>Pasadena, California 91101</li>
                     <li>info@drcarolinemin.com</li>
-                    <li class="separator"></li>
                     <li>Tel: 123-456-7890</li>
-                    <li>Fax: 123-456-7890</li>
+                    <li class="separator"></li>
+                    <li>
+                      Parking spots are available in front of the office as well
+                      as street parking and paid parking lots across the street
+                      at Madison Avenue.
+                    </li>
                   </ul>
                 </div>
-                <!--                <div>-->
-                <!--                  <ul>-->
-                <!--                    <li>Saint Francis Hospital</li>-->
-                <!--                    <li>500 Terry Francine Street</li>-->
-                <!--                    <li>San Francisco, CA 94158</li>-->
-                <!--                    <li>info@drcarolinemin.com</li>-->
-                <!--                    <li class="separator"></li>-->
-                <!--                    <li>Tel: 123-456-7890</li>-->
-                <!--                    <li>Fax: 123-456-7890</li>-->
-                <!--                  </ul>-->
-                <!--                </div>-->
               </div>
             </div>
           </v-col>
@@ -73,7 +75,7 @@ const year = computed(() => {
   padding: 0;
 }
 .bio {
-  --bio-padding: 2vw 10px 2vw 10px;
+  --bio-padding: 2vw;
   background-color: $secondary;
   .asps-logo {
     margin: 10px auto 0 auto;

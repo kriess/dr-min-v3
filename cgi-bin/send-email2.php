@@ -1,7 +1,6 @@
 <?php
 $referrer = $_SERVER['HTTP_REFERER'];
 $domain = "drcarolinemin.com";
-$ua = $_SERVER['HTTP_USER_AGENT'];
 
 function httpPost($data)
 {
@@ -16,21 +15,20 @@ function httpPost($data)
     curl_setopt($curl, CURLOPT_POSTFIELDS, $post);
     curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
     $response = curl_exec($curl);
+    echo( json_encode($response) );
     curl_close($curl);
     return json_decode( $response );
 }
 
-if ( strpos( $referrer, $domain ) !== false ) {
+if ( strpos( $referrer, $domain ) !== false {
+    $ua = $_SERVER['HTTP_USER_AGENT'];
     $error = '';
-    $sendToEmail = 'info@drcarolinemin.com';
-    // $sendToEmail = 'ken_riess@yahoo.com';
+    // $sendToEmail = 'info@drcarolinemin.com';
+    $sendToEmail = 'ken_riess@yahoo.com';
     // $sendToEmail = 'carolineminmd@gmail.com';
 
     $data = json_decode(file_get_contents("php://input"));
-    if ($data->random !== '987654321') {
-        $data->error = 'Random failed';
-    }
-    $data->postRes = httpPost($data);
+    // $data->postRes = httpPost($data);
     $data->sendToEmail  = $sendToEmail;
     $data->referrer     = $referrer;
     $data->ua   = $ua;
@@ -47,9 +45,9 @@ if ( strpos( $referrer, $domain ) !== false ) {
     if(!preg_match("/^[A-Za-z .'-]+$/", $lastName)){
       $error = 'Invalid name';
     }
-//     if(!preg_match("/^[A-Za-z .'-]+$/", $phone)){
-//       $error = 'Invalid phone';
-//     }
+    if(!preg_match("/^[A-Za-z .'-]+$/", $phone)){
+      $error = 'Invalid phone';
+    }
     if(!preg_match("/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/", $email)){
       $error = 'Invalid email';
     }
@@ -58,7 +56,7 @@ if ( strpos( $referrer, $domain ) !== false ) {
     }
 
     // validation
-    if (strlen($error) > 0) {
+    if (strlen($error) > 0 || ) {
         $data->error = $error;
     } else {
         // use wordwrap() if lines are longer than 70 characters
@@ -68,9 +66,8 @@ if ( strpos( $referrer, $domain ) !== false ) {
         $bdy .= "Email: " . $email . "\n";
         $bdy .= "Phone: " . $phone . "\n\n";
         $bdy .= "Message: " . $message . "\n\n";
-
         // send email
-        mail($sendToEmail, "Message from drcarolinemin.com", $bdy, $headers);
+        // mail($sendToEmail, "Message from drcarolinemin.com", $bdy, $headers);
     }
 
     header('Content-Type: application/json; charset=utf-8');

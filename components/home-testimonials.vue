@@ -18,7 +18,14 @@ const testimonials = appConfig.testimonials.slice(0, 2)
     </div>
 
     <p class="mt-1 pt-10 text-center">
-      <v-btn color="" class="text-h6" to="/testimonials">
+      <v-btn
+        color=""
+        variant="elevated"
+        rounded="sm"
+        size="small"
+        class="text-h6"
+        to="/testimonials"
+      >
         Read More Testimonials
       </v-btn>
     </p>

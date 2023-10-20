@@ -70,7 +70,16 @@ const goTo = (view: string) => {
     </VCarousel>
 
     <p class="py-3 text-center">
-      <v-btn color="" class="text-h6" to="/services">View All Services</v-btn>
+      <v-btn
+        color=""
+        variant="elevated"
+        rounded="sm"
+        size="small"
+        class="text-h6"
+        to="/services"
+      >
+        View All Services
+      </v-btn>
     </p>
   </div>
 </template>
