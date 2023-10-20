@@ -887,7 +887,7 @@ function createGoogleJson($data)
 
 if ( strpos( $referrer, $domain ) !== false && !is_bot($ua)) {
     $error = '';
-    $sendToEmail = 'contact.us@drcarolinemin.com';
+    $sendToEmail = 'info@drcarolinemin.com';
     // $sendToEmail = 'ken_riess@yahoo.com';
     // $sendToEmail = 'carolineminmd@gmail.com';
 

@@ -22,15 +22,15 @@ const slides = ref([
     href: '/services?section=breast',
   },
   {
-    text: 'Body Body Body Body Body',
-    imageSrc: '/img/services/carousel/body.webp',
+    text: 'Body Contouring & Makeovers',
+    imageSrc: '/img/services/carousel/body.jpg',
     href: '/services?section=body',
   },
-  {
-    text: 'Restorative & Cosmetic',
-    imageSrc: '/img/services/carousel/skin.webp',
-    href: '/services?section=skin',
-  },
+  // {
+  //   text: 'Restorative & Cosmetic',
+  //   imageSrc: '/img/services/carousel/skin.webp',
+  //   href: '/services?section=skin',
+  // },
 ])
 const cycleInterval = ref(6000)
 
@@ -46,9 +46,10 @@ const goTo = (view: string) => {
 </script>
 
 <template>
-  <div class="sevices-carousel">
-    <h1 class="text-h2 text-center mb-10 section-title">Services</h1>
+  <div class="services-carousel">
+    <!--    <h1 class="text-h2 text-center mb-10 section-title">Services</h1>-->
     <VCarousel
+      class="carousel"
       cycle
       :interval="cycleInterval"
       height="auto"
@@ -68,20 +69,26 @@ const goTo = (view: string) => {
       </VCarouselItem>
     </VCarousel>
 
-    <p class="mt-1 pt-10 text-center">
+    <p class="py-3 text-center">
       <v-btn color="" class="text-h6" to="/services">View All Services</v-btn>
     </p>
   </div>
 </template>
 
 <style lang="scss" scoped>
-.sevices-carousel {
-  padding: 5vw;
+.services-carousel {
+  border-radius: $main-border-radius $main-border-radius 0 0;
+  padding: 3px;
   background-color: $primary;
   width: auto;
   .slide-img {
     width: 100%;
     border-radius: $main-border-radius;
+  }
+  .carousel {
+    :deep(.v-btn) {
+      opacity: 0.4;
+    }
   }
   .carousel-item {
     position: relative;

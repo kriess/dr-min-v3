@@ -180,6 +180,7 @@ const sendEmail = async (e) => {
 
 <style lang="scss" scoped>
 .contact-us-form {
+  border-radius: 0 0 $main-border-radius $main-border-radius;
   overflow: hidden;
   position: relative;
   padding: 3vw 10vw;

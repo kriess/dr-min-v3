@@ -4,7 +4,7 @@
 
 <template>
   <div class="about-dr-min">
-    <h1 class="text-h2 text-center mb-10">Meet Dr. Min</h1>
+    <!--    <h1 class="text-h2 text-center mb-10">Welcome to Our Site</h1>-->
     <div class="container">
       <v-row>
         <v-col cols="12" sm="12" md="4" class="text-center">
@@ -17,6 +17,8 @@
         </v-col>
         <v-col cols="12" sm="12" md="1"></v-col>
         <v-col cols="12" sm="12" md="7">
+          <div class="sub-title">About</div>
+          <div class="main-title">Dr. Caroline Min</div>
           Dr. Caroline Min is a board certified plastic surgeon specializing in
           cosmetic surgery. She has completed additional fellowship training in
           aesthetic surgery and has the skills and expertise to help you achieve
@@ -27,7 +29,7 @@
           involved cosmetic surgery, our office strives to provide each patient
           with an exceptional experience in a warm, caring environment.
 
-          <p class="mt-10 pt-10">
+          <p class="mt-2 pt-10">
             <v-btn color="primary" class="text-h6" to="/biography">
               Read More About Dr. Min
             </v-btn>
@@ -41,8 +43,28 @@
 <style lang="scss" scoped>
 .about-dr-min {
   width: auto;
-  background-color: $light-primary;
+  // background-color: $light-primary;
   padding: 50px;
+  .sub-title {
+    font-weight: 100;
+    color: #333;
+    font-family: sans-serif;
+    font-size: clamp(0.5px, 12px, 100vw);
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: left;
+    letter-spacing: 1em;
+    line-height: 1em;
+  }
+  .main-title {
+    color: $primary;
+    font-size: clamp(0.5px, 40px, 100vw);
+    font-weight: bold;
+    // margin-bottom: 20px;
+    text-decoration: none;
+    text-align: left;
+    line-height: 2em;
+  }
   .title {
     text-align: center;
   }

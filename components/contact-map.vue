@@ -52,7 +52,7 @@ onUnmounted(() => {
   min-height: 400px;
   .map-container {
     background-color: $primary;
-    padding: 0 5vw 5vw 5vw;
+    padding: 3vw 3vw 0 3vw;
   }
   .map {
     aspect-ratio: 16/9;
