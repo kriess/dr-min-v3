@@ -5,7 +5,7 @@ const testimonials = appConfig.testimonials.slice(0, 2)
 
 <template>
   <div class="home-testimonials">
-    <h1 class="text-h2 text-center mb-10 section-title">Testimonials</h1>
+    <h1 class="text-center mb-10 section-title">Testimonials</h1>
 
     <div class="testimonials-grid">
       <TestimonialText
@@ -38,6 +38,7 @@ const testimonials = appConfig.testimonials.slice(0, 2)
   }
 }
 .section-title {
+  font-size: min(10vw, 50px);
   color: $text-on-dark;
 }
 </style>
