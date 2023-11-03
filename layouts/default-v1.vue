@@ -74,7 +74,7 @@ useHead({
         <v-col class="hidden-sm-and-down" cols="12" sm="4">
           <v-sheet class="py-10">
             <ul>
-              <li>Tel: 626-304-6300</li>
+              <li>Tel: 6-304-6300</li>
               <li>info@drcarolinemin.com</li>
             </ul>
           </v-sheet>

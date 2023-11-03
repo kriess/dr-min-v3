@@ -80,8 +80,8 @@ useHead({
       <v-col class="hidden-sm-and-down" cols="12" sm="4">
         <v-sheet class="banner-item">
           <ul>
-            <li>Tel: 626-304-6300</li>
-            <li>info@drcarolinemin.com</li>
+            <li>Tel: 626-737-9001</li>
+            <li>Fax: 626-737-9020</li>
           </ul>
         </v-sheet>
       </v-col>
