@@ -116,3 +116,5 @@ sw.*
 
 # service worker for nuxt pwa
 sw.*
+
+.output
