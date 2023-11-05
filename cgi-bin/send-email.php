@@ -22,7 +22,8 @@ function httpPost($data)
 
 if ( strpos( $referrer, $domain ) !== false ) {
     $error = '';
-    $sendToEmail = 'info@v2.drcarolinemin.com';
+    // $sendToEmail = 'info@v2.drcarolinemin.com';
+    $sendToEmail = 'info@drcarolinemin.com';
     // $sendToEmail = 'ken_riess@yahoo.com';
     // $sendToEmail = 'carolineminmd@gmail.com';
 
