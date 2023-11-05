@@ -38,7 +38,6 @@ const year = computed(() => {
                   <ul>
                     <li>547 E Union St.</li>
                     <li>Pasadena, California 91101</li>
-                    <li>info@drcarolinemin.com</li>
                     <li>Tel: 626-737-9001</li>
                     <li class="separator"></li>
                     <li>

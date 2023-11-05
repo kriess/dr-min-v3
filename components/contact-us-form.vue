@@ -37,13 +37,14 @@ const changeView = (view) => {
 const sendEmail = async (e) => {
   e.preventDefault()
 
-  const clientId = grecaptcha.render('inline-badge', {
-    sitekey: '',
-    badge: 'inline',
-    size: 'invisible',
-  })
+  // const clientId = grecaptcha.render('inline-badge', {
+  //   sitekey: '',
+  //   badge: 'inline',
+  //   size: 'invisible',
+  // })
 
   grecaptcha.enterprise.ready(async () => {
+    console.log('dfsdfsdfsd')
     const token = await grecaptcha.enterprise.execute(
       '6LepurAoAAAAAAO-f4JhmuJ5P7JA3uZ2N347jn0Q',
       { action: 'SUBMIT_EMAIL' },
