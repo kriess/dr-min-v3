@@ -1,5 +1,20 @@
 # dr caroline min
 
+## Making Updates
+
+1. Update the PHP mailer form.
+2. Just go to cgi-bin/send-email.php, amke changes, then right click and select deployment -> upload.
+
+Or updating the general site.
+
+1. Make code changes in this repo.
+2. Run the nuxi generate command listed below.
+3. Then right click and select deployment -> upload.
+
+Go to Tools -> Deployment -> Configurations then click on Mappings tab to see where files get placed when uploaded.
+
+## General
+
 The frontend codebase using nuxt 3, vue 3, and vuetify 3.
 
 - [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction)

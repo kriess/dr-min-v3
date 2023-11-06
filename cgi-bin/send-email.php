@@ -58,7 +58,7 @@ if ( strpos( $referrer, $domain ) !== false ) {
     } else {
         // use wordwrap() if lines are longer than 70 characters
         $msg = wordwrap($msg, $message);
-        $headers = "FROM: info@v2.drcarolinemin.com\r\n";
+        $headers = "FROM: info@drcarolinemin.com\r\n";
         $bdy = "From: " . $firstName . " " . $lastName . "\n";
         $bdy .= "Email: " . $email . "\n";
         $bdy .= "Phone: " . $phone . "\n\n";

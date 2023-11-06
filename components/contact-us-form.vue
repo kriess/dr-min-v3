@@ -9,6 +9,7 @@ const props = withDefaults(defineProps<Props>(), {
 // reactive data
 const recaptchaRef = ref<HTMLElement | null>(null)
 const dialog = ref(false)
+const dialogMessage = ref('Submitting your email...')
 const isValid = ref(false)
 const lastName = ref('')
 const firstName = ref('')
@@ -36,6 +37,8 @@ const changeView = (view) => {
 }
 const sendEmail = async (e) => {
   e.preventDefault()
+
+  dialog.value = true
 
   // const clientId = grecaptcha.render('inline-badge', {
   //   sitekey: '',
@@ -77,8 +80,7 @@ const sendEmail = async (e) => {
     console.log('res data', data)
 
     if (response.ok) {
-      message.value = ''
-      dialog.value = true
+      dialogMessage.value = 'Your email was submitted successfully.  Thank you!'
     }
   })
 }
@@ -166,7 +168,7 @@ const sendEmail = async (e) => {
     >
       <v-card>
         <v-card-text>
-          You're email was successfully sent. Thank you!
+          {{ dialogMessage }}
         </v-card-text>
         <v-card-actions>
           <v-btn color="primary" block @click="dialog = false">Close</v-btn>
