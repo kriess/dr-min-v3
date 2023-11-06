@@ -12,7 +12,7 @@ useHead({
     <AboutDrMin></AboutDrMin>
     <ServicesCarousel></ServicesCarousel>
     <HomeTestimonials></HomeTestimonials>
-    <contact-us-form></contact-us-form>
+    <contact-us-form :show-header="true"></contact-us-form>
   </section>
 </template>
 

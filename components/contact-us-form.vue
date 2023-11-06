@@ -1,9 +1,11 @@
 <script lang="ts" setup>
 interface Props {
   title?: string
+  showHeader?: boolean
 }
 const props = withDefaults(defineProps<Props>(), {
   title: 'Page Title',
+  showHeader: true,
 })
 
 // reactive data
@@ -84,25 +86,21 @@ const sendEmail = async (e) => {
     }
   })
 }
-
-// lifecycle hooks
-// onMounted(async () => {
-//   setTimeout(() => {
-//     console.log('render recaptcha')
-//     const domEl = recaptchaRef.value
-//     console.log(domEl)
-//     grecaptcha.render(domEl, {
-//       sitekey: '6LdLkK8oAAAAAMdq0ylLL9-qvGvBsKZugMxxdzzp',
-//     })
-//   }, 1000)
-// })
 </script>
 
 <template>
   <div class="contact-us-form">
     <div class="contact-us-container">
-      <img src="/img/misc/contact-us-bg.webp" class="contact-us-bg" />
+      <img
+        src="/img/misc/contact-us-bg.webp"
+        class="contact-us-bg"
+        alt="background"
+      />
     </div>
+
+    <h1 v-if="props.showHeader" class="text-center mb-10 section-title">
+      Contact Us
+    </h1>
 
     <v-form ref="form" v-model="isValid" @submit="sendEmail">
       <div class="form-fields-grid">
@@ -215,6 +213,11 @@ const sendEmail = async (e) => {
   }
   :deep(.v-field--error) {
     color: #fc0;
+  }
+  .section-title {
+    position: relative;
+    font-size: min(10vw, 50px);
+    color: $text-on-dark;
   }
 }
 
