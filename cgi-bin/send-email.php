@@ -28,9 +28,6 @@ if ( strpos( $referrer, $domain ) !== false ) {
     // $sendToEmail = 'carolineminmd@gmail.com';
 
     $data = json_decode(file_get_contents("php://input"));
-    if ($data->random !== '987654321') {
-        $data->error = 'Random failed';
-    }
     $data->postRes = httpPost($data);
     $data->sendToEmail  = $sendToEmail;
     $data->referrer     = $referrer;
@@ -48,9 +45,6 @@ if ( strpos( $referrer, $domain ) !== false ) {
     if(!preg_match("/^[A-Za-z .'-]+$/", $lastName)){
       $error = 'Invalid name';
     }
-//     if(!preg_match("/^[A-Za-z .'-]+$/", $phone)){
-//       $error = 'Invalid phone';
-//     }
     if(!preg_match("/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/", $email)){
       $error = 'Invalid email';
     }
@@ -64,7 +58,7 @@ if ( strpos( $referrer, $domain ) !== false ) {
     } else {
         // use wordwrap() if lines are longer than 70 characters
         $msg = wordwrap($msg, $message);
-        $headers = "From: " . $email . "\r\n";
+        $headers = "FROM: info@v2.drcarolinemin.com\r\n";
         $bdy = "From: " . $firstName . " " . $lastName . "\n";
         $bdy .= "Email: " . $email . "\n";
         $bdy .= "Phone: " . $phone . "\n\n";
@@ -76,6 +70,7 @@ if ( strpos( $referrer, $domain ) !== false ) {
 
     header('Content-Type: application/json; charset=utf-8');
     echo json_encode( $data );
+
 } else {
     header('Content-Type: application/json; charset=utf-8');
     echo "{}";

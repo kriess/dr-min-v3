@@ -82,6 +82,7 @@ useHead({
           <ul>
             <li>Tel: 626-737-9001</li>
             <li>Fax: 626-737-9020</li>
+            <li>info@drcarolinemin.com</li>
           </ul>
         </v-sheet>
       </v-col>
@@ -122,6 +123,7 @@ useHead({
       <ul class="mt-10 text-center">
         <li>Tel: 626-737-9001</li>
         <li>Fax: 626-737-9020</li>
+        <li>info@drcarolinemin.com</li>
       </ul>
     </v-navigation-drawer>
 

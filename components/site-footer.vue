@@ -39,6 +39,7 @@ const year = computed(() => {
                     <li>547 E Union St.</li>
                     <li>Pasadena, California 91101</li>
                     <li>Tel: 626-737-9001</li>
+                    <li>info@drcarolinemin.com</li>
                     <li class="separator"></li>
                     <li>
                       Parking spots are available in front of the office as well
