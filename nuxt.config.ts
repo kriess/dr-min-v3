@@ -17,7 +17,8 @@ export default defineNuxtConfig({
   },
 
   modules: [
-    // '@kevinmarrec/nuxt-pwa',
+    'nuxt-simple-sitemap',
+    'nuxt-simple-robots',
     '@vueuse/nuxt',
     '@pinia/nuxt',
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -40,6 +41,19 @@ export default defineNuxtConfig({
       'acceptHMRUpdate',
       ['defineStore', 'definePiniaStore'], // import { defineStore as definePiniaStore } from 'pinia'
     ],
+  },
+
+  robots: {
+    allow: '/',
+  },
+
+  routeRules: {
+    // Don't add any /secret/** URLs to the sitemap.xml
+    // '/admin/**': { index: false },
+  },
+
+  site: {
+    url: 'https://drcarolinemin.com',
   },
 
   // https://pwa.nuxtjs.org/icon

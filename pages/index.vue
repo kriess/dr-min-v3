@@ -3,7 +3,14 @@ import ContactUsForm from '~/components/contact-us-form.vue'
 
 const pageTitle = 'Home'
 useHead({
-  title: pageTitle,
+  titleTemplate: 'Dr Caroline Min',
+  meta: [
+    {
+      name: 'description',
+      content:
+        'A board certified plastic surgeon with over 20 years of experience serving Pasadena, Los Angeles, Beverly Hills, and the surrounding areas.',
+    },
+  ],
 })
 </script>
 

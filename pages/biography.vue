@@ -2,6 +2,15 @@
 const pageTitle = 'Biography'
 useHead({
   title: pageTitle,
+  meta: [
+    {
+      name: 'description',
+      content:
+        'Dr. Caroline Min is a plastic & reconstructive surgeon who performs\n' +
+        ' cosmetic surgery of the face, breast and body as well as general\n' +
+        ' reconstructive plastic surgery.',
+    },
+  ],
 })
 </script>
 

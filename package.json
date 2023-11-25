@@ -19,9 +19,9 @@
   },
   "devDependencies": {
     "@iconify/vue": "^4.1.1",
-    "@kevinmarrec/nuxt-pwa": "^0.17.0",
-    "@nuxt/devtools": "^0.8.5",
-    "@nuxtjs/google-fonts": "^3.0.2"
+    "@nuxtjs/google-fonts": "^3.0.2",
+    "nuxt-simple-robots": "^3.1.9",
+    "nuxt-simple-sitemap": "^4.1.6"
   },
   "config": {
     "commitizen": {
@@ -42,8 +42,6 @@
     "vite": "^4.1.4",
     "vite-plugin-vuetify": "^1.0.2",
     "vue": "^3.2.47",
-    "vue-google-map": "^0.0.1",
-    "vue-google-maps": "^0.1.21",
     "vuetify": "^3.1.14"
   }
 }
