@@ -2,6 +2,12 @@
 const pageTitle = 'Photo Gallery'
 useHead({
   title: pageTitle,
+  meta: [
+    {
+      name: 'description',
+      content: "View before and after pictures of Dr Caroline Min's patients.",
+    },
+  ],
 })
 const gallery = useGallery()
 const route = useRoute()

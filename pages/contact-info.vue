@@ -5,6 +5,13 @@ import ContactMap from '~/components/contact-map.vue'
 const pageTitle = 'Contact Us'
 useHead({
   title: pageTitle,
+  meta: [
+    {
+      name: 'description',
+      content:
+        'Email info@drcarolinemin.com, telephone 626-737-9001, address 547 E Union St. Pasadena, California 91101.',
+    },
+  ],
 })
 </script>
 

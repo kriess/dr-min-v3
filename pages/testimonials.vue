@@ -2,6 +2,12 @@
 const pageTitle = 'Testimonials'
 useHead({
   title: pageTitle,
+  meta: [
+    {
+      name: 'description',
+      content: "Read some of the testimonials from Dr. Caroline Min's patients",
+    },
+  ],
 })
 const appConfig = useAppConfig()
 </script>

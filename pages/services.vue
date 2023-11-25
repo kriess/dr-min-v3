@@ -2,6 +2,13 @@
 const pageTitle = 'Services'
 useHead({
   title: pageTitle,
+  meta: [
+    {
+      name: 'description',
+      content:
+        'Dr. Caroline Min performs cosmetic procedures for the face, breast, body, and skin.',
+    },
+  ],
 })
 const services = useServices()
 const route = useRoute()
