@@ -17,8 +17,7 @@ export default defineNuxtConfig({
   },
 
   modules: [
-    'nuxt-simple-sitemap',
-    'nuxt-simple-robots',
+    // '@kevinmarrec/nuxt-pwa',
     '@vueuse/nuxt',
     '@pinia/nuxt',
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -43,21 +42,7 @@ export default defineNuxtConfig({
     ],
   },
 
-  robots: {
-    allow: '/',
-  },
-
-  routeRules: {
-    // Don't add any /secret/** URLs to the sitemap.xml
-    // '/admin/**': { index: false },
-  },
-
-  site: {
-    url: 'https://drcarolinemin.com',
-  },
-
   // https://pwa.nuxtjs.org/icon
-  // meta tags are in the layout
   // pwa: {
   //   meta: {
   //     name: 'Dr. Caroline Min, MD | Pasadena Plastic Surgeon',

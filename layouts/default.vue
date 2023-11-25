@@ -19,6 +19,7 @@ const setTheme = (index: number) => {
 useHead({
   titleTemplate: 'Dr Caroline Min - %s',
   link: [
+    { rel: 'icon', href: '/icon.png' },
     { rel: 'canonical', href: 'https://drcarolinemin.com/' },
     {
       rel: 'stylesheet',
