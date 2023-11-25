@@ -1,17 +1,5 @@
 export default defineNuxtPlugin((nuxtApp) => {
   useHead({
-    meta: [
-      // the other og tags are in nuxt.config.js
-      {
-        name: 'keywords',
-        content: 'plastic surgeon, board certified, pasadena',
-      },
-      { property: 'og:image:width', content: '150' },
-      { property: 'og:image:height', content: '200' },
-      { property: 'og:image:type', content: 'image/jpg' },
-      { property: 'og:locale', content: 'en_US' },
-    ],
-    link: [{ rel: 'canonical', href: 'https://drcarolinemin.com/' }],
     style: [
       {
         src: '/styles/google.css',

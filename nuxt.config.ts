@@ -17,7 +17,7 @@ export default defineNuxtConfig({
   },
 
   modules: [
-    '@kevinmarrec/nuxt-pwa',
+    // '@kevinmarrec/nuxt-pwa',
     '@vueuse/nuxt',
     '@pinia/nuxt',
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -43,22 +43,23 @@ export default defineNuxtConfig({
   },
 
   // https://pwa.nuxtjs.org/icon
-  pwa: {
-    meta: {
-      name: 'Dr. Caroline Min, MD | Pasadena Plastic Surgeon',
-      description:
-        'Dr. Caroline Min, MD is a board certified plastic surgeon specializing in cosmetic surgery. She has completed additional fellowship training in aesthetic surgery and has the skills and expertise to help you achieve your goals for plastic surgery.',
-      ogType: 'website',
-      ogSiteName: 'Dr. Caroline Min, MD | Pasadena Plastic Surgeon',
-      ogTitle:
-        'Dr. Caroline Min, MD is a highly qualified plastic surgeon with over 20 years of experience.',
-      ogDescription:
-        'Dr. Caroline Min, MD is a board certified plastic surgeon specializing in cosmetic surgery. She has completed additional fellowship training in aesthetic surgery and has the skills and expertise to help you achieve your goals for plastic surgery.',
-      ogImage: 'https://drcarolinemin.com/img/headshots/dr-min.jpg',
-      ogUrl: 'https://drcarolinemin.com/',
-      twitterCard: 'summary_large_image',
-    },
-  },
+  // meta tags are in the layout
+  // pwa: {
+  //   meta: {
+  //     name: 'Dr. Caroline Min, MD | Pasadena Plastic Surgeon',
+  //     description:
+  //       'Dr. Caroline Min, MD is a board certified plastic surgeon specializing in cosmetic surgery. She has completed additional fellowship training in aesthetic surgery and has the skills and expertise to help you achieve your goals for plastic surgery.',
+  //     ogType: 'website',
+  //     ogSiteName: 'Dr. Caroline Min, MD | Pasadena Plastic Surgeon',
+  //     ogTitle:
+  //       'Dr. Caroline Min, MD is a highly qualified plastic surgeon with over 20 years of experience.',
+  //     ogDescription:
+  //       'Dr. Caroline Min, MD is a board certified plastic surgeon specializing in cosmetic surgery. She has completed additional fellowship training in aesthetic surgery and has the skills and expertise to help you achieve your goals for plastic surgery.',
+  //     ogImage: 'https://drcarolinemin.com/img/headshots/dr-min.jpg',
+  //     ogUrl: 'https://drcarolinemin.com/',
+  //     twitterCard: 'summary_large_image',
+  //   },
+  // },
 
   runtimeConfig: {
     public: { GOOGLE_MAPS_API_KEY: 'AIzaSyDQZDKJBwh9Z3JDV5dVTzUgFx3Ok-Oeysk' },

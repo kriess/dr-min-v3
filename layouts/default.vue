@@ -19,12 +19,48 @@ const setTheme = (index: number) => {
 useHead({
   titleTemplate: '%s - Dr Min',
   link: [
+    { rel: 'canonical', href: 'https://drcarolinemin.com/' },
     {
       rel: 'stylesheet',
       href: 'https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap',
     },
   ],
   meta: [
+    { name: 'mobile-web-app-capable', content: 'yes' },
+    {
+      name: 'apple-mobile-web-app-title',
+      content: 'Dr. Caroline Min, MD | Pasadena Plastic Surgeon',
+    },
+    {
+      property: 'og:type',
+      content: 'website',
+    },
+    {
+      property: 'og:title',
+      content:
+        'Dr. Caroline Min, MD is a highly qualified plastic surgeon with over 20 years of experience.',
+    },
+    {
+      property: 'og:description',
+      content:
+        'Dr. Caroline Min, MD is a board certified plastic surgeon specializing in cosmetic surgery. She has completed additional fellowship training in aesthetic surgery and has the skills and expertise to help you achieve your goals for plastic surgery.',
+    },
+    {
+      property: 'og:image',
+      content: 'https://drcarolinemin.com/img/headshots/dr-min.jpg',
+    },
+    {
+      property: 'og:url',
+      content: 'https://drcarolinemin.com/',
+    },
+    {
+      name: 'twitter:card',
+      content: 'summary_large_image',
+    },
+    { property: 'og:image:width', content: '150' },
+    { property: 'og:image:height', content: '200' },
+    { property: 'og:image:type', content: 'image/jpg' },
+    { property: 'og:locale', content: 'en_US' },
     {
       name: 'description',
       content:
