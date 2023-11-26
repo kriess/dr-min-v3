@@ -19,16 +19,18 @@
         <v-col cols="12" sm="12" md="7">
           <div class="sub-title">About</div>
           <div class="main-title">Dr. Caroline Min</div>
-          Dr. Caroline Min is a board certified plastic surgeon specializing in
-          cosmetic surgery. She has completed additional fellowship training in
-          aesthetic surgery and has the skills and expertise to help you achieve
-          your goals for plastic surgery. Your consultation with Dr. Min will be
-          thorough and unhurried. She and her staff will work closely with you
-          to develop an individualized plan of treatment to meet your plastic
-          surgery needs. Whether you are having a minor procedure or a more
-          involved cosmetic surgery, our office strives to provide each patient
-          with an exceptional experience in a warm, caring environment.
-
+          <p>
+            Dr. Caroline Min is a board certified plastic surgeon specializing
+            in cosmetic surgery. She has completed additional fellowship
+            training in aesthetic surgery and has the skills and expertise to
+            help you achieve your goals for plastic surgery. Your consultation
+            with Dr. Min will be thorough and unhurried. She and her staff will
+            work closely with you to develop an individualized plan of treatment
+            to meet your plastic surgery needs. Whether you are having a minor
+            procedure or a more involved cosmetic surgery, our office strives to
+            provide each patient with an exceptional experience in a warm,
+            caring environment.
+          </p>
           <p class="mt-2 pt-10">
             <v-btn
               color="primary"
