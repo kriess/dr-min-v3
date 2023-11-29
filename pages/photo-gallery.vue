@@ -74,6 +74,7 @@ onMounted(() => {
       :title="pageTitle"
       image-src="/img/headshots/photogallery.jpg"
       image-width="60%"
+      alt="Dr. Caroline Min, M.D. - board certified plastic surgeon - before/after photos"
     ></PageTopVisuals>
 
     <v-btn-toggle

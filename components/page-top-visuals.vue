@@ -3,12 +3,14 @@ interface Props {
   title: string
   imageSrc?: string
   imageWidth?: string
+  alt?: string
 }
 
 // props
 const props = withDefaults(defineProps<Props>(), {
   title: 'Page Title',
   imageWidth: '50%',
+  alt: 'Page Top Image',
 })
 
 // console.log(props)
@@ -23,6 +25,7 @@ const props = withDefaults(defineProps<Props>(), {
           v-if="imageSrc"
           :width="imageWidth"
           cover
+          :alt="alt"
           :src="imageSrc"
           class="main-img"
         ></v-img>

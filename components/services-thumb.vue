@@ -15,6 +15,7 @@ const dialog = ref(false)
         <v-img
           class="thumb"
           cover
+          :alt="`Services performed by Dr. Caroline Min - ${procedure.title}`"
           :src="`/img/services/thumbs/${procedure.thumbUrl || 'temp.jpg'}`"
         ></v-img>
         <div class="procedure-title">{{ procedure.title }}</div>

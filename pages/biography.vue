@@ -18,6 +18,7 @@ useHead({
   <section class="biography page">
     <PageTopVisuals
       :title="pageTitle"
+      alt="Dr. Caroline Min, M.D. - board certified plastic surgeon"
       image-src="/img/headshots/min-suit.jpg"
     ></PageTopVisuals>
     <div class="content-area">

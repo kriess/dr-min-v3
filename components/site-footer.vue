@@ -19,6 +19,7 @@ const year = computed(() => {
               <v-img
                 class="asps-logo"
                 width="60%"
+                alt="American Society of Plastic Surgeons logo"
                 src="/img/misc/asps-logo-footer.png"
               ></v-img>
             </div>

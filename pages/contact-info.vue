@@ -19,6 +19,7 @@ useHead({
   <section class="news page">
     <PageTopVisuals
       :title="pageTitle"
+      alt="Dr. Caroline Min, M.D. - board certified plastic surgeon - contact us"
       image-src="/img/headshots/min-white-coat.jpg"
     ></PageTopVisuals>
     <contact-us-form :show-header="false"></contact-us-form>

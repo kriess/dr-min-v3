@@ -43,6 +43,7 @@ const changeView = (type) => {
       <v-card-text>
         <v-img
           cover
+          :alt="`Before/after photos of procedure performed by Dr. Caroline Min - ${beforeAfter[0].caption}`"
           :src="`/img/photo-gallery/optimized/${beforeAfter[0].url}`"
         ></v-img>
         <div class="case-number text-center">Case {{ props.caseNumber }}</div>

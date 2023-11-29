@@ -12,6 +12,7 @@
             class="headshot"
             width="100%"
             cover
+            alt="Dr. Caroline Min, M.D. - board certified plastic surgeon"
             src="/img/headshots/min-white-coat.jpg"
           ></v-img>
         </v-col>
