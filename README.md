@@ -1,4 +1,4 @@
-# dr caroline min
+# Dr. Caroline Min
 
 ## Making Updates
 

@@ -3,7 +3,7 @@ import ContactUsForm from '~/components/contact-us-form.vue'
 
 const pageTitle = 'Home'
 useHead({
-  titleTemplate: 'Dr Caroline Min',
+  titleTemplate: 'Dr. Caroline Min',
   meta: [
     {
       name: 'description',

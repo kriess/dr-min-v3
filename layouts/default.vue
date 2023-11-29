@@ -17,7 +17,7 @@ const setTheme = (index: number) => {
 // console.log('setTheme', setTheme)
 
 useHead({
-  titleTemplate: 'Dr Caroline Min - %s',
+  titleTemplate: 'Dr. Caroline Min - %s',
   link: [
     { rel: 'icon', href: '/icon.png' },
     { rel: 'canonical', href: 'https://drcarolinemin.com/' },
@@ -70,7 +70,7 @@ useHead({
     {
       name: 'keywords',
       content:
-        'Pasadena, Plastic Surgery, Plastic Surgeon, Dr Caroline Min MD, Facelift, Tummy Tuck, Abdominoplasty, Eyelid Surgery, Eyelid Lift, Brow Lift, Blepharoplasty, Breast Augmentation, Liposuction, Facial Liposuction, Chin Surgery, Buccal Fat Removal, Inverted Nipple Correction, Labiaplasty, Mommy Makeover, Arm Lift, Thigh Lift, Otoplasty, Rhinoplasty, Nose Surgery,  Breast Lift, Breast Reduction, Male Breast Reduction, BOTOX, Microdermabrasion, Neck Lift, Buttock Augmentation, Body Contouring, Laser Hair Removal, Female Plastic Surgeon',
+        'Pasadena, Plastic Surgery, Plastic Surgeon, Dr. Caroline Min MD, Facelift, Tummy Tuck, Abdominoplasty, Eyelid Surgery, Eyelid Lift, Brow Lift, Blepharoplasty, Breast Augmentation, Liposuction, Facial Liposuction, Chin Surgery, Buccal Fat Removal, Inverted Nipple Correction, Labiaplasty, Mommy Makeover, Arm Lift, Thigh Lift, Otoplasty, Rhinoplasty, Nose Surgery,  Breast Lift, Breast Reduction, Male Breast Reduction, BOTOX, Microdermabrasion, Neck Lift, Buttock Augmentation, Body Contouring, Laser Hair Removal, Female Plastic Surgeon',
     },
   ],
 })

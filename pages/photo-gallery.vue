@@ -5,7 +5,7 @@ useHead({
   meta: [
     {
       name: 'description',
-      content: "View before and after pictures of Dr Caroline Min's patients.",
+      content: "View before and after pictures of Dr. Caroline Min's patients.",
     },
   ],
 })
