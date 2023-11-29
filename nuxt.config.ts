@@ -51,7 +51,7 @@ export default defineNuxtConfig({
   //     ogType: 'website',
   //     ogSiteName: 'Dr. Caroline Min, MD | Pasadena Plastic Surgeon',
   //     ogTitle:
-  //       'Dr. Caroline Min, MD is a highly qualified plastic surgeon with over 20 years of experience.',
+  //       'Dr. Caroline Min, MD is a highly qualified plastic surgeon with over 16 years of experience.',
   //     ogDescription:
   //       'Dr. Caroline Min, MD is a board certified plastic surgeon specializing in cosmetic surgery. She has completed additional fellowship training in aesthetic surgery and has the skills and expertise to help you achieve your goals for plastic surgery.',
   //     ogImage: 'https://drcarolinemin.com/img/headshots/dr-min.jpg',

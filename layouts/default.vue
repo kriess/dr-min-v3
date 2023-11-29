@@ -39,7 +39,7 @@ useHead({
     {
       property: 'og:title',
       content:
-        'Dr. Caroline Min, MD is a highly qualified plastic surgeon with over 20 years of experience.',
+        'Dr. Caroline Min, MD is a highly qualified plastic surgeon with over 16 years of experience.',
     },
     {
       property: 'og:description',

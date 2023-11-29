@@ -1216,7 +1216,7 @@ export default {
           galleries: [
             {
               caption:
-                'This is a 63 year old woman who had breast augmentation with breast lift approximately 20 years ago with several subsequent revisions. She was unhappy about the appearance of her breasts and desired correction. She underwent removal of her old silicone gel implants and capsule with replacement of silicone gel implants, bilateral periareolar breast lift and correction of the breast deformity. She is shown 2 months after surgery.',
+                'This is a 63 year old woman who had breast augmentation with breast lift approximately 16 years ago with several subsequent revisions. She was unhappy about the appearance of her breasts and desired correction. She underwent removal of her old silicone gel implants and capsule with replacement of silicone gel implants, bilateral periareolar breast lift and correction of the breast deformity. She is shown 2 months after surgery.',
               beforeAfter: [
                 {
                   label: 'Front View',
@@ -1238,7 +1238,7 @@ export default {
             },
             {
               caption:
-                'This is a 58 year old patient who had breast augmentation 20 years ago with silicone gel implants placed in the subglandular position. She presented with bilateral capsular contractures and breast deformity. She underwent revisional surgery and is shown 6 weeks after removal and replacement of silicone gel implants and correction of the breast deformity.',
+                'This is a 58 year old patient who had breast augmentation 16 years ago with silicone gel implants placed in the subglandular position. She presented with bilateral capsular contractures and breast deformity. She underwent revisional surgery and is shown 6 weeks after removal and replacement of silicone gel implants and correction of the breast deformity.',
               beforeAfter: [
                 {
                   label: 'Front View',
