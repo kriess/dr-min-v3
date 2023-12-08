@@ -54,7 +54,7 @@
 .about-dr-min {
   width: auto;
   // background-color: $light-primary;
-  background-image: url('/img/misc/rotatesliders.webp');
+  background-image: url('/img/misc/rotatesliders.jpg');
   padding: 50px;
   .sub-title {
     font-weight: 100;

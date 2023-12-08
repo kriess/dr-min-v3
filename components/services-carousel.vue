@@ -13,12 +13,12 @@ const colors = ref([
 const slides = ref([
   {
     text: 'Facial Plastic & Lifting',
-    imageSrc: '/img/services/carousel/face.webp',
+    imageSrc: '/img/services/carousel/face.jpg',
     href: '/services?section=face',
   },
   {
     text: 'Breast Lifting & Augmentation',
-    imageSrc: '/img/services/carousel/breast.webp',
+    imageSrc: '/img/services/carousel/breast.jpg',
     href: '/services?section=breast',
   },
   {

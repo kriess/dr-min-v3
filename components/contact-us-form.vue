@@ -92,7 +92,7 @@ const sendEmail = async (e) => {
   <div class="contact-us-form">
     <div class="contact-us-container">
       <img
-        src="/img/misc/contact-us-bg.webp"
+        src="/img/misc/contact-us-bg.jpg"
         class="contact-us-bg"
         alt="background"
       />
