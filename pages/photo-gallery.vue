@@ -1,7 +1,26 @@
 <script lang="ts" setup>
+const runtimeConfig = useRuntimeConfig()
+const gallery = useGallery()
+const route = useRoute()
+const router = useRouter()
 const pageTitle = 'Photo Gallery'
+
+let canonicalUrl = `${runtimeConfig.public.siteDomain}/photo-gallery`
+if (route.query.section) {
+  canonicalUrl = canonicalUrl + `?section=${route.query.section}`
+  if (route.query.procedure) {
+    canonicalUrl = canonicalUrl + `&procedure=${route.query.procedure}`
+  }
+}
+
 useHead({
   title: pageTitle,
+  link: [
+    {
+      rel: 'canonical',
+      href: canonicalUrl,
+    },
+  ],
   meta: [
     {
       name: 'description',
@@ -9,9 +28,6 @@ useHead({
     },
   ],
 })
-const gallery = useGallery()
-const route = useRoute()
-const router = useRouter()
 
 // methods
 const goToNewSection = (id) => {
@@ -58,14 +74,14 @@ const activeProcedure = computed(() => {
 // console.log('activeProcedure', activeProcedure.value)
 
 // lifecycle hooks
-onMounted(() => {
-  router.push({
-    query: {
-      section: sectionId.value,
-      procedure: procedureId.value,
-    },
-  })
-})
+// onMounted(() => {
+//   router.push({
+//     query: {
+//       section: sectionId.value,
+//       procedure: procedureId.value,
+//     },
+//   })
+// })
 </script>
 
 <template>

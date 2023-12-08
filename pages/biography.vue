@@ -1,7 +1,11 @@
 <script lang="ts" setup>
+const runtimeConfig = useRuntimeConfig()
 const pageTitle = 'Biography'
+const canonicalUrl = `${runtimeConfig.public.siteDomain}/biography`
+
 useHead({
   title: pageTitle,
+  link: [{ rel: 'canonical', href: canonicalUrl }],
   meta: [
     {
       name: 'description',

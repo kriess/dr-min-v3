@@ -1,7 +1,23 @@
 <script lang="ts" setup>
+const runtimeConfig = useRuntimeConfig()
 const pageTitle = 'Services'
+const services = useServices()
+const route = useRoute()
+const router = useRouter()
+
+let canonicalUrl = `${runtimeConfig.public.siteDomain}/services`
+if (route.query.section) {
+  canonicalUrl = canonicalUrl + `?section=${route.query.section}`
+}
+
 useHead({
   title: pageTitle,
+  link: [
+    {
+      rel: 'canonical',
+      href: canonicalUrl,
+    },
+  ],
   meta: [
     {
       name: 'description',
@@ -10,9 +26,6 @@ useHead({
     },
   ],
 })
-const services = useServices()
-const route = useRoute()
-const router = useRouter()
 
 // methods
 const goToNewSection = (id) => {
@@ -36,13 +49,13 @@ const activeSection = computed(() => {
 })
 
 // lifecycle hooks
-onMounted(() => {
-  router.push({
-    query: {
-      section: sectionId.value,
-    },
-  })
-})
+// onMounted(() => {
+//   router.push({
+//     query: {
+//       section: sectionId.value,
+//     },
+//   })
+// })
 </script>
 
 <template>

@@ -1,7 +1,17 @@
 <script lang="ts" setup>
+const runtimeConfig = useRuntimeConfig()
+const appConfig = useAppConfig()
 const pageTitle = 'Testimonials'
+const canonicalUrl = `${runtimeConfig.public.siteDomain}/testimonials`
+
 useHead({
   title: pageTitle,
+  link: [
+    {
+      rel: 'canonical',
+      href: canonicalUrl,
+    },
+  ],
   meta: [
     {
       name: 'description',
@@ -9,7 +19,6 @@ useHead({
     },
   ],
 })
-const appConfig = useAppConfig()
 </script>
 
 <template>

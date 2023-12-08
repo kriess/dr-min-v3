@@ -1,10 +1,17 @@
 <script lang="ts" setup>
+const runtimeConfig = useRuntimeConfig()
 import ContactUsForm from '~/components/contact-us-form.vue'
-import ContactMap from '~/components/contact-map.vue'
+const canonicalUrl = `${runtimeConfig.public.siteDomain}/contact-info`
 
 const pageTitle = 'Contact Us'
 useHead({
   title: pageTitle,
+  link: [
+    {
+      rel: 'canonical',
+      href: canonicalUrl,
+    },
+  ],
   meta: [
     {
       name: 'description',

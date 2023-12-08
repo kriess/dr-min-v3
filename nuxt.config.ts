@@ -61,7 +61,10 @@ export default defineNuxtConfig({
   // },
 
   runtimeConfig: {
-    public: { GOOGLE_MAPS_API_KEY: 'AIzaSyDQZDKJBwh9Z3JDV5dVTzUgFx3Ok-Oeysk' },
+    public: {
+      GOOGLE_MAPS_API_KEY: 'AIzaSyDQZDKJBwh9Z3JDV5dVTzUgFx3Ok-Oeysk',
+      siteDomain: 'https://drcarolinemin.com',
+    },
   },
 
   sourcemap: {
