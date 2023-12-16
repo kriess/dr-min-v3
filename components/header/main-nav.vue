@@ -30,15 +30,19 @@ const siteSection = computed(() => {
         <div class="hidden-sm-and-down" style="width: 100%; height: 100%">
           <div class="nav-container">
             <div>
-              <nuxt-link to="/">
-                <img
-                  width="219"
-                  height="50"
-                  class="logo"
-                  alt="Dr. Caroline Min - Board Certified Plastic Surgeon"
-                  src="/img/header/logo.png"
-                />
-              </nuxt-link>
+              <div class="logo-name">Caroline Min, M.D</div>
+              <div class="logo-description">
+                Board Certified Plastic Surgeon
+              </div>
+              <!--              <nuxt-link to="/">-->
+              <!--                <img-->
+              <!--                  width="219"-->
+              <!--                  height="50"-->
+              <!--                  class="logo"-->
+              <!--                  alt="Dr. Caroline Min - Board Certified Plastic Surgeon"-->
+              <!--                  src="/img/header/logo.png"-->
+              <!--                />-->
+              <!--              </nuxt-link>-->
             </div>
             <v-toolbar-items>
               <template v-for="item in navItems">
@@ -130,6 +134,19 @@ const siteSection = computed(() => {
     0 2px 4px -1px rgba(0, 0, 0, 0.2),
     0 4px 5px 0 rgba(0, 0, 0, 0.14),
     0 1px 10px 0 rgba(0, 0, 0, 0.12);
+
+  .logo-name {
+    letter-spacing: 1.4px;
+    font-weight: 700;
+    font-size: 30px;
+  }
+  .logo-description {
+    letter-spacing: 1.1px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: -10px;
+    margin-left: 2px;
+  }
 
   .header-main-nav-content {
     top: 0;

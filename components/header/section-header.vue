@@ -68,7 +68,7 @@ console.log('services', services)
 
 <style lang="scss" scoped>
 .header-section-header {
-  height: 400px;
+  height: 300px;
   background-image: url('https://www.gingerxumd.com/wp-content/uploads/2023/05/Xu-Banner-Body-Updated.jpg');
   // background-position: bottom right;
   background-color: #eee;
