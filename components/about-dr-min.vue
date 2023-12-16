@@ -18,8 +18,8 @@
         </v-col>
         <v-col cols="12" sm="12" md="1"></v-col>
         <v-col cols="12" sm="12" md="7">
-          <div class="sub-title">About</div>
-          <div class="main-title">Dr. Caroline Min</div>
+          <h4 class="sub-title">About</h4>
+          <h1 class="main-title">Dr. Caroline Min</h1>
           <p>
             Dr. Caroline Min is a board certified plastic surgeon specializing
             in cosmetic surgery. She has completed additional fellowship

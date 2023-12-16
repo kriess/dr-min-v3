@@ -30,7 +30,7 @@ const props = withDefaults(defineProps<Props>(), {
           class="main-img"
         ></v-img>
         <v-sheet color="primary" class="page-title-visual">
-          <div class="page-title-text">{{ title }}</div>
+          <h1 class="page-title-text">{{ title }}</h1>
         </v-sheet>
       </div>
     </div>
@@ -72,6 +72,7 @@ const props = withDefaults(defineProps<Props>(), {
     border-radius: $main-border-radius;
   }
   .page-title-text {
+    font-weight: 500;
     font-size: $page-title-font-size;
     margin: 0;
     position: absolute;

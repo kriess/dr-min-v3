@@ -8,7 +8,7 @@ export const useUtilsPrimaryItems = [
     title: 'Biography',
   },
   {
-    href: '/services',
+    href: '/services/face',
     title: 'Services',
   },
   {

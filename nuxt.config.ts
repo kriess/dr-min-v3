@@ -60,6 +60,12 @@ export default defineNuxtConfig({
   //   },
   // },
 
+  router: {
+    options: {
+      scrollBehaviorType: 'smooth',
+    },
+  },
+
   runtimeConfig: {
     public: {
       GOOGLE_MAPS_API_KEY: 'AIzaSyDQZDKJBwh9Z3JDV5dVTzUgFx3Ok-Oeysk',

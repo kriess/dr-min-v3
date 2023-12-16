@@ -110,8 +110,8 @@ useHead({
       </v-col>
       <v-col cols="12" sm="12" md="4">
         <v-sheet class="banner-item">
-          <div class="dr-title">Caroline Min M.D.</div>
-          <div class="dr-sub-title">Board Certified Plastic Surgeon</div>
+          <h1 class="dr-title">Caroline Min M.D.</h1>
+          <h2 class="dr-sub-title">Board Certified Plastic Surgeon</h2>
         </v-sheet>
       </v-col>
       <v-col class="hidden-sm-and-down" cols="12" sm="4">
@@ -173,6 +173,10 @@ useHead({
 </template>
 
 <style lang="scss" scoped>
+html {
+  scroll-behavior: smooth;
+}
+
 .dr-min-app {
   max-width: $page-max-width;
   margin: 0 auto;
