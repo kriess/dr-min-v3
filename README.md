@@ -30,6 +30,17 @@ npx nuxi generate
 npx serve .output/public
 ```
 
+- Then go to .output/public.
+- Right click on that folder in WebStorm
+- Select deployment, upload to v2
+
+## Adding new before/after pics
+
+- Get the new pics
+- Size them to 320x384
+- Open an existing pic
+- Copy the new ones on to an old pic and export to web.
+
 ## Setup
 
 Make sure to install the dependencies:
