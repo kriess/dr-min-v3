@@ -15,19 +15,21 @@ const props = withDefaults(defineProps<Props>(), {
 <template>
   <div class="services-details">
     <div class="services-section">
-      <div class="services-title">Breast Reduction Male</div>
+      <div class="services-title">BOTOX® Cosmetic</div>
       <v-img
         class="thumb"
         cover
-        :src="`/img/services/thumbs/malebreast-surgery.jpg`"
+        src="/img/services/thumbs/botox-fillers.jpg"
       ></v-img>
       <p>
-        Enlarged male breasts (gynecomastia) affect nearly 40-60% of men, often
-        with no known cause. This condition can be highly embarrassing as well
-        as physically uncomfortable. Men who feel self-conscious about enlarged
-        breasts may seek breast reduction surgery. The procedure removes fat
-        and/or glandular tissue from the breasts, and in some cases excess skin
-        as well. The result is a flatter, firmer chest.
+        BOTOX® Cosmetic is commonly used to reduce or eliminate the appearance
+        of facial wrinkles. It is injected under the skin into areas surrounding
+        the eyes, forehead and mouth to smooth crow's feet, frown and worry
+        lines, and lines on the neck. If BOTOX® is injected regularly, the
+        deepening of wrinkles from repetitive facial movements such as frowning,
+        can be prevented. Made from a purified protein, BOTOX® relaxes wrinkles
+        and gives the face a rejuvenated look. BOTOX® may also be useful for
+        migraine headaches, excessive sweating, and eye and neck muscle spasms.
       </p>
     </div>
   </div>

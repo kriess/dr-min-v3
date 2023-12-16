@@ -104,7 +104,7 @@ const props = withDefaults(defineProps<Props>(), {
     margin-bottom: 20px;
   }
   .thumb {
-    outline: 1px solid #ccc;
+    border: 1px solid #ccc;
     margin: 0 0 20px 20px;
     float: right;
     width: 50%;

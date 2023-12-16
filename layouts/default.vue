@@ -105,6 +105,7 @@ html {
   }
 
   .nuxt-slot {
+    width: 100%;
     max-width: $page-max-width;
     overflow: hidden;
     margin: 0 auto;

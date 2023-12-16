@@ -104,7 +104,16 @@ export default [
   {
     href: '/services/skin',
     title: 'Skin',
-    subNavItems: [],
+    subNavItems: [
+      {
+        title: 'Botox',
+        href: '/services/skin/botox',
+      },
+      {
+        title: 'Fillers',
+        href: '/services/skin/fillers',
+      },
+    ],
   },
   {
     href: '/photo-gallery',

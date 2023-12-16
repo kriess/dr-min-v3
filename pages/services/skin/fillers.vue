@@ -15,19 +15,16 @@ const props = withDefaults(defineProps<Props>(), {
 <template>
   <div class="services-details">
     <div class="services-section">
-      <div class="services-title">Breast Reduction Male</div>
-      <v-img
-        class="thumb"
-        cover
-        :src="`/img/services/thumbs/malebreast-surgery.jpg`"
-      ></v-img>
+      <div class="services-title">Fillers</div>
+      <v-img class="thumb" src="/img/services/thumbs/filler.jpg"></v-img>
       <p>
-        Enlarged male breasts (gynecomastia) affect nearly 40-60% of men, often
-        with no known cause. This condition can be highly embarrassing as well
-        as physically uncomfortable. Men who feel self-conscious about enlarged
-        breasts may seek breast reduction surgery. The procedure removes fat
-        and/or glandular tissue from the breasts, and in some cases excess skin
-        as well. The result is a flatter, firmer chest.
+        Facial fillers are designed to smooth wrinkles, sculpt lips and shape
+        facial contours. It is a clear, synthetic gel made with hyaluronic acid,
+        a natural substance that is found throughout your body. It carries
+        little risk of allergic reaction. The most common areas for treatment
+        are the glabellar lines (between the eyebrows) and the nasolabial folds
+        (from the root of the nose to the angle of your mouth and the lips). The
+        results can last from six months to a year.
       </p>
     </div>
   </div>
