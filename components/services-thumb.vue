@@ -67,7 +67,7 @@ const goToProcedurePage = (id) => {
   }
   :deep(.v-img__img--cover) {
     transition: 0.6s;
-    filter: grayscale(100%);
+    filter: grayscale(50%);
     opacity: 0.7;
   }
   .procedure-title {

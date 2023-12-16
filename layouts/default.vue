@@ -1,19 +1,5 @@
 <script lang="ts" setup>
-import { useTheme } from 'vuetify'
-import { THEME_NAMES as themes } from '~/helpers/themes'
 const drawer = ref(false)
-const theme = useTheme()
-const themeIndex = ref(0)
-// console.log(themes)
-
-const setTheme = (index: number) => {
-  console.log(themes)
-  const selectedTheme = themes[index]
-  console.log(selectedTheme)
-  theme.global.name.value = selectedTheme.value
-  themeIndex.value = index
-}
-// console.log('setTheme', setTheme)
 
 useHead({
   titleTemplate: 'Dr. Caroline Min - %s',
@@ -78,6 +64,8 @@ useHead({
 <template>
   <v-app class="dr-min-app">
     <header-main-nav></header-main-nav>
+    <div style="height: 64px"></div>
+    <header-section-header></header-section-header>
     <!--
     <header-banner-contact></header-banner-contact>
     -->
@@ -109,6 +97,7 @@ html {
     max-width: $page-max-width;
     overflow: hidden;
     margin: 0 auto;
+    padding: 0 10px;
   }
 
   a[href],

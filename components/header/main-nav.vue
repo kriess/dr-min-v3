@@ -7,73 +7,86 @@ const path = computed(() => {
   return route.fullPath
 })
 
-console.log(navItems)
+const isService = computed(() => {
+  return route.fullPath.includes('/services')
+})
+
+const siteSection = computed(() => {
+  const sections = route.fullPath.split('/')
+  return sections[1]
+})
 </script>
 
 <template>
   <div class="header-main-nav">
-    <v-toolbar>
-      <div class="hidden-md-and-up mobile-meni-icon">
-        <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
-      </div>
-
-      <div class="hidden-sm-and-down" style="width: 100%; height: 100%">
-        <div class="nav-container">
-          <div>
-            <img
-              width="219"
-              height="50"
-              class="logo"
-              alt="Dr. Caroline Min - Board Certified Plastic Surgeon"
-              src="/img/header/logo.png"
-            />
-          </div>
-          <v-toolbar-items>
-            <template v-for="item in navItems">
-              <template v-if="item.subNavItems">
-                <v-menu open-on-hover>
-                  <template v-slot:activator="{ props }">
-                    <v-btn
-                      :active="path.includes(item.href)"
-                      variant="plain"
-                      class="nav-btn"
-                      v-bind="props"
-                      :to="item.href"
-                      append-icon="mdi-menu-down"
-                    >
-                      {{ item.title }}
-                    </v-btn>
-                  </template>
-                  <v-list class="sub-nav-list">
-                    <v-list-item
-                      class="sub-nav-list-item"
-                      v-for="(subNavItem, index) in item.subNavItems"
-                      :key="index"
-                      :value="index"
-                    >
-                      <v-list-item-title>
-                        <v-btn
-                          variant="plain"
-                          class="sub-nav-btn"
-                          :to="subNavItem.href"
-                        >
-                          {{ subNavItem.title }}
-                        </v-btn>
-                      </v-list-item-title>
-                    </v-list-item>
-                  </v-list>
-                </v-menu>
-              </template>
-              <template v-else>
-                <v-btn variant="plain" class="nav-btn" :to="item.href">
-                  {{ item.title }}
-                </v-btn>
-              </template>
-            </template>
-          </v-toolbar-items>
+    <div class="header-main-nav-content">
+      <!--    <p>isService = {{ isService }}</p>-->
+      <!--    <p>siteSection = {{ siteSection }}</p>-->
+      <v-toolbar>
+        <div class="hidden-md-and-up mobile-meni-icon">
+          <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
         </div>
-      </div>
-    </v-toolbar>
+
+        <div class="hidden-sm-and-down" style="width: 100%; height: 100%">
+          <div class="nav-container">
+            <div>
+              <nuxt-link to="/">
+                <img
+                  width="219"
+                  height="50"
+                  class="logo"
+                  alt="Dr. Caroline Min - Board Certified Plastic Surgeon"
+                  src="/img/header/logo.png"
+                />
+              </nuxt-link>
+            </div>
+            <v-toolbar-items>
+              <template v-for="item in navItems">
+                <template v-if="item.subNavItems">
+                  <v-menu open-on-hover>
+                    <template v-slot:activator="{ props }">
+                      <v-btn
+                        :active="path.includes(item.href)"
+                        variant="plain"
+                        class="nav-btn"
+                        v-bind="props"
+                        :to="item.href"
+                        append-icon="mdi-menu-down"
+                      >
+                        {{ item.title }}
+                      </v-btn>
+                    </template>
+                    <v-list class="sub-nav-list">
+                      <v-list-item
+                        class="sub-nav-list-item"
+                        v-for="(subNavItem, index) in item.subNavItems"
+                        :key="index"
+                        :value="index"
+                      >
+                        <v-list-item-title>
+                          <v-btn
+                            variant="plain"
+                            class="sub-nav-btn"
+                            :to="subNavItem.href"
+                          >
+                            {{ subNavItem.title }}
+                          </v-btn>
+                        </v-list-item-title>
+                      </v-list-item>
+                    </v-list>
+                  </v-menu>
+                </template>
+                <template v-else>
+                  <v-btn variant="plain" class="nav-btn" :to="item.href">
+                    {{ item.title }}
+                  </v-btn>
+                </template>
+              </template>
+            </v-toolbar-items>
+          </div>
+        </div>
+      </v-toolbar>
+    </div>
 
     <v-navigation-drawer
       v-model="drawer"
@@ -110,12 +123,17 @@ console.log(navItems)
 
 <style lang="scss" scoped>
 .header-main-nav {
+  position: fixed;
+  z-index: 2;
   width: 100%;
   box-shadow:
     0 2px 4px -1px rgba(0, 0, 0, 0.2),
     0 4px 5px 0 rgba(0, 0, 0, 0.14),
     0 1px 10px 0 rgba(0, 0, 0, 0.12);
-  margin-bottom: 20px;
+
+  .header-main-nav-content {
+    top: 0;
+  }
 
   :deep(.v-toolbar) {
     background-color: $primary;
@@ -126,6 +144,7 @@ console.log(navItems)
     max-width: $page-max-width;
     margin: 0 auto;
     border-bottom: 1px solid $primary;
+    padding: 0 10px;
   }
 
   .logo {

@@ -14,17 +14,17 @@ const slides = ref([
   {
     text: 'Facial Plastic & Lifting',
     imageSrc: '/img/services/carousel/face.jpg',
-    href: '/services?section=face',
+    href: '/services/face',
   },
   {
     text: 'Breast Lifting & Augmentation',
     imageSrc: '/img/services/carousel/breast.jpg',
-    href: '/services?section=breast',
+    href: '/services/breast',
   },
   {
     text: 'Body Contouring & Makeovers',
     imageSrc: '/img/services/carousel/body.jpg',
-    href: '/services?section=body',
+    href: '/services/body',
   },
   // {
   //   text: 'Restorative & Cosmetic',
@@ -68,19 +68,6 @@ const goTo = (view: string) => {
         </div>
       </VCarouselItem>
     </VCarousel>
-
-    <p class="py-3 text-center">
-      <v-btn
-        color=""
-        variant="elevated"
-        rounded="sm"
-        size="small"
-        class="main-button temptext-h6"
-        to="/services"
-      >
-        View All Services
-      </v-btn>
-    </p>
   </div>
 </template>
 

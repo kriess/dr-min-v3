@@ -54,6 +54,7 @@ const props = withDefaults(defineProps<Props>(), {
 .services-details {
   width: 100%;
   .services-title {
+    display: none;
     color: $primary;
     font-size: 150%;
     font-weight: bold;
