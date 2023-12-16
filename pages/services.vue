@@ -66,12 +66,7 @@ onMounted(() => {
 
 <template>
   <section class="services page">
-    <PageTopVisuals
-      :title="pageTitle"
-      image-src="/img/headshots/ourservices.jpg"
-      image-width="60%"
-      alt="Dr. Caroline Min, M.D. - board certified plastic surgeon - services"
-    ></PageTopVisuals>
+    <!--    <services-header></services-header>-->
     <nuxt-page />
   </section>
 </template>

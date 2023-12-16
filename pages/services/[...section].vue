@@ -62,25 +62,6 @@ console.log('sectionId', sectionId.value)
 
 <template>
   <section>
-    <p>[...section].vue</p>
-    <v-btn-toggle
-      v-model="activeSection"
-      color="primary"
-      group
-      variant="text"
-      class="btn-grp"
-    >
-      <v-btn
-        v-for="section in services.sections"
-        :key="section.slug"
-        :value="section.slug"
-        :variant="sectionId === section.slug ? 'tonal' : 'text'"
-        @click="goToNewSection(section.slug)"
-      >
-        {{ section.title }}
-      </v-btn>
-    </v-btn-toggle>
-
     <div>
       <services-grid
         :section="sectionId"

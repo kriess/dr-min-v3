@@ -15,7 +15,7 @@ const props = withDefaults(defineProps<Props>(), {
 <template>
   <div class="services-details">
     <div class="services-section">
-      <div class="services-title">blepharoplasty</div>
+      <h1 class="services-title">Blepharoplasty</h1>
       <v-img
         class="thumb"
         cover
