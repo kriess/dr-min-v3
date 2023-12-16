@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import ServicesThumb from '~/components/services-thumb.vue'
-
 const props = defineProps<{
   section: string
   services: object

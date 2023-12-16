@@ -13,23 +13,23 @@ export default [
       },
       {
         title: 'Browlift',
-        href: '/services/face/blepharoplasty',
+        href: '/services/face/browlift',
       },
       {
         title: 'Facelift',
-        href: '/services/face/blepharoplasty',
+        href: '/services/face/facelift',
       },
       {
         title: 'Otoplasty',
-        href: '/services/face/blepharoplasty',
+        href: '/services/face/otoplasty',
       },
       {
         title: 'Neck Lift',
-        href: '/services/face/blepharoplasty',
+        href: '/services/face/necklift',
       },
       {
         title: 'Facial Liposuction',
-        href: '/services/face/blepharoplasty',
+        href: '/services/face/facelipo',
       },
     ],
   },
