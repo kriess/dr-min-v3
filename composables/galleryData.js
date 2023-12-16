@@ -1714,6 +1714,48 @@ export default {
                 },
               ],
             },
+            {
+              caption: '',
+              beforeAfter: [
+                {
+                  label: 'Front View',
+                  url: 'labiaplasty-p03-front-lrg.jpg',
+                  slug: 'front',
+                },
+              ],
+            },
+            {
+              caption: '',
+              beforeAfter: [
+                {
+                  label: 'Front View',
+                  url: 'labiaplasty-p04-front-lrg.jpg',
+                  slug: 'front',
+                },
+              ],
+            },
+            {
+              caption: '',
+              beforeAfter: [
+                {
+                  label: 'Front View',
+                  url: 'labiaplasty-p05-front-lrg.jpg',
+                  slug: 'front',
+                },
+              ],
+            },
+            // {
+            //   type: 'separate-images',
+            //   caption: 'TBD',
+            //   beforeAfter: [
+            //     {
+            //       label: 'Front View',
+            //       beforeUrl: 'labiaplasty-1937-before-opt.jpg',
+            //       afterUrl: 'labiaplasty-1937-after-opt.jpg',
+            //       slug: 'front',
+            //     },
+            //   ],
+            // },
           ],
         },
       ],

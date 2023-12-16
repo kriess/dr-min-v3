@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import GalleryThumbSeparateImages from '~/components/gallery-thumb-separate-images.vue'
+
 const props = defineProps<{
   section: string
   subSection: string
@@ -19,19 +21,28 @@ const galleries = computed(() => {
 
 <template>
   <div class="gallery-grid">
-    <!-- <p>section = {{ props.section }}</p>
-    <p>subSection = {{ props.subSection }}</p>
-    <p>subSections = {{ subSections }}</p>
-    <p>galleries = {{ galleries }}</p> -->
+    <!--    <p>section = {{ props.section }}</p>-->
+    <!--    <p>subSection = {{ props.subSection }}</p>-->
+    <!--    <p>galleries = {{ galleries }}</p>-->
 
     <template v-if="galleries">
       <div class="gallery-thumb-container">
-        <gallery-thumb
-          v-for="(g, index) in galleries"
-          :key="`${g.slug}-${index}`"
-          :gallery="g"
-          :case-number="index + 1"
-        ></gallery-thumb>
+        <template v-for="(g, index) in galleries">
+          <template v-if="g.type === 'separate-images'">
+            <!--            <gallery-thumb-separate-images-->
+            <!--              :key="`${g.slug}-${index}`"-->
+            <!--              :gallery="g"-->
+            <!--              :case-number="index + 1"-->
+            <!--            ></gallery-thumb-separate-images>-->
+          </template>
+          <template v-else>
+            <gallery-thumb
+              :key="`${g.slug}-${index}`"
+              :gallery="g"
+              :case-number="index + 1"
+            ></gallery-thumb>
+          </template>
+        </template>
       </div>
     </template>
   </div>
