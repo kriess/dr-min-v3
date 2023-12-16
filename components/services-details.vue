@@ -866,7 +866,6 @@ const props = withDefaults(defineProps<Props>(), {
           </p>
         </div>
       </template>
-
       <template v-if="procedure.slug === 'liposuction'">
         <div class="services-section">
           <div class="services-title">{{ procedure.title }}</div>

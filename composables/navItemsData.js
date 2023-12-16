@@ -36,14 +36,75 @@ export default [
   {
     href: '/services/breast',
     title: 'Breast',
+    subNavItems: [
+      {
+        title: 'Breast Augmentation',
+        href: '/services/breast/breast-augmentation',
+      },
+      {
+        title: 'Breast Lift',
+        href: '/services/breast/breast-lift',
+      },
+      {
+        title: 'Breast Reduction',
+        href: '/services/breast/breast-reduction',
+      },
+      {
+        title: 'Breast Revision',
+        href: '/services/breast/breast-revision',
+      },
+      {
+        title: 'Male Breast Reduction',
+        href: '/services/breast/breast-reduction-male',
+      },
+      {
+        title: 'Correction of Inverted Nipples',
+        href: '/services/breast/inverted-nipples',
+      },
+    ],
   },
   {
     href: '/services/body',
     title: 'Body',
+    subNavItems: [
+      {
+        title: 'Abdominoplasty (Tummy Tuck)',
+        href: '/services/body/abdominoplasty',
+      },
+      {
+        title: 'Liposuction',
+        href: '/services/body/liposuction',
+      },
+      {
+        title: 'Arm Lift',
+        href: '/services/body/arm-lift',
+      },
+      {
+        title: 'Thigh Lift',
+        href: '/services/body/thigh-lift',
+      },
+      {
+        title: 'Buttock Augmentation',
+        href: '/services/body/buttock-augmentation',
+      },
+      {
+        title: 'Body Contouring',
+        href: '/services/body/body-contouring',
+      },
+      {
+        title: 'Labiaplasty',
+        href: '/services/body/labiaplasty',
+      },
+      {
+        title: 'Mommy Makeover',
+        href: '/services/body/mommy-makeover',
+      },
+    ],
   },
   {
     href: '/services/skin',
     title: 'Skin',
+    subNavItems: [],
   },
   {
     href: '/photo-gallery',
