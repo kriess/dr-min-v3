@@ -12,15 +12,42 @@ export default defineNuxtConfig({
     transpile: ['vuetify'],
   },
 
+  devServer: {
+    host: 'dev.drcarolinemin.com',
+  },
+
   imports: {
     dirs: ['stores', 'utils'],
   },
+
+  modules: [
+    'nuxt-schema-org',
+    'nuxt-simple-robots',
+    'nuxt-simple-sitemap',
+    '@vueuse/nuxt',
+    '@invictus.codes/nuxt-vuetify',
+    async (options: any, nuxt: any) => {
+      await nuxt.hooks.hook('vite:extendConfig', (config: any) =>
+        config.plugins.push(
+          vuetify({
+            autoImport: true,
+            styles: { configFile: './assets/styles/vuetify.scss' },
+          }),
+        ),
+      )
+    },
+  ],
 
   runtimeConfig: {
     public: {
       GOOGLE_MAPS_API_KEY: 'AIzaSyDQZDKJBwh9Z3JDV5dVTzUgFx3Ok-Oeysk',
       siteDomain: 'https://drcarolinemin.com',
     },
+  },
+
+  site: {
+    url: 'https://drcarolinemin.com',
+    name: 'Dr. Caroline Min, M.D.',
   },
 
   sourcemap: {
@@ -50,21 +77,6 @@ export default defineNuxtConfig({
       },
     },
   },
-
-  modules: [
-    '@vueuse/nuxt',
-    '@invictus.codes/nuxt-vuetify',
-    async (options: any, nuxt: any) => {
-      await nuxt.hooks.hook('vite:extendConfig', (config: any) =>
-        config.plugins.push(
-          vuetify({
-            autoImport: true,
-            styles: { configFile: './assets/styles/vuetify.scss' },
-          }),
-        ),
-      )
-    },
-  ],
 
   vuetify: {
     /* vuetify options */

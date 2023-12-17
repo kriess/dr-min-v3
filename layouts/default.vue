@@ -1,11 +1,62 @@
 <script lang="ts" setup>
 const drawer = ref(false)
+const appConfig = useAppConfig()
+
+useSchemaOrg([
+  defineWebSite({
+    name: 'Dr. Caroline Min, M.D. - Board Certified Plastic Surgeon',
+    alternateName: "Dr. Caroline Min",
+  }),
+  defineLocalBusiness({
+    "@type": [
+      "Organization",
+      "LocalBusiness",
+      "MedicalBusiness",
+      "PlasticSurgery"
+    ],
+    name: 'Dr. Caroline Min, M.D. - Board Certified Plastic Surgeon',
+    priceRange: "Please call for pricing",
+    telephone: "+1-" + appConfig.phone,
+    additionalType: "https://en.wikipedia.org/wiki/Plastic_surgery",
+    description: "Dr. Caroline Min is a board certified plastic surgeon specializing in cosmetic surgery; including Facelift, Breast Augmentation, Tummy Tuck, Mommy Makeover, and Breast Lift. Contact Dr. Caroline Min to schedule a consultation.",
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+        ],
+        "opens": "09:00",
+        "closes": "17:00"
+      },
+    ],
+    address: {
+      "@type": "PostalAddress",
+      "streetAddress": "547 E Union St.",
+      "addressLocality": "Pasadena",
+      "addressRegion": "CA",
+      "postalCode": "91101",
+      "addressCountry": "United States",
+    },
+    geo: {
+      "@type": "GeoCoordinates",
+      "latitude": 37.293058,
+      "longitude": -121.988331
+    },
+    // need to update
+    // image: "TBD",
+    // logo: "TBD",
+  }),
+])
 
 useHead({
   titleTemplate: '%s - Dr. Caroline Min',
   link: [
     { rel: 'icon', href: '/icon.png' },
-    { rel: 'canonical', href: 'https://drcarolinemin.com/' },
+    { rel: 'canonical', hid: 'canonical', href: 'https://drcarolinemin.com/' },
     {
       rel: 'stylesheet',
       href: 'https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap',
@@ -29,7 +80,7 @@ useHead({
     {
       property: 'og:description',
       content:
-        'Dr. Caroline Min, MD is a board certified plastic surgeon specializing in cosmetic surgery. She has completed additional fellowship training in aesthetic surgery and has the skills and expertise to help you achieve your goals for plastic surgery.',
+        'Dr. Caroline Min is a board certified plastic surgeon specializing in cosmetic surgery; including Facelift, Breast Augmentation, Tummy Tuck, Mommy Makeover, and Breast Lift. Contact Dr. Caroline Min to schedule a consultation.',
     },
     {
       property: 'og:image',
@@ -55,7 +106,7 @@ useHead({
     {
       name: 'keywords',
       content:
-        'Pasadena, Plastic Surgery, Plastic Surgeon, Dr. Caroline Min MD, Facelift, Tummy Tuck, Abdominoplasty, Eyelid Surgery, Eyelid Lift, Brow Lift, Blepharoplasty, Breast Augmentation, Liposuction, Facial Liposuction, Chin Surgery, Buccal Fat Removal, Inverted Nipple Correction, Labiaplasty, Mommy Makeover, Arm Lift, Thigh Lift, Otoplasty, Rhinoplasty, Nose Surgery,  Breast Lift, Breast Reduction, Male Breast Reduction, BOTOX, Microdermabrasion, Neck Lift, Buttock Augmentation, Body Contouring, Laser Hair Removal, Female Plastic Surgeon',
+        'Pasadena, Plastic Surgery, Plastic Surgeon, Dr. Caroline Min, Facelift, Tummy Tuck, Abdominoplasty, Eyelid Surgery, Eyelid Lift, Brow Lift, Blepharoplasty, Breast Augmentation, Liposuction, Facial Liposuction, Chin Surgery, Buccal Fat Removal, Inverted Nipple Correction, Labiaplasty, Mommy Makeover, Arm Lift, Thigh Lift, Otoplasty, Rhinoplasty, Nose Surgery,  Breast Lift, Breast Reduction, Male Breast Reduction, BOTOX, Microdermabrasion, Neck Lift, Buttock Augmentation, Body Contouring, Laser Hair Removal, Female Plastic Surgeon',
     },
   ],
 })

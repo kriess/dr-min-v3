@@ -5,7 +5,7 @@ const canonicalUrl = `${runtimeConfig.public.siteDomain}${route.fullPath}`
 
 useHead({
   title: 'Male Breast Reduction',
-  link: [{ rel: 'canonical', href: canonicalUrl }],
+  link: [{ rel: 'canonical', hid: 'canonical', href: canonicalUrl }],
   meta: [
     {
       name: 'description',

@@ -8,7 +8,7 @@ useHead({
   title: pageTitle,
   link: [
     {
-      rel: 'canonical',
+      rel: 'canonical', hid: 'canonical',
       href: canonicalUrl,
     },
   ],
