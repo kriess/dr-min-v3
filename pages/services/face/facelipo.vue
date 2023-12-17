@@ -1,14 +1,17 @@
-<script lang="ts" setup>
-// https://vuejs.org/guide/typescript/composition-api.html#typing-component-props
-interface Props {
-  section: string
-  procedure: object
-}
+<script setup>
+const runtimeConfig = useRuntimeConfig()
+const route = useRoute()
+const canonicalUrl = `${runtimeConfig.public.siteDomain}${route.fullPath}`
 
-// props
-const props = withDefaults(defineProps<Props>(), {
-  section: '',
-  procedure: '',
+useHead({
+  title: 'Facial Liposuction',
+  link: [{ rel: 'canonical', href: canonicalUrl }],
+  meta: [
+    {
+      name: 'description',
+      content: 'Facial liposuction sculpts the face by removing areas of fat from the lower cheek, jawline, chin or neck. For older patients looking to tone the cheeks or jowls liposuction can be an effective and less invasive alternative to a face or neck lift.'
+    }
+  ],
 })
 </script>
 

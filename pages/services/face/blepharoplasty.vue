@@ -1,14 +1,17 @@
-<script lang="ts" setup>
-// https://vuejs.org/guide/typescript/composition-api.html#typing-component-props
-interface Props {
-  section: string
-  procedure: object
-}
+<script setup>
+const runtimeConfig = useRuntimeConfig()
+const route = useRoute()
+const canonicalUrl = `${runtimeConfig.public.siteDomain}${route.fullPath}`
 
-// props
-const props = withDefaults(defineProps<Props>(), {
-  section: '',
-  procedure: '',
+useHead({
+  title: 'Blepharoplasty - Eyelid Lift',
+  link: [{ rel: 'canonical', href: canonicalUrl }],
+  meta: [
+    {
+      name: 'description',
+      content: 'Eyelid surgery, also known as blepharoplasty, can rejuvenate puffy, sagging, tired-looking eyes by removing excess fat, skin and muscle from the eyelids. '
+    }
+  ],
 })
 </script>
 

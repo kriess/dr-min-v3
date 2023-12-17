@@ -1,14 +1,17 @@
-<script lang="ts" setup>
-// https://vuejs.org/guide/typescript/composition-api.html#typing-component-props
-interface Props {
-  section: string
-  procedure: object
-}
+<script setup>
+const runtimeConfig = useRuntimeConfig()
+const route = useRoute()
+const canonicalUrl = `${runtimeConfig.public.siteDomain}${route.fullPath}`
 
-// props
-const props = withDefaults(defineProps<Props>(), {
-  section: '',
-  procedure: '',
+useHead({
+  title: 'Neck Lift',
+  link: [{ rel: 'canonical', href: canonicalUrl }],
+  meta: [
+    {
+      name: 'description',
+      content: 'A neck lift is performed to remove excess fat beneath the chin and tighten loose skin in the neck. The procedure can produce dramatic results in the patient whose chin and/or neck has sagged with age or after weight loss.'
+    }
+  ],
 })
 </script>
 

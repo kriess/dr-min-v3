@@ -1,8 +1,18 @@
 <script setup>
-const services = useServices()
+const runtimeConfig = useRuntimeConfig()
 const route = useRoute()
+const canonicalUrl = `${runtimeConfig.public.siteDomain}${route.fullPath}`
 
-console.log(services)
+useHead({
+  title: 'Brow Lift',
+  link: [{ rel: 'canonical', href: canonicalUrl }],
+  meta: [
+    {
+      name: 'description',
+      content: 'A brow lift can revitalize the upper face by lifting sagging eyebrows that may make you look angry, tired and sad. The eye area tends to look heavy if the brows are droopy and in a low position. '
+    }
+  ],
+})
 </script>
 
 <template>

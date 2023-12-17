@@ -1,21 +1,24 @@
-<script lang="ts" setup>
-// https://vuejs.org/guide/typescript/composition-api.html#typing-component-props
-interface Props {
-  section: string
-  procedure: object
-}
+<script setup>
+const runtimeConfig = useRuntimeConfig()
+const route = useRoute()
+const canonicalUrl = `${runtimeConfig.public.siteDomain}${route.fullPath}`
 
-// props
-const props = withDefaults(defineProps<Props>(), {
-  section: '',
-  procedure: '',
+useHead({
+  title: 'Otoplasty',
+  link: [{ rel: 'canonical', href: canonicalUrl }],
+  meta: [
+    {
+      name: 'description',
+      content: 'Otoplasty is ear surgery that is done to improve the appearance of large prominent ears that stick out. Patients with prominent ears are often teased during childhood for having “dumbo ears” and are very self-conscious about it. '
+    }
+  ],
 })
 </script>
 
 <template>
   <div class="services-details">
     <div class="services-section">
-      <div class="services-title">Otoplasty</div>
+      <h2 class="services-title">Otoplasty</h2>
       <v-img
         class="thumb"
         cover
