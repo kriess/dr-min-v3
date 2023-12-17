@@ -1,11 +1,20 @@
 <script setup>
-// props
-const props = withDefaults(defineProps(), {
-  section: '',
-  procedure: '',
+const runtimeConfig = useRuntimeConfig()
+const route = useRoute()
+const canonicalUrl = `${runtimeConfig.public.siteDomain}${route.fullPath}`
+
+useHead({
+  title: 'Buttock Augmentation',
+  link: [{ rel: 'canonical', href: canonicalUrl }],
+  meta: [
+    {
+      name: 'description',
+      content:
+        'For patients who desire larger, fuller buttocks, fat from other parts of the body can be transferred to the buttocks, creating long lasting augmentation. '
+    },
+  ],
 })
 </script>
-
 <template>
   <div class="services-details">
     <div class="services-section">

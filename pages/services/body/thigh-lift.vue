@@ -1,14 +1,18 @@
-<script lang="ts" setup>
-// https://vuejs.org/guide/typescript/composition-api.html#typing-component-props
-interface Props {
-  section: string
-  procedure: object
-}
+<script setup>
+const runtimeConfig = useRuntimeConfig()
+const route = useRoute()
+const canonicalUrl = `${runtimeConfig.public.siteDomain}${route.fullPath}`
 
-// props
-const props = withDefaults(defineProps<Props>(), {
-  section: '',
-  procedure: '',
+useHead({
+  title: 'Thigh Lift',
+  link: [{ rel: 'canonical', href: canonicalUrl }],
+  meta: [
+    {
+      name: 'description',
+      content:
+        'A thigh lift is performed to remove excess skin and fat from the upper legs. Candidates typically suffer from loose, inelastic skin after extreme weight loss due to diet, exercise or bariatric surgery. ',
+    },
+  ],
 })
 </script>
 

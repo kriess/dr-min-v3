@@ -1,14 +1,17 @@
-<script lang="ts" setup>
-// https://vuejs.org/guide/typescript/composition-api.html#typing-component-props
-interface Props {
-  section: string
-  procedure: object
-}
+<script setup>
+const runtimeConfig = useRuntimeConfig()
+const route = useRoute()
+const canonicalUrl = `${runtimeConfig.public.siteDomain}${route.fullPath}`
 
-// props
-const props = withDefaults(defineProps<Props>(), {
-  section: '',
-  procedure: '',
+useHead({
+  title: 'Botox',
+  link: [{ rel: 'canonical', href: canonicalUrl }],
+  meta: [
+    {
+      name: 'description',
+      content: 'BOTOX® Cosmetic is commonly used to reduce or eliminate the appearance of facial wrinkles. It is injected under the skin into areas surrounding the eyes, forehead and mouth to smooth crow\'s feet, frown and worry lines, and lines on the neck.'
+    }
+  ],
 })
 </script>
 

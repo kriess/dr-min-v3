@@ -1,14 +1,18 @@
-<script lang="ts" setup>
-// https://vuejs.org/guide/typescript/composition-api.html#typing-component-props
-interface Props {
-  section: string
-  procedure: object
-}
+<script setup>
+const runtimeConfig = useRuntimeConfig()
+const route = useRoute()
+const canonicalUrl = `${runtimeConfig.public.siteDomain}${route.fullPath}`
 
-// props
-const props = withDefaults(defineProps<Props>(), {
-  section: '',
-  procedure: '',
+useHead({
+  title: 'Labiaplasty',
+  link: [{ rel: 'canonical', href: canonicalUrl }],
+  meta: [
+    {
+      name: 'description',
+      content:
+        'Many women suffer from enlarged labia minora (the inner genital lips). Some may not like the appearance of their large, uneven or thick labia, which can sometimes extend beyond the vaginal opening.'
+    },
+  ],
 })
 </script>
 

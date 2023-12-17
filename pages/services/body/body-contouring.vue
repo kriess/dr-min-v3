@@ -1,14 +1,18 @@
 <script lang="ts" setup>
-// https://vuejs.org/guide/typescript/composition-api.html#typing-component-props
-interface Props {
-  section: string
-  procedure: object
-}
+const runtimeConfig = useRuntimeConfig()
+const route = useRoute()
+const canonicalUrl = `${runtimeConfig.public.siteDomain}${route.fullPath}`
 
-// props
-const props = withDefaults(defineProps<Props>(), {
-  section: '',
-  procedure: '',
+useHead({
+  title: 'Body Contouring',
+  link: [{ rel: 'canonical', href: canonicalUrl }],
+  meta: [
+    {
+      name: 'description',
+      content:
+        'Candidates for body contouring typically suffer from loose (inelastic) skin on many or most areas of the body usually as a result of significant weight loss due to diet, exercise or bariatric surgery. ',
+    },
+  ],
 })
 </script>
 

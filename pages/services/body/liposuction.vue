@@ -1,14 +1,18 @@
-<script lang="ts" setup>
-// https://vuejs.org/guide/typescript/composition-api.html#typing-component-props
-interface Props {
-  section: string
-  procedure: object
-}
+<script setup>
+const runtimeConfig = useRuntimeConfig()
+const route = useRoute()
+const canonicalUrl = `${runtimeConfig.public.siteDomain}${route.fullPath}`
 
-// props
-const props = withDefaults(defineProps<Props>(), {
-  section: '',
-  procedure: '',
+useHead({
+  title: 'Liposuction',
+  link: [{ rel: 'canonical', href: canonicalUrl }],
+  meta: [
+    {
+      name: 'description',
+      content:
+        'Liposuction (also known as liposculpture) is one of the most popular cosmetic surgery procedures performed today. Liposuction permanently removes stubborn fat deposits that have not responded to diet and exercise. '
+    },
+  ],
 })
 </script>
 
