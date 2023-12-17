@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-const route = useRoute()
-const router = useRouter()
 const props = defineProps<{
   procedure: object
   section: string
@@ -8,21 +6,11 @@ const props = defineProps<{
 
 // reactive data
 const dialog = ref(false)
-
-// methods
-const goToProcedurePage = (id) => {
-  router.push({
-    path: `/services/${props.section}/${id}`,
-  })
-}
 </script>
 
 <template>
   <div class="services-thumb">
-    <v-card
-      @click="goToProcedurePage(procedure.slug)"
-      class="services-thumb-card"
-    >
+    <v-card @click="dialog = true" class="services-thumb-card">
       <v-card-text>
         <v-img
           class="thumb"
@@ -67,8 +55,8 @@ const goToProcedurePage = (id) => {
   }
   :deep(.v-img__img--cover) {
     transition: 0.6s;
-    filter: grayscale(0%);
-    opacity: 1;
+    filter: grayscale(100%);
+    opacity: 0.7;
   }
   .procedure-title {
     font-size: 130%;

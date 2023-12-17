@@ -1,6 +1,4 @@
-<script setup>
-import Breadcrumb from '~/components/breadcrumb.vue'
-
+<script lang="ts" setup>
 const runtimeConfig = useRuntimeConfig()
 const pageTitle = 'Services'
 const services = useServices()
@@ -50,12 +48,6 @@ const activeSection = computed(() => {
   return getSection(sectionId.value)
 })
 
-onMounted(() => {
-  if (process.client && window) {
-    window.history.scrollRestoration = 'auto'
-  }
-})
-
 // lifecycle hooks
 // onMounted(() => {
 //   router.push({
@@ -68,9 +60,37 @@ onMounted(() => {
 
 <template>
   <section class="services page">
-    <breadcrumb></breadcrumb>
-    <!--    <services-header></services-header>-->
-    <nuxt-page />
+    <PageTopVisuals
+      :title="pageTitle"
+      image-src="/img/headshots/ourservices.jpg"
+      image-width="60%"
+      alt="Dr. Caroline Min, M.D. - board certified plastic surgeon - services"
+    ></PageTopVisuals>
+
+    <v-btn-toggle
+      v-model="activeSection"
+      color="primary"
+      group
+      variant="text"
+      class="btn-grp"
+    >
+      <v-btn
+        v-for="section in services.sections"
+        :key="section.slug"
+        :value="section.slug"
+        :variant="sectionId === section.slug ? 'tonal' : 'text'"
+        @click="goToNewSection(section.slug)"
+      >
+        {{ section.title }}
+      </v-btn>
+    </v-btn-toggle>
+
+    <div>
+      <services-grid
+        :section="sectionId"
+        :services="activeSection"
+      ></services-grid>
+    </div>
   </section>
 </template>
 

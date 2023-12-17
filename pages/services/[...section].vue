@@ -1,15 +1,18 @@
 <script setup>
-import Breadcrumb from '~/components/breadcrumb.vue'
-
 const runtimeConfig = useRuntimeConfig()
 const pageTitle = 'Services'
 const services = useServices()
 const route = useRoute()
 const router = useRouter()
 
+console.log('services', services)
+
 let canonicalUrl = `${runtimeConfig.public.siteDomain}/services`
-if (route.query.section) {
-  canonicalUrl = canonicalUrl + `?section=${route.query.section}`
+if (route.params.section) {
+  canonicalUrl = canonicalUrl + `/${route.params.section}`
+}
+if (route.params.procedure) {
+  canonicalUrl = canonicalUrl + `/${route.params.procedure}`
 }
 
 useHead({
@@ -29,13 +32,17 @@ useHead({
   ],
 })
 
+onMounted(() => {
+  if (process.client && window) {
+    window.history.scrollRestoration = 'auto'
+  }
+})
+
 // methods
 const goToNewSection = (id) => {
   const section = getSection(id)
   router.push({
-    query: {
-      section: id,
-    },
+    path: `/services/${id}`,
   })
 }
 const getSection = (id) => {
@@ -44,48 +51,24 @@ const getSection = (id) => {
 
 // computed
 const sectionId = computed(() => {
-  return route.query.section || 'face'
+  return route.params.section[0] || 'face'
 })
 const activeSection = computed(() => {
   return getSection(sectionId.value)
 })
 
-onMounted(() => {
-  if (process.client && window) {
-    window.history.scrollRestoration = 'auto'
-  }
-})
-
-// lifecycle hooks
-// onMounted(() => {
-//   router.push({
-//     query: {
-//       section: sectionId.value,
-//     },
-//   })
-// })
+console.log('sectionId', sectionId.value)
 </script>
 
 <template>
-  <section class="services page">
-    <breadcrumb></breadcrumb>
-    <!--    <services-header></services-header>-->
-    <nuxt-page />
+  <section>
+    <div>
+      <services-grid
+        :section="sectionId"
+        :services="activeSection"
+      ></services-grid>
+    </div>
   </section>
 </template>
 
-<style lang="scss" scoped>
-.services {
-  width: auto;
-
-  .btn-grp {
-    margin: 10px 0;
-    justify-content: center;
-    display: flex;
-    :deep(.v-btn) {
-      text-transform: capitalize;
-      border-radius: $main-border-radius;
-    }
-  }
-}
-</style>
+<style lang="scss" scoped></style>

@@ -82,11 +82,13 @@ const year = computed(() => {
 
 <style lang="scss" scoped>
 .site-footer {
-  border-radius: $main-border-radius $main-border-radius 0 0;
+  margin-top: 50px;
+  border-radius: 0; //$main-border-radius $main-border-radius 0 0;
   padding: 0;
   overflow: hidden;
 }
 :deep(.v-container) {
+  max-width: none;
   padding: 0;
 }
 .bio {

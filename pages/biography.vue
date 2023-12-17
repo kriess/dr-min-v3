@@ -40,7 +40,6 @@ useHead({
           emphasis on safety and ethical practice. She is always available for
           her patients, both before and after surgery.
         </p>
-
         <p>
           Dr. Min is fully trained in plastic surgery as well as general
           surgery. She completed a general surgery residency at St. Luke's
@@ -65,19 +64,19 @@ useHead({
         </p>
       </div>
       <div class="education content-width">
-        <div class="text-h2 text-center title-text">Education & Training</div>
-        <div class="education--item text-h4">MIT / Stanford</div>
-        <div class="education--item text-h4">
+        <h2 class="text-h2 text-center title-text">Education & Training</h2>
+        <h4 class="education--item text-h4">MIT / Stanford</h4>
+        <h4 class="education--item text-h4">
           New York University School of Medicine
-        </div>
+        </h4>
 
-        <div class="education--item text-h4">
+        <h4 class="education--item text-h4">
           Plastic Surgery Residency, Montefiore Medical Center
-        </div>
+        </h4>
 
-        <div class="education--item text-h4">
+        <h4 class="education--item text-h4">
           Aesthetic Surgery Fellowship, Manhattan Eye, Ear and Throat Hospital
-        </div>
+        </h4>
       </div>
     </div>
   </section>

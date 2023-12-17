@@ -19,13 +19,6 @@ export default {
           summary:
             'A brow lift can revitalize the upper face by lifting sagging eyebrows that may make you look angry, tired and sad. ',
         },
-        // {
-        //   title: 'Rhinoplasty',
-        //   slug: 'rhinoplasty',
-        //   thumbUrl: 'rhinoplasty.jpg',
-        //   summary:
-        //     'One of the most common plastic surgery procedures, rhinoplasty is performed to reshape the nose to achieve facial harmony and boost self-confidence. ',
-        // },
         {
           title: 'Facelift',
           slug: 'facelift',
@@ -54,6 +47,13 @@ export default {
           summary:
             'Facial liposuction sculpts the face by removing areas of fat from the lower cheek, jawline, chin or neck. ',
         },
+        // {
+        //   title: 'Rhinoplasty',
+        //   slug: 'rhinoplasty',
+        //   thumbUrl: 'rhinoplasty.jpg',
+        //   summary:
+        //     'One of the most common plastic surgery procedures, rhinoplasty is performed to reshape the nose to achieve facial harmony and boost self-confidence. ',
+        // },
         // {
         //   title: 'Chin Surgery',
         //   slug: 'chinsurgery',
@@ -158,7 +158,7 @@ export default {
             'For patients who desire larger, fuller buttocks, fat from other parts of the body can be transferred to the buttocks, creating long lasting augmentation.',
         },
         {
-          title: 'Body Contouring after Weight Loss',
+          title: 'Body Contouring',
           slug: 'body-contouring',
           thumbUrl: 'bodycontouringweightloss.jpg',
           summary:

@@ -866,7 +866,6 @@ const props = withDefaults(defineProps<Props>(), {
           </p>
         </div>
       </template>
-
       <template v-if="procedure.slug === 'liposuction'">
         <div class="services-section">
           <div class="services-title">{{ procedure.title }}</div>
@@ -1222,6 +1221,7 @@ const props = withDefaults(defineProps<Props>(), {
 .services-details {
   width: auto;
   .services-title {
+    display: none;
     color: $primary;
     font-size: 150%;
     font-weight: bold;
