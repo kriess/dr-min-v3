@@ -3,7 +3,7 @@ const runtimeConfig = useRuntimeConfig()
 const gallery = useGallery()
 const route = useRoute()
 const router = useRouter()
-const pageTitle = 'Photo Gallery'
+const pageTitle = 'Before/After Gallery'
 
 let canonicalUrl = `${runtimeConfig.public.siteDomain}/photo-gallery`
 if (route.query.section) {

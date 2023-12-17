@@ -92,7 +92,7 @@ const changeView = (type) => {
   width: 100%;
   :deep(.v-img__img--cover) {
     transition: 0.6s;
-    filter: grayscale(100%);
+    filter: grayscale(0%);
     opacity: 0.7;
   }
 }
