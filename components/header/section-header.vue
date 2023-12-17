@@ -52,6 +52,16 @@ const procedureTitle = computed(() => {
   const procedure = section?.procedures?.find((i) => i.slug === sections[3])
   return procedure?.title
 })
+const procedures = computed(() => {
+  const sections = route.fullPath.split('/')
+  const section = services?.sections?.find((i) => i.slug === sections[2])
+  const procedures = section?.procedures
+
+  procedures.forEach((i) => {
+    i.href = `/services/${siteSection.value}/${i.slug}`
+  })
+  return procedures
+})
 
 console.log('services', services)
 </script>
@@ -60,8 +70,13 @@ console.log('services', services)
   <div class="header-section-header" v-if="isService" :style="getBg()">
     <div class="content" v-if="isService">
       <h1 class="section-title">{{ procedureTitle ?? siteSection }}</h1>
-      <!--      <h2>{{ siteProcedure }}</h2>-->
-      <!--      <p>{{ procedureTitle }}</p>-->
+      <ul class="procedures" v-if="procedureTitle">
+        <li v-for="i in procedures">
+          <v-btn class="section-nav-btn" variant="plain" :to="i.href">
+            {{ i.title }}
+          </v-btn>
+        </li>
+      </ul>
     </div>
   </div>
 </template>
@@ -76,7 +91,7 @@ console.log('services', services)
     0 2px 4px -1px rgba(0, 0, 0, 0.1),
     0 4px 5px 0 rgba(0, 0, 0, 0.1),
     0 1px 10px 0 rgba(0, 0, 0, 0.1);
-  margin-bottom: 40px;
+  margin-bottom: 0px;
   width: auto;
 
   .content {
@@ -90,8 +105,33 @@ console.log('services', services)
   }
 
   .section-title {
+    text-shadow: 1px 1px 2px #aaa;
+    font-size: 250%;
+    letter-spacing: 1.2px;
     color: $primary;
     text-transform: capitalize;
+    margin-bottom: 10px;
+  }
+
+  .procedures {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    li {
+      list-style-type: none;
+    }
+  }
+
+  .section-nav-btn {
+    color: $primary;
+    margin: 0 10px;
+    background-color: rgba(0, 0, 0, 0.1);
+    text-transform: capitalize;
+    &.v-btn--active {
+      opacity: 1;
+      background-color: rgba(0, 0, 0, 0.1);
+    }
   }
 }
 </style>

@@ -2,7 +2,7 @@
 const drawer = ref(false)
 
 useHead({
-  titleTemplate: 'Dr. Caroline Min - %s',
+  titleTemplate: '%s - Dr. Caroline Min',
   link: [
     { rel: 'icon', href: '/icon.png' },
     { rel: 'canonical', href: 'https://drcarolinemin.com/' },

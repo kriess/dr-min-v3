@@ -72,6 +72,7 @@ const props = withDefaults(defineProps<Props>(), {
     border-radius: $main-border-radius;
   }
   .page-title-text {
+    text-shadow: 1px 1px 1px #333;
     font-weight: 500;
     font-size: $page-title-font-size;
     margin: 0;

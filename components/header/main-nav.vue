@@ -2,6 +2,13 @@
 const navItems = useNavItems()
 const drawer = ref(false)
 const route = useRoute()
+const router = useRouter()
+
+const goHome = () => {
+  router.push({
+    path: '/',
+  })
+}
 
 const path = computed(() => {
   return route.fullPath
@@ -29,7 +36,7 @@ const siteSection = computed(() => {
 
         <div class="hidden-sm-and-down" style="width: 100%; height: 100%">
           <div class="nav-container">
-            <div>
+            <div @click="goHome" style="cursor: pointer">
               <div class="logo-name">Caroline Min, M.D</div>
               <div class="logo-description">
                 Board Certified Plastic Surgeon
@@ -136,6 +143,7 @@ const siteSection = computed(() => {
     0 1px 10px 0 rgba(0, 0, 0, 0.12);
 
   .logo-name {
+    text-shadow: 1px 1px 1px #333;
     letter-spacing: 1.4px;
     font-weight: 700;
     font-size: 30px;
@@ -160,7 +168,6 @@ const siteSection = computed(() => {
   :deep(.v-toolbar__content) {
     max-width: $page-max-width;
     margin: 0 auto;
-    border-bottom: 1px solid $primary;
     padding: 0 10px;
   }
 
@@ -177,13 +184,10 @@ const siteSection = computed(() => {
   }
 
   :deep(.v-btn--active) {
-    border-bottom: 2px solid #fff;
     opacity: 1;
   }
 
   .nav-btn {
-    border-bottom: 2px solid transparent;
-    border-top: 2px solid transparent;
     color: #fff;
     text-transform: capitalize;
     font-weight: 600;

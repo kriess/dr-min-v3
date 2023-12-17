@@ -158,7 +158,7 @@ export default {
             'For patients who desire larger, fuller buttocks, fat from other parts of the body can be transferred to the buttocks, creating long lasting augmentation.',
         },
         {
-          title: 'Body Contouring after Weight Loss',
+          title: 'Body Contouring',
           slug: 'body-contouring',
           thumbUrl: 'bodycontouringweightloss.jpg',
           summary:

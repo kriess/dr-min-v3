@@ -1,14 +1,19 @@
-<script lang="ts" setup>
-// https://vuejs.org/guide/typescript/composition-api.html#typing-component-props
-interface Props {
-  section: string
-  procedure: object
-}
+<script setup>
+const runtimeConfig = useRuntimeConfig()
+const route = useRoute()
+const canonicalUrl = `${runtimeConfig.public.siteDomain}${route.fullPath}`
 
-// props
-const props = withDefaults(defineProps<Props>(), {
-  section: '',
-  procedure: '',
+useHead({
+  title: 'Arm Lift',
+  link: [{ rel: 'canonical', href: canonicalUrl }],
+  meta: [
+    {
+      name: 'description',
+      content:
+        'After substantial weight loss, weight gain or simply from the effects of ' +
+        'aging, skin on the upper arms can become inelastic, loose and flabby.Arm lifts, also known as brachioplasty, remove that excess skin and fat.',
+    },
+  ],
 })
 </script>
 

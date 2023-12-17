@@ -1,4 +1,6 @@
 <script setup>
+import Breadcrumb from '~/components/breadcrumb.vue'
+
 const runtimeConfig = useRuntimeConfig()
 const pageTitle = 'Services'
 const services = useServices()
@@ -66,6 +68,7 @@ onMounted(() => {
 
 <template>
   <section class="services page">
+    <breadcrumb></breadcrumb>
     <!--    <services-header></services-header>-->
     <nuxt-page />
   </section>
