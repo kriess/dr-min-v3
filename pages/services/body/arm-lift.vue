@@ -63,6 +63,7 @@ useHead({
     margin-bottom: 20px;
   }
   .thumb {
+    border-radius: $border-radius-v3;
     border: 1px solid #ccc;
     margin: 0 0 20px 20px;
     float: right;

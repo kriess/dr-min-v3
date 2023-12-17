@@ -124,6 +124,7 @@ console.log('services', services)
   }
 
   .section-nav-btn {
+    border-radius: $border-radius-v3;
     color: $primary;
     margin: 0 10px;
     background-color: rgba(0, 0, 0, 0.1);
