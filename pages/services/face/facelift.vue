@@ -19,7 +19,10 @@ useHead({
   <div class="services-details">
     <div class="services-section">
       <div class="services-title">Facelift</div>
-      <v-img class="thumb" :src="`/img/services/thumbs/facelift.jpg`"></v-img>
+      <services-body-main-thumb
+        src="/img/services/thumbs/facelift.jpg">
+      </services-body-main-thumb>
+
 
       <p>
         In time, gravity, sun exposure, and the stresses of daily life take

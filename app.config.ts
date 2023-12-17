@@ -1,4 +1,5 @@
 export default defineAppConfig({
+  phone: '626-737-9001',
   testimonials: [
     {
       text: 'You did a breast lift on me at about 2 years ago. I just wanted to let you know that when I went for my yearly mammography the technician said, and I quote  "I see a lot of breasts  and that is the best breast lift I have seen";....... Needless to say that  made me very happy and I owe it to you!!!   Thanks again.',

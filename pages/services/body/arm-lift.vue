@@ -21,11 +21,9 @@ useHead({
   <div class="services-details">
     <div class="services-section">
       <div class="services-title">Arm Lift (Brachioplasty)</div>
-      <v-img
-        class="thumb"
-        cover
-        :src="`/img/services/thumbs/armlift.jpg`"
-      ></v-img>
+      <services-body-main-thumb
+        src="/img/services/thumbs/armlift.jpg">
+      </services-body-main-thumb>
       <p>
         After substantial weight loss, weight gain or simply from the effects of
         aging, skin on the upper arms can become inelastic, loose and flabby.

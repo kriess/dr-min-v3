@@ -18,11 +18,9 @@ useHead({
   <div class="services-details">
     <div class="services-section">
       <div class="services-title">Breast Revision</div>
-      <v-img
-        class="thumb"
-        cover
-        :src="`/img/services/thumbs/breastrevision.jpg`"
-      ></v-img>
+      <services-body-main-thumb
+        src="/img/services/thumbs/breastrevision.jpg">
+      </services-body-main-thumb>
       <p>
         Revision breast augmentation is performed for patients who are not
         satisfied with their results after previously undergoing breast

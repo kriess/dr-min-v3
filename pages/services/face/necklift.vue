@@ -19,11 +19,9 @@ useHead({
   <div class="services-details">
     <div class="services-section">
       <div class="services-title">Necklift</div>
-      <v-img
-        class="thumb"
-        cover
-        :src="`/img/services/thumbs/necklift.jpg`"
-      ></v-img>
+      <services-body-main-thumb
+        src="/img/services/thumbs/necklift.jpg">
+      </services-body-main-thumb>
 
       <p>
         A neck lift is performed to remove excess fat beneath the chin and

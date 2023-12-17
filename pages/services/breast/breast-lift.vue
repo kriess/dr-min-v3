@@ -19,11 +19,9 @@ useHead({
   <div class="services-details">
     <div class="services-section">
       <div class="services-title">Breast Lift</div>
-      <v-img
-        class="thumb"
-        cover
-        :src="`/img/services/thumbs/anotherbreastsurgery.jpg`"
-      ></v-img>
+      <services-body-main-thumb
+        src="/img/services/thumbs/anotherbreastsurgery.jpg">
+      </services-body-main-thumb>
       <p>
         A breast lift, or mastopexy, is performed to return youthful shape and
         lift to breasts that have sagged as a result of weight loss, pregnancy,

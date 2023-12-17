@@ -19,11 +19,9 @@ useHead({
   <div class="services-details">
     <div class="services-section">
       <div class="services-title">Breast Augmentation</div>
-      <v-img
-        class="thumb"
-        cover
-        :src="`/img/services/thumbs/breastsurgery.jpg`"
-      ></v-img>
+      <services-body-main-thumb
+        src="/img/services/thumbs/breastsurgery.jpg">
+      </services-body-main-thumb>
       <p>
         Breast augmentation is one of the most popular cosmetic surgery
         procedures in the United States. It can give women with small or

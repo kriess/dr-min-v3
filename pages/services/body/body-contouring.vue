@@ -20,11 +20,9 @@ useHead({
   <div class="services-details">
     <div class="services-section">
       <div class="services-title">Body Contouring after Weight Loss</div>
-      <v-img
-        class="thumb"
-        cover
-        :src="`/img/services/thumbs/bodycontouringweightloss.jpg`"
-      ></v-img>
+      <services-body-main-thumb
+        src="/img/services/thumbs/bodycontouringweightloss.jpg">
+      </services-body-main-thumb>
       <p>
         Candidates for body contouring typically suffer from loose (inelastic)
         skin on many or most areas of the body usually as a result of

@@ -20,11 +20,9 @@ useHead({
   <div class="services-details">
     <div class="services-section">
       <div class="services-title">Thigh Lift</div>
-      <v-img
-        class="thumb"
-        cover
-        :src="`/img/services/thumbs/thighlift.jpg`"
-      ></v-img>
+      <services-body-main-thumb
+        src="/img/services/thumbs/thighlift.jpg">
+      </services-body-main-thumb>
       <p>
         A thigh lift is performed to remove excess skin and fat from the upper
         legs. Candidates typically suffer from loose, inelastic skin after

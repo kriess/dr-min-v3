@@ -19,11 +19,9 @@ useHead({
   <div class="services-details">
     <div class="services-section">
       <div class="services-title">BOTOX® Cosmetic</div>
-      <v-img
-        class="thumb"
-        cover
-        src="/img/services/thumbs/botox-fillers.jpg"
-      ></v-img>
+      <services-body-main-thumb
+        src="/img/services/thumbs/botox-fillers.jpg">
+      </services-body-main-thumb>
       <p>
         BOTOX® Cosmetic is commonly used to reduce or eliminate the appearance
         of facial wrinkles. It is injected under the skin into areas surrounding

@@ -18,11 +18,9 @@ useHead({
   <div class="services-details">
     <div class="services-section">
       <div class="services-title">Breast Reduction Male</div>
-      <v-img
-        class="thumb"
-        cover
-        :src="`/img/services/thumbs/malebreast-surgery.jpg`"
-      ></v-img>
+      <services-body-main-thumb
+        src="/img/services/thumbs/malebreast-surgery.jpg">
+      </services-body-main-thumb>
       <p>
         Enlarged male breasts (gynecomastia) affect nearly 40-60% of men, often
         with no known cause. This condition can be highly embarrassing as well

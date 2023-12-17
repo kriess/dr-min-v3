@@ -20,11 +20,9 @@ useHead({
   <div class="services-details">
     <div class="services-section">
       <div class="services-title">Labiaplasty</div>
-      <v-img
-        class="thumb"
-        cover
-        :src="`/img/services/thumbs/labiaplasty.jpg`"
-      ></v-img>
+      <services-body-main-thumb
+        src="/img/services/thumbs/labiaplasty.jpg">
+      </services-body-main-thumb>
 
       <p>
         Many women suffer from enlarged labia minora (the inner genital lips).

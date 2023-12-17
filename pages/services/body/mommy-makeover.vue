@@ -20,11 +20,9 @@ useHead({
   <div class="services-details">
     <div class="services-section">
       <div class="services-title">Mommy Makeover</div>
-      <v-img
-        class="thumb"
-        cover
-        :src="`/img/services/thumbs/mommymakeover.jpg`"
-      ></v-img>
+      <services-body-main-thumb
+        src="/img/services/thumbs/mommymakeover.jpg">
+      </services-body-main-thumb>
       <p>
         One of our practice's increasingly popular programs addresses the
         changes to the female breasts and midsection after childbirth.

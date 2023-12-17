@@ -20,11 +20,9 @@ useHead({
   <div class="services-details">
     <div class="services-section">
       <div class="services-title">Abdominoplasty (Tummy Tuck)</div>
-      <v-img
-        class="thumb"
-        cover
-        :src="`/img/services/thumbs/abdominoplasty.jpg`"
-      ></v-img>
+      <services-body-main-thumb
+        src="/img/services/thumbs/abdominoplasty.jpg">
+      </services-body-main-thumb>
       <p>
         Sometimes, diet and exercise just aren't enough to give you the flat
         tummy that you desire. Especially if you've been pregnant or experienced

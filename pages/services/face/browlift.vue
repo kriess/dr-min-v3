@@ -19,7 +19,9 @@ useHead({
   <div class="services-details">
     <div class="services-section">
       <div class="services-title">Browlift</div>
-      <v-img class="thumb" src="/img/services/thumbs/eyebrowlift.jpg"></v-img>
+      <services-body-main-thumb
+        src="/img/services/thumbs/eyebrowlift.jpg">
+      </services-body-main-thumb>
       <p>
         A brow lift can revitalize the upper face by lifting sagging eyebrows
         that may make you look angry, tired and sad. The eye area tends to look

@@ -19,12 +19,9 @@ useHead({
   <div class="services-details">
     <div class="services-section">
       <div class="services-title">Facial Liposuction</div>
-      <v-img
-        class="thumb"
-        cover
-        :src="`/img/services/thumbs/neckliposuction.jpg`"
-      ></v-img>
-
+      <services-body-main-thumb
+        src="/img/services/thumbs/neckliposuction.jpg">
+      </services-body-main-thumb>
       <p>
         Facial liposuction sculpts the face by removing areas of fat from the
         lower cheek, jawline, chin or neck. For older patients looking to tone

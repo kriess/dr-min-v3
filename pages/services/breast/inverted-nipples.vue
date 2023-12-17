@@ -19,11 +19,9 @@ useHead({
   <div class="services-details">
     <div class="services-section">
       <div class="services-title">Correction of Inverted Nipples</div>
-      <v-img
-        class="thumb"
-        cover
-        :src="`/img/services/thumbs/nipplecorrection.jpg`"
-      ></v-img>
+      <services-body-main-thumb
+        src="/img/services/thumbs/nipplecorrection.jpg">
+      </services-body-main-thumb>
       <p>
         Nipple and areola reconstruction can provide a boost in self-confidence
         to patients who have inverted or stretched nipples. The inverted nipples

@@ -20,11 +20,9 @@ useHead({
   <div class="services-details">
     <div class="services-section">
       <div class="services-title">Liposuction</div>
-      <v-img
-        class="thumb"
-        cover
-        :src="`/img/services/thumbs/liposuction.jpg`"
-      ></v-img>
+      <services-body-main-thumb
+        src="/img/services/thumbs/liposuction.jpg">
+      </services-body-main-thumb>
       <p>
         Liposuction (also known as liposculpture) is one of the most popular
         cosmetic surgery procedures performed today. Liposuction permanently

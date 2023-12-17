@@ -19,11 +19,9 @@ useHead({
   <div class="services-details">
     <div class="services-section">
       <div class="services-title">Breast Reduction</div>
-      <v-img
-        class="thumb"
-        cover
-        :src="`/img/services/thumbs/breastreduction.jpg`"
-      ></v-img>
+      <services-body-main-thumb
+        src="/img/services/thumbs/breastreduction.jpg">
+      </services-body-main-thumb>
       <p>
         Large breasts can cause pain, improper posture, rashes, breathing
         problems, skeletal deformities, and low self-esteem. Breast reduction

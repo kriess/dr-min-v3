@@ -19,11 +19,9 @@ useHead({
   <div class="services-details">
     <div class="services-section">
       <h1 class="services-title">Blepharoplasty</h1>
-      <v-img
-        class="thumb"
-        cover
-        src="/img/services/thumbs/eyelid-adobe-2.jpg"
-      ></v-img>
+      <services-body-main-thumb
+        src="/img/services/thumbs/eyelid-adobe-2.jpg">
+      </services-body-main-thumb>
       <p>
         Eyelid surgery, also known as blepharoplasty, can rejuvenate puffy,
         sagging, tired-looking eyes by removing excess fat, skin and muscle from

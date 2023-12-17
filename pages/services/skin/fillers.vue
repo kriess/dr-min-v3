@@ -19,7 +19,9 @@ useHead({
   <div class="services-details">
     <div class="services-section">
       <div class="services-title">Fillers</div>
-      <v-img class="thumb" src="/img/services/thumbs/filler.jpg"></v-img>
+      <services-body-main-thumb
+        src="/img/services/thumbs/filler.jpg">
+      </services-body-main-thumb>
       <p>
         Facial fillers are designed to smooth wrinkles, sculpt lips and shape
         facial contours. It is a clear, synthetic gel made with hyaluronic acid,

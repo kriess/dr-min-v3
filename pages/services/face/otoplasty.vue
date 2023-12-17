@@ -19,12 +19,9 @@ useHead({
   <div class="services-details">
     <div class="services-section">
       <h2 class="services-title">Otoplasty</h2>
-      <v-img
-        class="thumb"
-        cover
-        :src="`/img/services/thumbs/otoplasty.jpg`"
-      ></v-img>
-
+      <services-body-main-thumb
+        src="/img/services/thumbs/otoplasty.jpg">
+      </services-body-main-thumb>
       <p>
         Otoplasty is ear surgery that is done to improve the appearance of large
         prominent ears that stick out. Patients with prominent ears are often

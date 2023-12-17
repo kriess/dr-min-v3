@@ -19,10 +19,9 @@ useHead({
   <div class="services-details">
     <div class="services-section">
       <div class="services-title">Buttock Augmentation</div>
-      <v-img
-        class="thumb"
-        :src="`/img/services/thumbs/buttockaugmentation.jpg`"
-      ></v-img>
+      <services-body-main-thumb
+        src="/img/services/thumbs/buttockaugmentation.jpg">
+      </services-body-main-thumb>
       <p>
         For patients who desire larger, fuller buttocks, fat from other parts of
         the body can be transferred to the buttocks, creating long lasting
