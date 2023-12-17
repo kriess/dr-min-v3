@@ -16,56 +16,6 @@ export default defineNuxtConfig({
     dirs: ['stores', 'utils'],
   },
 
-  modules: [
-    // '@kevinmarrec/nuxt-pwa',
-    '@vueuse/nuxt',
-    '@pinia/nuxt',
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    async (options: any, nuxt: any) => {
-      await nuxt.hooks.hook('vite:extendConfig', (config: any) =>
-        config.plugins.push(
-          vuetify({
-            autoImport: true,
-            styles: { configFile: './assets/styles/vuetify.scss' },
-          }),
-        ),
-      )
-    },
-  ],
-
-  pinia: {
-    autoImports: [
-      // automatically imports `defineStore`
-      'defineStore', // import { defineStore } from 'pinia',
-      'acceptHMRUpdate',
-      ['defineStore', 'definePiniaStore'], // import { defineStore as definePiniaStore } from 'pinia'
-    ],
-  },
-
-  // https://pwa.nuxtjs.org/icon
-  // pwa: {
-  //   meta: {
-  //     name: 'Dr. Caroline Min, MD | Pasadena Plastic Surgeon',
-  //     description:
-  //       'Dr. Caroline Min, MD is a board certified plastic surgeon specializing in cosmetic surgery. She has completed additional fellowship training in aesthetic surgery and has the skills and expertise to help you achieve your goals for plastic surgery.',
-  //     ogType: 'website',
-  //     ogSiteName: 'Dr. Caroline Min, MD | Pasadena Plastic Surgeon',
-  //     ogTitle:
-  //       'Dr. Caroline Min, MD is a highly qualified plastic surgeon with over 16 years of experience.',
-  //     ogDescription:
-  //       'Dr. Caroline Min, MD is a board certified plastic surgeon specializing in cosmetic surgery. She has completed additional fellowship training in aesthetic surgery and has the skills and expertise to help you achieve your goals for plastic surgery.',
-  //     ogImage: 'https://drcarolinemin.com/img/headshots/dr-min.jpg',
-  //     ogUrl: 'https://drcarolinemin.com/',
-  //     twitterCard: 'summary_large_image',
-  //   },
-  // },
-
-  router: {
-    options: {
-      scrollBehaviorType: 'smooth',
-    },
-  },
-
   runtimeConfig: {
     public: {
       GOOGLE_MAPS_API_KEY: 'AIzaSyDQZDKJBwh9Z3JDV5dVTzUgFx3Ok-Oeysk',
@@ -100,4 +50,37 @@ export default defineNuxtConfig({
       },
     },
   },
+
+  modules: [
+    '@vueuse/nuxt',
+    '@invictus.codes/nuxt-vuetify',
+    async (options: any, nuxt: any) => {
+      await nuxt.hooks.hook('vite:extendConfig', (config: any) =>
+        config.plugins.push(
+          vuetify({
+            autoImport: true,
+            styles: { configFile: './assets/styles/vuetify.scss' },
+          }),
+        ),
+      )
+    },
+  ],
+
+  vuetify: {
+    /* vuetify options */
+    vuetifyOptions: {
+      // @TODO: list all vuetify options
+    },
+
+    moduleOptions: {
+      /* nuxt-vuetify module options */
+      treeshaking: true,
+      useIconCDN: true,
+
+      /* vite-plugin-vuetify options */
+      styles: 'sass',
+      autoImport: true,
+      useVuetifyLabs: false,
+    }
+  }
 })

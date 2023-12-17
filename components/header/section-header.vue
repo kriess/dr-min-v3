@@ -63,7 +63,7 @@ const procedures = computed(() => {
   return procedures
 })
 
-console.log('services', services)
+// console.log('services', services)
 </script>
 
 <template>

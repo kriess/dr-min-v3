@@ -52,3 +52,12 @@ $text-on-dark: #ffffff;
     }
   }
 }
+
+html * {
+  font-family: 'Cormorant Garamond', sans-serif !important;
+  font-size: 1.1rem;
+}
+
+.page {
+  min-height: 500px;
+}

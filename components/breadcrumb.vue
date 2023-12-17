@@ -28,7 +28,7 @@ const routeSegments = computed(() => {
   return items
 })
 
-console.log('routeSegments', routeSegments.value)
+// console.log('routeSegments', routeSegments.value)
 </script>
 
 <template>
