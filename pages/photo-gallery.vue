@@ -4,14 +4,7 @@ const gallery = useGallery()
 const route = useRoute()
 const router = useRouter()
 const pageTitle = 'Before/After Gallery'
-
-let canonicalUrl = `${runtimeConfig.public.siteDomain}/photo-gallery`
-if (route.query.section) {
-  canonicalUrl = canonicalUrl + `?section=${route.query.section}`
-  if (route.query.procedure) {
-    canonicalUrl = canonicalUrl + `&procedure=${route.query.procedure}`
-  }
-}
+const canonicalUrl = `${runtimeConfig.public.siteDomain}${route.fullPath}`
 
 useHead({
   title: pageTitle,

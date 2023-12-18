@@ -5,12 +5,8 @@ const runtimeConfig = useRuntimeConfig()
 const pageTitle = 'Services'
 const services = useServices()
 const route = useRoute()
+const canonicalUrl = `${runtimeConfig.public.siteDomain}${route.fullPath}`
 const router = useRouter()
-
-let canonicalUrl = `${runtimeConfig.public.siteDomain}/services`
-if (route.query.section) {
-  canonicalUrl = canonicalUrl + `?section=${route.query.section}`
-}
 
 useHead({
   title: pageTitle,

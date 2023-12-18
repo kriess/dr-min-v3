@@ -2,7 +2,8 @@
 const runtimeConfig = useRuntimeConfig()
 const appConfig = useAppConfig()
 const pageTitle = 'Testimonials'
-const canonicalUrl = `${runtimeConfig.public.siteDomain}/testimonials`
+const route = useRoute()
+const canonicalUrl = `${runtimeConfig.public.siteDomain}${route.fullPath}`
 
 useHead({
   title: pageTitle,

@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 const runtimeConfig = useRuntimeConfig()
-import ContactUsForm from '~/components/contact-us-form.vue'
-const canonicalUrl = `${runtimeConfig.public.siteDomain}/contact-info`
+const route = useRoute()
+const canonicalUrl = `${runtimeConfig.public.siteDomain}${route.fullPath}`
 
 const pageTitle = 'Contact Us'
 useHead({

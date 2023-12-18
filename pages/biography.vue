@@ -1,7 +1,8 @@
 <script lang="ts" setup>
 const runtimeConfig = useRuntimeConfig()
 const pageTitle = 'Biography'
-const canonicalUrl = `${runtimeConfig.public.siteDomain}/biography`
+const route = useRoute()
+const canonicalUrl = `${runtimeConfig.public.siteDomain}${route.fullPath}`
 
 useHead({
   title: pageTitle,

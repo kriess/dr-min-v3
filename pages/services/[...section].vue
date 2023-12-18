@@ -4,16 +4,7 @@ const pageTitle = 'Services'
 const services = useServices()
 const route = useRoute()
 const router = useRouter()
-
-console.log('services', services)
-
-let canonicalUrl = `${runtimeConfig.public.siteDomain}/services`
-if (route.params.section) {
-  canonicalUrl = canonicalUrl + `/${route.params.section}`
-}
-if (route.params.procedure) {
-  canonicalUrl = canonicalUrl + `/${route.params.procedure}`
-}
+const canonicalUrl = `${runtimeConfig.public.siteDomain}${route.fullPath}`
 
 useHead({
   title: pageTitle,
