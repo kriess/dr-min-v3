@@ -17,6 +17,12 @@ useSchemaOrg([
       "PlasticSurgery"
     ],
     name: 'Dr. Caroline Min, M.D. - Board Certified Plastic Surgeon',
+    "image": {
+      "@type": "ImageObject",
+      "url": siteDomain + "/img/headshots/min-white-coat.jpg",
+      "height": 439,
+      "width": 292
+    },
     priceRange: "Please call for pricing",
     telephone: "+1-" + appConfig.phone,
     additionalType: "https://en.wikipedia.org/wiki/Plastic_surgery",
@@ -45,8 +51,8 @@ useSchemaOrg([
     },
     geo: {
       "@type": "GeoCoordinates",
-      "latitude": 37.293058,
-      "longitude": -121.988331
+      "latitude": 34.147560470457535,
+      "longitude": -118.13910802883551
     },
     // need to update
     // image: "TBD",
