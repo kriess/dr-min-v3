@@ -218,6 +218,9 @@ const siteSection = computed(() => {
   margin: 0;
 }
 .sub-nav-btn {
+  font-weight: 700;
+  opacity: 1;
+  color: $primary;
   text-transform: capitalize;
 }
 </style>
