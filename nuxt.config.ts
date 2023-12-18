@@ -1,6 +1,20 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import vuetify from 'vite-plugin-vuetify'
 
+const myCustomLightTheme = {
+  dark: false,
+  colors: {
+    background: '#FFFFFF',
+    surface: '#FFFFFF',
+    primary: '#00796B',
+    secondary: '#26A69A',
+    error: '#ffcc00',
+    info: '#3b82f6',
+    success: '#22c55e',
+    warning: '#f59e0b',
+  },
+}
+
 export default defineNuxtConfig({
   app: {
     pageTransition: { name: 'page', mode: 'out-in' },
@@ -41,12 +55,12 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       GOOGLE_MAPS_API_KEY: 'AIzaSyDQZDKJBwh9Z3JDV5dVTzUgFx3Ok-Oeysk',
-      siteDomain: 'https://drcarolinemin.com',
+      siteDomain: 'http://v3.drcarolinemin.com',
     },
   },
 
   site: {
-    url: 'https://drcarolinemin.com',
+    url: 'http://v3.drcarolinemin.com',
     name: 'Dr. Caroline Min, M.D.',
   },
 
@@ -78,10 +92,15 @@ export default defineNuxtConfig({
     },
   },
 
+  // https://github.com/invictus-codes/nuxt-vuetify
   vuetify: {
-    /* vuetify options */
     vuetifyOptions: {
-      // @TODO: list all vuetify options
+      theme: {
+        defaultTheme: 'myCustomLightTheme',
+        themes: {
+          myCustomLightTheme
+        },
+      },
     },
 
     moduleOptions: {

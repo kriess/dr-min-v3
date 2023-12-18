@@ -1,6 +1,8 @@
 <script lang="ts" setup>
 const drawer = ref(false)
 const appConfig = useAppConfig()
+const runtimeConfig = useRuntimeConfig()
+const siteDomain = runtimeConfig.public.siteDomain
 
 useSchemaOrg([
   defineWebSite({
@@ -56,7 +58,6 @@ useHead({
   titleTemplate: '%s - Dr. Caroline Min',
   link: [
     { rel: 'icon', href: '/icon.png' },
-    { rel: 'canonical', hid: 'canonical', href: 'https://drcarolinemin.com/' },
     {
       rel: 'stylesheet',
       href: 'https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap',
@@ -84,11 +85,11 @@ useHead({
     },
     {
       property: 'og:image',
-      content: 'https://drcarolinemin.com/img/headshots/dr-min.jpg',
+      content: siteDomain + '/img/headshots/dr-min.jpg',
     },
     {
       property: 'og:url',
-      content: 'https://drcarolinemin.com/',
+      content: siteDomain,
     },
     {
       name: 'twitter:card',
