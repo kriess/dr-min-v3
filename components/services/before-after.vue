@@ -17,12 +17,22 @@ const goTo = () => {
     path: `/photo-gallery?section=${props.section}&procedure=${props.procedure}`,
   })
 }
+
+const target = ref(null)
+const targetIsVisible = ref(false)
+
+const { stop } = useIntersectionObserver(
+  target,
+  ([{ isIntersecting }], observerElement) => {
+    targetIsVisible.value = isIntersecting
+  },
+)
 </script>
 
 <template>
-  <div class="services-before-after" @click="goTo">
+  <div class="services-before-after" @click="goTo" ref="target">
 <!--    <h3 class="title">{{ props.title }} Before/After</h3>-->
-    <div class="container">
+    <div :class="targetIsVisible ? 'container visible' : 'container'">
       <img class="img" :src="`/img/services/before-after/facelift.jpg`" :alt="`${title} image that links to the before/after ${title} photo gallery`" />
       <div class="link-container">
         <div class="gallery-link">
@@ -45,9 +55,16 @@ const goTo = () => {
   clear: both;
   position: relative;
 
+  .container {
+    opacity: 0;
+    transition: all 1s ease;
+    &.visible {
+      opacity: 1;
+    }
+  }
   .img {
     display: block;
-    transition: all 1s ease;
+    transition: all 3s ease;
     opacity: 1;
   }
   .img:hover {

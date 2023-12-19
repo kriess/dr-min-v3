@@ -125,14 +125,20 @@ const procedures = computed(() => {
 
   .section-nav-btn {
     border-radius: $border-radius-v3;
+    font-weight: 700;
+    opacity: 1;
     color: $primary;
     margin: 0 10px;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.05);
     text-transform: capitalize;
     &.v-btn--active {
       opacity: 1;
-      background-color: rgba(0, 0, 0, 0.1);
+      background-color: rgba(0, 0, 0, 0.15);
     }
+  }
+  .section-nav-btn:hover {
+    transition: all 1s ease;
+    background-color: rgba(0, 0, 0, 0.15);
   }
 }
 </style>

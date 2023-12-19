@@ -155,7 +155,7 @@ html {
     max-width: $page-max-width;
     overflow: hidden;
     margin: 0 auto;
-    padding: 0 10px;
+    padding: 0 20px;
   }
 
   a[href],
