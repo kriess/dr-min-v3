@@ -6,7 +6,7 @@ const myCustomLightTheme = {
   colors: {
     background: '#FFFFFF',
     surface: '#FFFFFF',
-    primary: '#00796B',
+    primary: '#00796b',
     secondary: '#26A69A',
     error: '#ffcc00',
     info: '#3b82f6',
@@ -20,7 +20,10 @@ export default defineNuxtConfig({
     pageTransition: { name: 'page', mode: 'out-in' },
   },
 
-  css: ['vuetify/styles', '@mdi/font/css/materialdesignicons.min.css'],
+  css: [
+    'vuetify/styles',
+    // '@mdi/font/css/materialdesignicons.min.css'
+  ],
 
   build: {
     transpile: ['vuetify'],

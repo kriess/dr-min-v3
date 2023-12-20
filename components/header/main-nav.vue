@@ -29,7 +29,7 @@ const siteSection = computed(() => {
     <div class="header-main-nav-content">
       <!--    <p>isService = {{ isService }}</p>-->
       <!--    <p>siteSection = {{ siteSection }}</p>-->
-      <v-toolbar>
+      <v-toolbar height="80">
         <div class="hidden-md-and-up mobile-meni-icon">
           <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
         </div>
@@ -54,7 +54,7 @@ const siteSection = computed(() => {
             <v-toolbar-items>
               <template v-for="item in navItems">
                 <template v-if="item.subNavItems">
-                  <v-menu open-on-hover>
+                  <v-menu open-on-hover close-on-content-click>
                     <template v-slot:activator="{ props }">
                       <v-btn
                         :active="path.includes(item.href)"

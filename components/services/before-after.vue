@@ -12,12 +12,7 @@ const props = withDefaults(defineProps<Props>(), {
   procedure: 'facelift'
 })
 
-const goTo = () => {
-  router.push({
-    path: `/photo-gallery?section=${props.section}&procedure=${props.procedure}`,
-  })
-}
-
+const path = `/photo-gallery?section=${props.section}&procedure=${props.procedure}`
 const target = ref(null)
 const targetIsVisible = ref(false)
 
@@ -30,17 +25,19 @@ const { stop } = useIntersectionObserver(
 </script>
 
 <template>
-  <div class="services-before-after" @click="goTo" ref="target">
-<!--    <h3 class="title">{{ props.title }} Before/After</h3>-->
-    <div :class="targetIsVisible ? 'container visible' : 'container'">
-      <img class="img" :src="`/img/services/before-after/facelift.jpg`" :alt="`${title} image that links to the before/after ${title} photo gallery`" />
-      <div class="link-container">
-        <div class="gallery-link">
-        View the {{ props.title }} <br />Before/After Gallery
+  <nuxt-link :to="path">
+    <div class="services-before-after" ref="target">
+      <!--<h3 class="title">{{ props.title }} Before/After</h3>-->
+      <div :class="targetIsVisible ? 'container visible' : 'container'">
+        <img class="img" :src="`/img/services/before-after/facelift.jpg`" :alt="`${title} image that links to the before/after ${title} photo gallery`" />
+        <div class="link-container">
+          <div class="gallery-link">
+          View the {{ props.title }} <br />Before/After Gallery
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  </nuxt-link>
 </template>
 
 <style lang="scss" scoped>
@@ -57,14 +54,14 @@ const { stop } = useIntersectionObserver(
 
   .container {
     opacity: 0;
-    transition: all 1s ease;
+    transition: all 2s ease;
     &.visible {
       opacity: 1;
     }
   }
   .img {
     display: block;
-    transition: all 3s ease;
+    transition: all 1s ease;
     opacity: 1;
   }
   .img:hover {
@@ -77,6 +74,7 @@ const { stop } = useIntersectionObserver(
     position: absolute;
   }
   .gallery-link {
+    text-shadow: 1px 1px 1px #ddd;
     color: $primary;
     text-decoration: none;
     font-size: 200%;

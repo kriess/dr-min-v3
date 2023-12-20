@@ -12,7 +12,7 @@ export default [
         href: '/services/face/blepharoplasty/',
       },
       {
-        title: 'Browlift',
+        title: 'Brow Lift',
         href: '/services/face/browlift/',
       },
       {

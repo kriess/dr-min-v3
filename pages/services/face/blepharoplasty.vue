@@ -1,10 +1,92 @@
 <script setup>
 const runtimeConfig = useRuntimeConfig()
 const route = useRoute()
+const title = "Blepharoplasty - Eyelid Lift"
 const canonicalUrl = `${runtimeConfig.public.siteDomain}${route.fullPath}`
 
+const faqs = [
+  {
+    question: "Am I a good candidate for an eyelid lift?",
+    answer: `The best candidates for blepharoplasty are generally healthy, do not
+ smoke and do not have any serious eye conditions like glaucoma or
+ dryness. For lower eyelid surgery, it is important to have good eyelid
+ tone to avoid complications. Dr. Min will evaluate this during the
+ initial consultation.`
+  },
+  {
+    question: "How is a blepharoplasty performed?",
+    answer: `Eyelid surgery is performed on an outpatient basis either with local
+ anesthesia and sedation or under general anesthesia. The procedure can
+ take 45 to 60 minutes or longer, depending on how much work is done.`
+  },
+  {
+    question: "What is transconjunctival blepharoplasty?",
+    answer: `This refers to a limited form of eyelid surgery that is done in
+ patients who have bulging fat in the eyelids without loose skin or
+ muscle. These patients are usually younger and have good skin tone.
+ The incision is made inside the eyelid and only fat is removed.
+ There are no visible scars and recovery is quicker than with
+ traditional blepharoplasty.
+`
+  },
+  {
+    question: "What won't blepharoplasty correct?",
+    answer: `Blepharoplasty cannot raise the eyebrows or reduce the appearance of
+ crow’s feet or dark discoloration under the eyes. However, eyelid
+ surgery can be combined with other procedures such as a brow lift,
+ BOTOX® treatments and laser procedures to achieve optimal results.
+`
+  },
+  {
+    question: "What is a browlift and when is it combined with eyelid surgery?",
+    answer: `The eyebrows are intimately related to the upper eyelids. When the
+ eyebrows droop with age, the upper eyelids appear to have more skin
+ excess than they would if the eyebrows were in a normal position. In
+ those patients who have significant droopiness of the eyebrows,
+ browlift is combined with upper eyelid lift for the most optimal
+ result and complete correction of aging changes in the upper face.
+`
+  },
+  {
+    question: "What is the tear trough deformity?",
+    answer: `The tear trough refers to the groove underneath the lower eyelid
+ that extends from the inner corner of the eye. This groove is often
+ one of the first signs of aging around the eyes and results from a
+ loss of volume. It can be improved by the placement of fat or filler
+ into the groove.
+`
+  },
+  {
+    question: "Is blepharoplasty ever covered by my insurance?",
+    answer: `Upper eyelid lift may be covered by insurance for those patients who
+ have a tremendous amount of hanging skin. In these patients, the
+ skin excess must be enough to cause a limitation in vision. Your eye
+ doctor must document this during an eye examination.
+`
+  },
+  {
+    question: "What is recovery from eyelid surgery like?",
+    answer: `Bruising, swelling and a sense of tightness in the eyelids are
+ common after eyelid surgery. Eyelid surgery is not typically
+ painful. Most patients return to work in about 7-10 days. Contact
+ lenses may not be worn for two weeks. The eyes may be more sensitive
+ to light and wind and feel drier for a short while - eye drops and
+ lubricants may be used to ease any temporary discomfort.
+`
+  },
+  {
+    question: "What are the risks of eyelid surgery?",
+    answer: `Complications from blepharoplasty are uncommon, but can include
+ infection, reaction to anesthesia, dry eyes, double or blurred
+ vision for a few days, temporary swelling of the eyelids and
+ difficulty closing the eyes when going to sleep. Uneven healing and
+ scarring and ectropion (pulling down of the lower lids) are very
+ rare and may require surgical correction.`
+  }
+]
+
 useHead({
-  title: 'Blepharoplasty - Eyelid Lift',
+  title: title,
   link: [{ rel: 'canonical', hid: 'canonical', href: canonicalUrl }],
   meta: [
     {
@@ -18,7 +100,7 @@ useHead({
 <template>
   <div class="services-details">
     <div class="services-section">
-      <h1 class="services-title">Blepharoplasty</h1>
+      <h1 class="services-title">{{ title }}</h1>
       <services-body-main-thumb
         src="/img/services/thumbs/eyelid-adobe-2.jpg">
       </services-body-main-thumb>
@@ -38,111 +120,9 @@ useHead({
         making it difficult to apply make-up and have problems with eye shadow
         creasing in the folds.
       </p>
-      <h1 class="header-text">Blepharoplasty FAQ’s</h1>
-      <dl>
-        <dt>Am I a good candidate for an eyelid lift?</dt>
-        <dd>
-          The best candidates for blepharoplasty are generally healthy, do not
-          smoke and do not have any serious eye conditions like glaucoma or
-          dryness. For lower eyelid surgery, it is important to have good eyelid
-          tone to avoid complications. Dr. Min will evaluate this during the
-          initial consultation.
-        </dd>
-      </dl>
-      <dl>
-        <dt>How is a blepharoplasty performed?</dt>
-        <dd>
-          Eyelid surgery is performed on an outpatient basis either with local
-          anesthesia and sedation or under general anesthesia. The procedure can
-          take 45 to 60 minutes or longer, depending on how much work is done.
-        </dd>
-      </dl>
-      <dl>
-        <dt>What is transconjunctival blepharoplasty?</dt>
-        <dd>
-          <p>
-            This refers to a limited form of eyelid surgery that is done in
-            patients who have bulging fat in the eyelids without loose skin or
-            muscle. These patients are usually younger and have good skin tone.
-            The incision is made inside the eyelid and only fat is removed.
-            There are no visible scars and recovery is quicker than with
-            traditional blepharoplasty.
-          </p>
-        </dd>
-      </dl>
-      <dl>
-        <dt>What won't blepharoplasty correct?</dt>
-        <dd>
-          <p>
-            Blepharoplasty cannot raise the eyebrows or reduce the appearance of
-            crow’s feet or dark discoloration under the eyes. However, eyelid
-            surgery can be combined with other procedures such as a brow lift,
-            BOTOX® treatments and laser procedures to achieve optimal results.
-          </p>
-        </dd>
-      </dl>
-      <dl>
-        <dt>What is a browlift and when is it combined with eyelid surgery?</dt>
-        <dd>
-          <p>
-            The eyebrows are intimately related to the upper eyelids. When the
-            eyebrows droop with age, the upper eyelids appear to have more skin
-            excess than they would if the eyebrows were in a normal position. In
-            those patients who have significant droopiness of the eyebrows,
-            browlift is combined with upper eyelid lift for the most optimal
-            result and complete correction of aging changes in the upper face.
-          </p>
-        </dd>
-      </dl>
-      <dl>
-        <dt>What is the tear trough deformity?</dt>
-        <dd>
-          <p>
-            The tear trough refers to the groove underneath the lower eyelid
-            that extends from the inner corner of the eye. This groove is often
-            one of the first signs of aging around the eyes and results from a
-            loss of volume. It can be improved by the placement of fat or filler
-            into the groove.
-          </p>
-        </dd>
-      </dl>
-      <dl>
-        <dt>Is blepharoplasty ever covered by my insurance?</dt>
-        <dd>
-          <p>
-            Upper eyelid lift may be covered by insurance for those patients who
-            have a tremendous amount of hanging skin. In these patients, the
-            skin excess must be enough to cause a limitation in vision. Your eye
-            doctor must document this during an eye examination.
-          </p>
-        </dd>
-      </dl>
-      <dl>
-        <dt>What is recovery from eyelid surgery like?</dt>
-        <dd>
-          <p>
-            Bruising, swelling and a sense of tightness in the eyelids are
-            common after eyelid surgery. Eyelid surgery is not typically
-            painful. Most patients return to work in about 7-10 days. Contact
-            lenses may not be worn for two weeks. The eyes may be more sensitive
-            to light and wind and feel drier for a short while - eye drops and
-            lubricants may be used to ease any temporary discomfort.
-          </p>
-        </dd>
-      </dl>
-      <dl>
-        <dt>What are the risks of eyelid surgery?</dt>
-        <dd>
-          <p>
-            Complications from blepharoplasty are uncommon, but can include
-            infection, reaction to anesthesia, dry eyes, double or blurred
-            vision for a few days, temporary swelling of the eyelids and
-            difficulty closing the eyes when going to sleep. Uneven healing and
-            scarring and ectropion (pulling down of the lower lids) are very
-            rare and may require surgical correction.
-          </p>
-        </dd>
-      </dl>
+
+      <services-faqs :faqs="faqs" :title="title"></services-faqs>
+      <services-before-after :title="title" section="face" procedure="blepharoplasty"></services-before-after>
     </div>
   </div>
 </template>

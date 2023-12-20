@@ -1,6 +1,4 @@
-<script lang="ts" setup>
-import ContactMap from '~/components/contact-map.vue'
-
+<script setup>
 const year = computed(() => {
   const today = new Date()
   return today.getFullYear()

@@ -58,7 +58,7 @@ const procedures = computed(() => {
   const procedures = section?.procedures
 
   procedures.forEach((i) => {
-    i.href = `/services/${siteSection.value}/${i.slug}`
+    i.href = `/services/${siteSection.value}/${i.slug}/`
   })
   return procedures
 })

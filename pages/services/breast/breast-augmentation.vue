@@ -1,10 +1,38 @@
 <script setup>
 const runtimeConfig = useRuntimeConfig()
 const route = useRoute()
+const title = "Breast Augmentation"
 const canonicalUrl = `${runtimeConfig.public.siteDomain}${route.fullPath}`
 
+const faqs = [
+  {
+    question: "Will I be able to breastfeed after breast augmentation?",
+    answer: `Implants may affect your ability to successfully breastfeed. Not all women are able to breastfeed, even without surgery. Many women have been able to successfully breastfeed with breast implants but the success rate is likely to be slightly lower.`
+  },
+  {
+    question: "Will I lose nipple sensation?",
+    answer: `A change in nipple sensation is always a possibility after any breast surgery, although the risk of permanent change is low.`
+  },
+  {
+    question: "Are breast implants permanent?",
+    answer: `Breast implants are not considered lifetime devices. Removal and replacement of your implants will eventually be required. Timing is different for each patient as some may require earlier intervention and others go much longer before exchanging their implants.`
+  },
+  {
+    question: "Can I have the implants removed later on?",
+    answer: `The implants can be removed but keep in mind that the breast tissue and skin have been stretched by the presence of the implant. After implant removal, the breasts may appear more droopy and deflated. The appearance of the breasts after implant removal depends on the way they looked before implantation and the size of the implants that were placed.`
+  },
+  {
+    question: "What causes capsular contracture?",
+    answer: `After breast augmentation, the body normally forms scar tissue or a “capsule” around the implant. Capsular contracture is the abnormal hardening of this capsule. This can range from mild firmness of the implants to extreme hardness and distortion of the breast appearance. Severe hardening is uncommon. The cause is not known but has been linked to possible microscopic bacterial contamination. It cannot be predicted which patients will develop this as each individual heals differently. Dr. Min takes measures to reduce the risk of capsule formation by using an antibiotic irrigation during surgery and instructing all patients to perform breast massage afterwards to keep the implants soft.`
+  },
+  {
+    question: "What about pregnancy?",
+    answer: `If you are planning to get pregnant within the next year or two, you should wait to undergo breast augmentation. Your breasts may undergo significant changes with pregnancy that may alter the results. If you have been pregnant recently, it is advisable to wait at least six months after you have finished breast-feeding to allow your breasts to have time to return to their normal shape and size.`
+  }
+]
+
 useHead({
-  title: 'Breast Augmentation',
+  title: title,
   link: [{ rel: 'canonical', hid: 'canonical', href: canonicalUrl }],
   meta: [
     {
@@ -151,62 +179,9 @@ useHead({
         compression and movement of your breast.
         <strong></strong>
       </p>
-      <h1 class="header-text"><strong>Breast Implant FAQ’s</strong></h1>
-      <p>
-        <strong>Will I be able to breastfeed after breast augmentation?</strong>
-        <br />
-        Implants may affect your ability to successfully breastfeed. Not all
-        women are able to breastfeed, even without surgery. Many women have been
-        able to successfully breastfeed with breast implants but the success
-        rate is likely to be slightly lower.
-      </p>
-      <p>
-        <strong>Will I lose nipple sensation?</strong>
-        <br />
-        A change in nipple sensation is always a possibility after any breast
-        surgery, although the risk of permanent change is low.
-      </p>
-      <p>
-        <strong>Are breast implants permanent?</strong>
-        <br />
-        Breast implants are not considered lifetime devices. Removal and
-        replacement of your implants will eventually be required. Timing is
-        different for each patient as some may require earlier intervention and
-        others go much longer before exchanging their implants.
-      </p>
-      <p>
-        <strong>Can I have the implants removed later on?</strong>
-        <br />
-        The implants can be removed but keep in mind that the breast tissue and
-        skin have been stretched by the presence of the implant. After implant
-        removal, the breasts may appear more droopy and deflated. The appearance
-        of the breasts after implant removal depends on the way they looked
-        before implantation and the size of the implants that were placed.
-      </p>
-      <p>
-        <strong>What causes capsular contracture?</strong>
-        <br />
-        After breast augmentation, the body normally forms scar tissue or a
-        “capsule” around the implant. Capsular contracture is the abnormal
-        hardening of this capsule. This can range from mild firmness of the
-        implants to extreme hardness and distortion of the breast appearance.
-        Severe hardening is uncommon. The cause is not known but has been linked
-        to possible microscopic bacterial contamination. It cannot be predicted
-        which patients will develop this as each individual heals differently.
-        Dr. Min takes measures to reduce the risk of capsule formation by using
-        an antibiotic irrigation during surgery and instructing all patients to
-        perform breast massage afterwards to keep the implants soft.
-      </p>
-      <p>
-        <strong>What about pregnancy?</strong>
-        <br />
-        If you are planning to get pregnant within the next year or two, you
-        should wait to undergo breast augmentation. Your breasts may undergo
-        significant changes with pregnancy that may alter the results. If you
-        have been pregnant recently, it is advisable to wait at least six months
-        after you have finished breast-feeding to allow your breasts to have
-        time to return to their normal shape and size.
-      </p>
+
+      <services-faqs :faqs="faqs" :title="title"></services-faqs>
+      <services-before-after :title="title" section="breast" procedure="breast-augmentation"></services-before-after>
     </div>
   </div>
 </template>

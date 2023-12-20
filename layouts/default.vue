@@ -63,11 +63,11 @@ useSchemaOrg([
 useHead({
   titleTemplate: '%s - Dr. Caroline Min',
   link: [
-    { rel: 'icon', href: '/icon.png' },
-    {
-      rel: 'stylesheet',
-      href: 'https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap',
-    },
+    // { rel: 'icon', href: '/icon.png' },
+    // {
+    //   rel: 'stylesheet',
+    //   href: 'https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap',
+    // },
   ],
   meta: [
     { name: 'mobile-web-app-capable', content: 'yes' },
@@ -122,7 +122,7 @@ useHead({
 <template>
   <v-app class="dr-min-app">
     <header-main-nav></header-main-nav>
-    <div style="height: 64px"></div>
+    <div style="height: 80px"></div>
     <header-section-header></header-section-header>
     <!--
     <header-banner-contact></header-banner-contact>

@@ -49,9 +49,13 @@ const props = withDefaults(defineProps<Props>(), {
     border: 1px solid #eee;
   }
   .faq:hover {
-    transition: all 1s ease;
-    background-color: rgba(0, 0, 0, 0.06);
-    border: 1px solid $primary;
+    transition: all 0.5s ease;
+    background-color: rgba(0, 0, 0, 0.08);
+    // border: 1px solid $primary;
+    box-shadow:
+      0 2px 4px -1px rgba(0, 0, 0, 0.2),
+      0 4px 5px 0 rgba(0, 0, 0, 0.14),
+      0 1px 10px 0 rgba(0, 0, 0, 0.12);
   }
   .question {
     font-weight: 600;

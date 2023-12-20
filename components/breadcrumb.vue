@@ -21,7 +21,7 @@ const routeSegments = computed(() => {
       items.push({
         title: i,
         disabled: index > segments.length - 2,
-        href: hrefSegments.join('/'),
+        href: hrefSegments.join('/') + "/",
       })
     }
   })
@@ -52,6 +52,9 @@ const routeSegments = computed(() => {
   :deep(.v-breadcrumbs) {
     padding-left: 0;
     margin: 10px 0;
+    li:last-child {
+      color: #ccc;
+    }
   }
 
   :deep(.v-breadcrumbs-item) {
