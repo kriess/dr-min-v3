@@ -78,7 +78,7 @@ const { stop } = useIntersectionObserver(
     color: $primary;
     text-decoration: none;
     font-size: 200%;
-    font-weight: 700;
+    font-weight: 500;
   }
 }
 </style>

@@ -2,7 +2,7 @@
 // https://en.bem.info/methodology/quick-start/
 // https://en.bem.info/methodology/naming-convention/
 
-$page-max-width: 1540px;
+$page-max-width: 2240px;
 $page-content-bg: #eee;
 $main-border-radius: 4px;
 $border-radius-v3: 12px;
@@ -22,13 +22,28 @@ $teal-darken-2: #00796b;
 $teal-darken-3: #00695c;
 $teal-darken-4: #004d40;
 
+/*
+// https://colorhunt.co/palette/a75d5dd3756bf0997dffc3a1
+#A75D5D
+#D3756B
+#F0997D
+#FFC3A1
+
+https://colorhunt.co/palette/fdeedcffd8a9f1a661e38b29
+#FDEEDC
+#FFD8A9
+#F1A661
+#E38B29
+*/
+
+
+
 // bg colors
-$primary: $teal-darken-2;
-$primary-r: 0;
-$primary-g: 121;
-$primary-b: 107;
-$secondary: $teal-lighten-1;
-$light-primary: $grey-lighten-3;
+$primary: #D3756B; // $teal-darken-2;
+$secondary: #F0997D; // $teal-lighten-1;
+$tertiary: #FFC3A1; // $teal-lighten-1;
+$tertiary-action: #A75D5D;
+$light-primary: #A75D5D;
 
 // text colors
 $text-on-dark: #ffffff;
@@ -59,6 +74,10 @@ $text-on-dark: #ffffff;
 html * {
   font-family: "Helvetica", "Times New Roman", 'Cormorant Garamond', sans-serif !important;
   font-size: 1.0rem;
+}
+
+html h1 {
+  font-weight: 500;
 }
 
 .page {

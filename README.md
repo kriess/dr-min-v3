@@ -25,7 +25,7 @@ The frontend codebase using nuxt 3, vue 3, and vuetify 3.
 https://nuxt.com/docs/getting-started/deployment#crawl-based-pre-rendering
 
 ```bash 
-npx nuxi generate
+yarn generate
 
 npx serve .output/public
 ```

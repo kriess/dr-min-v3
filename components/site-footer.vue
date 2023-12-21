@@ -1,4 +1,27 @@
 <script setup>
+// import recaptchaScriptIsReady from '~/scripts/google/captcha';
+import { loadScript } from "vue-plugin-load-script";
+const status = ref('loading');
+
+// lifecycle hooks
+onMounted(() => {
+  console.log('footer mounted')
+  const link = 'https://www.google.com/recaptcha/enterprise.js?render=6LepurAoAAAAAAO-f4JhmuJ5P7JA3uZ2N347jn0Q'
+  // const link = 'https://www.google.com/recaptcha/api.js?render=explicit&onload=onRecaptchaLoadCallback'
+  loadScript(link).then(() => {
+    // console.log(grecaptcha)
+    // function onRecaptchaLoadCallback() {
+    //   const clientId = grecaptcha.render('inline-badge', {
+    //     sitekey: '6LepurAoAAAAAAO-f4JhmuJ5P7JA3uZ2N347jn0Q',
+    //     badge: 'inline',
+    //     size: 'invisible',
+    //   })
+    // }
+  }).catch(() => {
+    console.log('failed to load recaptcha script')
+  });
+})
+
 const year = computed(() => {
   const today = new Date()
   return today.getFullYear()
@@ -108,7 +131,7 @@ const year = computed(() => {
   }
   .bio__address {
     padding: var(--bio-padding);
-    background-color: $light-primary;
+    background-color: $tertiary;
     height: 100%;
   }
   .bio__contact {

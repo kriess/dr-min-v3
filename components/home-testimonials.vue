@@ -19,11 +19,10 @@ const testimonials = appConfig.testimonials.slice(0, 2)
 
     <p class="mt-1 pt-10 text-center">
       <v-btn
-        color=""
         variant="elevated"
         rounded="sm"
         size="small"
-        class="main-button temptext-h6"
+        class="main-button"
         to="/testimonials"
       >
         Read More Testimonials
@@ -47,5 +46,10 @@ const testimonials = appConfig.testimonials.slice(0, 2)
 .section-title {
   font-size: min(10vw, 50px);
   color: $text-on-dark;
+}
+.main-button {
+  background-color: $tertiary-action;
+  color: #fff;
+  text-transform: capitalize;
 }
 </style>

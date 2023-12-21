@@ -12,7 +12,7 @@ const dialog = ref(false)
 // methods
 const goToProcedurePage = (id) => {
   router.push({
-    path: `/services/${props.section}/${id}`,
+    path: `/services/${props.section}/${id}/`,
   })
 }
 </script>
@@ -73,7 +73,7 @@ const goToProcedurePage = (id) => {
   .procedure-title {
     font-size: 130%;
     color: $primary;
-    font-weight: bold;
+    font-weight: 500;
     margin-bottom: 5px;
   }
 }

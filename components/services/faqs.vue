@@ -39,7 +39,7 @@ const props = withDefaults(defineProps<Props>(), {
   .title {
     font-size: 150%;
     color: $primary;
-    font-weight: bold;
+    font-weight: 500;
     margin-bottom: 20px;
   }
   .faq {

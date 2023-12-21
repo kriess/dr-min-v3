@@ -64,15 +64,21 @@ onMounted(() => {
 
 <template>
   <section class="services page">
+    <header-services-header></header-services-header>
+    <div class="page-content">
     <breadcrumb></breadcrumb>
-    <!--    <services-header></services-header>-->
     <nuxt-page />
+    </div>
   </section>
 </template>
 
 <style lang="scss" scoped>
 .services {
   width: auto;
+
+  .page-content {
+    padding: 0 20px;
+  }
 
   .btn-grp {
     margin: 10px 0;

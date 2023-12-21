@@ -49,7 +49,6 @@ function onRecaptchaLoadCallback() {
 
 /**
 POST https://recaptchaenterprise.googleapis.com/v1/projects/PROJECT_ID/assessments?key=API_KEY
-
 {
   "event": {
     "token": "TOKEN",
@@ -57,10 +56,8 @@ POST https://recaptchaenterprise.googleapis.com/v1/projects/PROJECT_ID/assessmen
     "expectedAction": "SUBMIT_EMAIL"
   }
 }
-
-  curl -X POST \
-    -H "Content-Type: application/json; charset=utf-8" \
-    -d @request.json \
-    "https://recaptchaenterprise.googleapis.com/v1/projects/PROJECT_ID/assessments?key=API_KEY"
-
- **/
+curl -X POST \
+  -H "Content-Type: application/json; charset=utf-8" \
+  -d @request.json \
+  "https://recaptchaenterprise.googleapis.com/v1/projects/PROJECT_ID/assessments?key=API_KEY"
+**/

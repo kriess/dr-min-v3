@@ -3,9 +3,6 @@ const navItems = useNavItems()
 const drawer = ref(false)
 const route = useRoute()
 const router = useRouter()
-const { x, y } = useWindowScroll({ behavior: 'smooth' })
-
-console.log(y.value)
 
 const goHome = () => {
   router.push({
@@ -13,9 +10,6 @@ const goHome = () => {
   })
 }
 
-// ----- methods ----------------------------
-
-// ----- computed ---------------------------
 const path = computed(() => {
   return route.fullPath
 })
@@ -28,31 +22,18 @@ const siteSection = computed(() => {
   const sections = route.fullPath.split('/')
   return sections[1]
 })
-
-const headerSelectors = computed(() => {
-  const selectors = []
-  if (y.value > 50) {
-    selectors.push('scrolling')
-  }
-  return selectors
-})
-
-// ----- life cycle ---------------------------
-// onMounted(() => {
-//   window.addEventListener('scroll', updateScroll);
-// })
-//
-// onUnmounted(() => {
-//   window.removeEventListener('scroll', updateScroll);
-// })
-
-
 </script>
 
 <template>
   <div class="header-main-nav">
     <div class="header-main-nav-content">
-      <v-toolbar height="80" :class="headerSelectors">
+      <!--    <p>isService = {{ isService }}</p>-->
+      <!--    <p>siteSection = {{ siteSection }}</p>-->
+      <v-toolbar height="80">
+        <div class="hidden-md-and-up mobile-meni-icon">
+          <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
+        </div>
+
         <div class="hidden-sm-and-down" style="width: 100%; height: 100%">
           <div class="nav-container">
             <div @click="goHome" style="cursor: pointer">
@@ -60,6 +41,15 @@ const headerSelectors = computed(() => {
               <div class="logo-description">
                 Board Certified Plastic Surgeon
               </div>
+              <!--              <nuxt-link to="/">-->
+              <!--                <img-->
+              <!--                  width="219"-->
+              <!--                  height="50"-->
+              <!--                  class="logo"-->
+              <!--                  alt="Dr. Caroline Min - Board Certified Plastic Surgeon"-->
+              <!--                  src="/img/header/logo.png"-->
+              <!--                />-->
+              <!--              </nuxt-link>-->
             </div>
             <v-toolbar-items>
               <template v-for="item in navItems">
@@ -108,6 +98,37 @@ const headerSelectors = computed(() => {
         </div>
       </v-toolbar>
     </div>
+
+    <v-navigation-drawer
+      v-model="drawer"
+      temporary
+      location="right"
+      color="primary"
+    >
+      <v-btn
+        v-for="item in navItems"
+        :key="item.href"
+        variant="flat"
+        color="primary"
+        class="nav-btn drawer"
+        :to="item.href"
+        block
+        rounded="0"
+      >
+        {{ item.title }}
+      </v-btn>
+
+      <ul class="mt-10 text-center">
+        <li>547 E Union St.</li>
+        <li>Pasadena, California 91101</li>
+      </ul>
+
+      <ul class="mt-10 text-center">
+        <li>Tel: 626-737-9001</li>
+        <li>Fax: 626-737-9020</li>
+        <li>info@drcarolinemin.com</li>
+      </ul>
+    </v-navigation-drawer>
   </div>
 </template>
 
@@ -116,39 +137,32 @@ const headerSelectors = computed(() => {
   position: fixed;
   z-index: 2;
   width: 100%;
-  top: 0;
+  box-shadow:
+    0 2px 4px -1px rgba(0, 0, 0, 0.2),
+    0 4px 5px 0 rgba(0, 0, 0, 0.14),
+    0 1px 10px 0 rgba(0, 0, 0, 0.12);
 
   .logo-name {
-    // text-shadow: 1px 1px 1px #333;
+    text-shadow: 1px 1px 1px #333;
     letter-spacing: 1.4px;
-    font-weight: 500;
+    font-weight: 700;
     font-size: 30px;
   }
   .logo-description {
     letter-spacing: 1.1px;
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 600;
     margin-top: -10px;
     margin-left: 2px;
   }
 
   .header-main-nav-content {
-
+    top: 0;
   }
 
   :deep(.v-toolbar) {
-    transition: color 0.1s ease, background-color 0.5s ease;
-    background-color: transparent;
-    color: $tertiary-action;
-  }
-
-  :deep(.v-toolbar.scrolling) {
     background-color: $primary;
     color: #fff;
-    box-shadow:
-      0 2px 4px -1px rgba(0, 0, 0, 0.2),
-      0 4px 5px 0 rgba(0, 0, 0, 0.14),
-      0 1px 10px 0 rgba(0, 0, 0, 0.12);
   }
 
   :deep(.v-toolbar__content) {
@@ -174,11 +188,10 @@ const headerSelectors = computed(() => {
   }
 
   .nav-btn {
-    opacity: 1;
-    border-radius: $border-radius-v3;
+    color: #fff;
     text-transform: capitalize;
-    font-weight: 500;
-    font-size: 100%;
+    font-weight: 600;
+    font-size: 114%;
     letter-spacing: normal;
     :deep(.v-btn__append) {
       margin: 0;

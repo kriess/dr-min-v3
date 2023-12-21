@@ -21,17 +21,16 @@ const props = withDefaults(defineProps<Props>(), {
     <div class="visuals">
       <div class="color-band"></div>
       <div class="title-image-container">
-        <v-img
+        <img
           v-if="imageSrc"
           :width="imageWidth"
-          cover
           :alt="alt"
           :src="imageSrc"
           class="main-img"
-        ></v-img>
-        <v-sheet color="primary" class="page-title-visual">
+        />
+        <div class="page-title-visual">
           <h1 class="page-title-text">{{ title }}</h1>
-        </v-sheet>
+        </div>
       </div>
     </div>
   </div>
@@ -40,12 +39,13 @@ const props = withDefaults(defineProps<Props>(), {
 <style lang="scss" scoped>
 .page-top-visuals {
   position: relative;
-  padding: 0 5vw 0 5vw;
+  padding: 100px 5vw 0 5vw;
 }
 .visuals {
   padding: min(5vw, 40px);
   margin: 0 auto;
   width: 100%;
+  max-width: 1000px;
   .title-image-container {
     margin: 0 auto;
     width: 70%;
@@ -65,20 +65,20 @@ const props = withDefaults(defineProps<Props>(), {
   }
   .page-title-visual {
     position: absolute;
-    top: 35%;
-    right: 0;
-    bottom: 35%;
+    top: 40%;
     left: 40%;
+    color: #fff;
+    background-color: $primary;
     border-radius: $main-border-radius;
+    padding: 10px 20px 10px 15px;
+    width: fit-content;
   }
   .page-title-text {
     text-shadow: 1px 1px 1px #333;
     font-weight: 500;
     font-size: $page-title-font-size;
     margin: 0;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%) translateX(20%);
+    white-space: nowrap;
   }
 }
 </style>

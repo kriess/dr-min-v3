@@ -34,7 +34,6 @@
           </p>
           <p class="mt-2 pt-10">
             <v-btn
-              color="primary"
               variant="elevated"
               rounded="sm"
               size="small"
@@ -55,10 +54,11 @@
   width: auto;
   // background-color: $light-primary;
   background-image: url('/img/misc/rotatesliders.jpg');
-  padding: 50px;
+  background-position: 10px 30%;
+  padding: 100px 50px;
   .sub-title {
     font-weight: 100;
-    color: #333;
+    color: $tertiary-action;
     font-family: sans-serif;
     font-size: clamp(0.5px, 12px, 100vw);
     text-transform: uppercase;
@@ -70,11 +70,16 @@
   .main-title {
     color: $primary;
     font-size: clamp(0.5px, 40px, 100vw);
-    font-weight: bold;
+    font-weight: 500;
     // margin-bottom: 20px;
     text-decoration: none;
     text-align: left;
     line-height: 2em;
+  }
+  .main-button {
+    text-transform: capitalize;
+    background-color: $tertiary-action;
+    color: #fff;
   }
   .title {
     text-align: center;

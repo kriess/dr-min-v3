@@ -1,36 +1,39 @@
-<script lang="ts" setup>
-const mapRef = ref<HTMLElement | null>(null)
+<script setup>
+import { loadScript } from "vue-plugin-load-script";
+const mapRef = ref(null)
 let config = useRuntimeConfig()
 let map
 let marker
 
 // lifecycle hooks
 onMounted(async () => {
-  setTimeout(() => {
-    async function initMap() {
-      const domEl = mapRef.value // document.getElementById('map')
-      console.log('initMap: dom el', domEl)
-
-      const position = { lat: 34.14752, lng: -118.139075 }
-      // Request needed libraries.
-      //@ts-ignore
-      const { Map } = await google.maps.importLibrary('maps')
-      const { AdvancedMarkerElement } =
-        await google.maps.importLibrary('marker')
-
-      map = new Map(domEl, {
-        zoom: 14,
-        center: position,
-        mapId: 'drcarolinemin',
-      })
-      marker = new AdvancedMarkerElement({
-        map: map,
-        position: position,
-        title: 'essentia ESTHETICS',
-      })
-    }
+  const mapLink = '/scripts/map-init.js'
+  loadScript(mapLink).then(() => {
     initMap()
-  }, 1000)
+  }).catch(() => {
+    console.log('failed to get google maps init file')
+  });
+
+  async function initMap() {
+    const domEl = mapRef.value // document.getElementById('map')
+    console.log('initMap: dom el', domEl)
+
+    const position = { lat: 34.14752, lng: -118.139075 }
+    const { Map } = await google.maps.importLibrary('maps')
+    const { AdvancedMarkerElement } = await google.maps.importLibrary('marker')
+
+    map = new Map(domEl, {
+      zoom: 14,
+      center: position,
+      mapId: 'drcarolinemin',
+    })
+    marker = new AdvancedMarkerElement({
+      map: map,
+      position: position,
+      title: 'essentia ESTHETICS',
+    })
+  }
+
 })
 onUnmounted(() => {
   map = null

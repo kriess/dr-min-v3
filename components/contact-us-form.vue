@@ -148,7 +148,7 @@ const sendEmail = async (e) => {
           :rules="[rules.length(10), rules.max(1000)]"
           auto-grow
         ></v-textarea>
-        <v-btn type="submit" variant="elevated" rounded="sm" size="small">
+        <v-btn type="submit" variant="elevated" rounded="sm" size="small" class="submit-button">
           Submit
         </v-btn>
         <!--        <v-btn type="submit" :disabled="!isValid">Submit</v-btn>-->
@@ -219,6 +219,14 @@ const sendEmail = async (e) => {
     font-size: min(10vw, 50px);
     color: $text-on-dark;
   }
+}
+
+.submit-button {
+  width: fit-content;
+  display: inline-block;
+  background-color: $tertiary-action;
+  color: #fff;
+  text-transform: capitalize;
 }
 
 @media screen and (max-width: 700px) {

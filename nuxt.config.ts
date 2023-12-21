@@ -38,6 +38,7 @@ export default defineNuxtConfig({
   },
 
   modules: [
+    '@vite-pwa/nuxt',
     'nuxt-schema-org',
     'nuxt-simple-robots',
     'nuxt-simple-sitemap',
@@ -54,6 +55,48 @@ export default defineNuxtConfig({
       )
     },
   ],
+
+  pwa: {
+    registerType: 'autoUpdate',
+    manifest: {
+      name: 'Dr. Caroline Min',
+      short_name: 'Dr. Min',
+      theme_color: myCustomLightTheme.colors.primary,
+      // icons: [
+      //   {
+      //     src: 'pwa-192x192.png',
+      //     sizes: '192x192',
+      //     type: 'image/png',
+      //   },
+      //   {
+      //     src: 'pwa-512x512.png',
+      //     sizes: '512x512',
+      //     type: 'image/png',
+      //   },
+      //   {
+      //     src: 'pwa-512x512.png',
+      //     sizes: '512x512',
+      //     type: 'image/png',
+      //     purpose: 'any maskable',
+      //   },
+      // ],
+    },
+    workbox: {
+      globPatterns: ['**/*.{js,css,html,png,svg,ico}'],
+    },
+    client: {
+      installPrompt: false,
+      // you don't need to include this: only for testing purposes
+      // if enabling periodic sync for update use 1 hour or so (periodicSyncForUpdates: 3600)
+      periodicSyncForUpdates: 20,
+    },
+    devOptions: {
+      enabled: true,
+      suppressWarnings: true,
+      navigateFallbackAllowlist: [/^\/$/],
+      type: 'module',
+    },
+  },
 
   runtimeConfig: {
     public: {

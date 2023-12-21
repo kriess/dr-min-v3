@@ -122,8 +122,8 @@ useHead({
 <template>
   <v-app class="dr-min-app">
     <header-main-nav></header-main-nav>
-    <div style="height: 80px"></div>
-    <header-section-header></header-section-header>
+<!--    <div style="height: 80px"></div>-->
+
     <!--
     <header-banner-contact></header-banner-contact>
     -->
@@ -155,7 +155,6 @@ html {
     max-width: $page-max-width;
     overflow: hidden;
     margin: 0 auto;
-    padding: 0 20px;
   }
 
   a[href],
