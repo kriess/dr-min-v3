@@ -3,7 +3,7 @@
 // https://en.bem.info/methodology/naming-convention/
 
 $page-max-width: 2240px;
-$page-content-bg: #eee;
+$page-content-bg: #e7cfc3;
 $main-border-radius: 4px;
 $border-radius-v3: 12px;
 $page-title-font-size: min(5vw, 50px);
@@ -43,10 +43,11 @@ $primary: #D3756B; // $teal-darken-2;
 $secondary: #F0997D; // $teal-lighten-1;
 $tertiary: #FFC3A1; // $teal-lighten-1;
 $tertiary-action: #A75D5D;
-$light-primary: #A75D5D;
+$light-primary: #e7cfc3;
 
 // text colors
 $text-on-dark: #ffffff;
+$text-body: #333;
 
 .page-enter-active,
 .page-leave-active {

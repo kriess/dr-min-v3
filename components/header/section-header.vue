@@ -14,7 +14,7 @@ const imageSrc = computed(() => {
 
 const imageBg = computed(() => {
   return {
-    backgroundPosition: 'bottom right',
+    backgroundPosition: 'bottom',
     backgroundImage: 'url(/img/header/section/home.webp)',
   }
 })
@@ -32,7 +32,7 @@ const imageBg = computed(() => {
 <style lang="scss" scoped>
 .header-section-header {
   height: 380px;
-  background-color: #eee;
+  background-color: $page-content-bg;
   box-shadow:
     0 2px 4px -1px rgba(0, 0, 0, 0.1),
     0 4px 5px 0 rgba(0, 0, 0, 0.1),

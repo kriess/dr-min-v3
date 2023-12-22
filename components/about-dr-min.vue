@@ -21,7 +21,7 @@
           <h4 class="sub-title">About</h4>
           <h1 class="main-title">Dr. Caroline Min</h1>
           <p>
-            Dr. Caroline Min is a board certified plastic surgeon specializing
+            Dr. Caroline Min is a board certified female plastic surgeon specializing
             in cosmetic surgery. She has completed additional fellowship
             training in aesthetic surgery and has the skills and expertise to
             help you achieve your goals for plastic surgery. Your consultation
@@ -53,8 +53,8 @@
 .about-dr-min {
   width: auto;
   // background-color: $light-primary;
-  background-image: url('/img/misc/rotatesliders.jpg');
-  background-position: 10px 30%;
+  // background-image: url('/img/misc/rotatesliders.jpg');
+  // background-position: 10px 30%;
   padding: 100px 50px;
   .sub-title {
     font-weight: 100;

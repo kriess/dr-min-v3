@@ -32,7 +32,8 @@ const { stop } = useIntersectionObserver(
         <img class="img" :src="`/img/services/before-after/facelift.jpg`" :alt="`${title} image that links to the before/after ${title} photo gallery`" />
         <div class="link-container">
           <div class="gallery-link">
-          View the {{ props.title }} <br />Before/After Gallery
+          {{ props.title }} Gallery <br />
+          Before & Afters
           </div>
         </div>
       </div>

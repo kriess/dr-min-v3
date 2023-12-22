@@ -33,9 +33,9 @@ const testimonials = appConfig.testimonials.slice(0, 2)
 
 <style lang="scss" scoped>
 .home-testimonials {
-  color: $text-on-dark;
+  color: $text-body;
   padding: 3vw 5vw;
-  background-color: $secondary;
+  background-color: transparent;
   width: auto;
   .testimonials-grid {
     display: grid;
@@ -44,8 +44,8 @@ const testimonials = appConfig.testimonials.slice(0, 2)
   }
 }
 .section-title {
-  font-size: min(10vw, 50px);
-  color: $text-on-dark;
+  font-size: min(9vw, 40px);
+  color: $primary;
 }
 .main-button {
   background-color: $tertiary-action;

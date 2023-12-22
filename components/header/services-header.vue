@@ -86,7 +86,7 @@ const procedures = computed(() => {
   height: 380px;
   background-image: url('https://www.gingerxumd.com/wp-content/uploads/2023/05/Xu-Banner-Body-Updated.jpg');
   // background-position: bottom right;
-  background-color: #eee;
+  background-color: $page-content-bg;
   box-shadow:
     0 2px 4px -1px rgba(0, 0, 0, 0.1),
     0 4px 5px 0 rgba(0, 0, 0, 0.1),

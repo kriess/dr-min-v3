@@ -18,9 +18,9 @@ useHead({
   <section class="home page">
     <header-section-header section="home.webp"></header-section-header>
     <AboutDrMin></AboutDrMin>
-<!--    <ServicesCarousel></ServicesCarousel>-->
+    <HomeServices></HomeServices>
     <HomeTestimonials></HomeTestimonials>
-    <contact-us-form :show-header="true"></contact-us-form>
+    <home-contact-us-form :show-header="true"></home-contact-us-form>
   </section>
 </template>
 

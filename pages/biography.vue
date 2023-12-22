@@ -93,7 +93,7 @@ useHead({
 }
 
 .text-descriptions {
-  background-color: $page-content-bg;
+  // background-color: $page-content-bg;
   padding: 0 0 80px 0;
   p {
     margin-bottom: 20px;

@@ -90,7 +90,7 @@ const sendEmail = async (e) => {
 
 <template>
   <div class="contact-us-form">
-    <div class="contact-us-form__bg" style="background-image: url('/img/raw/essentia-office-2.webp');">
+    <div class="contact-us-form__bg" style="background-image: url('/img/raw/essentia-office.webp');">
 
       <div class="form-wrapper">
         <h1 v-if="props.showHeader" class="text-center mb-10 section-title">
@@ -189,7 +189,7 @@ const sendEmail = async (e) => {
 
   .contact-us-form__bg:before {
     content: '';
-    background: linear-gradient(0deg, rgba(255, 255, 255, 0) 75%, white 100%);
+    // background: linear-gradient(0deg, rgba(255, 255, 255, 0) 75%, white 100%);
     inset: 0;
     position: absolute;
     z-index: 1;
@@ -242,7 +242,6 @@ const sendEmail = async (e) => {
 }
 
 .form-wrapper {
-  z-index: 2;
   position: relative;
   margin: 3vw 20vw;
   padding: 3vw;

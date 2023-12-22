@@ -145,9 +145,9 @@ html {
   margin: 0 auto;
 
   :deep(.content-area) {
-    background-color: $page-content-bg;
+    // background-color: $page-content-bg;
     padding: 0 5vw 0 5vw;
-    border-radius: $main-border-radius;
+    // border-radius: $main-border-radius;
   }
 
   .nuxt-slot {

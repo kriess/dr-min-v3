@@ -1,21 +1,7 @@
-<script lang="ts" setup>
-// https://vuejs.org/guide/typescript/composition-api.html#typing-component-props
-interface Props {
-  title?: string
-}
-
-// props
-const props = withDefaults(defineProps<Props>(), {
-  title: 'Page Title',
+<script setup>
+const props = defineProps({
+  title: { type: String, default: "page title" },
 })
-
-/*
-Another props
-const props = defineProps<{
-  gallery: object
-  caseNumber: number
-}>()
-*/
 
 // reactive data
 const dialog = ref(false)

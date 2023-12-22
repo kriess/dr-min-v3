@@ -36,17 +36,6 @@ const headerSelectors = computed(() => {
   }
   return selectors
 })
-
-// ----- life cycle ---------------------------
-// onMounted(() => {
-//   window.addEventListener('scroll', updateScroll);
-// })
-//
-// onUnmounted(() => {
-//   window.removeEventListener('scroll', updateScroll);
-// })
-
-
 </script>
 
 <template>
@@ -114,7 +103,7 @@ const headerSelectors = computed(() => {
 <style lang="scss" scoped>
 .header-main-nav {
   position: fixed;
-  z-index: 2;
+  z-index: 3;
   width: 100%;
   top: 0;
 
@@ -132,10 +121,6 @@ const headerSelectors = computed(() => {
     margin-left: 2px;
   }
 
-  .header-main-nav-content {
-
-  }
-
   :deep(.v-toolbar) {
     transition: color 0.1s ease, background-color 0.5s ease;
     background-color: transparent;
@@ -143,8 +128,9 @@ const headerSelectors = computed(() => {
   }
 
   :deep(.v-toolbar.scrolling) {
-    background-color: $primary;
-    color: #fff;
+    // background: linear-gradient(0deg, rgba(255, 255, 255, 0) 25%, white 100%);
+     background-color: $primary;
+     color: #fff;
     box-shadow:
       0 2px 4px -1px rgba(0, 0, 0, 0.2),
       0 4px 5px 0 rgba(0, 0, 0, 0.14),
@@ -174,8 +160,14 @@ const headerSelectors = computed(() => {
   }
 
   .nav-btn {
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    // margin: 5px;
+    //background-color: rgba(0, 0, 0, 0.05);
     opacity: 1;
-    border-radius: $border-radius-v3;
+    //border-radius: $border-radius-v3;
     text-transform: capitalize;
     font-weight: 500;
     font-size: 100%;

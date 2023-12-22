@@ -90,71 +90,73 @@ const sendEmail = async (e) => {
 
 <template>
   <div class="contact-us-form">
-    <div class="contact-us-form__bg" style="background-image: url('/img/raw/essentia-office-2.webp');">
-
-      <div class="form-wrapper">
-        <h1 v-if="props.showHeader" class="text-center mb-10 section-title">
-          Contact Us
-        </h1>
-
-        <v-form ref="form" v-model="isValid" @submit="sendEmail">
-          <div class="form-fields-grid">
-            <v-text-field
-              base-color="#fff"
-              v-model="firstName"
-              label="First Name*"
-              placeholder="First Name"
-              persistent-placeholder
-              variant="outlined"
-              :rules="[rules.required, rules.max(30)]"
-            ></v-text-field>
-            <v-text-field
-              v-model="lastName"
-              label="Last Name*"
-              placeholder="Last Name"
-              persistent-placeholder
-              variant="outlined"
-              :rules="[rules.required, rules.max(30)]"
-            ></v-text-field>
-            <v-text-field
-              v-model="email"
-              label="Email*"
-              placeholder="Email"
-              persistent-placeholder
-              variant="outlined"
-              :rules="[rules.email, rules.max(50)]"
-              type="email"
-            ></v-text-field>
-            <v-text-field
-              v-model="phone"
-              label="Phone"
-              placeholder="Phone"
-              persistent-placeholder
-              :rules="[rules.required, rules.max(20)]"
-              variant="outlined"
-            ></v-text-field>
-            <v-textarea
-              class="message-container"
-              v-model="message"
-              label="Message*"
-              placeholder="Message"
-              persistent-placeholder
-              variant="outlined"
-              :rules="[rules.length(10), rules.max(1000)]"
-              auto-grow
-            ></v-textarea>
-            <v-btn type="submit" variant="elevated" rounded="sm" size="small" class="submit-button">
-              Submit
-            </v-btn>
-            <!--        <v-btn type="submit" :disabled="!isValid">Submit</v-btn>-->
-            <!--
-            https://developers.google.com/recaptcha/docs/invisible#js_api
-            -->
-          </div>
-        </v-form>
-      </div>
-
+    <div class="contact-us-container">
+      <img
+        src="/img/misc/contact-us-bg.jpg"
+        class="contact-us-bg"
+        alt="background"
+      />
     </div>
+
+    <h1 v-if="props.showHeader" class="text-center mb-10 section-title">
+      Contact Us
+    </h1>
+
+    <v-form ref="form" v-model="isValid" @submit="sendEmail">
+      <div class="form-fields-grid">
+        <v-text-field
+          base-color="#fff"
+          v-model="firstName"
+          label="First Name*"
+          placeholder="First Name"
+          persistent-placeholder
+          variant="outlined"
+          :rules="[rules.required, rules.max(30)]"
+        ></v-text-field>
+        <v-text-field
+          v-model="lastName"
+          label="Last Name*"
+          placeholder="Last Name"
+          persistent-placeholder
+          variant="outlined"
+          :rules="[rules.required, rules.max(30)]"
+        ></v-text-field>
+        <v-text-field
+          v-model="email"
+          label="Email*"
+          placeholder="Email"
+          persistent-placeholder
+          variant="outlined"
+          :rules="[rules.email, rules.max(50)]"
+          type="email"
+        ></v-text-field>
+        <v-text-field
+          v-model="phone"
+          label="Phone"
+          placeholder="Phone"
+          persistent-placeholder
+          :rules="[rules.required, rules.max(20)]"
+          variant="outlined"
+        ></v-text-field>
+        <v-textarea
+          class="message-container"
+          v-model="message"
+          label="Message*"
+          placeholder="Message"
+          persistent-placeholder
+          variant="outlined"
+          :rules="[rules.length(10), rules.max(1000)]"
+          auto-grow
+        ></v-textarea>
+        <v-btn type="submit" variant="elevated" rounded="sm" size="small" class="submit-button">
+          Submit
+        </v-btn>
+        <!--        <v-btn type="submit" :disabled="!isValid">Submit</v-btn>-->
+        <!--
+        https://developers.google.com/recaptcha/docs/invisible#js_api
+        -->
+      </div>
+    </v-form>
 
     <v-dialog
       v-if="dialog"
@@ -176,25 +178,11 @@ const sendEmail = async (e) => {
 
 <style lang="scss" scoped>
 .contact-us-form {
+  border-radius: 0 0 $main-border-radius $main-border-radius;
   overflow: hidden;
   position: relative;
+  padding: 3vw 10vw;
   color: #fff;
-
-  .contact-us-form__bg {
-    background-position: top center;
-    background-size: cover;
-    height: auto;
-    padding: 5vw 0;
-  }
-
-  .contact-us-form__bg:before {
-    content: '';
-    background: linear-gradient(0deg, rgba(255, 255, 255, 0) 75%, white 100%);
-    inset: 0;
-    position: absolute;
-    z-index: 1;
-  }
-
   :deep(.v-text-field input),
   :deep(textarea),
   :deep(.v-input__details .v-messages) {
@@ -239,14 +227,6 @@ const sendEmail = async (e) => {
   background-color: $tertiary-action;
   color: #fff;
   text-transform: capitalize;
-}
-
-.form-wrapper {
-  z-index: 2;
-  position: relative;
-  margin: 3vw 20vw;
-  padding: 3vw;
-  background-color: $primary;
 }
 
 @media screen and (max-width: 700px) {

@@ -40,6 +40,7 @@ const props = withDefaults(defineProps<Props>(), {
 .page-top-visuals {
   position: relative;
   padding: 100px 5vw 0 5vw;
+  margin-bottom: 3vw;
 }
 .visuals {
   padding: min(5vw, 40px);
@@ -65,7 +66,7 @@ const props = withDefaults(defineProps<Props>(), {
   }
   .page-title-visual {
     position: absolute;
-    top: 40%;
+    top: 30%;
     left: 40%;
     color: #fff;
     background-color: $primary;
