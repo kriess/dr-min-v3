@@ -19,6 +19,10 @@ const { stop } = useIntersectionObserver(
     targetIsVisible.value = isIntersecting
   },
 )
+
+const telephoneLink = computed(() => {
+  return `tel:1-${appConfig.phone}`
+})
 </script>
 
 <template>
@@ -33,7 +37,7 @@ const { stop } = useIntersectionObserver(
     </p>
     <div class="schedule-consult">
       <div class="consult-title">Schedule a Consultation with Dr. Min</div>
-      {{ appConfig.phone }}
+      <a :href="telephoneLink" class="telephone-link">{{ appConfig.phone }}</a>
     </div>
   </div>
 </template>
@@ -74,5 +78,10 @@ const { stop } = useIntersectionObserver(
     font-size: 80%;
     line-height: 18px;
   }
+}
+
+a.telephone-link:link {
+  color: #fff;
+  text-decoration: none;
 }
 </style>
