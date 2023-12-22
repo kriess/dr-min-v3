@@ -7,15 +7,20 @@ const services = [
   {
     link: "/services/face/",
     label: "Face",
-    imageSrc: '/img/raw/Layer-4-1024x676.jpg',
-    content: `We enjoy seeing our patients' bright and happy faces, especially when we can care for them! Dr. Davis offers several aesthetic facial procedures, including rhinoplasties, facelifts, brow lifts, blepharoplasties, neck lifts, and fat transfers. Discover which facial rejuvenation procedure can help you reach your aesthetic goals by following the link.`
+    imageSrc: '/img/home/services/face.webp',
+    content: `We enjoy seeing our patients' bright and happy faces,
+    especially when we can care for them! Dr. Min offers several aesthetic
+    facial procedures, including rhinoplasties, facelifts, brow lifts,
+    blepharoplasties, neck lifts, and fat transfers. Discover which facial
+    rejuvenation procedure can help you reach your aesthetic goals by
+    following the link.`
   },
   {
     link: "/services/breast/",
     label: "Breast",
-    imageSrc: '/img/raw/Layer-3-1024x676.jpg',
+    imageSrc: '/img/home/services/breast.webp',
     content: `A woman’s breasts can be a positive source of confidence and
-            femininity. Dr. Davis has helped countless women achieve their ideal
+            femininity. Dr. Min has helped countless women achieve their ideal
             look through her cosmetic breast surgery options, which include breast
             augmentation, breast lift, breast lift with implants, breast revision
             and more. Continue reading for in-depth information on breast surgeries.`
@@ -23,14 +28,21 @@ const services = [
   {
     link: "/services/body/",
     label: "Body",
-    imageSrc: '/img/raw/Davis-Homepage-Face-procedures-Beverly-Hills-CA-1024x676.jpg',
-    content: `All bodies are welcome at Dr. Gabrielle B. Davis Plastic Surgery. Dr. Davis provides a number of body contouring procedures, such as tummy tucks, liposuction, mommy makeovers, Brazilian butt lifts, labiaplasty, and more. To see which body contouring procedures are right for you, please follow the link for thorough information on each procedure.  `
+    imageSrc: '/img/home/services/body.webp',
+    content: `Dr. Min provides a number of body contouring procedures, such as tummy
+    tucks, liposuction, mommy makeovers, Brazilian butt lifts, labiaplasty, and
+     more. To see which body contouring procedures are right for you, please
+     follow the link for thorough information on each procedure.  `
   },
   {
     link: "/services/skin/",
     label: "Skin",
-    imageSrc: '/img/raw/Davis-Homepage-non-surgical-procedures-Beverly-Hills-1024x676.jpg',
-    content: `Not interested or ready for cosmetic surgery? In addition to our surgical procedures, we also offer various non-surgical treatments such as injectables, non-surgical facelifts, laser skin resurfacing, microneedling, body sculpting, and more. Learn more about all of our non-surgical aesthetic treatments by following the link below.`
+    imageSrc: '/img/home/services/skin.webp',
+    content: `Not interested or ready for cosmetic surgery? In addition to our
+    surgical procedures, we also offer various non-surgical treatments such as
+    injectables, non-surgical facelifts, laser skin resurfacing, microneedling,
+    body sculpting, and more. Learn more about all of our non-surgical aesthetic
+    treatments by following the link below.`
   },
 ]
 </script>

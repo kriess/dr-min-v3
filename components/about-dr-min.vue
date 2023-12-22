@@ -21,7 +21,7 @@ const { stop } = useIntersectionObserver(
               class="headshot"
               width="100%"
               alt="Dr. Caroline Min, M.D. - board certified plastic surgeon"
-              src="/img/headshots/min-white-coat.jpg"
+              src="/img/headshots/min-white-coat.webp"
             />
           </div>
         </v-col>
