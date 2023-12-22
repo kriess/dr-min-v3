@@ -247,6 +247,7 @@ const sendEmail = async (e) => {
   margin: 3vw 20vw;
   padding: 3vw;
   background-color: $primary;
+  background-color: rgba(211, 117, 107, 0.92);
 }
 
 @media screen and (max-width: 700px) {
