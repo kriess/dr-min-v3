@@ -10,27 +10,25 @@ const getBg = () => {
   if (siteSection === 'body') {
     return {
       backgroundPosition: 'bottom right',
-      backgroundImage:
-        'url(https://www.gingerxumd.com/wp-content/uploads/2023/05/Xu-Banner-Body-Updated.jpg)',
+      backgroundImage: 'url(/img/header/section/body.webp)',
     }
   }
   if (siteSection === 'face') {
     return {
       backgroundPosition: 'bottom center',
-      backgroundImage: 'url(/img/header/section/face.jpg)',
+      backgroundImage: 'url(/img/header/section/face.webp)',
     }
   }
   if (siteSection === 'breast') {
     return {
       backgroundPosition: 'bottom center',
-      backgroundImage: 'url(/img/header/section/breast.jpg)',
+      backgroundImage: 'url(/img/header/section/breast.webp)',
     }
   }
   if (siteSection === 'skin') {
     return {
       backgroundPosition: 'bottom right',
-      backgroundImage:
-        'url(https://www.gingerxumd.com/wp-content/uploads/2023/05/Xu-Banner-Body-Updated.jpg)',
+      backgroundImage: 'url(/img/header/section/skin.webp)',
     }
   }
   return {
@@ -84,7 +82,7 @@ const procedures = computed(() => {
 <style lang="scss" scoped>
 .header-services-header {
   height: 380px;
-  background-image: url('https://www.gingerxumd.com/wp-content/uploads/2023/05/Xu-Banner-Body-Updated.jpg');
+  // background-image: url('https://www.gingerxumd.com/wp-content/uploads/2023/05/Xu-Banner-Body-Updated.jpg');
   // background-position: bottom right;
   background-color: $page-content-bg;
   box-shadow:

@@ -31,7 +31,7 @@ const siteSection = computed(() => {
 
 const headerSelectors = computed(() => {
   const selectors = []
-  if (y.value > 50) {
+  if (y.value > 200) {
     selectors.push('scrolling')
   }
   return selectors
@@ -130,8 +130,9 @@ const headerSelectors = computed(() => {
   :deep(.v-toolbar.scrolling) {
     // background: linear-gradient(0deg, rgba(255, 255, 255, 0) 25%, white 100%);
     //background-color: $primary;
-    background: linear-gradient($primary, $secondary);
-    color: #fff;
+    background-color: #fff;
+    // background: linear-gradient($primary, $secondary);
+    // color: #fff;
     box-shadow:
       0 2px 4px -1px rgba(0, 0, 0, 0.2),
       0 4px 5px 0 rgba(0, 0, 0, 0.14),

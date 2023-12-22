@@ -29,7 +29,7 @@ const { stop } = useIntersectionObserver(
     <div class="services-before-after" ref="target">
       <!--<h3 class="title">{{ props.title }} Before/After</h3>-->
       <div :class="targetIsVisible ? 'container visible' : 'container'">
-        <img class="img" :src="`/img/services/before-after/face.webp`" :alt="`${title} image that links to the before/after ${title} photo gallery`" />
+        <img class="img" :src="`/img/services/before-after/body.webp`" :alt="`${title} image that links to the before/after ${title} photo gallery`" />
         <div class="link-container">
           <div class="gallery-link">
           {{ props.title }}  <br />
@@ -66,7 +66,7 @@ const { stop } = useIntersectionObserver(
   }
   .img {
     width: 100%;
-    aspect-ratio: 2700/1110;
+    aspect-ratio: 1000/400;
     display: block;
     transition: all 1s ease;
     opacity: 1;
