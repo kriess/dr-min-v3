@@ -26,6 +26,7 @@ useHead({
       alt="Dr. Caroline Min, M.D. - board certified plastic surgeon"
       image-src="/img/headshots/min-suit.jpg"
     ></PageTopVisuals>
+
     <div class="content-area">
       <div class="text-descriptions text-body-1">
         <p>
@@ -64,6 +65,14 @@ useHead({
           Surgeons.
         </p>
       </div>
+
+      <div class="logos">
+        <img src="/img/school-logos-200-tall/mit-logo.webp" alt="MIT School logo" height="100" />
+        <img src="/img/school-logos-200-tall/nyu-logo.jpg" alt="NYU School logo" height="100" />
+        <img src="/img/school-logos-200-tall/stanford-logo.webp" alt="Stanford School logo" height="100" />
+        <img src="/img/school-logos-200-tall/abps-logo-square.webp" alt="American Board of Plastic Surgery logo" height="100" />
+      </div>
+
       <div class="education content-width">
         <h2 class="text-h2 text-center title-text">Education & Training</h2>
         <h4 class="education--item text-h4">MIT / Stanford</h4>
@@ -94,9 +103,12 @@ useHead({
 
 .text-descriptions {
   // background-color: $page-content-bg;
-  padding: 0 0 80px 0;
+  padding: 0 0 50px 0;
   p {
     margin-bottom: 20px;
+  }
+  p:last-child {
+    margin-bottom: 0px;
   }
 }
 .education {
@@ -110,5 +122,15 @@ useHead({
     text-align: center;
     padding: 50px;
   }
+}
+
+.logos {
+  padding: 0 0 50px 0;
+  max-width: 800px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 </style>
