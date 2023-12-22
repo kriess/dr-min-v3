@@ -187,14 +187,6 @@ const sendEmail = async (e) => {
     padding: 5vw 0;
   }
 
-  .contact-us-form__bg:before {
-    content: '';
-    // background: linear-gradient(0deg, rgba(255, 255, 255, 0) 75%, white 100%);
-    inset: 0;
-    position: absolute;
-    z-index: 1;
-  }
-
   :deep(.v-text-field input),
   :deep(textarea),
   :deep(.v-input__details .v-messages) {
@@ -245,7 +237,7 @@ const sendEmail = async (e) => {
   position: relative;
   margin: 3vw 20vw;
   padding: 3vw;
-  background-color: $primary;
+  background-color: rgba(211, 117, 107, 0.92); // $primary;
 }
 
 @media screen and (max-width: 700px) {

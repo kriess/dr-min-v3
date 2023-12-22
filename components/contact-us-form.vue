@@ -246,7 +246,7 @@ const sendEmail = async (e) => {
   position: relative;
   margin: 3vw 20vw;
   padding: 3vw;
-  background-color: $primary;
+  // background-color: $primary;
   background-color: rgba(211, 117, 107, 0.92);
 }
 

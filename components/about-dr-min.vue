@@ -1,48 +1,59 @@
 <script lang="ts" setup>
-//
+const target = ref(null)
+const targetIsVisible = ref(false)
+
+const { stop } = useIntersectionObserver(
+  target,
+  ([{ isIntersecting }], observerElement) => {
+    targetIsVisible.value = isIntersecting
+  },
+)
 </script>
 
 <template>
   <div class="about-dr-min">
     <!--    <h1 class="text-h2 text-center mb-10">Welcome to Our Site</h1>-->
     <div class="container">
-      <v-row>
+      <v-row ref="target">
         <v-col cols="12" sm="12" md="4" class="text-center">
-          <v-img
-            class="headshot"
-            width="100%"
-            cover
-            alt="Dr. Caroline Min, M.D. - board certified plastic surgeon"
-            src="/img/headshots/min-white-coat.jpg"
-          ></v-img>
+          <div :class="targetIsVisible ? 'head-shot visible' : 'head-shot'">
+            <img
+              class="headshot"
+              width="100%"
+              alt="Dr. Caroline Min, M.D. - board certified plastic surgeon"
+              src="/img/headshots/min-white-coat.jpg"
+            />
+          </div>
         </v-col>
         <v-col cols="12" sm="12" md="1"></v-col>
         <v-col cols="12" sm="12" md="7">
-          <h4 class="sub-title">About</h4>
-          <h1 class="main-title">Dr. Caroline Min</h1>
-          <p>
-            Dr. Caroline Min is a board certified female plastic surgeon specializing
-            in cosmetic surgery. She has completed additional fellowship
-            training in aesthetic surgery and has the skills and expertise to
-            help you achieve your goals for plastic surgery. Your consultation
-            with Dr. Min will be thorough and unhurried. She and her staff will
-            work closely with you to develop an individualized plan of treatment
-            to meet your plastic surgery needs. Whether you are having a minor
-            procedure or a more involved cosmetic surgery, our office strives to
-            provide each patient with an exceptional experience in a warm,
-            caring environment.
-          </p>
-          <p class="mt-2 pt-10">
-            <v-btn
-              variant="elevated"
-              rounded="sm"
-              size="small"
-              class="main-button temptext-h6"
-              to="/biography"
-            >
-              Read More About Dr. Min
-            </v-btn>
-          </p>
+          <div :class="targetIsVisible ? 'content visible' : 'content'">
+            <h4 class="sub-title">About</h4>
+            <h1 class="main-title">Dr. Caroline Min</h1>
+            <p class="">
+              Dr. Caroline Min is a board certified female plastic surgeon specializing
+              in cosmetic surgery. She has completed additional fellowship
+              training in aesthetic surgery and has the skills and expertise to
+              help you achieve your goals for plastic surgery. Your consultation
+              with Dr. Min will be thorough and unhurried. She and her staff will
+              work closely with you to develop an individualized plan of treatment
+              to meet your plastic surgery needs. Whether you are having a minor
+              procedure or a more involved cosmetic surgery, our office strives to
+              provide each patient with an exceptional experience in a warm,
+              caring environment.
+            </p>
+            <p class="mt-2 pt-10">
+              <v-btn
+                variant="elevated"
+                rounded="sm"
+                size="small"
+                class="main-button temptext-h6"
+                to="/biography"
+              >
+                Read More About Dr. Min
+              </v-btn>
+            </p>
+          </div>
         </v-col>
       </v-row>
     </div>
@@ -95,5 +106,26 @@
     max-width: 500px;
     margin: 0 auto;
   }
+  .head-shot {
+    opacity: 0;
+    position: relative;
+    left: -300px;
+    transition: all 1s ease;
+    &.visible {
+      left: 0px;
+      opacity: 1;
+    }
+  }
+  .content {
+    opacity: 0;
+    position: relative;
+    left: 300px;
+    transition: all 1s ease;
+    &.visible {
+      left: 0px;
+      opacity: 1;
+    }
+  }
+
 }
 </style>
