@@ -3,7 +3,7 @@ const runtimeConfig = useRuntimeConfig()
 const gallery = useGallery()
 const route = useRoute()
 const router = useRouter()
-const pageTitle = 'Before/After Gallery'
+const pageTitle = 'Before & After Gallery'
 const canonicalUrl = `${runtimeConfig.public.siteDomain}${route.fullPath}`
 
 useHead({
