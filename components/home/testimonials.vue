@@ -34,7 +34,7 @@ const testimonials = appConfig.testimonials.slice(0, 2)
 <style lang="scss" scoped>
 .home-testimonials {
   color: $text-body;
-  padding: 3vw 5vw;
+  padding: 3vw 5vw 2vw 5vw;
   background-color: transparent;
   width: auto;
   .testimonials-grid {

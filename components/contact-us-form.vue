@@ -100,7 +100,7 @@ const sendEmail = async (e) => {
         <v-form ref="form" v-model="isValid" @submit="sendEmail">
           <div class="form-fields-grid">
             <v-text-field
-              base-color="#fff"
+              class="form-field"
               v-model="firstName"
               label="First Name*"
               placeholder="First Name"
@@ -109,6 +109,7 @@ const sendEmail = async (e) => {
               :rules="[rules.required, rules.max(30)]"
             ></v-text-field>
             <v-text-field
+              class="form-field"
               v-model="lastName"
               label="Last Name*"
               placeholder="Last Name"
@@ -117,6 +118,7 @@ const sendEmail = async (e) => {
               :rules="[rules.required, rules.max(30)]"
             ></v-text-field>
             <v-text-field
+              class="form-field"
               v-model="email"
               label="Email*"
               placeholder="Email"
@@ -126,6 +128,7 @@ const sendEmail = async (e) => {
               type="email"
             ></v-text-field>
             <v-text-field
+              class="form-field"
               v-model="phone"
               label="Phone"
               placeholder="Phone"
@@ -134,7 +137,7 @@ const sendEmail = async (e) => {
               variant="outlined"
             ></v-text-field>
             <v-textarea
-              class="message-container"
+              class="message-container form-field"
               v-model="message"
               label="Message*"
               placeholder="Message"
@@ -248,6 +251,12 @@ const sendEmail = async (e) => {
   padding: 3vw;
   // background-color: $primary;
   background-color: rgba(211, 117, 107, 0.92);
+}
+
+.form-field {
+  :deep(.v-field__outline) {
+    --v-field-border-opacity: 0.9;
+  }
 }
 
 @media screen and (max-width: 700px) {

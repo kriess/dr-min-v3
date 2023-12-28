@@ -91,8 +91,8 @@ const sendEmail = async (e) => {
 <template>
   <div class="contact-us-form">
     <div class="contact-us-form__bg" style="background-image: url('/img/raw/essentia-office.webp');">
-
-      <div class="form-wrapper">
+      <div class="mask"></div>
+        <div class="form-wrapper">
         <h1 v-if="props.showHeader" class="text-center mb-10 section-title">
           Contact Us
         </h1>
@@ -100,6 +100,7 @@ const sendEmail = async (e) => {
         <v-form ref="form" v-model="isValid" @submit="sendEmail">
           <div class="form-fields-grid">
             <v-text-field
+              class="form-field"
               base-color="#fff"
               v-model="firstName"
               label="First Name*"
@@ -109,6 +110,7 @@ const sendEmail = async (e) => {
               :rules="[rules.required, rules.max(30)]"
             ></v-text-field>
             <v-text-field
+              class="form-field"
               v-model="lastName"
               label="Last Name*"
               placeholder="Last Name"
@@ -117,6 +119,7 @@ const sendEmail = async (e) => {
               :rules="[rules.required, rules.max(30)]"
             ></v-text-field>
             <v-text-field
+              class="form-field"
               v-model="email"
               label="Email*"
               placeholder="Email"
@@ -126,6 +129,7 @@ const sendEmail = async (e) => {
               type="email"
             ></v-text-field>
             <v-text-field
+              class="form-field"
               v-model="phone"
               label="Phone"
               placeholder="Phone"
@@ -134,7 +138,7 @@ const sendEmail = async (e) => {
               variant="outlined"
             ></v-text-field>
             <v-textarea
-              class="message-container"
+              class="message-container form-field"
               v-model="message"
               label="Message*"
               placeholder="Message"
@@ -153,7 +157,6 @@ const sendEmail = async (e) => {
           </div>
         </v-form>
       </div>
-
     </div>
 
     <v-dialog
@@ -176,6 +179,8 @@ const sendEmail = async (e) => {
 
 <style lang="scss" scoped>
 .contact-us-form {
+  border-top: 10px solid $secondary;
+  border-bottom: 10px solid $secondary;
   overflow: hidden;
   position: relative;
   color: #fff;
@@ -185,6 +190,9 @@ const sendEmail = async (e) => {
     background-size: cover;
     height: auto;
     padding: 5vw 0;
+    //display: grid;
+    //justify-content: center;
+    //align-content: center;
   }
 
   :deep(.v-text-field input),
@@ -200,21 +208,6 @@ const sendEmail = async (e) => {
   .message-container {
     grid-column: 1 / span 2;
   }
-  .contact-us-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: $primary;
-  }
-  .contact-us-bg {
-    aspect-ratio: 10/6;
-    width: 100%;
-    filter: grayscale(100%);
-    opacity: 0.05;
-    object-fit: cover;
-  }
   :deep(.v-field--error) {
     color: #fc0;
   }
@@ -223,6 +216,15 @@ const sendEmail = async (e) => {
     font-size: min(9vw, 40px);
     color: $text-on-dark;
   }
+}
+
+.mask {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .submit-button {
@@ -235,9 +237,15 @@ const sendEmail = async (e) => {
 
 .form-wrapper {
   position: relative;
-  margin: 3vw 20vw;
+  margin: 3vw 25vw;
   padding: 3vw;
-  background-color: rgba(211, 117, 107, 0.92); // $primary;
+  background-color: rgba(211, 117, 107, 0.85); // $primary;
+}
+
+.form-field {
+  :deep(.v-field__outline) {
+    --v-field-border-opacity: 0.9;
+  }
 }
 
 @media screen and (max-width: 700px) {

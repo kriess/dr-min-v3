@@ -1,5 +1,4 @@
 <script setup>
-const appConfig = useAppConfig();
 const navItems = useNavItems()
 const drawer = ref(false)
 const route = useRoute()
@@ -36,10 +35,6 @@ const headerSelectors = computed(() => {
     selectors.push('scrolling')
   }
   return selectors
-})
-
-const telephoneLink = computed(() => {
-  return `tel:1-${appConfig.phone}`
 })
 </script>
 
@@ -97,8 +92,6 @@ const telephoneLink = computed(() => {
                   </v-btn>
                 </template>
               </template>
-<!--              <v-btn density="compact" icon="mdi-cellphone" variant="plain" class="ctas__btn" :href="telephoneLink" title="Call to schedule a consultation"></v-btn>-->
-<!--              <v-btn density="compact" icon="mdi-email" variant="plain" class="ctas__btn" href="/contact-info/" title="Email to schedule a consultation"></v-btn>-->
             </v-toolbar-items>
           </div>
         </div>
@@ -115,16 +108,14 @@ const telephoneLink = computed(() => {
   top: 0;
 
   .logo-name {
-    white-space: nowrap;
     // text-shadow: 1px 1px 1px #333;
     letter-spacing: 1.4px;
     font-weight: 500;
-    font-size: 30px;
+    font-size: 32px;
   }
   .logo-description {
-    white-space: nowrap;
     letter-spacing: 1.1px;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 500;
     margin-top: -10px;
     margin-left: 2px;
@@ -133,8 +124,7 @@ const telephoneLink = computed(() => {
   :deep(.v-toolbar) {
     transition: color 0.1s ease, background-color 0.5s ease;
     background-color: transparent;
-    color: $tertiary-action; // #fff; // $tertiary-action;
-    // text-shadow: 1px 1px 1px #777; // #777
+    color: $tertiary-action;
   }
 
   :deep(.v-toolbar.scrolling) {
@@ -182,7 +172,7 @@ const telephoneLink = computed(() => {
     //border-radius: $border-radius-v3;
     text-transform: capitalize;
     font-weight: 500;
-    font-size: 1.5vw;
+    font-size: 1.2rem;
     letter-spacing: normal;
     :deep(.v-btn__append) {
       margin: 0;
@@ -198,10 +188,6 @@ const telephoneLink = computed(() => {
       }
     }
   }
-}
-
-.ctas__btn {
-  margin: 0 5px;
 }
 
 /* need to have dropdown menu classes at root level */

@@ -1,5 +1,5 @@
 <script setup>
-const appConfig = useAppConfig();
+const appConfig = useAppConfig()
 const navItems = useNavItems()
 const drawer = ref(false)
 const route = useRoute()
@@ -38,6 +38,14 @@ const headerSelectors = computed(() => {
   return selectors
 })
 
+const headerContentSelectors = computed(() => {
+  const selectors = ['header-main-nav-content']
+  if (y.value > 30) {
+    selectors.push('scrolling')
+  }
+  return selectors
+})
+
 const telephoneLink = computed(() => {
   return `tel:1-${appConfig.phone}`
 })
@@ -45,16 +53,23 @@ const telephoneLink = computed(() => {
 
 <template>
   <div class="header-main-nav">
-    <div class="header-main-nav-content">
-      <v-toolbar height="80" :class="headerSelectors">
+    <div :class="headerContentSelectors">
+      <div class="header-container">
+          <div @click="goHome" style="cursor: pointer">
+            <div class="logo-name">Caroline Min, M.D</div>
+            <div class="logo-description">
+              Board Certified Plastic Surgeon
+            </div>
+          </div>
+          <div class="ctas">
+            <v-btn variant="plain" class="ctas__btn" :href="telephoneLink">{{ appConfig.phone }}</v-btn>
+            <v-btn variant="tonal" class="ctas__btn" href="/contact-info/">Schedule a Consultation</v-btn>
+          </div>
+        </div>
+
+      <v-toolbar :class="headerSelectors" density="compact">
         <div class="hidden-sm-and-down" style="width: 100%; height: 100%">
           <div class="nav-container">
-            <div @click="goHome" style="cursor: pointer">
-              <div class="logo-name">Caroline Min, M.D</div>
-              <div class="logo-description">
-                Board Certified Plastic Surgeon
-              </div>
-            </div>
             <v-toolbar-items>
               <template v-for="item in navItems">
                 <template v-if="item.subNavItems">
@@ -97,8 +112,6 @@ const telephoneLink = computed(() => {
                   </v-btn>
                 </template>
               </template>
-<!--              <v-btn density="compact" icon="mdi-cellphone" variant="plain" class="ctas__btn" :href="telephoneLink" title="Call to schedule a consultation"></v-btn>-->
-<!--              <v-btn density="compact" icon="mdi-email" variant="plain" class="ctas__btn" href="/contact-info/" title="Email to schedule a consultation"></v-btn>-->
             </v-toolbar-items>
           </div>
         </div>
@@ -114,39 +127,35 @@ const telephoneLink = computed(() => {
   width: 100%;
   top: 0;
 
+  .header-main-nav-content {
+    transition: color 0.1s ease, background-color 0.5s ease;
+    background-color: transparent;
+    color: $primary;
+    &.scrolling {
+      // background: linear-gradient(0deg, rgba(255, 255, 255, 0) 25%, white 100%);
+      //background-color: $primary;
+      background-color: #fff;
+      // background: linear-gradient($primary, $secondary);
+      // color: #fff;
+      box-shadow:
+        0 2px 4px -1px rgba(0, 0, 0, 0.2),
+        0 4px 5px 0 rgba(0, 0, 0, 0.14),
+        0 1px 10px 0 rgba(0, 0, 0, 0.12);
+    }
+  }
+
   .logo-name {
-    white-space: nowrap;
     // text-shadow: 1px 1px 1px #333;
     letter-spacing: 1.4px;
     font-weight: 500;
-    font-size: 30px;
+    font-size: 32px;
   }
   .logo-description {
-    white-space: nowrap;
     letter-spacing: 1.1px;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 500;
     margin-top: -10px;
     margin-left: 2px;
-  }
-
-  :deep(.v-toolbar) {
-    transition: color 0.1s ease, background-color 0.5s ease;
-    background-color: transparent;
-    color: $tertiary-action; // #fff; // $tertiary-action;
-    // text-shadow: 1px 1px 1px #777; // #777
-  }
-
-  :deep(.v-toolbar.scrolling) {
-    // background: linear-gradient(0deg, rgba(255, 255, 255, 0) 25%, white 100%);
-    //background-color: $primary;
-    background-color: #fff;
-    // background: linear-gradient($primary, $secondary);
-    // color: #fff;
-    box-shadow:
-      0 2px 4px -1px rgba(0, 0, 0, 0.2),
-      0 4px 5px 0 rgba(0, 0, 0, 0.14),
-      0 1px 10px 0 rgba(0, 0, 0, 0.12);
   }
 
   :deep(.v-toolbar__content) {
@@ -159,10 +168,21 @@ const telephoneLink = computed(() => {
     display: block;
   }
 
-  .nav-container {
+  .header-container {
+    padding: 10px 20px 10px 20px;
+    color: $primary;
+    text-shadow: 0px 0px 1px $secondary;
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    margin: 0 auto;
+    align-items: center;
+    height: 100%;
+  }
+
+  .nav-container {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
     align-items: center;
     height: 100%;
   }
@@ -171,19 +191,29 @@ const telephoneLink = computed(() => {
     opacity: 1;
   }
 
+  :deep(.v-toolbar) {
+    // background-color: rgba(167, 93, 93, 0.05);
+    background-color: transparent;
+  }
+
   .nav-btn {
-    padding-left: 5px;
-    padding-right: 5px;
-    margin-left: 5px;
-    margin-right: 5px;
-    // margin: 5px;
     //background-color: rgba(0, 0, 0, 0.05);
+    //border-radius: $border-radius-v3;
+    color: $primary;
+    //padding-left: 5px;
+    //padding-right: 5px;
+    //margin-left: 5px;
+    //margin-right: 5px;
     opacity: 1;
     //border-radius: $border-radius-v3;
     text-transform: capitalize;
     font-weight: 500;
-    font-size: 1.5vw;
+    font-size: 1.2rem;
     letter-spacing: normal;
+    &.v-btn--active {
+      opacity: 1;
+      background-color: rgba(167, 93, 93, 0.09);
+    }
     :deep(.v-btn__append) {
       margin: 0;
     }
@@ -200,8 +230,16 @@ const telephoneLink = computed(() => {
   }
 }
 
+a.telephone-link:link {
+  color: #fff;
+  text-decoration: none;
+}
+.ctas {}
 .ctas__btn {
-  margin: 0 5px;
+  opacity: 1;
+  text-transform: none;
+  color: $primary;
+  // border-radius: $border-radius-v3;
 }
 
 /* need to have dropdown menu classes at root level */

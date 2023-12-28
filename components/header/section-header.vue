@@ -32,8 +32,8 @@ const telephoneLink = computed(() => {
       <div class="content-box" :style="imageBg">
 
         <div class="ctas">
-          <v-btn variant="plain" class="ctas__btn" :href="telephoneLink">{{ appConfig.phone }}</v-btn>
-          <v-btn variant="plain" class="ctas__btn" href="/contact-info/">Schedule a Consultation</v-btn>
+          <v-btn variant="plain" class="ctas__btn" :href="telephoneLink" title="Call to schedule a consultation">{{ appConfig.phone }}</v-btn>
+          <v-btn variant="plain" class="ctas__btn" href="/contact-info/" title="Email to schedule a consultation">Schedule a Consultation</v-btn>
         </div>
 
       </div>

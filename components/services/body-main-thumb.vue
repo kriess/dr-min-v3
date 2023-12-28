@@ -36,7 +36,11 @@ const telephoneLink = computed(() => {
       {{ props.caption }}
     </p>
     <div class="schedule-consult">
-      <div class="consult-title">Schedule a Consultation with Dr. Min</div>
+      <div class="consult-title">
+        <NuxtLink  class="telephone-link" to="/contact-info/">
+        Schedule a Consultation with Dr. Min
+        </NuxtLink>
+      </div>
       <a :href="telephoneLink" class="telephone-link">{{ appConfig.phone }}</a>
     </div>
   </div>
@@ -80,7 +84,7 @@ const telephoneLink = computed(() => {
   }
 }
 
-a.telephone-link:link {
+a.telephone-link:link, a.telephone-link:visited, a.telephone-link:active {
   color: #fff;
   text-decoration: none;
 }

@@ -48,7 +48,7 @@ const activeSection = computed(() => {
   return getSection(sectionId.value)
 })
 
-console.log('sectionId', sectionId.value)
+// console.log('sectionId', sectionId.value)
 </script>
 
 <template>

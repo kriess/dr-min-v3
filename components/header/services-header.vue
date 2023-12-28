@@ -112,9 +112,13 @@ const procedures = computed(() => {
   }
 
   .procedures {
+    overflow: hidden;
+    border-radius: $border-radius-v3;
+    // background-color: rgba(0, 0, 0, 0.05);
+    // background-color: rgba(167, 93, 93, 0.05);
     display: flex;
     justify-content: center;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     li {
       list-style-type: none;
@@ -122,21 +126,22 @@ const procedures = computed(() => {
   }
 
   .section-nav-btn {
-    border-radius: $border-radius-v3;
+    //border-radius: $border-radius-v3;
+    border-radius: 0;
     font-weight: 500;
     opacity: 1;
     color: $primary;
-    margin: 0 10px;
-    background-color: rgba(0, 0, 0, 0.05);
+    margin: 0;
+    //background-color: rgba(0, 0, 0, 0.05);
     text-transform: capitalize;
     &.v-btn--active {
       opacity: 1;
-      background-color: rgba(0, 0, 0, 0.1);
+      background-color: rgba(167, 93, 93, 0.09);
     }
   }
   .section-nav-btn:hover {
     transition: all 1s ease;
-    background-color: rgba(0, 0, 0, 0.15);
+    background-color: rgba(167, 93, 93, 0.09);
   }
 }
 </style>

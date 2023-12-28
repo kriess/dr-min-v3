@@ -69,7 +69,7 @@ const props = withDefaults(defineProps<Props>(), {
     top: 30%;
     left: 40%;
     color: #fff;
-    background-color: $primary;
+    background-color: $secondary;
     border-radius: $main-border-radius;
     padding: 10px 20px 10px 15px;
     width: fit-content;
