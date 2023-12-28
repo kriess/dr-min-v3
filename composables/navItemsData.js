@@ -53,10 +53,10 @@ export default [
         title: 'Breast Revision',
         href: '/services/breast/breast-revision/',
       },
-      {
-        title: 'Breast Implant Removal',
-        href: '/services/breast/breast-implant-removal/',
-      },
+      // {
+      //   title: 'Breast Implant Removal',
+      //   href: '/services/breast/breast-implant-removal/',
+      // },
       {
         title: 'Male Breast Reduction',
         href: '/services/breast/breast-reduction-male/',
@@ -106,25 +106,25 @@ export default [
     ],
   },
   {
-    href: '/services/skin/',
+    href: '/services/non-surgical/',
     title: 'Non-Surgical', //Non-Surgical
     subNavItems: [
       {
         title: 'Botox',
-        href: '/services/skin/botox/',
+        href: '/services/non-surgical/botox/',
       },
       {
         title: 'Fillers',
-        href: '/services/skin/fillers/',
+        href: '/services/non-surgical/fillers/',
       },
-      {
-        title: 'Non-Surgical Nosejob',
-        href: '/services/skin/fillers/',
-      },
-      {
-        title: 'Jawline & Chin Enhancement',
-        href: '/services/skin/fillers/',
-      },
+      // {
+      //   title: 'Non-Surgical Nosejob',
+      //   href: '/services/non-surgical/fillers/',
+      // },
+      // {
+      //   title: 'Jawline & Chin Enhancement',
+      //   href: '/services/non-surgical/fillers/',
+      // },
     ],
   },
   {

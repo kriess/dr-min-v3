@@ -8,41 +8,25 @@ const services = [
     link: "/services/face/",
     label: "Face",
     imageSrc: '/img/home/services/face.webp',
-    content: `We enjoy seeing our patients' bright and happy faces,
-    especially when we can care for them! Dr. Min offers several aesthetic
-    facial procedures, including rhinoplasties, facelifts, brow lifts,
-    blepharoplasties, neck lifts, and fat transfers. Discover which facial
-    rejuvenation procedure can help you reach your aesthetic goals by
-    following the link.`
+    content: `Tired of looking tired? Discover what facial rejuvenation can do to refresh your look. `
   },
   {
     link: "/services/breast/",
     label: "Breast",
     imageSrc: '/img/home/services/breast.webp',
-    content: `A woman’s breasts can be a positive source of confidence and
-            femininity. Dr. Min has helped countless women achieve their ideal
-            look through her cosmetic breast surgery options, which include breast
-            augmentation, breast lift, breast lift with implants, breast revision
-            and more. Continue reading for in-depth information on breast surgeries.`
+    content: `Whether you are looking for an augmentation, reduction, lift or a combination, learn about breast enhancement options.`
   },
   {
     link: "/services/body/",
     label: "Body",
     imageSrc: '/img/home/services/body.webp',
-    content: `Dr. Min provides a number of body contouring procedures, such as tummy
-    tucks, liposuction, mommy makeovers, Brazilian butt lifts, labiaplasty, and
-     more. To see which body contouring procedures are right for you, please
-     follow the link for thorough information on each procedure.  `
+    content: `Discover what can be done to remove unwanted fat and excess skin or boost your curves.`
   },
   {
-    link: "/services/skin/",
-    label: "Skin",
+    link: "/services/non-surgical/",
+    label: "Non-Surgical",
     imageSrc: '/img/home/services/skin.webp',
-    content: `Not interested or ready for cosmetic surgery? In addition to our
-    surgical procedures, we also offer various non-surgical treatments such as
-    injectables, non-surgical facelifts, laser skin resurfacing, microneedling,
-    body sculpting, and more. Learn more about all of our non-surgical aesthetic
-    treatments by following the link below.`
+    content: `Not yet ready for surgery but need a refresh?  Learn about non surgical options.`
   },
 ]
 </script>

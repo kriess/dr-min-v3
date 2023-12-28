@@ -119,7 +119,7 @@ const telephoneLink = computed(() => {
     // text-shadow: 1px 1px 1px #333;
     letter-spacing: 1.4px;
     font-weight: 500;
-    font-size: 30px;
+    font-size: 32px;
   }
   .logo-description {
     white-space: nowrap;

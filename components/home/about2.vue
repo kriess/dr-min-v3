@@ -26,18 +26,11 @@ const { stop } = useIntersectionObserver(
       <div :class="targetIsVisible ? 'content visible' : 'content'">
         <h4 class="sub-title">About</h4>
         <h1 class="main-title">Dr. Caroline Min</h1>
-        <p class="">
-          Dr. Caroline Min is a board certified female plastic surgeon specializing
-          in cosmetic surgery. She has completed additional fellowship
-          training in aesthetic surgery and has the skills and expertise to
-          help you achieve your goals for plastic surgery. Your consultation
-          with Dr. Min will be thorough and unhurried. She and her staff will
-          work closely with you to develop an individualized plan of treatment
-          to meet your plastic surgery needs. Whether you are having a minor
-          procedure or a more involved cosmetic surgery, our office strives to
-          provide each patient with an exceptional experience in a warm,
-          caring environment.
+        <p class="mb-5">
+          Dr. Caroline Min is a board certified female plastic surgeon who is dedicated to achieving natural looking results with cosmetic surgery and non surgical procedures.  With a wealth of expertise and experience,  she is dedicated to helping you attain your aesthetic goals.  Each consultation is characterized by a thorough and unhurried approach, ensuring that patients feel heard and understood.  She will work closely with you to develop an individualized plan of treatment.  Dr. Min will never recommend an unnecessary procedure and throughout her career, she has cultivated a reputation for integrity and honesty.  Whether you are having a minor procedure or a more involved surgery, she strives to provide each patient with an exceptional experience.  She will ensure that patients are fully educated and prepared before any procedure and will be there for you afterwards during every aspect of recovery.
         </p>
+        <p class="">
+          Dr. Min enjoys spending time with her two children and her two rescue dogs, Oreo and Willie.  She is active and enjoys Crossfit workouts, hiking, and the great outdoors.  She was born and raised in New York City but the Los Angeles area has been home since 2007.  </p>
         <p class="mt-2 pt-10">
           <v-btn
             variant="elevated"

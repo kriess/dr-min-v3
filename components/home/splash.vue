@@ -70,6 +70,7 @@ const imageBg = computed(() => {
   aspect-ratio: 2/1;
 }
 .ctas {
+  padding-top: 13vw;
   text-align: center;
   place-self: center;
   color: #fff;
@@ -79,7 +80,7 @@ const imageBg = computed(() => {
     left: 0px;
     transition: all 1s ease;
     opacity: 0;
-    font-size: 6vw;
+    font-size: 5.25vw;
     line-height: 6vw;
     font-weight: 300;
     text-shadow: 1px 1px 1px #777;
@@ -87,17 +88,17 @@ const imageBg = computed(() => {
   h4 {
     position: relative;
     top: -200px;
-    transition: all 1s 0.5s;
+    transition: all 1s 0.3s;
     opacity: 0;
-    font-size: 1.5vw;
+    font-size: 1.75vw;
     font-weight: 300;
-    margin-bottom: 40px;
+    margin-bottom: 13vw;
     text-shadow: 1px 1px 1px #777;
   }
   .ctas__btn {
     position: relative;
     top: -200px;
-    transition: all 1s 0.995s;
+    transition: all 1s 0.6s;
     opacity: 0;
     text-transform: none;
     background-color: $tertiary-action;
@@ -117,7 +118,7 @@ const imageBg = computed(() => {
   }
   .ctas__btn {
     left: 0;
-    top: 0;
+    top: 0px;
     opacity: 1;
   }
 }

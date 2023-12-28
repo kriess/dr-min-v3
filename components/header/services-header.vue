@@ -25,7 +25,7 @@ const getBg = () => {
       backgroundImage: 'url(/img/header/section/breast.webp)',
     }
   }
-  if (siteSection === 'skin') {
+  if (siteSection === 'non-surgical') {
     return {
       backgroundPosition: 'bottom right',
       backgroundImage: 'url(/img/header/section/skin.webp)',

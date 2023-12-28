@@ -182,7 +182,7 @@ export default {
     },
     {
       title: 'Non-Surgical',
-      slug: 'skin',
+      slug: 'non-surgical',
 
       procedures: [
         {
