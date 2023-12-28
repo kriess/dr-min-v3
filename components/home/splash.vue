@@ -13,7 +13,7 @@ const { stop } = useIntersectionObserver(
 const imageBg = computed(() => {
   return {
     backgroundPosition: 'center center',
-    backgroundImage: 'url(/img/raw/home/header-1600x1200.jpg)',
+    backgroundImage: 'url(/img/home/header-1600x1200.webp)',
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover"
   }
@@ -62,7 +62,7 @@ const imageBg = computed(() => {
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.1);
 }
 .content {
   display: grid;

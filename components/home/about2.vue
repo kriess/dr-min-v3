@@ -66,7 +66,6 @@ const { stop } = useIntersectionObserver(
 }
 .headshot {
   border-radius: 3px;
-  box-shadow: 2px 2px ;
 }
 .title-container {
   width: 38.5%;
