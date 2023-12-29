@@ -1,4 +1,5 @@
 <script setup>
+const appConfig = useAppConfig()
 const target = ref(null)
 const targetIsVisible = ref(false)
 
@@ -31,7 +32,6 @@ const imageBg = computed(() => {
           <v-btn variant="elevated" class="ctas__btn" href="/contact-info/" title="Email to schedule a consultation">
             Schedule a Consultation
           </v-btn>
-
         </div>
       </div>
     </div>

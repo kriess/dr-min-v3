@@ -1,6 +1,15 @@
 <script setup>
 const route = useRoute()
 const services = useServices()
+const target = ref(null)
+const targetIsVisible = ref(false)
+
+const { stop } = useIntersectionObserver(
+  target,
+  ([{ isIntersecting }], observerElement) => {
+    targetIsVisible.value = isIntersecting
+  },
+)
 
 const getBg = () => {
   const isService = route.fullPath.includes('/services')
@@ -67,7 +76,9 @@ const procedures = computed(() => {
 <template>
   <div class="header-services-header" v-if="isService" :style="getBg()">
     <div class="content" v-if="isService">
-      <h1 class="section-title">{{ procedureTitle ?? siteSection }}</h1>
+      <h1 :class="targetIsVisible ? 'section-title visible' : 'section-title'" ref="target">
+        {{ procedureTitle ?? siteSection }}
+      </h1>
       <ul class="procedures" v-if="procedureTitle">
         <li v-for="i in procedures">
           <v-btn class="section-nav-btn" variant="plain" :to="i.href">
@@ -109,13 +120,18 @@ const procedures = computed(() => {
     color: $primary;
     text-transform: capitalize;
     margin-bottom: 10px;
+    opacity: 0;
+    position: relative;
+    left: -300px;
+    transition: all 1s ease;
+    &.visible {
+      left: 0px;
+      opacity: 1;
+    }
   }
 
   .procedures {
     overflow: hidden;
-    border-radius: $border-radius-v3;
-    // background-color: rgba(0, 0, 0, 0.05);
-    // background-color: rgba(167, 93, 93, 0.05);
     display: flex;
     justify-content: center;
     margin: 0 auto;
@@ -126,22 +142,24 @@ const procedures = computed(() => {
   }
 
   .section-nav-btn {
-    //border-radius: $border-radius-v3;
+    background-color: rgba(167, 93, 93, 0);
+    padding: 0 10px;
+    font-size: 0.8rem;
     border-radius: 0;
     font-weight: 500;
     opacity: 1;
     color: $primary;
     margin: 0;
-    //background-color: rgba(0, 0, 0, 0.05);
     text-transform: capitalize;
     &.v-btn--active {
       opacity: 1;
-      background-color: rgba(167, 93, 93, 0.09);
+      background-color: rgba(167, 93, 93, 0.3);
     }
   }
   .section-nav-btn:hover {
     transition: all 1s ease;
-    background-color: rgba(167, 93, 93, 0.09);
+    color: #fff;
+    background-color: rgba(167, 93, 93, 0.75);
   }
 }
 </style>

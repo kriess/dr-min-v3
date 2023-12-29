@@ -8,6 +8,16 @@ const props = withDefaults(defineProps<Props>(), {
   showHeader: true,
 })
 
+const target = ref(null)
+const targetIsVisible = ref(false)
+
+const { stop } = useIntersectionObserver(
+  target,
+  ([{ isIntersecting }], observerElement) => {
+    targetIsVisible.value = isIntersecting
+  },
+)
+
 // reactive data
 const recaptchaRef = ref<HTMLElement | null>(null)
 const dialog = ref(false)
@@ -92,7 +102,7 @@ const sendEmail = async (e) => {
   <div class="contact-us-form">
     <div class="contact-us-form__bg" style="background-image: url('/img/raw/essentia-office.webp');">
       <div class="mask"></div>
-        <div class="form-wrapper">
+        <div ref="target" :class="targetIsVisible ? 'form-wrapper visible' : 'form-wrapper'">
         <h1 v-if="props.showHeader" class="text-center mb-10 section-title">
           Contact Us
         </h1>
@@ -240,6 +250,14 @@ const sendEmail = async (e) => {
   margin: 3vw 25vw;
   padding: 3vw;
   background-color: rgba(211, 117, 107, 0.85); // $primary;
+  opacity: 0;
+  position: relative;
+  top: 200px;
+  transition: all 1s ease;
+  &.visible {
+    top: 0px;
+    opacity: 1;
+  }
 }
 
 .form-field {

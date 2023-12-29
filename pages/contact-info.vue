@@ -23,18 +23,13 @@ useHead({
 </script>
 
 <template>
-  <section class="news page">
-<!--    <PageTopVisuals-->
-<!--      :title="pageTitle"-->
-<!--      alt="Dr. Caroline Min, M.D. - board certified plastic surgeon - contact us"-->
-<!--      image-src="/img/headshots/min-white-coat.jpg"-->
-<!--    ></PageTopVisuals>-->
+  <section class="contact-info">
     <contact-us-form :show-header="true"></contact-us-form>
   </section>
 </template>
 
 <style lang="scss" scoped>
-.news {
+.contact-info {
   width: auto;
 }
 </style>

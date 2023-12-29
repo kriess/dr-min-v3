@@ -116,7 +116,6 @@ const telephoneLink = computed(() => {
 
   .logo-name {
     white-space: nowrap;
-    // text-shadow: 1px 1px 1px #333;
     letter-spacing: 1.4px;
     font-weight: 500;
     font-size: 32px;
@@ -133,16 +132,11 @@ const telephoneLink = computed(() => {
   :deep(.v-toolbar) {
     transition: color 0.1s ease, background-color 0.5s ease;
     background-color: transparent;
-    color: $tertiary-action; // #fff; // $tertiary-action;
-    // text-shadow: 1px 1px 1px #777; // #777
+    color: $tertiary-action;
   }
 
   :deep(.v-toolbar.scrolling) {
-    // background: linear-gradient(0deg, rgba(255, 255, 255, 0) 25%, white 100%);
-    //background-color: $primary;
     background-color: #fff;
-    // background: linear-gradient($primary, $secondary);
-    // color: #fff;
     box-shadow:
       0 2px 4px -1px rgba(0, 0, 0, 0.2),
       0 4px 5px 0 rgba(0, 0, 0, 0.14),
@@ -176,10 +170,7 @@ const telephoneLink = computed(() => {
     padding-right: 5px;
     margin-left: 5px;
     margin-right: 5px;
-    // margin: 5px;
-    //background-color: rgba(0, 0, 0, 0.05);
     opacity: 1;
-    //border-radius: $border-radius-v3;
     text-transform: capitalize;
     font-weight: 500;
     font-size: 1.5vw;

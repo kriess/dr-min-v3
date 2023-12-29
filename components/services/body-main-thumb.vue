@@ -27,11 +27,13 @@ const telephoneLink = computed(() => {
 
 <template>
   <div class="services-body-main-thumb">
-    <v-img
-      ref="target"
-      :class="targetIsVisible ? 'thumb visible' : 'thumb'"
-      :src="props.src"
-    ></v-img>
+    <div :class="targetIsVisible ? 'thumb-container visible' : 'thumb-container'" ref="target">
+      <img
+        alt=""
+        class="thumb"
+        :src="props.src"
+      />
+    </div>
     <p class="caption">
       {{ props.caption }}
     </p>
@@ -48,20 +50,27 @@ const telephoneLink = computed(() => {
 
 <style lang="scss" scoped>
 .services-body-main-thumb {
-  margin: 0 0 20px 5vw;
+  margin: 0 0 20px 8vw;
   float: right;
-  width: 50%;
+  width: 40%;
   max-width: 600px;
-  .thumb {
+  .thumb-container {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 3/2;
     border-radius: $border-radius-v3;
     border: 1px solid #eee;
     opacity: 0;
-    left: 100px;
+    left: 150px;
     transition: all 1s ease;
     &.visible {
       opacity: 1;
       left: 0;
     }
+  }
+
+  .thumb {
+    width: 100%
   }
 
   .schedule-consult {
