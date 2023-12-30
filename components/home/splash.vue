@@ -72,7 +72,7 @@ const imageBg = computed(() => {
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, $header-opacity);
 }
 
 .content {
@@ -95,7 +95,7 @@ const imageBg = computed(() => {
     font-size: clamp(40px, 8vw, 70px);
     line-height: 6vw;
     font-weight: 300;
-    text-shadow: 1px 1px 1px #777;
+    text-shadow: 1px 1px 1px $font-primary-shadow;
   }
 
   h4 {
@@ -105,7 +105,7 @@ const imageBg = computed(() => {
     opacity: 0;
     font-size: clamp(15px, 3vw, 25px);
     font-weight: 300;
-    text-shadow: 1px 1px 1px #777;
+    text-shadow: 1px 1px 1px $font-primary-shadow;
   }
 }
 
@@ -114,7 +114,7 @@ const imageBg = computed(() => {
   transition: all 1s 0.6s;
   opacity: 0;
   text-transform: none;
-  background-color: $tertiary-action;
+  background-color: $primary;
   color: #fff;
   width: fit-content;
   margin-bottom: 200px;

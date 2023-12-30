@@ -15,10 +15,21 @@ const goHome = () => {
 const path = computed(() => {
   return route.fullPath
 })
+const isHome = computed(() => {
+  return route.fullPath === '/'
+})
+
+const isService = computed(() => {
+  return route.fullPath.includes('/services')
+})
+
 const headerSelectors = computed(() => {
   const selectors = []
   if (y.value > 50) {
     selectors.push('scrolling')
+  }
+  if (!isHome.value && !isService.value) {
+    selectors.push('not-home-or-service')
   }
   return selectors
 })
@@ -183,15 +194,24 @@ const headerSelectors = computed(() => {
     color 0.1s ease,
     background-color 0.5s ease;
   background-color: transparent;
-  color: $tertiary-action;
+  color: $font-primary;
+  text-shadow: 1px 1px 1px $font-primary-shadow;
 }
 
 :deep(.v-toolbar.scrolling) {
   background-color: #fff;
+  color: $primary;
+  text-shadow: 1px 1px 1px #eee;
   box-shadow:
     0 2px 4px -1px rgba(0, 0, 0, 0.2),
     0 4px 5px 0 rgba(0, 0, 0, 0.14),
     0 1px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+:deep(.v-toolbar.not-home-or-service) {
+  background-color: #fff;
+  color: $primary;
+  text-shadow: 1px 1px 1px #eee;
 }
 
 :deep(.v-toolbar__content) {

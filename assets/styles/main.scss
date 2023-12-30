@@ -5,7 +5,7 @@
 $page-max-width: 2240px;
 $page-content-bg: #e7cfc3;
 $main-border-radius: 4px;
-$border-radius-v3: 12px;
+$border-radius-v3: 4px;
 $page-title-font-size: min(5vw, 50px);
 
 // vuetify pallete colors
@@ -39,9 +39,17 @@ https://colorhunt.co/palette/fdeedcffd8a9f1a661e38b29
 // bg colors
 $primary: #D3756B; // $teal-darken-2;
 $secondary: #F0997D; // $teal-lighten-1;
-$tertiary: #FFC3A1; // $teal-lighten-1;
+$tertiary: #f8d3bd; // ffe0cb f8d3bd fdc5a8 fdc5a8 $teal-lighten-1;
 $tertiary-action: #A75D5D;
 $light-primary: #e7cfc3;
+
+// font colors
+$font-primary: #fff;
+$font-primary-shadow: #854343;
+
+// opacity
+$header-opacity: 0.4;
+$header-services-opacity: 0.4;
 
 // text colors
 $text-on-dark: #ffffff;

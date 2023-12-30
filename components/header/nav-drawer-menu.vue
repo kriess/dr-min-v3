@@ -5,7 +5,6 @@ const props = defineProps({
 const subMenuIsVisible = ref(false)
 
 const subMenuCss = computed(() => {
-  console.log(subMenuIsVisible)
   return subMenuIsVisible.value
     ? 'header-nav-drawer-menu__sub-menu visible'
     : 'header-nav-drawer-menu__sub-menu'

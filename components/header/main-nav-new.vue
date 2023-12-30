@@ -21,6 +21,10 @@ const path = computed(() => {
   return route.fullPath
 })
 
+const isHome = computed(() => {
+  return route.fullPath === "/"
+})
+
 const isService = computed(() => {
   return route.fullPath.includes('/services')
 })
@@ -35,6 +39,9 @@ const headerSelectors = computed(() => {
   if (y.value > 50) {
     selectors.push('scrolling')
   }
+  if (!isHome && !isService) {
+    selectors.push('not-home-or-service')
+  }
   return selectors
 })
 
@@ -42,6 +49,9 @@ const headerContentSelectors = computed(() => {
   const selectors = ['header-main-nav-content']
   if (y.value > 30) {
     selectors.push('scrolling')
+  }
+  if () {
+
   }
   return selectors
 })
@@ -55,17 +65,19 @@ const telephoneLink = computed(() => {
   <div class="header-main-nav">
     <div :class="headerContentSelectors">
       <div class="header-container">
-          <div @click="goHome" style="cursor: pointer">
-            <div class="logo-name">Caroline Min, M.D</div>
-            <div class="logo-description">
-              Board Certified Plastic Surgeon
-            </div>
-          </div>
-          <div class="ctas">
-            <v-btn variant="plain" class="ctas__btn" :href="telephoneLink">{{ appConfig.phone }}</v-btn>
-            <v-btn variant="tonal" class="ctas__btn" href="/contact-info/">Schedule a Consultation</v-btn>
-          </div>
+        <div @click="goHome" style="cursor: pointer">
+          <div class="logo-name">Caroline Min, M.D</div>
+          <div class="logo-description">Board Certified Plastic Surgeon</div>
         </div>
+        <div class="ctas">
+          <v-btn variant="plain" class="ctas__btn" :href="telephoneLink">
+            {{ appConfig.phone }}
+          </v-btn>
+          <v-btn variant="tonal" class="ctas__btn" href="/contact-info/">
+            Schedule a Consultation
+          </v-btn>
+        </div>
+      </div>
 
       <v-toolbar :class="headerSelectors" density="compact">
         <div class="hidden-sm-and-down" style="width: 100%; height: 100%">
@@ -128,9 +140,12 @@ const telephoneLink = computed(() => {
   top: 0;
 
   .header-main-nav-content {
-    transition: color 0.1s ease, background-color 0.5s ease;
+    transition:
+      color 0.1s ease,
+      background-color 0.5s ease;
     background-color: transparent;
     color: $primary;
+
     &.scrolling {
       // background: linear-gradient(0deg, rgba(255, 255, 255, 0) 25%, white 100%);
       //background-color: $primary;
@@ -150,6 +165,7 @@ const telephoneLink = computed(() => {
     font-weight: 500;
     font-size: 32px;
   }
+
   .logo-description {
     letter-spacing: 1.1px;
     font-size: 15px;
@@ -210,18 +226,23 @@ const telephoneLink = computed(() => {
     font-weight: 500;
     font-size: 1.2rem;
     letter-spacing: normal;
+
     &.v-btn--active {
       opacity: 1;
       background-color: rgba(167, 93, 93, 0.09);
     }
+
     :deep(.v-btn__append) {
       margin: 0;
     }
+
     :deep(.v-icon) {
       zoom: 0.75;
     }
+
     &.drawer {
       text-align: left;
+
       :deep(.v-btn__content) {
         width: 100%;
         justify-content: left;
@@ -234,7 +255,10 @@ a.telephone-link:link {
   color: #fff;
   text-decoration: none;
 }
-.ctas {}
+
+.ctas {
+}
+
 .ctas__btn {
   opacity: 1;
   text-transform: none;
@@ -246,10 +270,12 @@ a.telephone-link:link {
 .sub-nav-list {
   width: auto;
 }
+
 .sub-nav-list-item {
   padding: 0;
   margin: 0;
 }
+
 .sub-nav-btn {
   font-weight: 700;
   opacity: 1;

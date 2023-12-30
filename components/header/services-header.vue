@@ -122,13 +122,14 @@ const procedures = computed(() => {
     margin: 0px auto;
     padding: 10px;
     max-width: $page-max-width;
+    background-color: rgba(0, 0, 0, $header-services-opacity);
   }
 
   .section-title {
-    text-shadow: 1px 1px 2px #aaa;
+    text-shadow: 1px 1px 1px $font-primary-shadow;
     font-weight: 300;
     font-size: 250%;
-    color: $primary;
+    color: $font-primary;
     text-transform: capitalize;
     margin-bottom: 10px;
     opacity: 0;
@@ -146,18 +147,19 @@ const procedures = computed(() => {
     background-color: transparent;
 
     :deep(.v-icon) {
-      color: $primary;
+      color: #fff;
     }
   }
 
   .section-nav-btn {
+    text-shadow: 1px 1px 1px $font-primary-shadow;
     background-color: rgba(167, 93, 93, 0);
     padding: 0 10px;
     font-size: 0.8rem;
     border-radius: 0;
     font-weight: 500;
     opacity: 1;
-    color: $primary;
+    color: $font-primary;
     margin: 0;
     text-transform: capitalize;
 
