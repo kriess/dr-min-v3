@@ -175,9 +175,10 @@ const headerSelectors = computed(() => {
 
 .logo-name {
   white-space: nowrap;
-  letter-spacing: 1.4px;
+  letter-spacing: 1.2px;
   font-weight: 500;
   font-size: 32px;
+  line-height: 42px;
 }
 
 .logo-description {
