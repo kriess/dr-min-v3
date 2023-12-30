@@ -1,11 +1,12 @@
 <script lang="ts" setup>
 interface Props {
-  faqs?: [],
+  faqs?: []
   title: string
 }
+
 const props = withDefaults(defineProps<Props>(), {
   faqs: [],
-  title: 'Title'
+  title: 'Title',
 })
 </script>
 
@@ -18,7 +19,6 @@ const props = withDefaults(defineProps<Props>(), {
           <dt class="question">{{ faq.question }}</dt>
           <dd class="answer">{{ faq.answer }}</dd>
         </dl>
-
       </div>
     </div>
   </div>
@@ -33,21 +33,24 @@ const props = withDefaults(defineProps<Props>(), {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
-    gap: 2vw; // 15px;
+    gap: 2vw;
     width: 100%;
   }
+
   .title {
     font-size: 150%;
     color: $primary;
     font-weight: 500;
     margin-bottom: 20px;
   }
+
   .faq {
     padding: 20px;
     border-radius: $border-radius-v3;
     background-color: rgba(0, 0, 0, 0.03);
     border: 1px solid #eee;
   }
+
   .faq:hover {
     transition: all 0.5s ease;
     background-color: rgba(0, 0, 0, 0.08);
@@ -57,6 +60,7 @@ const props = withDefaults(defineProps<Props>(), {
       0 4px 5px 0 rgba(0, 0, 0, 0.14),
       0 1px 10px 0 rgba(0, 0, 0, 0.12);
   }
+
   .question {
     font-weight: 600;
     margin-bottom: 10px;

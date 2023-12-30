@@ -1,35 +1,20 @@
 <script setup>
-const appConfig = useAppConfig();
+const appConfig = useAppConfig()
 const navItems = useNavItems()
 const drawer = ref(false)
 const route = useRoute()
 const router = useRouter()
 const { x, y } = useWindowScroll({ behavior: 'smooth' })
-
-console.log(y.value)
-
 const goHome = () => {
   router.push({
     path: '/',
   })
 }
 
-// ----- methods ----------------------------
-
 // ----- computed ---------------------------
 const path = computed(() => {
   return route.fullPath
 })
-
-const isService = computed(() => {
-  return route.fullPath.includes('/services')
-})
-
-const siteSection = computed(() => {
-  const sections = route.fullPath.split('/')
-  return sections[1]
-})
-
 const headerSelectors = computed(() => {
   const selectors = []
   if (y.value > 50) {
@@ -37,16 +22,15 @@ const headerSelectors = computed(() => {
   }
   return selectors
 })
-
-const telephoneLink = computed(() => {
-  return `tel:1-${appConfig.phone}`
-})
 </script>
 
 <template>
   <div class="header-main-nav">
     <div class="header-main-nav-content">
       <v-toolbar height="80" :class="headerSelectors">
+        <div class="hidden-md-and-up mobile-meni-icon">
+          <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
+        </div>
         <div class="hidden-sm-and-down" style="width: 100%; height: 100%">
           <div class="nav-container">
             <div @click="goHome" style="cursor: pointer">
@@ -97,22 +81,143 @@ const telephoneLink = computed(() => {
                   </v-btn>
                 </template>
               </template>
-<!--              <v-btn density="compact" icon="mdi-cellphone" variant="plain" class="ctas__btn" :href="telephoneLink" title="Call to schedule a consultation"></v-btn>-->
-<!--              <v-btn density="compact" icon="mdi-email" variant="plain" class="ctas__btn" href="/contact-info/" title="Email to schedule a consultation"></v-btn>-->
+              <!--              <v-btn density="compact" icon="mdi-cellphone" variant="plain" class="ctas__btn" :href="telephoneLink" title="Call to schedule a consultation"></v-btn>-->
+              <!--              <v-btn density="compact" icon="mdi-email" variant="plain" class="ctas__btn" href="/contact-info/" title="Email to schedule a consultation"></v-btn>-->
             </v-toolbar-items>
           </div>
         </div>
       </v-toolbar>
     </div>
+
+    <v-navigation-drawer
+      v-model="drawer"
+      class="drawer"
+      temporary
+      location="right"
+      color="primary"
+      width="350"
+    >
+      <div class="drawer-content">
+        <div class="drawer-header">
+          <div class="drawer-branding">
+            <div class="logo-name">Caroline Min, M.D</div>
+            <div class="logo-description">Board Certified Plastic Surgeon</div>
+          </div>
+          <v-btn
+            variant="flat"
+            density="compact"
+            icon="mdi-menu-right"
+            color="primary"
+            size="large"
+            @click="drawer = !drawer"
+          ></v-btn>
+        </div>
+
+        <v-btn
+          variant="flat"
+          color="primary"
+          class="nav-btn drawer"
+          to="/"
+          block
+          size="large"
+        >
+          Home
+        </v-btn>
+
+        <template v-for="item in navItems">
+          <template v-if="item.subNavItems">
+            <v-menu open-on-hover close-on-content-click>
+              <template v-slot:activator="{ props }">
+                <v-btn
+                  :active="path.includes(item.href)"
+                  variant="plain"
+                  class="nav-btn drawer"
+                  v-bind="props"
+                  append-icon="mdi-menu-down"
+                >
+                  {{ item.title }}
+                </v-btn>
+              </template>
+              <v-list class="sub-nav-list">
+                <v-list-item
+                  class="sub-nav-list-item"
+                  v-for="(subNavItem, index) in item.subNavItems"
+                  :key="index"
+                  :value="index"
+                >
+                  <v-list-item-title>
+                    <v-btn
+                      variant="plain"
+                      class="sub-nav-btn"
+                      :to="subNavItem.href"
+                    >
+                      {{ subNavItem.title }}
+                    </v-btn>
+                  </v-list-item-title>
+                </v-list-item>
+              </v-list>
+            </v-menu>
+          </template>
+          <template v-else>
+            <v-btn variant="plain" class="nav-btn drawer" :to="item.href">
+              {{ item.title }}
+            </v-btn>
+          </template>
+        </template>
+
+        <div v-for="item in navItems" class="drawer-nav-items">
+          <div class="drawer-nav-items__btn-container">
+            <v-btn
+              variant="flat"
+              color="primary"
+              class="nav-btn drawer"
+              :to="item.href"
+              block
+              size="large"
+            >
+              {{ item.title }}
+            </v-btn>
+          </div>
+          <div class="drawer-nav-items__icon">
+            <v-btn
+              variant="flat"
+              icon="mdi-menu-down"
+              color="primary"
+              size="large"
+              block
+            ></v-btn>
+          </div>
+        </div>
+
+        <ul class="mt-10 text-center">
+          <li>547 E Union St.</li>
+          <li>Pasadena, California 91101</li>
+        </ul>
+
+        <ul class="mt-10 text-center">
+          <li>Tel: 626-737-9001</li>
+          <li>Fax: 626-737-9020</li>
+          <li>info@drcarolinemin.com</li>
+        </ul>
+      </div>
+    </v-navigation-drawer>
   </div>
 </template>
 
 <style lang="scss" scoped>
 .header-main-nav {
-  position: fixed;
-  z-index: 3;
-  width: 100%;
-  top: 0;
+  .header-main-nav-content {
+    position: fixed;
+    z-index: 3;
+    width: 100%;
+    top: 0;
+  }
+
+  .mobile-meni-icon {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+  }
 
   .logo-name {
     white-space: nowrap;
@@ -120,6 +225,7 @@ const telephoneLink = computed(() => {
     font-weight: 500;
     font-size: 32px;
   }
+
   .logo-description {
     white-space: nowrap;
     letter-spacing: 1.1px;
@@ -130,7 +236,9 @@ const telephoneLink = computed(() => {
   }
 
   :deep(.v-toolbar) {
-    transition: color 0.1s ease, background-color 0.5s ease;
+    transition:
+      color 0.1s ease,
+      background-color 0.5s ease;
     background-color: transparent;
     color: $tertiary-action;
   }
@@ -175,14 +283,21 @@ const telephoneLink = computed(() => {
     font-weight: 500;
     font-size: 1.5vw;
     letter-spacing: normal;
+
     :deep(.v-btn__append) {
       margin: 0;
     }
+
     :deep(.v-icon) {
       zoom: 0.75;
     }
+
     &.drawer {
       text-align: left;
+      font-size: 100%;
+      margin: 0;
+      width: 80%;
+
       :deep(.v-btn__content) {
         width: 100%;
         justify-content: left;
@@ -199,14 +314,55 @@ const telephoneLink = computed(() => {
 .sub-nav-list {
   width: auto;
 }
+
 .sub-nav-list-item {
   padding: 0;
   margin: 0;
 }
+
 .sub-nav-btn {
   font-weight: 700;
   opacity: 1;
   color: $primary;
   text-transform: capitalize;
+}
+
+/* drawer */
+.drawer-content {
+  padding: 0 5px;
+}
+
+.drawer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 5px;
+}
+
+.drawer-branding {
+  margin: 0px;
+
+  .logo-name {
+    font-size: 30px;
+    line-height: 50px;
+  }
+
+  .logo-description {
+    font-size: 12px;
+  }
+}
+
+.drawer-nav-items {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid $tertiary;
+}
+
+.drawer-nav-items__btn-container {
+  width: 80%;
+}
+
+.drawer-nav-items__icon {
+  width: 20%;
 }
 </style>

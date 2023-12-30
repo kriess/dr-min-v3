@@ -15,8 +15,8 @@ const imageBg = computed(() => {
   return {
     backgroundPosition: 'center center',
     backgroundImage: 'url(/img/home/header-1600x1200.webp)',
-    backgroundRepeat: "no-repeat",
-    backgroundSize: "cover"
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: 'cover',
   }
 })
 </script>
@@ -29,18 +29,26 @@ const imageBg = computed(() => {
         <div :class="targetIsVisible ? 'ctas visible' : 'ctas'">
           <h1>Caroline Min, M.D.</h1>
           <h4>Board Certified Plastic Surgeon</h4>
-          <v-btn variant="elevated" class="ctas__btn" href="/contact-info/" title="Email to schedule a consultation">
-            Schedule a Consultation
-          </v-btn>
         </div>
       </div>
     </div>
-
+    <v-btn
+      variant="elevated"
+      :class="targetIsVisible ? 'ctas__btn visible' : 'ctas__btn'"
+      href="/contact-info/"
+      title="Email to schedule a consultation"
+    >
+      Schedule a Consultation
+    </v-btn>
   </div>
 </template>
 
 <style lang="scss" scoped>
 .home-splash {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
   aspect-ratio: 2/1;
   font-size: 200%;
   position: relative;
@@ -49,6 +57,7 @@ const imageBg = computed(() => {
     0 4px 5px 0 rgba(0, 0, 0, 0.1),
     0 1px 10px 0 rgba(0, 0, 0, 0.1);
 }
+
 .bg-image {
   position: absolute;
   top: 0;
@@ -56,6 +65,7 @@ const imageBg = computed(() => {
   bottom: 0;
   left: 0;
 }
+
 .mask {
   position: absolute;
   top: 0;
@@ -64,64 +74,80 @@ const imageBg = computed(() => {
   left: 0;
   background-color: rgba(0, 0, 0, 0.1);
 }
+
 .content {
   display: grid;
   width: 100%;
-  aspect-ratio: 2/1;
+  height: 100%;
 }
+
 .ctas {
-  padding-top: 13vw;
   text-align: center;
   place-self: center;
   color: #fff;
+
   h1 {
     position: relative;
     top: -200px;
     left: 0px;
     transition: all 1s ease;
     opacity: 0;
-    font-size: 5.25vw;
+    font-size: clamp(40px, 8vw, 70px);
     line-height: 6vw;
     font-weight: 300;
     text-shadow: 1px 1px 1px #777;
   }
+
   h4 {
     position: relative;
     top: -200px;
     transition: all 1s 0.3s;
     opacity: 0;
-    font-size: 1.75vw;
+    font-size: clamp(15px, 3vw, 25px);
     font-weight: 300;
-    margin-bottom: 13vw;
     text-shadow: 1px 1px 1px #777;
   }
-  .ctas__btn {
-    position: relative;
-    top: -200px;
-    transition: all 1s 0.6s;
-    opacity: 0;
-    text-transform: none;
-    background-color: $tertiary-action;
-    color: #fff;
-  }
 }
+
+.ctas__btn {
+  position: relative;
+  transition: all 1s 0.6s;
+  opacity: 0;
+  text-transform: none;
+  background-color: $tertiary-action;
+  color: #fff;
+  width: fit-content;
+  margin-bottom: 200px;
+}
+
+.ctas__btn.visible {
+  opacity: 1;
+  margin-bottom: 20px;
+}
+
 .ctas.visible {
   h1 {
     left: 0;
     top: 0;
     opacity: 1;
   }
+
   h4 {
     left: 0;
     top: 0;
     opacity: 1;
   }
-  .ctas__btn {
-    left: 0;
-    top: 0px;
-    opacity: 1;
-  }
+
+  //.ctas__btn {
+  //  left: 0;
+  //  top: 0px;
+  //  opacity: 1;
+  //}
 }
 
-
+@include upToSm {
+  .home-splash {
+    aspect-ratio: 3/3;
+  }
+}
 </style>

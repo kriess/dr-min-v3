@@ -6,8 +6,8 @@ const myCustomLightTheme = {
   colors: {
     background: '#FFFFFF',
     surface: '#FFFFFF',
-    primary: '#00796b',
-    secondary: '#26A69A',
+    primary: '#D3756B',
+    secondary: '#F0997D',
     error: '#ffcc00',
     info: '#3b82f6',
     success: '#22c55e',
@@ -144,7 +144,7 @@ export default defineNuxtConfig({
       theme: {
         defaultTheme: 'myCustomLightTheme',
         themes: {
-          myCustomLightTheme
+          myCustomLightTheme,
         },
       },
     },
@@ -158,6 +158,6 @@ export default defineNuxtConfig({
       styles: 'sass',
       autoImport: true,
       useVuetifyLabs: false,
-    }
-  }
+    },
+  },
 })

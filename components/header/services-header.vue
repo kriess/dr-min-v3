@@ -115,8 +115,8 @@ const procedures = computed(() => {
 
   .section-title {
     text-shadow: 1px 1px 2px #aaa;
+    font-weight: 300;
     font-size: 250%;
-    letter-spacing: 1.2px;
     color: $primary;
     text-transform: capitalize;
     margin-bottom: 10px;
@@ -153,13 +153,14 @@ const procedures = computed(() => {
     text-transform: capitalize;
     &.v-btn--active {
       opacity: 1;
-      background-color: rgba(167, 93, 93, 0.3);
+      color: #fff;
+      background-color: rgba(167, 93, 93, 0.8);
     }
   }
   .section-nav-btn:hover {
     transition: all 1s ease;
     color: #fff;
-    background-color: rgba(167, 93, 93, 0.75);
+    background-color: rgba(167, 93, 93, 0.8);
   }
 }
 </style>

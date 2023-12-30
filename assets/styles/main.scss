@@ -36,8 +36,6 @@ https://colorhunt.co/palette/fdeedcffd8a9f1a661e38b29
 #E38B29
 */
 
-
-
 // bg colors
 $primary: #D3756B; // $teal-darken-2;
 $secondary: #F0997D; // $teal-lighten-1;
@@ -49,10 +47,62 @@ $light-primary: #e7cfc3;
 $text-on-dark: #ffffff;
 $text-body: #333;
 
+// breakpoints
+$breakpoint-sm-min: 600px;
+$breakpoint-md-min: 960px;
+$breakpoint-lg-min: 1264px;
+$breakpoint-xl-min: 1904px;
+@mixin upToSm {
+  @media (max-width: #{$breakpoint-sm-min - 1 }) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media (min-width: #{$breakpoint-sm-min}) {
+    @content;
+  }
+}
+
+// Medium devices
+@mixin upToMd {
+  @media (max-width: #{$breakpoint-md-min - 1 }) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (min-width: #{$breakpoint-md-min}) {
+    @content;
+  }
+}
+
+// Large devices
+@mixin upToLg {
+  @media (max-width: #{$breakpoint-lg-min - 1 }) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (min-width: #{$breakpoint-lg-min}) {
+    @content;
+  }
+}
+
+// Extra large devices
+@mixin xl {
+  @media (min-width: #{$breakpoint-xl-min}) {
+    @content;
+  }
+}
+
+// site wide css
 .page-enter-active,
 .page-leave-active {
   transition: all 0.4s;
 }
+
 .page-enter-from,
 .page-leave-to {
   opacity: 0;
@@ -64,8 +114,10 @@ $text-body: #333;
   .caption-text {
     font-size: 100%;
   }
+
   .change-view-btns {
     display: flex;
+
     :deep(.v-btn) {
       flex: 1 0 auto;
     }

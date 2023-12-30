@@ -23,6 +23,7 @@ const props = defineProps<{
   width: 100%;
   min-height: 300px;
 }
+
 .services-thumb-container {
   width: auto;
   display: grid;
@@ -32,15 +33,15 @@ const props = defineProps<{
   padding-bottom: 5vw;
 }
 
-@media screen and (max-width: 1100px) {
+@include upToMd {
   .services-thumb-container {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
-@media screen and (max-width: 700px) {
+@include upToSm {
   .services-thumb-container {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
   }
 }
 </style>
