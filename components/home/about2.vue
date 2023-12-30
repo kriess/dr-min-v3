@@ -62,6 +62,29 @@ const { stop } = useIntersectionObserver(
         </p>
       </div>
     </div>
+
+    <div class="logos">
+      <img
+        src="/img/school-logos-200-tall/mit-logo.webp"
+        alt="MIT School logo"
+        height="100"
+      />
+      <img
+        src="/img/school-logos-200-tall/nyu-logo.jpg"
+        alt="NYU School logo"
+        height="100"
+      />
+      <img
+        src="/img/school-logos-200-tall/stanford-logo.webp"
+        alt="Stanford School logo"
+        height="100"
+      />
+      <img
+        src="/img/school-logos-200-tall/abps-logo-square.webp"
+        alt="American Board of Plastic Surgery logo"
+        height="100"
+      />
+    </div>
   </div>
 </template>
 
@@ -139,6 +162,21 @@ const { stop } = useIntersectionObserver(
   text-transform: none;
   background-color: $tertiary-action;
   color: #fff;
+}
+
+.logos {
+  padding: 10px 0 10px 0;
+  max-width: 800px;
+  margin: 40px auto 0 auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  img {
+    filter: grayscale(100%);
+    opacity: 0.7;
+  }
 }
 
 @include upToSm {
