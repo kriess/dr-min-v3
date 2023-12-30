@@ -123,7 +123,7 @@ export default {
       slug: 'body',
       procedures: [
         {
-          title: 'Abdominoplasty (Tummy Tuck)',
+          title: 'Tummy Tuck',
           slug: 'abdominoplasty',
           thumbUrl: 'abdominoplasty.jpg',
           summary:

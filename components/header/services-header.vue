@@ -18,7 +18,7 @@ const getBg = () => {
 
   if (siteSection === 'body') {
     return {
-      backgroundPosition: 'bottom right',
+      backgroundPosition: 'bottom center',
       backgroundImage: 'url(/img/header/section/body.webp)',
     }
   }
@@ -36,7 +36,7 @@ const getBg = () => {
   }
   if (siteSection === 'non-surgical') {
     return {
-      backgroundPosition: 'bottom right',
+      backgroundPosition: 'bottom center',
       backgroundImage: 'url(/img/header/section/skin.webp)',
     }
   }
@@ -113,67 +113,73 @@ const procedures = computed(() => {
     0 1px 10px 0 rgba(0, 0, 0, 0.1);
   margin-bottom: 0px;
   width: auto;
+}
 
-  .content {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    margin: 0px auto;
-    padding: 10px;
-    max-width: $page-max-width;
-    background-color: rgba(0, 0, 0, $header-services-opacity);
-  }
+.content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin: 0px auto;
+  padding: 10px;
+  max-width: $page-max-width;
+  background-color: rgba(0, 0, 0, $header-services-opacity);
+}
 
-  .section-title {
-    text-shadow: 1px 1px 1px $font-primary-shadow;
-    font-weight: 300;
-    font-size: 250%;
-    color: $font-primary;
-    text-transform: capitalize;
-    margin-bottom: 10px;
-    opacity: 0;
-    position: relative;
-    left: -300px;
-    transition: all 1s ease;
+.section-title {
+  text-shadow: 1px 1px 1px $font-primary-shadow;
+  font-weight: 300;
+  font-size: 250%;
+  color: $font-primary;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+  opacity: 0;
+  position: relative;
+  left: -300px;
+  transition: all 1s ease;
 
-    &.visible {
-      left: 0px;
-      opacity: 1;
-    }
-  }
-
-  .procedures {
-    background-color: transparent;
-
-    :deep(.v-icon) {
-      color: #fff;
-    }
-  }
-
-  .section-nav-btn {
-    text-shadow: 1px 1px 1px $font-primary-shadow;
-    background-color: rgba(167, 93, 93, 0);
-    padding: 0 10px;
-    font-size: 0.9rem;
-    border-radius: 0;
-    font-weight: 500;
+  &.visible {
+    left: 0px;
     opacity: 1;
-    color: $font-primary;
-    margin: 0;
-    text-transform: capitalize;
-
-    &.v-btn--active {
-      opacity: 1;
-      color: #fff;
-      background-color: rgba(167, 93, 93, 0.8);
-    }
   }
+}
 
-  .section-nav-btn:hover {
-    transition: all 1s ease;
+.procedures {
+  background-color: transparent;
+
+  :deep(.v-icon) {
+    color: #fff;
+  }
+}
+
+.section-nav-btn {
+  text-shadow: 1px 1px 1px $font-primary-shadow;
+  background-color: rgba(167, 93, 93, 0);
+  padding: 0 10px;
+  font-size: 0.9rem;
+  border-radius: 0;
+  font-weight: 500;
+  opacity: 1;
+  color: $font-primary;
+  margin: 0;
+  text-transform: capitalize;
+
+  &.v-btn--active {
+    opacity: 1;
     color: #fff;
     background-color: rgba(167, 93, 93, 0.8);
+  }
+}
+
+.section-nav-btn:hover {
+  transition: all 1s ease;
+  color: #fff;
+  background-color: rgba(167, 93, 93, 0.8);
+}
+
+@include upToSm {
+  .header-services-header {
+    height: 300px;
   }
 }
 </style>
