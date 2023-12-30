@@ -93,7 +93,7 @@ const imageBg = computed(() => {
     transition: all 1s ease;
     opacity: 0;
     font-size: clamp(40px, 8vw, 70px);
-    line-height: 6vw;
+    line-height: clamp(40px, 8vw, 70px);
     font-weight: 300;
     text-shadow: 1px 1px 1px $font-primary-shadow;
   }

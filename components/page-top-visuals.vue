@@ -42,19 +42,24 @@ const props = withDefaults(defineProps<Props>(), {
   padding: 100px 5vw 0 5vw;
   margin-bottom: 3vw;
 }
+
 .visuals {
-  padding: min(5vw, 40px);
+  padding: min(5vw, 20px);
   margin: 0 auto;
   width: 100%;
   max-width: 1000px;
+
   .title-image-container {
     margin: 0 auto;
-    width: 70%;
+    width: 90%;
+    max-width: 400px;
     position: relative;
   }
+
   .main-img {
     border-radius: $main-border-radius;
   }
+
   .color-band {
     border-radius: $main-border-radius;
     background-color: $page-content-bg;
@@ -64,9 +69,10 @@ const props = withDefaults(defineProps<Props>(), {
     right: 0;
     top: 50%;
   }
+
   .page-title-visual {
     position: absolute;
-    top: 30%;
+    top: 20%;
     left: 40%;
     color: #fff;
     background-color: $secondary;
@@ -74,6 +80,7 @@ const props = withDefaults(defineProps<Props>(), {
     padding: 10px 20px 10px 15px;
     width: fit-content;
   }
+
   .page-title-text {
     text-shadow: 1px 1px 1px #333;
     font-weight: 500;
@@ -81,5 +88,8 @@ const props = withDefaults(defineProps<Props>(), {
     margin: 0;
     white-space: nowrap;
   }
+}
+
+@include upToSm {
 }
 </style>

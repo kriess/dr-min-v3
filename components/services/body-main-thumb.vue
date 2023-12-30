@@ -2,12 +2,13 @@
 const appConfig = useAppConfig()
 
 interface Props {
-  src?: string,
+  src?: string
   caption?: string
 }
+
 const props = withDefaults(defineProps<Props>(), {
   src: 'temp.jpg',
-  caption: ''
+  caption: '',
 })
 
 const target = ref(null)
@@ -27,20 +28,22 @@ const telephoneLink = computed(() => {
 
 <template>
   <div class="services-body-main-thumb">
-    <div :class="targetIsVisible ? 'thumb-container visible' : 'thumb-container'" ref="target">
-      <img
-        alt=""
-        class="thumb"
-        :src="props.src"
-      />
+    <div
+      :class="targetIsVisible ? 'thumb-container visible' : 'thumb-container'"
+      ref="target"
+    >
+      <img alt="" class="thumb" :src="props.src" />
     </div>
     <p class="caption">
       {{ props.caption }}
     </p>
     <div class="schedule-consult">
       <div class="consult-title">
-        <NuxtLink  class="telephone-link" to="/contact-info/">
-        Schedule a Consultation with Dr. Min
+        <NuxtLink class="telephone-link" to="/contact-info/">
+          <span class="hidden-sm-and-down">
+            Schedule a Consultation with Dr. Min
+          </span>
+          <span class="hidden-md-and-up">Consult with Dr. Min</span>
         </NuxtLink>
       </div>
       <a :href="telephoneLink" class="telephone-link">{{ appConfig.phone }}</a>
@@ -54,6 +57,7 @@ const telephoneLink = computed(() => {
   float: right;
   width: 40%;
   max-width: 600px;
+
   .thumb-container {
     position: relative;
     overflow: hidden;
@@ -63,6 +67,7 @@ const telephoneLink = computed(() => {
     opacity: 0;
     left: 150px;
     transition: all 1s ease;
+
     &.visible {
       opacity: 1;
       left: 0;
@@ -70,12 +75,12 @@ const telephoneLink = computed(() => {
   }
 
   .thumb {
-    width: 100%
+    width: 100%;
   }
 
   .schedule-consult {
     color: white;
-    font-weight: 700;
+    font-weight: 500;
     background-color: $primary;
     border-radius: $border-radius-v3;
     // background-color: rgba(0, 0, 0, 0.05);
@@ -83,9 +88,11 @@ const telephoneLink = computed(() => {
     text-align: center;
     padding: 5px;
   }
+
   .consult-title {
     white-space: nowrap;
   }
+
   .caption {
     margin-top: 5px;
     font-size: 80%;
@@ -93,8 +100,17 @@ const telephoneLink = computed(() => {
   }
 }
 
-a.telephone-link:link, a.telephone-link:visited, a.telephone-link:active {
+a.telephone-link:link,
+a.telephone-link:visited,
+a.telephone-link:active {
   color: #fff;
   text-decoration: none;
+}
+
+@include upToSm {
+  .services-body-main-thumb {
+    margin: 0 0 10px 5px;
+    width: 50%;
+  }
 }
 </style>

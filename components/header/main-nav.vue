@@ -31,6 +31,9 @@ const headerSelectors = computed(() => {
   if (!isHome.value && !isService.value) {
     selectors.push('not-home-or-service')
   }
+  if (isHome.value) {
+    selectors.push('is-home')
+  }
   return selectors
 })
 </script>
@@ -41,7 +44,11 @@ const headerSelectors = computed(() => {
       <v-toolbar height="80" :class="headerSelectors">
         <div class="" style="width: 100%; height: 100%">
           <div class="nav-container">
-            <div @click="goHome" style="cursor: pointer">
+            <div
+              @click="goHome"
+              style="cursor: pointer"
+              :class="headerSelectors"
+            >
               <div class="logo-name">Caroline Min, M.D</div>
               <div class="logo-description">
                 Board Certified Plastic Surgeon
@@ -231,6 +238,14 @@ const headerSelectors = computed(() => {
   width: 100%;
   align-items: center;
   height: 100%;
+
+  .is-home {
+    opacity: 0;
+
+    &.scrolling {
+      opacity: 1;
+    }
+  }
 }
 
 :deep(.v-btn--active) {
