@@ -283,7 +283,7 @@ const sendEmail = async (e) => {
   }
 }
 
-@include upToSm {
+@include upToMd {
   .contact-us-form {
     .form-fields-grid {
       grid-template-columns: 1fr;

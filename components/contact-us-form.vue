@@ -3,6 +3,7 @@ interface Props {
   title?: string
   showHeader?: boolean
 }
+
 const props = withDefaults(defineProps<Props>(), {
   title: 'Page Title',
   showHeader: true,
@@ -90,8 +91,10 @@ const sendEmail = async (e) => {
 
 <template>
   <div class="contact-us-form">
-    <div class="contact-us-form__bg" style="background-image: url('/img/raw/essentia-office-2.webp');">
-
+    <div
+      class="contact-us-form__bg"
+      style="background-image: url('/img/raw/essentia-office-2.webp')"
+    >
       <div class="form-wrapper">
         <h1 v-if="props.showHeader" class="text-center mb-10 section-title">
           Contact Us
@@ -146,7 +149,13 @@ const sendEmail = async (e) => {
               :rules="[rules.length(10), rules.max(1000)]"
               auto-grow
             ></v-textarea>
-            <v-btn type="submit" variant="elevated" rounded="sm" size="small" class="submit-button">
+            <v-btn
+              type="submit"
+              variant="elevated"
+              rounded="sm"
+              size="small"
+              class="submit-button"
+            >
               Submit
             </v-btn>
             <!--        <v-btn type="submit" :disabled="!isValid">Submit</v-btn>-->
@@ -156,7 +165,6 @@ const sendEmail = async (e) => {
           </div>
         </v-form>
       </div>
-
     </div>
 
     <v-dialog
@@ -203,14 +211,17 @@ const sendEmail = async (e) => {
   :deep(.v-input__details .v-messages) {
     font-size: 1.1rem;
   }
+
   .form-fields-grid {
     display: grid;
     grid-gap: 20px;
     grid-template-columns: 1fr 1fr;
   }
+
   .message-container {
     grid-column: 1 / span 2;
   }
+
   .contact-us-container {
     position: absolute;
     top: 0;
@@ -219,6 +230,7 @@ const sendEmail = async (e) => {
     height: 100%;
     background-color: $primary;
   }
+
   .contact-us-bg {
     aspect-ratio: 10/6;
     width: 100%;
@@ -226,9 +238,11 @@ const sendEmail = async (e) => {
     opacity: 0.05;
     object-fit: cover;
   }
+
   :deep(.v-field--error) {
     color: #fc0;
   }
+
   .section-title {
     position: relative;
     font-size: min(9vw, 40px);
@@ -259,14 +273,18 @@ const sendEmail = async (e) => {
   }
 }
 
-@media screen and (max-width: 700px) {
+@include upToMd {
   .contact-us-form {
     .form-fields-grid {
       grid-template-columns: 1fr;
     }
+
     .message-container {
       grid-column: 1;
     }
+  }
+  .form-wrapper {
+    margin: 3vw 10vw;
   }
 }
 </style>

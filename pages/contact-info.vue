@@ -8,7 +8,8 @@ useHead({
   title: pageTitle,
   link: [
     {
-      rel: 'canonical', hid: 'canonical',
+      rel: 'canonical',
+      hid: 'canonical',
       href: canonicalUrl,
     },
   ],
@@ -30,6 +31,7 @@ useHead({
 
 <style lang="scss" scoped>
 .contact-info {
+  padding-top: 100px;
   width: auto;
 }
 </style>

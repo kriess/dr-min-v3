@@ -155,7 +155,7 @@ const procedures = computed(() => {
     text-shadow: 1px 1px 1px $font-primary-shadow;
     background-color: rgba(167, 93, 93, 0);
     padding: 0 10px;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     border-radius: 0;
     font-weight: 500;
     opacity: 1;
