@@ -28,10 +28,7 @@ const headerSelectors = computed(() => {
   <div class="header-main-nav">
     <div class="header-main-nav-content">
       <v-toolbar height="80" :class="headerSelectors">
-        <div class="hidden-md-and-up mobile-meni-icon">
-          <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
-        </div>
-        <div class="hidden-sm-and-down" style="width: 100%; height: 100%">
+        <div class="" style="width: 100%; height: 100%">
           <div class="nav-container">
             <div @click="goHome" style="cursor: pointer">
               <div class="logo-name">Caroline Min, M.D</div>
@@ -39,7 +36,7 @@ const headerSelectors = computed(() => {
                 Board Certified Plastic Surgeon
               </div>
             </div>
-            <v-toolbar-items>
+            <v-toolbar-items class="hidden-sm-and-down">
               <template v-for="item in navItems">
                 <template v-if="item.subNavItems">
                   <v-menu open-on-hover close-on-content-click>
@@ -84,6 +81,11 @@ const headerSelectors = computed(() => {
               <!--              <v-btn density="compact" icon="mdi-cellphone" variant="plain" class="ctas__btn" :href="telephoneLink" title="Call to schedule a consultation"></v-btn>-->
               <!--              <v-btn density="compact" icon="mdi-email" variant="plain" class="ctas__btn" href="/contact-info/" title="Email to schedule a consultation"></v-btn>-->
             </v-toolbar-items>
+            <div class="hidden-md-and-up mobile-meni-icon">
+              <v-app-bar-nav-icon
+                @click="drawer = !drawer"
+              ></v-app-bar-nav-icon>
+            </div>
           </div>
         </div>
       </v-toolbar>
@@ -124,69 +126,8 @@ const headerSelectors = computed(() => {
           Home
         </v-btn>
 
-        <template v-for="item in navItems">
-          <template v-if="item.subNavItems">
-            <v-menu open-on-hover close-on-content-click>
-              <template v-slot:activator="{ props }">
-                <v-btn
-                  :active="path.includes(item.href)"
-                  variant="plain"
-                  class="nav-btn drawer"
-                  v-bind="props"
-                  append-icon="mdi-menu-down"
-                >
-                  {{ item.title }}
-                </v-btn>
-              </template>
-              <v-list class="sub-nav-list">
-                <v-list-item
-                  class="sub-nav-list-item"
-                  v-for="(subNavItem, index) in item.subNavItems"
-                  :key="index"
-                  :value="index"
-                >
-                  <v-list-item-title>
-                    <v-btn
-                      variant="plain"
-                      class="sub-nav-btn"
-                      :to="subNavItem.href"
-                    >
-                      {{ subNavItem.title }}
-                    </v-btn>
-                  </v-list-item-title>
-                </v-list-item>
-              </v-list>
-            </v-menu>
-          </template>
-          <template v-else>
-            <v-btn variant="plain" class="nav-btn drawer" :to="item.href">
-              {{ item.title }}
-            </v-btn>
-          </template>
-        </template>
-
         <div v-for="item in navItems" class="drawer-nav-items">
-          <div class="drawer-nav-items__btn-container">
-            <v-btn
-              variant="flat"
-              color="primary"
-              class="nav-btn drawer"
-              :to="item.href"
-              block
-              size="large"
-            >
-              {{ item.title }}
-            </v-btn>
-          </div>
-          <div class="drawer-nav-items__icon">
-            <v-btn
-              variant="flat"
-              icon="mdi-menu-down"
-              color="primary"
-              size="large"
-              block
-            ></v-btn>
-          </div>
+          <header-nav-drawer-menu :nav-item="item"></header-nav-drawer-menu>
         </div>
 
         <ul class="mt-10 text-center">
@@ -206,102 +147,103 @@ const headerSelectors = computed(() => {
 
 <style lang="scss" scoped>
 .header-main-nav {
-  .header-main-nav-content {
-    position: fixed;
-    z-index: 3;
-    width: 100%;
-    top: 0;
+}
+
+.header-main-nav-content {
+  position: fixed;
+  z-index: 3;
+  width: 100%;
+  top: 0;
+}
+
+.mobile-meni-icon {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.logo-name {
+  white-space: nowrap;
+  letter-spacing: 1.4px;
+  font-weight: 500;
+  font-size: 32px;
+}
+
+.logo-description {
+  white-space: nowrap;
+  letter-spacing: 1.1px;
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: -10px;
+  margin-left: 2px;
+}
+
+:deep(.v-toolbar) {
+  transition:
+    color 0.1s ease,
+    background-color 0.5s ease;
+  background-color: transparent;
+  color: $tertiary-action;
+}
+
+:deep(.v-toolbar.scrolling) {
+  background-color: #fff;
+  box-shadow:
+    0 2px 4px -1px rgba(0, 0, 0, 0.2),
+    0 4px 5px 0 rgba(0, 0, 0, 0.14),
+    0 1px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+:deep(.v-toolbar__content) {
+  max-width: $page-max-width;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.logo {
+  display: block;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  height: 100%;
+}
+
+:deep(.v-btn--active) {
+  opacity: 1;
+}
+
+.nav-btn {
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  opacity: 1;
+  text-transform: capitalize;
+  font-weight: 500;
+  font-size: 1.5vw;
+  letter-spacing: normal;
+
+  :deep(.v-btn__append) {
+    margin: 0;
   }
 
-  .mobile-meni-icon {
-    display: flex;
-    justify-content: flex-end;
-    width: 100%;
+  :deep(.v-icon) {
+    zoom: 0.75;
   }
 
-  .logo-name {
-    white-space: nowrap;
-    letter-spacing: 1.4px;
-    font-weight: 500;
-    font-size: 32px;
-  }
+  &.drawer {
+    text-align: left;
+    font-size: 100%;
+    margin: 0;
+    width: 80%;
 
-  .logo-description {
-    white-space: nowrap;
-    letter-spacing: 1.1px;
-    font-size: 14px;
-    font-weight: 500;
-    margin-top: -10px;
-    margin-left: 2px;
-  }
-
-  :deep(.v-toolbar) {
-    transition:
-      color 0.1s ease,
-      background-color 0.5s ease;
-    background-color: transparent;
-    color: $tertiary-action;
-  }
-
-  :deep(.v-toolbar.scrolling) {
-    background-color: #fff;
-    box-shadow:
-      0 2px 4px -1px rgba(0, 0, 0, 0.2),
-      0 4px 5px 0 rgba(0, 0, 0, 0.14),
-      0 1px 10px 0 rgba(0, 0, 0, 0.12);
-  }
-
-  :deep(.v-toolbar__content) {
-    max-width: $page-max-width;
-    margin: 0 auto;
-    padding: 0 10px;
-  }
-
-  .logo {
-    display: block;
-  }
-
-  .nav-container {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    align-items: center;
-    height: 100%;
-  }
-
-  :deep(.v-btn--active) {
-    opacity: 1;
-  }
-
-  .nav-btn {
-    padding-left: 5px;
-    padding-right: 5px;
-    margin-left: 5px;
-    margin-right: 5px;
-    opacity: 1;
-    text-transform: capitalize;
-    font-weight: 500;
-    font-size: 1.5vw;
-    letter-spacing: normal;
-
-    :deep(.v-btn__append) {
-      margin: 0;
-    }
-
-    :deep(.v-icon) {
-      zoom: 0.75;
-    }
-
-    &.drawer {
-      text-align: left;
-      font-size: 100%;
-      margin: 0;
-      width: 80%;
-
-      :deep(.v-btn__content) {
-        width: 100%;
-        justify-content: left;
-      }
+    :deep(.v-btn__content) {
+      width: 100%;
+      justify-content: left;
     }
   }
 }
@@ -352,17 +294,23 @@ const headerSelectors = computed(() => {
   }
 }
 
-.drawer-nav-items {
-  display: flex;
-  align-items: center;
-  border-bottom: 1px solid $tertiary;
+@include upToMd {
+  .logo-name {
+    font-size: 30px;
+  }
+
+  .logo-description {
+    font-size: 12px;
+  }
 }
 
-.drawer-nav-items__btn-container {
-  width: 80%;
-}
+@include upToSm {
+  .logo-name {
+    font-size: 26px;
+  }
 
-.drawer-nav-items__icon {
-  width: 20%;
+  .logo-description {
+    font-size: 11px;
+  }
 }
 </style>

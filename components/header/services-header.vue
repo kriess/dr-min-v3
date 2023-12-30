@@ -76,16 +76,27 @@ const procedures = computed(() => {
 <template>
   <div class="header-services-header" v-if="isService" :style="getBg()">
     <div class="content" v-if="isService">
-      <h1 :class="targetIsVisible ? 'section-title visible' : 'section-title'" ref="target">
+      <h1
+        :class="targetIsVisible ? 'section-title visible' : 'section-title'"
+        ref="target"
+      >
         {{ procedureTitle ?? siteSection }}
       </h1>
-      <ul class="procedures" v-if="procedureTitle">
-        <li v-for="i in procedures">
-          <v-btn class="section-nav-btn" variant="plain" :to="i.href">
-            {{ i.title }}
-          </v-btn>
-        </li>
-      </ul>
+
+      <v-sheet class="procedures" v-if="procedureTitle">
+        <v-slide-group show-arrows>
+          <v-slide-group-item
+            v-for="(i, index) in procedures"
+            :key="index"
+            v-slot="{ isSelected, toggle }"
+            class="procedure"
+          >
+            <v-btn class="section-nav-btn" variant="plain" :to="i.href">
+              {{ i.title }}
+            </v-btn>
+          </v-slide-group-item>
+        </v-slide-group>
+      </v-sheet>
     </div>
   </div>
 </template>
@@ -124,6 +135,7 @@ const procedures = computed(() => {
     position: relative;
     left: -300px;
     transition: all 1s ease;
+
     &.visible {
       left: 0px;
       opacity: 1;
@@ -131,13 +143,10 @@ const procedures = computed(() => {
   }
 
   .procedures {
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    margin: 0 auto;
-    padding: 0;
-    li {
-      list-style-type: none;
+    background-color: transparent;
+
+    :deep(.v-icon) {
+      color: $primary;
     }
   }
 
@@ -151,12 +160,14 @@ const procedures = computed(() => {
     color: $primary;
     margin: 0;
     text-transform: capitalize;
+
     &.v-btn--active {
       opacity: 1;
       color: #fff;
       background-color: rgba(167, 93, 93, 0.8);
     }
   }
+
   .section-nav-btn:hover {
     transition: all 1s ease;
     color: #fff;

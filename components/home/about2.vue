@@ -97,13 +97,6 @@ const { stop } = useIntersectionObserver(
   }
 }
 
-.title {
-  font-weight: 300;
-  font-size: 3.2rem;
-  color: $primary;
-  line-height: 3.8rem;
-}
-
 .content {
   // border-left: 2px solid $primary;
   width: 61.5%;
@@ -121,6 +114,7 @@ const { stop } = useIntersectionObserver(
 
 .sub-title {
   font-weight: 100;
+  padding-bottom: 10px;
   color: $tertiary-action;
   font-family: sans-serif;
   font-size: clamp(0.5px, 12px, 100vw);
@@ -132,15 +126,13 @@ const { stop } = useIntersectionObserver(
 }
 
 .main-title {
-  color: $primary;
   font-weight: 300;
-  font-size: 3.2rem;
-  line-height: 4.8rem;
-  //font-size: clamp(0.5px, 40px, 100vw);
-  //font-weight: 500;
-  // margin-bottom: 20px;
+  color: $primary;
+  font-size: clamp(1rem, 10vw, 3rem);
+  line-height: clamp(1rem, 10vw, 3rem);
   text-decoration: none;
   text-align: left;
+  padding-bottom: 20px;
 }
 
 .main-button {

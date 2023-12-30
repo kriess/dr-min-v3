@@ -64,9 +64,9 @@ const { stop } = useIntersectionObserver(
 
 .title {
   font-weight: 300;
-  font-size: 3.2rem;
   color: $primary;
-  line-height: 3.3rem;
+  font-size: clamp(1rem, 10vw, 3rem);
+  line-height: clamp(1rem, 10vw, 3rem);
 }
 
 .content {
