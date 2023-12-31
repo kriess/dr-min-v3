@@ -20,6 +20,7 @@ const goToProcedurePage = (id) => {
 <template>
   <div class="services-thumb">
     <v-card
+      flat=""
       @click="goToProcedurePage(procedure.slug)"
       class="services-thumb-card"
     >
@@ -56,20 +57,25 @@ const goToProcedurePage = (id) => {
   cursor: pointer;
   width: 100%;
   height: 100%;
+
   .services-thumb-card {
     height: 100%;
+    border: 1px solid $tertiary;
   }
+
   .thumb {
     outline: 1px solid #eee;
     margin-bottom: 15px;
     aspect-ratio: 16/12;
     border-radius: $main-border-radius;
   }
+
   :deep(.v-img__img--cover) {
     transition: 0.6s;
     filter: grayscale(0%);
-    opacity: 1;
+    opacity: 0.9;
   }
+
   .procedure-title {
     font-size: 130%;
     color: $primary;
@@ -77,6 +83,7 @@ const goToProcedurePage = (id) => {
     margin-bottom: 5px;
   }
 }
+
 .services-thumb:hover {
   :deep(.v-img__img--cover) {
     filter: grayscale(0%);

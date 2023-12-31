@@ -57,6 +57,7 @@ const props = withDefaults(defineProps<Props>(), {
   }
 
   .main-img {
+    border: 1px solid $tertiary;
     border-radius: $main-border-radius;
   }
 

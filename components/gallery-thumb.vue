@@ -39,14 +39,14 @@ const changeView = (type) => {
 
 <template>
   <div class="gallery-thumb">
-    <v-card @click="dialog = true">
+    <v-card @click="dialog = true" class="gallery-thumb-card" flat>
       <v-card-text>
         <v-img
           cover
           :alt="`Before/after photos of procedure performed by Dr. Caroline Min - ${beforeAfter[0].caption}`"
           :src="`/img/photo-gallery/optimized/${beforeAfter[0].url}`"
         ></v-img>
-        <div class="case-number text-center">Case {{ props.caseNumber }}</div>
+        <!--        <div class="case-number text-center">Case {{ props.caseNumber }}</div>-->
         <!-- {{ props.gallery }} -->
       </v-card-text>
     </v-card>
@@ -90,16 +90,29 @@ const changeView = (type) => {
 <style lang="scss" scoped>
 .gallery-thumb {
   width: 100%;
+
   :deep(.v-img__img--cover) {
     transition: 0.6s;
     filter: grayscale(0%);
     opacity: 1;
   }
 }
+
 .gallery-thumb:hover {
   :deep(.v-img__img--cover) {
     filter: grayscale(0%);
     opacity: 1;
   }
+}
+
+.gallery-thumb-card {
+  border: 1px solid $tertiary;
+}
+
+.case-number {
+  color: $tertiary-action;
+  display: block;
+  margin-top: 5px;
+  font-size: 90%;
 }
 </style>

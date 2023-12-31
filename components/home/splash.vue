@@ -147,7 +147,7 @@ const imageBg = computed(() => {
 
 @include upToSm {
   .home-splash {
-    aspect-ratio: 3/3;
+    aspect-ratio: 3/2.5;
   }
 }
 </style>
