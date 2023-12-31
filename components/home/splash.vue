@@ -45,6 +45,7 @@ const imageBg = computed(() => {
 
 <style lang="scss" scoped>
 .home-splash {
+  border-bottom: 10px solid $secondary;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -114,7 +115,7 @@ const imageBg = computed(() => {
   transition: all 1s 0.6s;
   opacity: 0;
   text-transform: none;
-  background-color: $primary;
+  background-color: $tertiary-action;
   color: #fff;
   width: fit-content;
   margin-bottom: 200px;
