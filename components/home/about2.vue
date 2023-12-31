@@ -198,5 +198,9 @@ const { stop } = useIntersectionObserver(
   .main-button-container {
     text-align: center;
   }
+  .sub-title,
+  .main-title {
+    text-align: center;
+  }
 }
 </style>

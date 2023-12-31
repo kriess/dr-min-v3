@@ -1,4 +1,5 @@
 export default defineAppConfig({
+  releaseId: (Math.random() * 10000000).toFixed(0),
   phone: '626-737-9001',
   testimonials: [
     {

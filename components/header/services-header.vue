@@ -3,6 +3,7 @@ const route = useRoute()
 const services = useServices()
 const target = ref(null)
 const targetIsVisible = ref(false)
+const appConfig = useAppConfig()
 
 const { stop } = useIntersectionObserver(
   target,
@@ -19,25 +20,25 @@ const getBg = () => {
   if (siteSection === 'body') {
     return {
       backgroundPosition: 'bottom center',
-      backgroundImage: 'url(/img/header/section/body.webp)',
+      backgroundImage: `url(/img/header/section/body.webp?${appConfig.releaseId})`,
     }
   }
   if (siteSection === 'face') {
     return {
       backgroundPosition: 'bottom center',
-      backgroundImage: 'url(/img/header/section/face.webp)',
+      backgroundImage: `url(/img/header/section/face.webp?${appConfig.releaseId})`,
     }
   }
   if (siteSection === 'breast') {
     return {
       backgroundPosition: 'bottom center',
-      backgroundImage: 'url(/img/header/section/breast.webp)',
+      backgroundImage: `url(/img/header/section/breast.webp?${appConfig.releaseId})`,
     }
   }
   if (siteSection === 'non-surgical') {
     return {
       backgroundPosition: 'bottom center',
-      backgroundImage: 'url(/img/header/section/skin.webp)',
+      backgroundImage: `url(/img/header/section/skin.webp?${appConfig.releaseId})`,
     }
   }
   return {

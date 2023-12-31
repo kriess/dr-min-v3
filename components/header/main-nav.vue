@@ -36,6 +36,10 @@ const headerSelectors = computed(() => {
   }
   return selectors
 })
+
+const telephoneLink = computed(() => {
+  return `tel:1-${appConfig.phone}`
+})
 </script>
 
 <template>
@@ -154,7 +158,12 @@ const headerSelectors = computed(() => {
         </ul>
 
         <ul class="mt-10 text-center">
-          <li>Tel: 626-737-9001</li>
+          <li>
+            Tel:
+            <a class="phone-link" :href="telephoneLink">
+              {{ appConfig.phone }}
+            </a>
+          </li>
           <li>Fax: 626-737-9020</li>
           <li>info@drcarolinemin.com</li>
         </ul>
@@ -328,6 +337,11 @@ const headerSelectors = computed(() => {
   .logo-description {
     font-size: 12px;
   }
+}
+
+.phone-link:link,
+.phone:visited {
+  color: #fff;
 }
 
 @include upToMd {

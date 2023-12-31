@@ -32,7 +32,6 @@ const subMenuCss = computed(() => {
           variant="flat"
           :icon="subMenuIsVisible ? 'mdi-menu-up' : 'mdi-menu-down'"
           color="primary"
-          size="large"
           block
           @click="subMenuIsVisible = !subMenuIsVisible"
         ></v-btn>
@@ -128,6 +127,7 @@ const subMenuCss = computed(() => {
 }
 
 .drawer-nav-items__icon {
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
   width: 20%;
 }
 </style>

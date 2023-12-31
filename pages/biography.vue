@@ -67,24 +67,38 @@ useHead({
       </div>
 
       <div class="logos">
-        <img src="/img/school-logos-200-tall/mit-logo.webp" alt="MIT School logo" height="100" />
-        <img src="/img/school-logos-200-tall/nyu-logo.jpg" alt="NYU School logo" height="100" />
-        <img src="/img/school-logos-200-tall/stanford-logo.webp" alt="Stanford School logo" height="100" />
-        <img src="/img/school-logos-200-tall/abps-logo-square.webp" alt="American Board of Plastic Surgery logo" height="100" />
+        <img
+          src="/img/school-logos-200-tall/mit-logo.webp"
+          alt="MIT School logo"
+          height="100"
+        />
+        <img
+          src="/img/school-logos-200-tall/nyu-logo.jpg"
+          alt="NYU School logo"
+          height="100"
+        />
+        <img
+          src="/img/school-logos-200-tall/stanford-logo.webp"
+          alt="Stanford School logo"
+          height="100"
+        />
+        <img
+          src="/img/school-logos-200-tall/abps-logo-square.webp"
+          alt="American Board of Plastic Surgery logo"
+          height="100"
+        />
       </div>
 
       <div class="education content-width">
-        <h2 class="text-h2 text-center title-text">Education & Training</h2>
-        <h4 class="education--item text-h4">MIT / Stanford</h4>
-        <h4 class="education--item text-h4">
-          New York University School of Medicine
-        </h4>
+        <h2 class="title-text">Education & Training</h2>
+        <h4 class="education--item">MIT / Stanford</h4>
+        <h4 class="education--item">New York University School of Medicine</h4>
 
-        <h4 class="education--item text-h4">
+        <h4 class="education--item">
           Plastic Surgery Residency, Montefiore Medical Center
         </h4>
 
-        <h4 class="education--item text-h4">
+        <h4 class="education--item">
           Aesthetic Surgery Fellowship, Manhattan Eye, Ear and Throat Hospital
         </h4>
       </div>
@@ -96,6 +110,7 @@ useHead({
 .biography {
   width: auto;
 }
+
 .content-width {
   width: 70%;
   margin: 0 auto;
@@ -104,23 +119,35 @@ useHead({
 .text-descriptions {
   // background-color: $page-content-bg;
   padding: 0 0 50px 0;
+
   p {
     margin-bottom: 20px;
   }
+
   p:last-child {
     margin-bottom: 0px;
   }
 }
+
 .education {
   padding-bottom: 50px;
+
   .title-text {
+    text-align: center;
     border-bottom: 1px solid #777;
     padding-bottom: 50px;
+    font-weight: 300;
+    font-size: clamp(1rem, 8vw, 2.5rem);
+    line-height: clamp(1rem, 8vw, 2.5rem);
   }
+
   .education--item {
     border-bottom: 1px solid #777;
     text-align: center;
     padding: 50px;
+    font-weight: 300;
+    font-size: clamp(1rem, 6vw, 2rem);
+    line-height: clamp(1rem, 6vw, 2rem);
   }
 }
 
@@ -132,5 +159,16 @@ useHead({
   display: flex;
   align-items: center;
   justify-content: space-around;
+}
+
+@include upToSm {
+  .content-width {
+    width: 100%;
+  }
+  .education {
+    .education--item {
+      padding: 40px 0px;
+    }
+  }
 }
 </style>

@@ -1,32 +1,33 @@
 <script setup>
+const appConfig = useAppConfig()
 const props = defineProps({
-  title: { type: String, default: "page title" },
+  title: { type: String, default: 'page title' },
 })
 
 const services = [
   {
-    link: "/services/face/",
-    label: "Face",
-    imageSrc: '/img/home/services/face.webp',
-    content: `Tired of looking tired? Discover what facial rejuvenation can do to refresh your look. `
+    link: '/services/face/',
+    label: 'Face',
+    imageSrc: `/img/home/services/face.webp?${appConfig.releaseId}`,
+    content: `Tired of looking tired? Discover what facial rejuvenation can do to refresh your look. `,
   },
   {
-    link: "/services/breast/",
-    label: "Breast",
-    imageSrc: '/img/home/services/breast.webp',
-    content: `Whether you are looking for an augmentation, reduction, lift or a combination, learn about breast enhancement options.`
+    link: '/services/breast/',
+    label: 'Breast',
+    imageSrc: `/img/home/services/breast.webp?${appConfig.releaseId}`,
+    content: `Whether you are looking for an augmentation, reduction, lift or a combination, learn about breast enhancement options.`,
   },
   {
-    link: "/services/body/",
-    label: "Body",
-    imageSrc: '/img/home/services/body.webp',
-    content: `Discover what can be done to remove unwanted fat and excess skin or boost your curves.`
+    link: '/services/body/',
+    label: 'Body',
+    imageSrc: `/img/home/services/body.webp?${appConfig.releaseId}`,
+    content: `Discover what can be done to remove unwanted fat and excess skin or boost your curves.`,
   },
   {
-    link: "/services/non-surgical/",
-    label: "Non-Surgical",
-    imageSrc: '/img/home/services/skin.webp',
-    content: `Not yet ready for surgery but need a refresh?  Learn about non surgical options.`
+    link: '/services/non-surgical/',
+    label: 'Non-Surgical',
+    imageSrc: `/img/home/services/skin.webp?${appConfig.releaseId}`,
+    content: `Not yet ready for surgery but need a refresh?  Learn about non surgical options.`,
   },
 ]
 </script>
@@ -37,11 +38,12 @@ const services = [
       v-for="(item, index) in services"
       :key="index"
       class="home-services__item"
-      :style="`background-image: url('${item.imageSrc}')`">
+      :style="`background-image: url(${item.imageSrc})`"
+    >
       <NuxtLink class="nuxt-link" :to="item.link">
         <div class="item__wrapper">
           <div class="item__label">
-            <h4 class="item__title">{{ item.label}}</h4>
+            <h4 class="item__title">{{ item.label }}</h4>
           </div>
           <div class="item__content">
             <h4 class="item__title">{{ item.label }}</h4>
@@ -61,6 +63,7 @@ const services = [
   display: flex;
   width: 100%;
 }
+
 .home-services__item {
   position: relative;
   background-position: center center;
@@ -70,7 +73,8 @@ const services = [
   display: grid;
   place-items: center;
   filter: grayscale(100%);
-  transition: width .5s linear;
+  transition: width 0.5s linear;
+
   .item__content {
     top: 700px;
     position: relative;
@@ -78,31 +82,42 @@ const services = [
     padding: 0 2vw;
     visibility: visible;
     opacity: 1;
-    transition: visibility 0s, top 0.5s ease, opacity 0.5s 0.6s;
+    transition:
+      visibility 0s,
+      top 0.5s ease,
+      opacity 0.5s 0.6s;
   }
+
   .item__label {
     top: 38%;
     position: absolute;
     visibility: visible;
     opacity: 1;
-    transition: visibility 0s, opacity 0.5s 0.6s, top 0.5s ease;
+    transition:
+      visibility 0s,
+      opacity 0.5s 0.6s,
+      top 0.5s ease;
   }
 }
+
 .home-services__item:hover {
   width: 35%;
   filter: grayscale(0%);
+
   .item__content {
     top: 38%;
     position: absolute;
     visibility: visible;
     opacity: 1;
   }
+
   .item__label {
     top: -700px;
     visibility: hidden;
     opacity: 0;
   }
 }
+
 .item__wrapper {
   color: #fff;
   width: 100%;
@@ -113,6 +128,7 @@ const services = [
   justify-content: center;
   background: rgba(0, 0, 0, 0.5);
 }
+
 .item__title {
   text-align: center;
   font-weight: 300;
