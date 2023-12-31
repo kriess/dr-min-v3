@@ -123,7 +123,7 @@ const imageBg = computed(() => {
 
 .ctas__btn.visible {
   opacity: 1;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .ctas.visible {
