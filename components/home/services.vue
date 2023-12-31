@@ -52,6 +52,26 @@ const services = [
         </div>
       </NuxtLink>
     </div>
+    <!--    <div class="hidden-md-and-up hidden-sm-and-down">-->
+    <!--      <div-->
+    <!--        v-for="(item, index) in services"-->
+    <!--        :key="index"-->
+    <!--        class=""-->
+    <!--        :style="`background-image: url(${item.imageSrc})`"-->
+    <!--      >-->
+    <!--        <NuxtLink class="nuxt-link" :to="item.link">-->
+    <!--          <div class="item__wrapper">-->
+    <!--            <div class="item__label">-->
+    <!--              <h4 class="item__title">{{ item.label }}</h4>-->
+    <!--            </div>-->
+    <!--            <div class="item__content">-->
+    <!--              <h4 class="item__title">{{ item.label }}</h4>-->
+    <!--              {{ item.content }}-->
+    <!--            </div>-->
+    <!--          </div>-->
+    <!--        </NuxtLink>-->
+    <!--      </div>-->
+    <!--    </div>-->
   </div>
 </template>
 
@@ -70,7 +90,7 @@ const services = [
   width: 25%;
   min-height: 620px;
   background-color: #e1d9c5;
-  display: grid;
+  display: flex;
   place-items: center;
   filter: grayscale(100%);
   transition: width 0.5s linear;
@@ -134,12 +154,32 @@ const services = [
   font-weight: 300;
   text-transform: capitalize;
   color: #fff;
-  font-size: 3vw;
+  font-size: clamp(1rem, 6vw, 2rem);
 }
 
 .nuxt-link {
   text-decoration: none;
   height: 100%;
   width: 100%;
+}
+
+@include upToSm {
+  .home-services {
+    flex-wrap: wrap;
+  }
+  .home-services__item,
+  .home-services__item:hover {
+    width: 50%;
+    filter: grayscale(0%);
+
+    .item__content {
+      top: 0;
+      opacity: 1;
+    }
+
+    .item__label {
+      opacity: 0;
+    }
+  }
 }
 </style>

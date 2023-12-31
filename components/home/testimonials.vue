@@ -37,19 +37,28 @@ const testimonials = appConfig.testimonials.slice(0, 2)
   padding: 3vw 5vw 2vw 5vw;
   background-color: transparent;
   width: auto;
-  .testimonials-grid {
-    display: grid;
-    gap: 10vw;
-    grid-template-columns: 1fr 1fr;
-  }
 }
+
+.testimonials-grid {
+  display: grid;
+  gap: 10vw;
+  grid-template-columns: 1fr 1fr;
+}
+
 .section-title {
   font-size: min(9vw, 40px);
   color: $primary;
 }
+
 .main-button {
   background-color: $tertiary-action;
   color: #fff;
   text-transform: capitalize;
+}
+
+@include upToSm {
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
 }
 </style>
