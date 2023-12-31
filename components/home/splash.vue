@@ -118,12 +118,12 @@ const imageBg = computed(() => {
   background-color: $tertiary-action;
   color: #fff;
   width: fit-content;
-  margin-bottom: 200px;
+  margin-bottom: 25vw;
 }
 
 .ctas__btn.visible {
   opacity: 1;
-  margin-bottom: 40px;
+  margin-bottom: 5vw;
 }
 
 .ctas.visible {
