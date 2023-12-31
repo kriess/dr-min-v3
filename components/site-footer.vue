@@ -71,7 +71,9 @@ const telephoneLink = computed(() => {
                     <li>Pasadena, California 91101</li>
                     <li>
                       Tel:
-                      <a :href="telephoneLink">{{ appConfig.phone }}</a>
+                      <a class="phone-link" :href="telephoneLink">
+                        {{ appConfig.phone }}
+                      </a>
                     </li>
                     <li>info@drcarolinemin.com</li>
                     <li class="separator"></li>
@@ -227,5 +229,10 @@ const telephoneLink = computed(() => {
   margin-right: 20px;
   width: 25px;
   height: 25px;
+}
+
+.phone-link:link,
+.phone:visited {
+  color: #333;
 }
 </style>
