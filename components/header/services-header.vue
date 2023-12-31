@@ -104,6 +104,7 @@ const procedures = computed(() => {
 
 <style lang="scss" scoped>
 .header-services-header {
+  border-bottom: 10px solid $secondary;
   height: 380px;
   // background-image: url('https://www.gingerxumd.com/wp-content/uploads/2023/05/Xu-Banner-Body-Updated.jpg');
   // background-position: bottom right;
