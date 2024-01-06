@@ -9,10 +9,6 @@ const title = 'Arm Lift'
  */
 const faqs = [
   {
-    question: 'Will there be visible scars after brachioplasty?',
-    answer: `Ideally, the arm lift scar should be placed carefully so that the scar is not visible when your arms are down by your side.  The scars will be visible if you wear short sleeved clothing and your arms are raised.  Over time, the scars should fade. Post-operative scar therapy is recommended for the optimal result.`,
-  },
-  {
     question: 'How long is the recovery period after brachioplasty?',
     answer: `Recovery time varies, but most patients can expect to take off about 2 weeks from work.  There will be some swelling and bruising. Strenuous activities should be avoided during the initial healing period. Compression garments may be recommended to support the healing process.`,
   },
@@ -71,6 +67,13 @@ useHead({
         when your arms are down. The excision can extend into the armpit and
         also into the lateral chest if there is additional loose skin present in
         this area.
+      </p>
+      <p>
+        Ideally, the arm lift scar should be placed carefully so that the scar
+        is not visible when your arms are down by your side. The scars will be
+        visible if you wear short sleeved clothing and your arms are raised.
+        Over time, the scars should fade. Post-operative scar therapy is
+        recommended for the optimal result.
       </p>
 
       <services-faqs :faqs="faqs" :title="title"></services-faqs>

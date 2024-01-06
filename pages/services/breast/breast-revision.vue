@@ -55,9 +55,12 @@ useHead({
         concerns. It may include changing the size or type of implants,
         adjusting the position of the implants, removing and/or replacing
         implants, correcting asymmetries, addressing complications, or revising
-        breast scars. It's advisable to consult with a board-certified plastic
-        surgeon to assess your situation and determine whether breast revision
-        surgery is appropriate for you.
+        breast scars.
+      </p>
+      <p>
+        It's advisable to consult with a board-certified plastic surgeon to
+        assess your situation and determine whether breast revision surgery is
+        appropriate for you.
       </p>
 
       <services-faqs :faqs="faqs" :title="title"></services-faqs>

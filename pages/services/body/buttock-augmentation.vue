@@ -20,10 +20,6 @@ const faqs = [
     question: 'Are the results of BBL permanent?',
     answer: `Yes, the fat becomes a permanent part of the buttocks for an all natural silicone free result.`,
   },
-  {
-    question: 'What are the risks of butt lift?',
-    answer: `Possible complications include infection, fat embolism, irregular contour, and fluid accumulation.  It is important to inject the fat evenly and smoothly and to avoid injection into the gluteus muscle where fat can more easily enter the bloodstream resulting in a potentially life-threatening complication.`,
-  },
 ]
 
 useHead({
@@ -63,6 +59,14 @@ useHead({
         to create a beautiful hourglass shape. The lower outer hip area, which
         can have depressions and are known as “hip dips”, are filled in with fat
         to create a smooth contour.
+      </p>
+
+      <p>
+        Possible complications include infection, fat embolism, irregular
+        contour, and fluid accumulation. It is important to inject the fat
+        evenly and smoothly and to avoid injection into the gluteus muscle where
+        fat can more easily enter the bloodstream resulting in a potentially
+        life-threatening complication.
       </p>
 
       <services-faqs :faqs="faqs" :title="title"></services-faqs>

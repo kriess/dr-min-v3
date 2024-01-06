@@ -21,10 +21,6 @@ const faqs = [
     question: 'What is the recovery like after inverted nipple surgery?',
     answer: `Recovery is generally quick. Patients may experience some swelling, bruising, and mild discomfort, but these symptoms typically subside within a few days. It is important to shield the nipple from pressure during the healing period to prevent recurrent inversion.  Post-operative care instructions should be followed for optimal healing.`,
   },
-  {
-    question: 'Will there be visible scarring after inverted nipple surgery?',
-    answer: `The extent of scarring depends on the surgical technique used but the scar is typically small and inconspicuous.`,
-  },
 ]
 
 useHead({
@@ -74,6 +70,11 @@ useHead({
         tethering that restrict the normal eversion of the nipple. Acquired
         inversion can be caused by scarring, inflammation, or underlying medical
         conditions.
+      </p>
+
+      <p>
+        The extent of scarring depends on the surgical technique used but the
+        scar is typically small and inconspicuous.
       </p>
 
       <services-faqs :faqs="faqs" :title="title"></services-faqs>
