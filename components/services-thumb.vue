@@ -99,6 +99,7 @@ const goToProcedurePage = (id) => {
   :deep(.v-img__img--cover) {
     filter: grayscale(0%);
     opacity: 1;
+    transform: scale(1.05);
   }
 }
 

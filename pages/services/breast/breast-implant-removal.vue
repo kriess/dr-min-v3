@@ -41,7 +41,7 @@ useHead({
     <div class="services-section">
       <div class="services-title">{{ title }}</div>
       <services-body-main-thumb
-        src="/img/services/thumbs/breastrevision.jpg"
+        src="/img/services/thumbs/breast-implant-removal.webp"
       ></services-body-main-thumb>
       <p>
         Breast implant removal, also known as explantation, is a surgical

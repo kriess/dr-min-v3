@@ -105,7 +105,7 @@ export default {
         {
           title: 'Breast Implant Removal',
           slug: 'breast-implant-removal',
-          thumbUrl: 'breastrevision.jpg',
+          thumbUrl: 'breast-implant-removal.webp',
           summary:
             'Breast implant removal, also known as explantation, is a surgical\n' +
             '        procedure to remove breast implants. It may be done for various reasons,\n' +
