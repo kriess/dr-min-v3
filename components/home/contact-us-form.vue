@@ -166,7 +166,7 @@ const sendEmail = async (e) => {
             ></v-textarea>
             <v-btn
               type="submit"
-              variant="elevated"
+              variant="flat"
               rounded="sm"
               size="small"
               class="submit-button"

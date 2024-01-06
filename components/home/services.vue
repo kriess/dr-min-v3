@@ -171,12 +171,12 @@ const services = [
   .home-services__item:hover {
     position: relative;
     background-position: center center;
-    min-height: 620px;
+    min-height: 500px;
     background-color: #e1d9c5;
     display: flex;
     place-items: center;
     transition: width 0.5s linear;
-    width: 50%;
+    width: 100%;
     filter: grayscale(0%);
 
     .item__content {
@@ -195,6 +195,10 @@ const services = [
     .item__label {
       display: none;
     }
+  }
+
+  .item__title {
+    font-size: clamp(2rem, 9vw, 3rem);
   }
 }
 </style>

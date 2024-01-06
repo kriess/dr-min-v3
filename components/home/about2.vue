@@ -51,7 +51,7 @@ const { stop } = useIntersectionObserver(
         </p>
         <p class="mt-2 pt-10 main-button-container">
           <v-btn
-            variant="elevated"
+            variant="flat"
             rounded="sm"
             size="small"
             class="main-button"

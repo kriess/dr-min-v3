@@ -1272,6 +1272,42 @@ export default {
           ],
         },
         {
+          title: 'Male Breast Reduction',
+          slug: 'male-breast-reducstion',
+          galleries: [
+            {
+              caption: '',
+              beforeAfter: [
+                {
+                  label: 'Front View',
+                  url: 'male-breast-reduction-p01-front-lrg.jpg',
+                  slug: 'front',
+                },
+              ],
+            },
+            {
+              caption: '',
+              beforeAfter: [
+                {
+                  label: 'Front View',
+                  url: 'male-breast-reduction-p02-front-lrg.jpg',
+                  slug: 'front',
+                },
+              ],
+            },
+            {
+              caption: '',
+              beforeAfter: [
+                {
+                  label: 'Front View',
+                  url: 'male-breast-reduction-p03-front-lrg.jpg',
+                  slug: 'front',
+                },
+              ],
+            },
+          ],
+        },
+        {
           title: 'Breast Reconstruction',
           slug: 'breast-reconstruction',
           galleries: [

@@ -33,6 +33,17 @@ const goToProcedurePage = (id) => {
         ></v-img>
         <div class="procedure-title">{{ procedure.title }}</div>
         <div class="summary">{{ procedure.summary }}</div>
+        <div class="text-center ctas">
+          <v-btn
+            variant="flat"
+            class="ctas__btn text-center"
+            title="Read More"
+            size="small"
+            @click="goToProcedurePage(procedure.slug)"
+          >
+            Read More
+          </v-btn>
+        </div>
       </v-card-text>
     </v-card>
 
@@ -89,5 +100,18 @@ const goToProcedurePage = (id) => {
     filter: grayscale(0%);
     opacity: 1;
   }
+}
+
+.ctas {
+  text-align: center;
+  // display: flex;
+  // flex-direction: column;
+}
+
+.ctas__btn {
+  margin-top: 1rem;
+  text-transform: capitalize;
+  color: #fff;
+  background-color: $tertiary-action;
 }
 </style>

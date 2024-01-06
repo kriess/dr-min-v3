@@ -2,14 +2,15 @@
 const router = useRouter()
 
 interface Props {
-  title: string,
-  section: string,
+  title: string
+  section: string
   procedure: string
 }
+
 const props = withDefaults(defineProps<Props>(), {
   title: 'Title',
   section: 'face',
-  procedure: 'facelift'
+  procedure: 'facelift',
 })
 
 const path = `/photo-gallery?section=${props.section}&procedure=${props.procedure}`
@@ -29,11 +30,16 @@ const { stop } = useIntersectionObserver(
     <div class="services-before-after" ref="target">
       <!--<h3 class="title">{{ props.title }} Before/After</h3>-->
       <div :class="targetIsVisible ? 'container visible' : 'container'">
-        <img class="img" :src="`/img/services/before-after/body.webp`" :alt="`${title} image that links to the before/after ${title} photo gallery`" />
+        <img
+          class="img"
+          :src="`/img/services/before-after/body.webp`"
+          :alt="`${title} image that links to the before/after ${title} photo gallery`"
+        />
         <div class="link-container">
           <div class="gallery-link">
-          {{ props.title }}  <br />
-          Before & Afters Gallery
+            {{ props.title }}
+            <br />
+            Before & Afters Gallery
           </div>
         </div>
       </div>
@@ -59,11 +65,13 @@ const { stop } = useIntersectionObserver(
     top: 100px;
     opacity: 0;
     transition: all 2s ease;
+
     &.visible {
       top: 0px;
       opacity: 1;
     }
   }
+
   .img {
     width: 100%;
     aspect-ratio: 1000/400;
@@ -71,21 +79,25 @@ const { stop } = useIntersectionObserver(
     transition: all 1s ease;
     opacity: 1;
   }
+
   .img:hover {
     border-radius: $border-radius-v3;
     opacity: 1;
   }
+
   .link-container {
     top: 20%;
     left: 20px;
     position: absolute;
   }
+
   .gallery-link {
     text-shadow: 1px 1px 1px #ddd;
     color: $primary;
     text-decoration: none;
-    font-size: 200%;
-    font-weight: 500;
+    font-size: clamp(0.25rem, 4vw, 2.2rem);
+    line-height: clamp(0.25rem, 4vw, 2.2rem);
+    font-weight: 400;
   }
 }
 </style>

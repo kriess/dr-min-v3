@@ -53,10 +53,10 @@ export default [
         title: 'Breast Revision',
         href: '/services/breast/breast-revision/',
       },
-      // {
-      //   title: 'Breast Implant Removal',
-      //   href: '/services/breast/breast-implant-removal/',
-      // },
+      {
+        title: 'Breast Implant Removal',
+        href: '/services/breast/breast-implant-removal/',
+      },
       {
         title: 'Male Breast Reduction',
         href: '/services/breast/breast-reduction-male/',

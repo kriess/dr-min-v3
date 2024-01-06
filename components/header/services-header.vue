@@ -106,14 +106,12 @@ const procedures = computed(() => {
 .header-services-header {
   border-bottom: 10px solid $secondary;
   height: 380px;
-  // background-image: url('https://www.gingerxumd.com/wp-content/uploads/2023/05/Xu-Banner-Body-Updated.jpg');
-  // background-position: bottom right;
   background-color: $page-content-bg;
-  box-shadow:
-    0 2px 4px -1px rgba(0, 0, 0, 0.1),
-    0 4px 5px 0 rgba(0, 0, 0, 0.1),
-    0 1px 10px 0 rgba(0, 0, 0, 0.1);
-  margin-bottom: 0px;
+  //box-shadow:
+  //  0 2px 4px -1px rgba(0, 0, 0, 0.1),
+  //  0 4px 5px 0 rgba(0, 0, 0, 0.1),
+  //  0 1px 10px 0 rgba(0, 0, 0, 0.1);
+  margin-bottom: 0;
   width: auto;
 }
 
@@ -131,7 +129,8 @@ const procedures = computed(() => {
 .section-title {
   text-shadow: 1px 1px 1px $font-primary-shadow;
   font-weight: 300;
-  font-size: 250%;
+  font-size: clamp(1rem, 9vw, 3rem);
+  line-height: clamp(1rem, 9vw, 3rem);
   color: $font-primary;
   text-transform: capitalize;
   margin-bottom: 10px;

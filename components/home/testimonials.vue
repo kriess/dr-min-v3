@@ -19,7 +19,7 @@ const testimonials = appConfig.testimonials.slice(0, 2)
 
     <p class="mt-1 pt-10 text-center">
       <v-btn
-        variant="elevated"
+        variant="flat"
         rounded="sm"
         size="small"
         class="main-button"

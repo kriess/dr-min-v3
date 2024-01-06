@@ -16,7 +16,7 @@ const { stop } = useIntersectionObserver(
       <div
         :class="targetIsVisible ? 'title-container visible' : 'title-container'"
       >
-        <h2 class="title">Enhance your inherent beauty</h2>
+        <h2 class="title">Elevate your natural beauty</h2>
       </div>
       <div :class="targetIsVisible ? 'content visible' : 'content'">
         <p>

@@ -31,20 +31,20 @@ const { stop } = useIntersectionObserver(
             <h4 class="sub-title">About</h4>
             <h1 class="main-title">Dr. Caroline Min</h1>
             <p class="">
-              Dr. Caroline Min is a board certified female plastic surgeon specializing
-              in cosmetic surgery. She has completed additional fellowship
-              training in aesthetic surgery and has the skills and expertise to
-              help you achieve your goals for plastic surgery. Your consultation
-              with Dr. Min will be thorough and unhurried. She and her staff will
-              work closely with you to develop an individualized plan of treatment
-              to meet your plastic surgery needs. Whether you are having a minor
-              procedure or a more involved cosmetic surgery, our office strives to
-              provide each patient with an exceptional experience in a warm,
-              caring environment.
+              Dr. Caroline Min is a board certified female plastic surgeon
+              specializing in cosmetic surgery. She has completed additional
+              fellowship training in aesthetic surgery and has the skills and
+              expertise to help you achieve your goals for plastic surgery. Your
+              consultation with Dr. Min will be thorough and unhurried. She and
+              her staff will work closely with you to develop an individualized
+              plan of treatment to meet your plastic surgery needs. Whether you
+              are having a minor procedure or a more involved cosmetic surgery,
+              our office strives to provide each patient with an exceptional
+              experience in a warm, caring environment.
             </p>
             <p class="mt-2 pt-10">
               <v-btn
-                variant="elevated"
+                variant="flat"
                 rounded="sm"
                 size="small"
                 class="main-button temptext-h6"
@@ -55,8 +55,6 @@ const { stop } = useIntersectionObserver(
             </p>
           </div>
         </v-col>
-
-
       </v-row>
     </div>
   </div>
@@ -69,6 +67,7 @@ const { stop } = useIntersectionObserver(
   // background-image: url('/img/misc/rotatesliders.jpg');
   // background-position: 10px 30%;
   padding: 50px 50px 100px 50px;
+
   .sub-title {
     font-weight: 100;
     color: $tertiary-action;
@@ -80,6 +79,7 @@ const { stop } = useIntersectionObserver(
     letter-spacing: 1em;
     line-height: 1em;
   }
+
   .main-title {
     color: $primary;
     font-size: clamp(0.5px, 40px, 100vw);
@@ -89,18 +89,22 @@ const { stop } = useIntersectionObserver(
     text-align: left;
     line-height: 2em;
   }
+
   .main-button {
     text-transform: capitalize;
     background-color: $tertiary-action;
     color: #fff;
   }
+
   .title {
     text-align: center;
   }
+
   .container {
     margin: 0 auto;
     max-width: 800px;
   }
+
   .headshot {
     outline: 1px solid #ccc;
     filter: drop-shadow(3px 3px 4px #ccc);
@@ -108,26 +112,29 @@ const { stop } = useIntersectionObserver(
     max-width: 500px;
     margin: 0 auto;
   }
+
   .head-shot {
     opacity: 0;
     position: relative;
     left: -300px;
     transition: all 1s ease;
-    &.visible {
-      left: 0px;
-      opacity: 1;
-    }
-  }
-  .content {
-    opacity: 0;
-    position: relative;
-    left: 300px;
-    transition: all 1s ease;
+
     &.visible {
       left: 0px;
       opacity: 1;
     }
   }
 
+  .content {
+    opacity: 0;
+    position: relative;
+    left: 300px;
+    transition: all 1s ease;
+
+    &.visible {
+      left: 0px;
+      opacity: 1;
+    }
+  }
 }
 </style>

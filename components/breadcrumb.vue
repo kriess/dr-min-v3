@@ -19,9 +19,9 @@ const routeSegments = computed(() => {
       let href = 'tbd'
       const hrefSegments = segments.slice(0, index + 1)
       items.push({
-        title: i,
+        title: i.replace(/-/g, ' '),
         disabled: index > segments.length - 2,
-        href: hrefSegments.join('/') + "/",
+        href: hrefSegments.join('/') + '/',
       })
     }
   })
@@ -52,6 +52,7 @@ const routeSegments = computed(() => {
   :deep(.v-breadcrumbs) {
     padding-left: 0;
     margin: 10px 0;
+
     li:last-child {
       color: #ccc;
     }

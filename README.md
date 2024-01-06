@@ -58,7 +58,8 @@ pnpm install
 
 ## Development Server
 
-Start the development server on http://localhost:8080. The default port of 3000 is changed in `package.json` with this: `"dev": "nuxt dev --port=8080",`.
+Start the development server on http://localhost:8080. The default port of 3000 is changed in `package.json` with
+this: `"dev": "nuxt dev --port=8080",`.
 
 ```bash
 yarn dev
@@ -106,7 +107,9 @@ Add `commitlint` as a git hook
 yarn husky add .husky/commit-msg 'yarn commitlint --edit "$1"'
 ```
 
-**Note:** husky by default creates a pre-commit file, which runs npm test. If you don't have a test script defined in your package.json it will throw an error. You can remove the npm test line from the pre-commit file or add a valid test script.
+**Note:** husky by default creates a pre-commit file, which runs npm test. If you don't have a test script defined in
+your package.json it will throw an error. You can remove the npm test line from the pre-commit file or add a valid test
+script.
 
 Add `commitizen` cli for composing commit messages
 
@@ -153,3 +156,12 @@ This collection of utilities https://vueuse.org/ comes in very handy.
 ## Pinia
 
 [Pinia](https://pinia.vuejs.org/ssr/nuxt.html) is a lightweight store that allows state to be shared across pages, etc.
+
+## Social MEdia
+
+Example Google Review link
+
+What is the `ludocid` and `lsig`? See this for info https://serpapi.com/search-api.
+
+`https://www.google.com/search?hl=en-US&gl=us&q=J.+Timothy+Katzen,+M.D.+Beverly+Hills,+9735+Wilshire+Blvd+%23407,+Beverly+Hills,+CA+90212&ludocid=2451073845676584090&lsig=AB86z5Xc-KaMKMwWL8w8BNC6jFdT#ip=1`
+

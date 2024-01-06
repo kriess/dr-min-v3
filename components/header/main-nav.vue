@@ -105,6 +105,7 @@ const telephoneLink = computed(() => {
             </v-toolbar-items>
             <div class="hidden-md-and-up mobile-meni-icon">
               <v-app-bar-nav-icon
+                title="Open and Close Menu"
                 @click="drawer = !drawer"
               ></v-app-bar-nav-icon>
             </div>
@@ -269,7 +270,8 @@ const telephoneLink = computed(() => {
   opacity: 1;
   text-transform: capitalize;
   font-weight: 500;
-  font-size: 1.5vw;
+  font-size: clamp(0.5rem, 5vw, 1rem);
+  line-height: clamp(0.5rem, 5vw, 1rem);
   letter-spacing: normal;
 
   :deep(.v-btn__append) {
@@ -303,12 +305,13 @@ const telephoneLink = computed(() => {
 }
 
 .sub-nav-list-item {
+  padding-inline: 0 !important;
   padding: 0;
   margin: 0;
 }
 
 .sub-nav-btn {
-  font-weight: 700;
+  font-weight: 500;
   opacity: 1;
   color: $primary;
   text-transform: capitalize;
