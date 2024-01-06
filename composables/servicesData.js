@@ -103,6 +103,16 @@ export default {
             'Revision breast augmentation is performed for patients who are not satisfied with their results after previously undergoing breast augmentation.',
         },
         {
+          title: 'Breast Implant Removal',
+          slug: 'breast-implant-removal',
+          thumbUrl: 'breastrevision.jpg',
+          summary:
+            'Breast implant removal, also known as explantation, is a surgical\n' +
+            '        procedure to remove breast implants. It may be done for various reasons,\n' +
+            '        including personal choice, changes in health, or the desire to address\n' +
+            '        complications or aesthetic concerns related to the implants.',
+        },
+        {
           title: 'Male Breast Reduction',
           slug: 'breast-reduction-male',
           thumbUrl: 'malebreast-surgery.jpg',
