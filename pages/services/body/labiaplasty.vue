@@ -2,15 +2,46 @@
 const runtimeConfig = useRuntimeConfig()
 const route = useRoute()
 const canonicalUrl = `${runtimeConfig.public.siteDomain}${route.fullPath}`
+const title = 'Labiaplasty'
+
+/**
+
+ */
+const faqs = [
+  {
+    question: 'How is labiaplasty performed?',
+    answer: `Generally speaking, there are two different ways to perform labiaplasty surgery, the trim technique and the wedge technique.  In the trim technique, the edge of the labia is excised and the incision is closed with sutures.  While it is a quicker procedure, this technique may result in a loss of natural contour with a more visible scar and a scalloped appearance to the edge of the labia.  The wedge technique involves removing a triangular-shaped wedge of tissue from the thickest part of the labia minora, preserving the natural contour and edge of the labia and the scars are well hidden.  This technique is more complex than the trim technique but gives superior results.`,
+  },
+  {
+    question: 'Will labiaplasty affect sexual sensation?',
+    answer: `Labiaplasty is generally focused on the external appearance of the labia and should not significantly impact sexual sensation. Some women may report increased comfort and satisfaction after the procedure.`,
+  },
+  {
+    question: 'What is the recovery like after labiaplasty?',
+    answer: `Pain is usually mild and most women can return to work in less than one week.  There is some swelling which will resolve with time.  Sexual intercourse and use of tampons should be avoided for 6 weeks.`,
+  },
+  {
+    question: 'Will there be visible scarring after labiaplasty?',
+    answer: `The wedge technique places the scars in discrete locations and once healed, the scars are usually barely visible.`,
+  },
+  {
+    question: 'Is labiaplasty suitable for women of all ages?',
+    answer: `Labiaplasty surgery is generally suitable for adult women.  Healing may be more delayed in post-menopausal women due to thinning of tissues with decline in estrogen levels.`,
+  },
+  {
+    question: 'What are the risks associated with labiaplasty?',
+    answer: `Like any surgery, labiaplasty carries potential risks, including infection, bleeding, scarring, and changes in sensation. Wound healing complications can rarely occur.`,
+  },
+]
 
 useHead({
-  title: 'Labiaplasty',
+  title: title,
   link: [{ rel: 'canonical', hid: 'canonical', href: canonicalUrl }],
   meta: [
     {
       name: 'description',
       content:
-        'Many women suffer from enlarged labia minora (the inner genital lips). Some may not like the appearance of their large, uneven or thick labia, which can sometimes extend beyond the vaginal opening.'
+        'Many women suffer from enlarged labia minora (the inner genital lips). Some may not like the appearance of their large, uneven or thick labia, which can sometimes extend beyond the vaginal opening.',
     },
   ],
 })
@@ -19,19 +50,21 @@ useHead({
 <template>
   <div class="services-details">
     <div class="services-section">
-      <div class="services-title">Labiaplasty</div>
+      <div class="services-title">{Labiaplasty{ title }</div>
       <services-body-main-thumb
-        src="/img/services/thumbs/labiaplasty.jpg">
-      </services-body-main-thumb>
+        src="/img/services/thumbs/labiaplasty.jpg"
+      ></services-body-main-thumb>
 
       <p>
-        Many women suffer from enlarged labia minora (the inner genital lips).
-        Some may not like the appearance of their large, uneven or thick labia,
-        which can sometimes extend beyond the vaginal opening. Others may be
-        bothered by labial irritation while conducting normal activities, or may
-        find it difficult to keep the labial area clean. Still others may
-        experience pain during sexual intercourse, sports or other vigorous
-        activities.
+        Many women suffer from enlarged labia minora (the inner genital lips)
+        which can cause physical and emotional discomfort. Some women may be
+        dissatisfied with the appearance of their labia if it is larger or
+        thicker than they desire. Enlarged labia minora can lead to discomfort
+        during normal activities, such as walking, sitting, or wearing certain
+        types of clothing as well as during sexual intercourse or sports. Women
+        with enlarged labia minora may experience psychological distress,
+        including embarrassment or anxiety which can influence intimate
+        relationships and overall well-being.
       </p>
       <p>
         Labiaplasty reduces large labia or reshapes uneven labia, improving
@@ -56,10 +89,10 @@ useHead({
         scars that are barely visible. Excess skin on the sides of the clitoral
         hood can also be reduced. In contrast, many surgeons merely trim the
         edge of the labia and oversew the raw edge, which changes the natural
-        color and contour of the labia, giving an unnatural appearance. Recovery
-        from labiaplasty surgery is quick and relatively pain free. Sexual
-        intercourse may be resumed in 6 weeks.
+        color and contour of the labia, giving an unnatural appearance.
       </p>
+
+      <services-faqs :faqs="faqs" :title="title"></services-faqs>
     </div>
   </div>
 </template>
@@ -67,6 +100,7 @@ useHead({
 <style lang="scss" scoped>
 .services-details {
   width: auto;
+
   .services-title {
     display: none;
     color: $primary;
@@ -74,21 +108,26 @@ useHead({
     font-weight: bold;
     margin-bottom: 20px;
   }
+
   p {
     margin-bottom: 20px;
   }
+
   .header-text {
     font-size: 150%;
     color: $primary;
     font-weight: bold;
     margin-bottom: 20px;
   }
+
   dt {
     font-weight: bold;
   }
+
   dd {
     margin-bottom: 20px;
   }
+
   .thumb {
     border-radius: $border-radius-v3;
     border: 1px solid #ccc;
@@ -96,8 +135,10 @@ useHead({
     float: right;
     width: 50%;
   }
+
   .unordered-list {
     margin-bottom: 20px;
+
     li {
       margin-left: 20px;
     }
