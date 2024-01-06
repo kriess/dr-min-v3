@@ -32,14 +32,14 @@ const { stop } = useIntersectionObserver(
       <div :class="targetIsVisible ? 'container visible' : 'container'">
         <img
           class="img"
-          :src="`/img/services/before-after/body.webp`"
+          src="/img/photo-gallery/gallery-2.webp"
           :alt="`${title} image that links to the before/after ${title} photo gallery`"
         />
         <div class="link-container">
           <div class="gallery-link">
             {{ props.title }}
             <br />
-            Before & Afters Gallery
+            Before & After Gallery
           </div>
         </div>
       </div>
@@ -51,7 +51,7 @@ const { stop } = useIntersectionObserver(
 .services-before-after {
   cursor: pointer;
   overflow: hidden;
-  max-width: 1000px;
+  max-width: 800px;
   width: 80%;
   margin: 0 auto;
   clear: both;
