@@ -43,12 +43,12 @@ const { stop } = useIntersectionObserver(
           any procedure and will be there for you afterwards during every aspect
           of recovery.
         </p>
-        <p class="">
-          Dr. Min enjoys spending time with her two children and her two rescue
-          dogs, Oreo and Willie. She is active and enjoys Crossfit workouts,
-          hiking, and the great outdoors. She was born and raised in New York
-          City but the Los Angeles area has been home since 2007.
-        </p>
+        <!--        <p class="">-->
+        <!--          Dr. Min enjoys spending time with her two children and her two rescue-->
+        <!--          dogs, Oreo and Willie. She is active and enjoys Crossfit workouts,-->
+        <!--          hiking, and the great outdoors. She was born and raised in New York-->
+        <!--          City but the Los Angeles area has been home since 2007.-->
+        <!--        </p>-->
         <p class="mt-2 pt-10 main-button-container">
           <v-btn
             variant="flat"

@@ -1630,12 +1630,12 @@ export default {
               beforeAfter: [
                 {
                   label: 'Rear View',
-                  url: 'liposuction-p01-rear-lrg.jpg',
+                  url: 'liposuction-p02-rear-lrg.jpg',
                   slug: 'rear',
                 },
                 {
                   label: 'Oblique View',
-                  url: 'liposuction-p01-oblique-lrg.jpg',
+                  url: 'liposuction-p02-oblique-lrg.jpg',
                   slug: 'oblique',
                 },
               ],
@@ -1646,7 +1646,7 @@ export default {
               beforeAfter: [
                 {
                   label: 'Front View',
-                  url: 'liposuction-p01-front-lrg.jpg',
+                  url: 'liposuction-p03-front-lrg.jpg',
                   slug: 'front',
                 },
               ],
@@ -1657,7 +1657,7 @@ export default {
               beforeAfter: [
                 {
                   label: 'Rear View',
-                  url: 'liposuction-p01-rear-lrg.jpg',
+                  url: 'liposuction-p04-rear-lrg.jpg',
                   slug: 'rear',
                 },
               ],
@@ -1668,17 +1668,17 @@ export default {
               beforeAfter: [
                 {
                   label: 'Front View',
-                  url: 'liposuction-p01-front-lrg.jpg',
+                  url: 'liposuction-p05-front-lrg.jpg',
                   slug: 'front',
                 },
                 {
                   label: 'Rear View',
-                  url: 'liposuction-p01-rear-lrg.jpg',
+                  url: 'liposuction-p05-rear-lrg.jpg',
                   slug: 'rear',
                 },
                 {
                   label: 'Side View',
-                  url: 'liposuction-p01-side-lrg.jpg',
+                  url: 'liposuction-p05-side-lrg.jpg',
                   slug: 'side',
                 },
               ],

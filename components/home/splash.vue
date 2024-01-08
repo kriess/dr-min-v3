@@ -27,19 +27,19 @@ const imageBg = computed(() => {
     <div class="mask">
       <div class="content" ref="target">
         <div :class="targetIsVisible ? 'ctas visible' : 'ctas'">
-          <h1>Caroline Min, M.D.</h1>
-          <h4>Board Certified Plastic Surgeon</h4>
+          <h1>Soft, Natural Beauty</h1>
+          <!--          <h4>Board Certified Plastic Surgeon</h4>-->
+          <v-btn
+            variant="flat"
+            :class="targetIsVisible ? 'ctas__btn visible' : 'ctas__btn'"
+            href="/contact-info/"
+            title="Email to schedule a consultation"
+          >
+            Ask Dr. Min a Question
+          </v-btn>
         </div>
       </div>
     </div>
-    <v-btn
-      variant="flat"
-      :class="targetIsVisible ? 'ctas__btn visible' : 'ctas__btn'"
-      href="/contact-info/"
-      title="Email to schedule a consultation"
-    >
-      Schedule a Consultation
-    </v-btn>
   </div>
 </template>
 
@@ -77,9 +77,12 @@ const imageBg = computed(() => {
 }
 
 .content {
-  display: grid;
+  display: flex;
   width: 100%;
   height: 100%;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: column;
 }
 
 .ctas {
@@ -89,59 +92,57 @@ const imageBg = computed(() => {
 
   h1 {
     position: relative;
-    top: -200px;
-    left: 0px;
     transition: all 1s ease;
     opacity: 0;
     font-size: clamp(40px, 8vw, 70px);
     line-height: clamp(40px, 8vw, 70px);
     font-weight: 300;
+    margin-bottom: 10px;
     text-shadow: 1px 1px 1px $font-primary-shadow;
   }
 
-  h4 {
+  .ctas__btn {
     position: relative;
-    top: -200px;
-    transition: all 1s 0.3s;
+    transition: all 1s 0.25s;
     opacity: 0;
-    font-size: clamp(15px, 3vw, 25px);
-    font-weight: 300;
-    text-shadow: 1px 1px 1px $font-primary-shadow;
+    text-transform: none;
+    background-color: $tertiary-action;
+    color: #fff;
+    width: fit-content;
+    margin-bottom: 25vw;
   }
-}
 
-.ctas__btn {
-  position: relative;
-  transition: all 1s 0.6s;
-  opacity: 0;
-  text-transform: none;
-  background-color: $tertiary-action;
-  color: #fff;
-  width: fit-content;
-  margin-bottom: 25vw;
+  //h4 {
+  //  position: relative;
+  //  top: -200px;
+  //  transition: all 1s 0.3s;
+  //  opacity: 0;
+  //  font-size: clamp(15px, 3vw, 25px);
+  //  font-weight: 300;
+  //  text-shadow: 1px 1px 1px $font-primary-shadow;
+  //}
 }
 
 .ctas__btn.visible {
   opacity: 1;
-  margin-bottom: 5vw;
+  margin-bottom: 2vw;
 }
 
 .ctas.visible {
   h1 {
+    //  margin-bottom: 6vw;
+    opacity: 1;
+  }
+
+  .ctas__btn {
     left: 0;
     top: 0;
     opacity: 1;
   }
 
-  h4 {
-    left: 0;
-    top: 0;
-    opacity: 1;
-  }
-
-  //.ctas__btn {
+  //h4 {
   //  left: 0;
-  //  top: 0px;
+  //  top: 0;
   //  opacity: 1;
   //}
 }

@@ -31,9 +31,9 @@ const headerSelectors = computed(() => {
   if (!isHome.value && !isService.value) {
     selectors.push('not-home-or-service')
   }
-  if (isHome.value) {
-    selectors.push('is-home')
-  }
+  // if (isHome.value) {
+  //   selectors.push('is-home')
+  // }
   return selectors
 })
 

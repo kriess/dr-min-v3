@@ -20,7 +20,8 @@ const faqs = [
   },
   {
     question: 'Can breast implant removal be combined with other procedures?\n',
-    answer: `Yes, breast implant removal can be combined with other procedures to achieve the desired aesthetic outcome. This may include a breast lift to improve breast shape, the replacement of implants, or fat grafting to the breasts. Th`,
+    answer: `Yes, breast implant removal can be combined with other procedures to achieve the desired aesthetic outcome. This may include a breast lift to improve breast shape, the replacement of implants, or fat grafting to the breasts. The combination of procedures will be tailored to individual goals and circumstances.
+`,
   },
 ]
 
