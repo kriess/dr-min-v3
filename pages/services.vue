@@ -5,14 +5,15 @@ const runtimeConfig = useRuntimeConfig()
 const pageTitle = 'Services'
 const services = useServices()
 const route = useRoute()
-const canonicalUrl = `${runtimeConfig.public.siteDomain}${route.fullPath}`
+const canonicalUrl = `${runtimeConfig.public.siteDomain}${route.fullPath}/`
 const router = useRouter()
 
 useHead({
   title: pageTitle,
   link: [
     {
-      rel: 'canonical', hid: 'canonical',
+      rel: 'canonical',
+      hid: 'canonical',
       href: canonicalUrl,
     },
   ],
@@ -66,8 +67,8 @@ onMounted(() => {
   <section class="services page">
     <header-services-header></header-services-header>
     <div class="page-content">
-    <breadcrumb></breadcrumb>
-    <nuxt-page />
+      <breadcrumb></breadcrumb>
+      <nuxt-page />
     </div>
   </section>
 </template>
@@ -84,6 +85,7 @@ onMounted(() => {
     margin: 10px 0;
     justify-content: center;
     display: flex;
+
     :deep(.v-btn) {
       text-transform: capitalize;
       border-radius: $main-border-radius;

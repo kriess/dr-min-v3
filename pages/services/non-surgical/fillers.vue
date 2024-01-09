@@ -1,7 +1,7 @@
 <script setup>
 const runtimeConfig = useRuntimeConfig()
 const route = useRoute()
-const canonicalUrl = `${runtimeConfig.public.siteDomain}${route.fullPath}`
+const canonicalUrl = `${runtimeConfig.public.siteDomain}${route.fullPath}/`
 
 useHead({
   title: 'Fillers',
@@ -9,8 +9,9 @@ useHead({
   meta: [
     {
       name: 'description',
-      content: 'Facial fillers are designed to smooth wrinkles, sculpt lips and shape facial contours. It is a clear, synthetic gel made with hyaluronic acid, a natural substance that is found throughout your body. '
-    }
+      content:
+        'Facial fillers are designed to smooth wrinkles, sculpt lips and shape facial contours. It is a clear, synthetic gel made with hyaluronic acid, a natural substance that is found throughout your body. ',
+    },
   ],
 })
 </script>
@@ -20,8 +21,8 @@ useHead({
     <div class="services-section">
       <div class="services-title">Fillers</div>
       <services-body-main-thumb
-        src="/img/services/thumbs/filler.jpg">
-      </services-body-main-thumb>
+        src="/img/services/thumbs/filler.jpg"
+      ></services-body-main-thumb>
       <p>
         Facial fillers are designed to smooth wrinkles, sculpt lips and shape
         facial contours. It is a clear, synthetic gel made with hyaluronic acid,
@@ -38,6 +39,7 @@ useHead({
 <style lang="scss" scoped>
 .services-details {
   width: auto;
+
   .services-title {
     display: none;
     color: $primary;
@@ -45,21 +47,26 @@ useHead({
     font-weight: bold;
     margin-bottom: 20px;
   }
+
   p {
     margin-bottom: 20px;
   }
+
   .header-text {
     font-size: 150%;
     color: $primary;
     font-weight: bold;
     margin-bottom: 20px;
   }
+
   dt {
     font-weight: bold;
   }
+
   dd {
     margin-bottom: 20px;
   }
+
   .thumb {
     border-radius: $border-radius-v3;
     border: 1px solid #ccc;
@@ -67,8 +74,10 @@ useHead({
     float: right;
     width: 50%;
   }
+
   .unordered-list {
     margin-bottom: 20px;
+
     li {
       margin-left: 20px;
     }

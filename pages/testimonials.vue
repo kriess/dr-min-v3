@@ -3,13 +3,14 @@ const runtimeConfig = useRuntimeConfig()
 const appConfig = useAppConfig()
 const pageTitle = 'Testimonials'
 const route = useRoute()
-const canonicalUrl = `${runtimeConfig.public.siteDomain}${route.fullPath}`
+const canonicalUrl = `${runtimeConfig.public.siteDomain}${route.fullPath}/`
 
 useHead({
   title: pageTitle,
   link: [
     {
-      rel: 'canonical', hid: 'canonical',
+      rel: 'canonical',
+      hid: 'canonical',
       href: canonicalUrl,
     },
   ],
@@ -46,6 +47,7 @@ useHead({
 .testimonials {
   width: auto;
   padding-top: 10px;
+
   .testimonials-container {
     width: auto;
     display: grid;

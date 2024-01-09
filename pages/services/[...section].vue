@@ -4,13 +4,14 @@ const pageTitle = 'Services'
 const services = useServices()
 const route = useRoute()
 const router = useRouter()
-const canonicalUrl = `${runtimeConfig.public.siteDomain}${route.fullPath}`
+const canonicalUrl = `${runtimeConfig.public.siteDomain}${route.fullPath}/`
 
 useHead({
   title: pageTitle,
   link: [
     {
-      rel: 'canonical', hid: 'canonical',
+      rel: 'canonical',
+      hid: 'canonical',
       href: canonicalUrl,
     },
   ],

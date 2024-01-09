@@ -1,9 +1,12 @@
 <script lang="ts" setup>
-import ContactUsForm from '~/components/contact-us-form.vue'
-
+const runtimeConfig = useRuntimeConfig()
+const route = useRoute()
+const canonicalUrl = `${runtimeConfig.public.siteDomain}/`
 const pageTitle = 'Home'
+
 useHead({
   titleTemplate: 'Dr. Caroline Min',
+  link: [{ rel: 'canonical', hid: 'canonical', href: canonicalUrl }],
   meta: [
     {
       name: 'description',
@@ -16,15 +19,15 @@ useHead({
 
 <template>
   <section class="home page">
-<!--    <header-section-header section="home.webp"></header-section-header>-->
+    <!--    <header-section-header section="home.webp"></header-section-header>-->
     <HomeSplash></HomeSplash>
     <HomeIntro></HomeIntro>
     <HomeServices></HomeServices>
     <HomeAbout2></HomeAbout2>
-<!--    <AboutDrMin></AboutDrMin>-->
-<!--    <HomeAbout></HomeAbout>-->
+    <!--    <AboutDrMin></AboutDrMin>-->
+    <!--    <HomeAbout></HomeAbout>-->
 
-<!--    <HomeServices></HomeServices>-->
+    <!--    <HomeServices></HomeServices>-->
 
     <home-contact-us-form :show-header="true"></home-contact-us-form>
     <HomeTestimonials></HomeTestimonials>

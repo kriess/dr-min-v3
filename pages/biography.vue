@@ -2,7 +2,7 @@
 const runtimeConfig = useRuntimeConfig()
 const pageTitle = 'Biography'
 const route = useRoute()
-const canonicalUrl = `${runtimeConfig.public.siteDomain}${route.fullPath}`
+const canonicalUrl = `${runtimeConfig.public.siteDomain}${route.fullPath}/`
 
 useHead({
   title: pageTitle,

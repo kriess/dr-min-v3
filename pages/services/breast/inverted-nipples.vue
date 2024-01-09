@@ -1,7 +1,7 @@
 <script setup>
 const runtimeConfig = useRuntimeConfig()
 const route = useRoute()
-const canonicalUrl = `${runtimeConfig.public.siteDomain}${route.fullPath}`
+const canonicalUrl = `${runtimeConfig.public.siteDomain}${route.fullPath}/`
 const title = 'Correction of Inverted Nipples'
 
 /**

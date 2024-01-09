@@ -4,13 +4,14 @@ const gallery = useGallery()
 const route = useRoute()
 const router = useRouter()
 const pageTitle = 'Before & After Gallery'
-const canonicalUrl = `${runtimeConfig.public.siteDomain}${route.fullPath}`
+const canonicalUrl = `${runtimeConfig.public.siteDomain}${route.fullPath}/`
 
 useHead({
   title: pageTitle,
   link: [
     {
-      rel: 'canonical', hid: 'canonical',
+      rel: 'canonical',
+      hid: 'canonical',
       href: canonicalUrl,
     },
   ],
@@ -81,7 +82,7 @@ const activeProcedure = computed(() => {
   <section class="photo-gallery page">
     <PageTopVisuals
       :title="pageTitle"
-      image-src="/img/headshots/photogallery.jpg"
+      image-src="/img/headshots/ourservices.jpg"
       image-width="60%"
       alt="Dr. Caroline Min, M.D. - board certified plastic surgeon - before/after photos"
     ></PageTopVisuals>
@@ -151,6 +152,7 @@ const activeProcedure = computed(() => {
     margin-top: 10px;
     justify-content: center;
     display: flex;
+
     :deep(.v-btn) {
       text-transform: capitalize;
       border-radius: $main-border-radius;
@@ -168,6 +170,7 @@ const activeProcedure = computed(() => {
     display: inline-block;
     margin: 10px 20px;
     flex: 1 1 auto;
+
     &.selected {
       color: $primary;
     }
@@ -177,6 +180,7 @@ const activeProcedure = computed(() => {
     cursor: pointer;
     display: inline-block;
     margin: 10px;
+
     &.active {
       color: $primary;
       font-weight: 700;

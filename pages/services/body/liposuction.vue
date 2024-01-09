@@ -2,7 +2,7 @@
 const runtimeConfig = useRuntimeConfig()
 const route = useRoute()
 const title = 'Liposuction'
-const canonicalUrl = `${runtimeConfig.public.siteDomain}${route.fullPath}`
+const canonicalUrl = `${runtimeConfig.public.siteDomain}${route.fullPath}/`
 
 const faqs = [
   {
