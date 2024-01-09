@@ -1765,7 +1765,7 @@ export default {
               beforeAfter: [
                 {
                   label: 'Front View',
-                  url: 'labiaplasty-p04-front-lrg.jpg',
+                  url: 'labiaplasty-p04-front-lrg.webp',
                   slug: 'front',
                 },
               ],
