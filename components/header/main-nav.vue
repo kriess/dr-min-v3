@@ -194,14 +194,14 @@ const telephoneLink = computed(() => {
   white-space: nowrap;
   letter-spacing: 1.2px;
   font-weight: 500;
-  font-size: 32px;
+  font-size: 33px;
   line-height: 42px;
 }
 
 .logo-description {
   white-space: nowrap;
   letter-spacing: 1.1px;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 500;
   margin-top: -10px;
   margin-left: 2px;
@@ -270,8 +270,8 @@ const telephoneLink = computed(() => {
   opacity: 1;
   text-transform: capitalize;
   font-weight: 500;
-  font-size: clamp(0.5rem, 5vw, 1rem);
-  line-height: clamp(0.5rem, 5vw, 1rem);
+  font-size: clamp(0.5rem, 5.5vw, 1rem);
+  line-height: clamp(0.5rem, 5.5vw, 1rem);
   letter-spacing: normal;
 
   :deep(.v-btn__append) {

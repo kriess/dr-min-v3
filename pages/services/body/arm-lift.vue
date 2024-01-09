@@ -77,6 +77,11 @@ useHead({
       </p>
 
       <services-faqs :faqs="faqs" :title="title"></services-faqs>
+      <services-before-after
+        :title="title"
+        section="body"
+        procedure="arm-lift"
+      ></services-before-after>
     </div>
   </div>
 </template>

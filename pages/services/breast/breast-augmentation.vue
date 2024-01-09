@@ -1,34 +1,34 @@
 <script setup>
 const runtimeConfig = useRuntimeConfig()
 const route = useRoute()
-const title = "Breast Augmentation"
+const title = 'Breast Augmentation'
 const canonicalUrl = `${runtimeConfig.public.siteDomain}${route.fullPath}`
 
 const faqs = [
   {
-    question: "Will I be able to breastfeed after breast augmentation?",
-    answer: `Implants may affect your ability to successfully breastfeed. Not all women are able to breastfeed, even without surgery. Many women have been able to successfully breastfeed with breast implants but the success rate is likely to be slightly lower.`
+    question: 'Will I be able to breastfeed after breast augmentation?',
+    answer: `Implants may affect your ability to successfully breastfeed. Not all women are able to breastfeed, even without surgery. Many women have been able to successfully breastfeed with breast implants but the success rate is likely to be slightly lower.`,
   },
   {
-    question: "Will I lose nipple sensation?",
-    answer: `A change in nipple sensation is always a possibility after any breast surgery, although the risk of permanent change is low.`
+    question: 'Will I lose nipple sensation?',
+    answer: `A change in nipple sensation is always a possibility after any breast surgery, although the risk of permanent change is low.`,
   },
   {
-    question: "Are breast implants permanent?",
-    answer: `Breast implants are not considered lifetime devices. Removal and replacement of your implants will eventually be required. Timing is different for each patient as some may require earlier intervention and others go much longer before exchanging their implants.`
+    question: 'Are breast implants permanent?',
+    answer: `Breast implants are not considered lifetime devices. Removal and replacement of your implants will eventually be required. Timing is different for each patient as some may require earlier intervention and others go much longer before exchanging their implants.`,
   },
   {
-    question: "Can I have the implants removed later on?",
-    answer: `The implants can be removed but keep in mind that the breast tissue and skin have been stretched by the presence of the implant. After implant removal, the breasts may appear more droopy and deflated. The appearance of the breasts after implant removal depends on the way they looked before implantation and the size of the implants that were placed.`
+    question: 'Can I have the implants removed later on?',
+    answer: `The implants can be removed but keep in mind that the breast tissue and skin have been stretched by the presence of the implant. After implant removal, the breasts may appear more droopy and deflated. The appearance of the breasts after implant removal depends on the way they looked before implantation and the size of the implants that were placed.`,
   },
   {
-    question: "What causes capsular contracture?",
-    answer: `After breast augmentation, the body normally forms scar tissue or a “capsule” around the implant. Capsular contracture is the abnormal hardening of this capsule. This can range from mild firmness of the implants to extreme hardness and distortion of the breast appearance. Severe hardening is uncommon. The cause is not known but has been linked to possible microscopic bacterial contamination. It cannot be predicted which patients will develop this as each individual heals differently. Dr. Min takes measures to reduce the risk of capsule formation by using an antibiotic irrigation during surgery and instructing all patients to perform breast massage afterwards to keep the implants soft.`
+    question: 'What causes capsular contracture?',
+    answer: `After breast augmentation, the body normally forms scar tissue or a “capsule” around the implant. Capsular contracture is the abnormal hardening of this capsule. This can range from mild firmness of the implants to extreme hardness and distortion of the breast appearance. Severe hardening is uncommon. The cause is not known but has been linked to possible microscopic bacterial contamination. It cannot be predicted which patients will develop this as each individual heals differently. Dr. Min takes measures to reduce the risk of capsule formation by using an antibiotic irrigation during surgery and instructing all patients to perform breast massage afterwards to keep the implants soft.`,
   },
   {
-    question: "What about pregnancy?",
-    answer: `If you are planning to get pregnant within the next year or two, you should wait to undergo breast augmentation. Your breasts may undergo significant changes with pregnancy that may alter the results. If you have been pregnant recently, it is advisable to wait at least six months after you have finished breast-feeding to allow your breasts to have time to return to their normal shape and size.`
-  }
+    question: 'What about pregnancy?',
+    answer: `If you are planning to get pregnant within the next year or two, you should wait to undergo breast augmentation. Your breasts may undergo significant changes with pregnancy that may alter the results. If you have been pregnant recently, it is advisable to wait at least six months after you have finished breast-feeding to allow your breasts to have time to return to their normal shape and size.`,
+  },
 ]
 
 useHead({
@@ -37,8 +37,9 @@ useHead({
   meta: [
     {
       name: 'description',
-      content: 'Breast augmentation is one of the most popular cosmetic surgery procedures in the United States. It can give women with small or unevenly sized breasts a fuller, firmer, better-proportioned look. '
-    }
+      content:
+        'Breast augmentation is one of the most popular cosmetic surgery procedures in the United States. It can give women with small or unevenly sized breasts a fuller, firmer, better-proportioned look. ',
+    },
   ],
 })
 </script>
@@ -48,8 +49,8 @@ useHead({
     <div class="services-section">
       <div class="services-title">Breast Augmentation</div>
       <services-body-main-thumb
-        src="/img/services/thumbs/breastsurgery.jpg">
-      </services-body-main-thumb>
+        src="/img/services/thumbs/breastsurgery.jpg"
+      ></services-body-main-thumb>
       <p>
         Breast augmentation is one of the most popular cosmetic surgery
         procedures in the United States. It can give women with small or
@@ -73,22 +74,6 @@ useHead({
         customized treatment. She has extensive experience with breast surgery
         and takes pride in natural looking, beautiful results.
       </p>
-
-      <p>
-        Breast augmentation is one of the most popular cosmetic surgery
-        procedures in the United States. It can give women with small or
-        unevenly sized breasts a fuller, firmer, better-proportioned look. Women
-        choose to undergo breast augmentation for a variety of reasons. Some
-        women have small breasts that never quite developed and enhancement with
-        breast implants can improve self-esteem and quality of life. Other women
-        choose breast augmentation to regain breast fullness that was lost after
-        pregnancy and breast-feeding or after weight loss. In patients with
-        sagging breast tissue, augmentation may be combined with a breast lift
-        to provide the most optimal result. Some women are born with congenital
-        breast defects where one breast is much smaller than the other or fails
-        to develop at all. Breast augmentation can provide better symmetry in
-        these patients so that the breasts match in size.
-      </p>
       <p>
         Dr. Min takes the time during every consultation to learn what her
         patients want to achieve from a breast augmentation procedure. By
@@ -97,7 +82,6 @@ useHead({
         customized treatment. She has extensive experience with breast surgery
         and takes pride in natural looking, beautiful results.
       </p>
-
       <p>
         <strong>Silicone vs. Saline Implants</strong>
         <br />
@@ -181,7 +165,11 @@ useHead({
       </p>
 
       <services-faqs :faqs="faqs" :title="title"></services-faqs>
-      <services-before-after :title="title" section="breast" procedure="breast-augmentation"></services-before-after>
+      <services-before-after
+        :title="title"
+        section="breast"
+        procedure="breast-augmentation"
+      ></services-before-after>
     </div>
   </div>
 </template>
@@ -189,6 +177,7 @@ useHead({
 <style lang="scss" scoped>
 .services-details {
   width: auto;
+
   .services-title {
     display: none;
     color: $primary;
@@ -196,21 +185,26 @@ useHead({
     font-weight: bold;
     margin-bottom: 20px;
   }
+
   p {
     margin-bottom: 20px;
   }
+
   .header-text {
     font-size: 150%;
     color: $primary;
     font-weight: bold;
     margin-bottom: 20px;
   }
+
   dt {
     font-weight: bold;
   }
+
   dd {
     margin-bottom: 20px;
   }
+
   .thumb {
     border-radius: $border-radius-v3;
     border: 1px solid #ccc;
@@ -218,8 +212,10 @@ useHead({
     float: right;
     width: 50%;
   }
+
   .unordered-list {
     margin-bottom: 20px;
+
     li {
       margin-left: 20px;
     }

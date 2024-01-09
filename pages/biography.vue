@@ -30,39 +30,45 @@ useHead({
     <div class="content-area">
       <div class="text-descriptions text-body-1">
         <p>
-          Dr. Caroline Min is a plastic & reconstructive surgeon who performs
-          cosmetic surgery of the face, breast and body as well as general
-          reconstructive plastic surgery. She provides the full range of
-          cosmetic procedures with an emphasis on obtaining soft, natural
-          looking results. Each consultation is personalized and confidential.
-          Dr. Min realizes that every patient has different needs and aesthetic
-          standards. She will listen carefully to each patient and formulate an
-          individualized treatment plan to best achieve his or her goals. Dr.
-          Min is committed to providing the highest quality of care with an
-          emphasis on safety and ethical practice. She is always available for
-          her patients, both before and after surgery.
+          Dr. Caroline Min was born and raised in New York City to parents who
+          immigrated from South Korea. She comes from a family of physicians as
+          both of her parents and twin sister are also physicians. She knew
+          early on in childhood that she wanted to pursue a career in medicine
+          as the idea of helping people appealed to her and she enjoyed science
+          and innovation. With a love of working with her hands and changing
+          lives for the better, she was fascinated by surgery while in medical
+          school. Dr. Min completed a 5 year residency in General Surgery which
+          gave her a robust foundation in both surgical skills and clinical
+          knowledge needed to care for the entirety of a patient’s journey, from
+          preoperative, intraoperative to postoperative recovery. She was drawn
+          to the artistry and creativity of plastic surgery and went on to
+          complete an accredited Plastic Surgery Residency at Montefiore Medical
+          Center in New York. She completed an additional year of fellowship
+          training in cosmetic plastic surgery at the Manhattan Eye, Ear and
+          Throat Hospital under the tutelage of some of the most renowned
+          cosmetic surgeons in the country.
         </p>
         <p>
-          Dr. Min is fully trained in plastic surgery as well as general
-          surgery. She completed a general surgery residency at St. Luke's
-          Roosevelt Hospital in New York City. She completed her plastic surgery
-          training at Montefiore Medical Center in the Bronx. Because she has a
-          special interest in cosmetic surgery, she decided to pursue additional
-          training in this subspecialty to further hone her skills. She
-          completed the prestigious aesthetic surgery fellowship at the
-          Manhattan Eye, Ear and Throat Hospital under the tutelage of some of
-          the most renowned cosmetic surgeons in the country.
-        </p>
-        <p>
-          Dr. Min is double board certified in both Plastic Surgery and General
-          Surgery. She is an active member of the American Society of Plastic
+          After completion of her training, Dr. Min moved to sunny Pasadena to
+          begin her career, initially working for a medical group formerly known
+          as HealthCare Partners. Dr. Min is board certified in Plastic Surgery
+          since 2008 and is an active member of the American Society of Plastic
           Surgeons (ASPS), the largest plastic surgery organization in the
           world. ASPS members are required to have completed a minimum of 6
           years of surgical training, adhere to a strict code of ethics,
           participate in continuing education requirements and operate only in
-          accredited medical facilities. She is also a member of the Los Angeles
-          Society of Plastic Surgeons and the California Society of Plastic
-          Surgeons.
+          accredited medical facilities. She is proud to establish her private
+          practice in late 2023 where she can provide her patients with
+          personalized top notch care.
+        </p>
+        <p>
+          Dr. Min is a mother to two wonderful boys, Lucas and Aiden. She also
+          has two rescue dogs, Oreo and Willie and has a soft spot for animals
+          in need. She has fostered dogs for local rescue organizations, one
+          being a mother with puppies and another with medical needs. She enjoys
+          being active - walking her dogs, Crossfit workouts, hiking, paddle
+          boarding and snowboarding. She is an oenophile and enjoys wine and
+          international food from all over the world.
         </p>
       </div>
 

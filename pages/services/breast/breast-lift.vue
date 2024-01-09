@@ -90,6 +90,11 @@ useHead({
       </p>
 
       <services-faqs :faqs="faqs" :title="title"></services-faqs>
+      <services-before-after
+        :title="title"
+        section="breast"
+        procedure="breast-lift"
+      ></services-before-after>
     </div>
   </div>
 </template>

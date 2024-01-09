@@ -27,7 +27,7 @@ const imageBg = computed(() => {
     <div class="mask">
       <div class="content" ref="target">
         <div :class="targetIsVisible ? 'ctas visible' : 'ctas'">
-          <h1>Soft, Natural Beauty</h1>
+          <h1>Soft Natural Beauty</h1>
           <!--          <h4>Board Certified Plastic Surgeon</h4>-->
           <v-btn
             variant="flat"
@@ -92,9 +92,9 @@ const imageBg = computed(() => {
 
   h1 {
     position: relative;
-    transition: all 1s ease;
+    transition: all 1.5s ease;
     opacity: 0;
-    font-size: clamp(40px, 8vw, 70px);
+    font-size: clamp(35px, 6vw, 60px);
     line-height: clamp(40px, 8vw, 70px);
     font-weight: 300;
     margin-bottom: 10px;
@@ -103,7 +103,7 @@ const imageBg = computed(() => {
 
   .ctas__btn {
     position: relative;
-    transition: all 1s 0.25s;
+    transition: all 1.5s 0.25s;
     opacity: 0;
     text-transform: none;
     background-color: $tertiary-action;
