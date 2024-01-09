@@ -101,12 +101,12 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       GOOGLE_MAPS_API_KEY: 'AIzaSyDQZDKJBwh9Z3JDV5dVTzUgFx3Ok-Oeysk',
-      siteDomain: 'http://v3.drcarolinemin.com',
+      siteDomain: 'https://drcarolinemin.com',
     },
   },
 
   site: {
-    url: 'http://v3.drcarolinemin.com',
+    url: 'https://drcarolinemin.com',
     name: 'Dr. Caroline Min, M.D.',
   },
 
