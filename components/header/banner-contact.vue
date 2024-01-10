@@ -13,7 +13,7 @@
       </v-col>
       <v-col cols="12" sm="12" md="4">
         <v-sheet class="banner-item">
-          <h1 class="dr-title">Caroline Min M.D.</h1>
+          <h1 class="dr-title">Caroline Min MD</h1>
           <h2 class="dr-sub-title">Board Certified Plastic Surgeon</h2>
         </v-sheet>
       </v-col>
@@ -39,6 +39,7 @@
     border-bottom: 1px solid #777;
     align-items: center;
     text-align: center;
+
     li {
       list-style-type: none;
     }

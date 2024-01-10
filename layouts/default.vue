@@ -6,53 +6,48 @@ const siteDomain = runtimeConfig.public.siteDomain
 
 useSchemaOrg([
   defineWebSite({
-    name: 'Dr. Caroline Min, M.D. - Board Certified Plastic Surgeon',
-    alternateName: "Dr. Caroline Min",
+    name: 'Dr. Caroline Min, MD - Board Certified Plastic Surgeon',
+    alternateName: 'Dr. Caroline Min',
   }),
   defineLocalBusiness({
-    "@type": [
-      "Organization",
-      "LocalBusiness",
-      "MedicalBusiness",
-      "PlasticSurgery"
+    '@type': [
+      'Organization',
+      'LocalBusiness',
+      'MedicalBusiness',
+      'PlasticSurgery',
     ],
-    name: 'Dr. Caroline Min, M.D. - Board Certified Plastic Surgeon',
-    "image": {
-      "@type": "ImageObject",
-      "url": siteDomain + "/img/headshots/min-white-coat.jpg",
-      "height": 439,
-      "width": 292
+    name: 'Dr. Caroline Min, MD - Board Certified Plastic Surgeon',
+    image: {
+      '@type': 'ImageObject',
+      url: siteDomain + '/img/headshots/min-white-coat.jpg',
+      height: 439,
+      width: 292,
     },
-    priceRange: "Please call for pricing",
-    telephone: "+1-" + appConfig.phone,
-    additionalType: "https://en.wikipedia.org/wiki/Plastic_surgery",
-    description: "Dr. Caroline Min is a board certified plastic surgeon specializing in cosmetic surgery; including Facelift, Breast Augmentation, Tummy Tuck, Mommy Makeover, and Breast Lift. Contact Dr. Caroline Min to schedule a consultation.",
+    priceRange: 'Please call for pricing',
+    telephone: '+1-' + appConfig.phone,
+    additionalType: 'https://en.wikipedia.org/wiki/Plastic_surgery',
+    description:
+      'Dr. Caroline Min is a board certified plastic surgeon specializing in cosmetic surgery; including Facelift, Breast Augmentation, Tummy Tuck, Mommy Makeover, and Breast Lift. Contact Dr. Caroline Min to schedule a consultation.',
     openingHoursSpecification: [
       {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday",
-        ],
-        "opens": "09:00",
-        "closes": "17:00"
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+        opens: '09:00',
+        closes: '17:00',
       },
     ],
     address: {
-      "@type": "PostalAddress",
-      "streetAddress": "547 E Union St.",
-      "addressLocality": "Pasadena",
-      "addressRegion": "CA",
-      "postalCode": "91101",
-      "addressCountry": "United States",
+      '@type': 'PostalAddress',
+      streetAddress: '547 E Union St.',
+      addressLocality: 'Pasadena',
+      addressRegion: 'CA',
+      postalCode: '91101',
+      addressCountry: 'United States',
     },
     geo: {
-      "@type": "GeoCoordinates",
-      "latitude": 34.147560470457535,
-      "longitude": -118.13910802883551
+      '@type': 'GeoCoordinates',
+      latitude: 34.147560470457535,
+      longitude: -118.13910802883551,
     },
     // need to update
     // image: "TBD",
@@ -108,7 +103,7 @@ useHead({
     {
       name: 'description',
       content:
-        'Plastic Surgery Pasadena - Dr. Caroline Min, M.D., specializes in plastic surgery procedures serving Pasadena, Los Angeles, Beverly Hills, and the surrounding areas.',
+        'Plastic Surgery Pasadena - Dr. Caroline Min, MD, specializes in plastic surgery procedures serving Pasadena, Los Angeles, Beverly Hills, and the surrounding areas.',
     },
     {
       name: 'keywords',
@@ -122,7 +117,7 @@ useHead({
 <template>
   <v-app class="dr-min-app">
     <header-main-nav></header-main-nav>
-<!--    <div style="height: 80px"></div>-->
+    <!--    <div style="height: 80px"></div>-->
 
     <!--
     <header-banner-contact></header-banner-contact>

@@ -107,7 +107,7 @@ export default defineNuxtConfig({
 
   site: {
     url: 'https://drcarolinemin.com',
-    name: 'Dr. Caroline Min, M.D.',
+    name: 'Dr. Caroline Min, MD',
   },
 
   sourcemap: {

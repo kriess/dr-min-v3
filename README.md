@@ -163,5 +163,5 @@ Example Google Review link
 
 What is the `ludocid` and `lsig`? See this for info https://serpapi.com/search-api.
 
-`https://www.google.com/search?hl=en-US&gl=us&q=J.+Timothy+Katzen,+M.D.+Beverly+Hills,+9735+Wilshire+Blvd+%23407,+Beverly+Hills,+CA+90212&ludocid=2451073845676584090&lsig=AB86z5Xc-KaMKMwWL8w8BNC6jFdT#ip=1`
+`https://www.google.com/search?hl=en-US&gl=us&q=J.+Timothy+Katzen,+MD+Beverly+Hills,+9735+Wilshire+Blvd+%23407,+Beverly+Hills,+CA+90212&ludocid=2451073845676584090&lsig=AB86z5Xc-KaMKMwWL8w8BNC6jFdT#ip=1`
 

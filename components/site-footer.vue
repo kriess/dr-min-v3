@@ -44,7 +44,7 @@ const telephoneLink = computed(() => {
         <v-row no-gutters class="bio">
           <v-col cols="12" sm="12" md="4" class="bio__left-col">
             <div class="bio__name">
-              <h3 class="text-h4">Caroline Min M.D.</h3>
+              <h3 class="text-h4">Caroline Min MD</h3>
               <h4 class="text-h6">Board Certified Plastic Surgeon</h4>
               <v-img
                 class="asps-logo"
@@ -191,7 +191,7 @@ const telephoneLink = computed(() => {
                       </a>
                       <a
                         title="Dr. Caroline Min Google Profile/Reviews"
-                        href="https://www.google.com/search?hl=en-US&gl=us&q=Caroline+Min,+M.D.+Pasadena,+547+Union+St,+Pasadena,+CA+91101"
+                        href="https://www.google.com/search?hl=en-US&gl=us&q=Caroline+Min,+MD+Pasadena,+547+Union+St,+Pasadena,+CA+91101"
                         target="_blank"
                         class="social-icons__icon social-icons__icon--color"
                       >
@@ -221,12 +221,12 @@ const telephoneLink = computed(() => {
           <v-col cols="12" sm="12" md="9">
             <div class="copy">
               <p>
-                Plastic Surgery Pasadena - Dr. Caroline Min, M.D., specializes
-                in plastic surgery procedures serving Pasadena, Los Angeles,
+                Plastic Surgery Pasadena - Dr. Caroline Min, MD, specializes in
+                plastic surgery procedures serving Pasadena, Los Angeles,
                 Beverly Hills, and the surrounding areas.
               </p>
               &copy;
-              {{ year }} Dr. Caroline Min, M.D. All Rights Reserved.
+              {{ year }} Dr. Caroline Min, MD All Rights Reserved.
             </div>
           </v-col>
           <v-col cols="12" sm="12" md="3">

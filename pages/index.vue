@@ -11,7 +11,7 @@ useHead({
     {
       name: 'description',
       content:
-        'A board certified plastic surgeon with over 16 years of experience serving Pasadena, Los Angeles, Beverly Hills, and the surrounding areas.',
+        'Dr. Caroline Min is a female board certified plastic surgeon with over 16 years of experience serving Pasadena, Los Angeles, Beverly Hills, and the surrounding areas.',
     },
   ],
 })
