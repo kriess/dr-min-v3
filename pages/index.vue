@@ -19,16 +19,10 @@ useHead({
 
 <template>
   <section class="home page">
-    <!--    <header-section-header section="home.webp"></header-section-header>-->
     <HomeSplash></HomeSplash>
     <HomeIntro></HomeIntro>
     <HomeServices></HomeServices>
     <HomeAbout2></HomeAbout2>
-    <!--    <AboutDrMin></AboutDrMin>-->
-    <!--    <HomeAbout></HomeAbout>-->
-
-    <!--    <HomeServices></HomeServices>-->
-
     <home-contact-us-form :show-header="true"></home-contact-us-form>
     <HomeTestimonials></HomeTestimonials>
   </section>
