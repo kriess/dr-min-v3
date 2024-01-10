@@ -27,7 +27,7 @@ useSchemaOrg([
     telephone: '+1-' + appConfig.phone,
     additionalType: 'https://en.wikipedia.org/wiki/Plastic_surgery',
     description:
-      'Dr. Caroline Min is a board certified plastic surgeon specializing in cosmetic surgery; including Facelift, Breast Augmentation, Tummy Tuck, Mommy Makeover, and Breast Lift. Contact Dr. Caroline Min to schedule a consultation.',
+      'Dr. Caroline Min is a female board certified plastic surgeon specializing in cosmetic surgery; including Facelift, Breast Augmentation, Tummy Tuck, Mommy Makeover, and Breast Lift. Contact Dr. Caroline Min to schedule a consultation.',
     openingHoursSpecification: [
       {
         '@type': 'OpeningHoursSpecification',
@@ -57,13 +57,7 @@ useSchemaOrg([
 
 useHead({
   titleTemplate: '%s - Dr. Caroline Min',
-  link: [
-    // { rel: 'icon', href: '/icon.png' },
-    // {
-    //   rel: 'stylesheet',
-    //   href: 'https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap',
-    // },
-  ],
+  link: [{ rel: 'icon', href: '/icon.png' }],
   meta: [
     { name: 'mobile-web-app-capable', content: 'yes' },
     {
@@ -77,12 +71,12 @@ useHead({
     {
       property: 'og:title',
       content:
-        'Dr. Caroline Min, MD is a highly qualified plastic surgeon with over 16 years of experience.',
+        'Dr. Caroline Min, MD is a highly qualified female plastic surgeon with over 16 years of experience.',
     },
     {
       property: 'og:description',
       content:
-        'Dr. Caroline Min is a board certified plastic surgeon specializing in cosmetic surgery; including Facelift, Breast Augmentation, Tummy Tuck, Mommy Makeover, and Breast Lift. Contact Dr. Caroline Min to schedule a consultation.',
+        'Dr. Caroline Min is a female board certified plastic surgeon specializing in cosmetic surgery; including Facelift, Breast Augmentation, Tummy Tuck, Mommy Makeover, and Breast Lift. Contact Dr. Caroline Min to schedule a consultation.',
     },
     {
       property: 'og:image',
@@ -117,16 +111,9 @@ useHead({
 <template>
   <v-app class="dr-min-app">
     <header-main-nav></header-main-nav>
-    <!--    <div style="height: 80px"></div>-->
-
-    <!--
-    <header-banner-contact></header-banner-contact>
-    -->
-
     <v-main class="nuxt-slot">
       <slot />
     </v-main>
-
     <site-footer></site-footer>
   </v-app>
 </template>
@@ -140,9 +127,7 @@ html {
   margin: 0 auto;
 
   :deep(.content-area) {
-    // background-color: $page-content-bg;
     padding: 0 5vw 0 5vw;
-    // border-radius: $main-border-radius;
   }
 
   .nuxt-slot {
