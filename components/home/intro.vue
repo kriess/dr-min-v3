@@ -57,7 +57,7 @@ const { stop } = useIntersectionObserver(
   transition: all 1s ease;
 
   &.visible {
-    left: 0px;
+    left: 0;
     opacity: 1;
   }
 }
@@ -72,7 +72,6 @@ const { stop } = useIntersectionObserver(
 .content {
   color: #555;
   padding: 0 5vw 0 5vw;
-  // border-left: 2px solid $primary;
   width: 61.5%;
   opacity: 0;
   position: relative;
@@ -80,7 +79,7 @@ const { stop } = useIntersectionObserver(
   transition: all 1s ease;
 
   &.visible {
-    left: 0px;
+    left: 0;
     opacity: 1;
   }
 }
@@ -95,11 +94,15 @@ const { stop } = useIntersectionObserver(
   }
   .content {
     width: auto;
+    opacity: 1;
+    left: 0;
   }
   .title-container {
     width: auto;
     text-align: center;
     padding: 0 20px 20px 20px;
+    opacity: 1;
+    left: 0;
   }
 }
 </style>

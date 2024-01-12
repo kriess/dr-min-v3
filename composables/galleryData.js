@@ -641,11 +641,11 @@ export default {
               caption:
                 'This is a 25 year old patient who was a B cup and wished to be augmented to a full C/small D cup. She is shown 7 months after undergoing breast augmentation with saline implants placed underneath the pectoralis muscle via a periareolar incision. On the left side, 425 cc was placed as it was slightly larger pre-operatively and on the right side, 450 cc was placed.',
               beforeAfter: [
-                {
-                  label: 'Front View',
-                  url: 'breastaug-p11-front-lrg.jpg',
-                  slug: 'front',
-                },
+                // {
+                //   label: 'Front View',
+                //   url: 'breastaug-p11-front-lrg.jpg',
+                //   slug: 'front',
+                // },
                 {
                   label: 'Oblique View',
                   url: 'breastaug-p11-oblique-lrg.jpg',
@@ -742,6 +742,27 @@ export default {
                 {
                   label: 'Side View',
                   url: 'breastaug-p16-side-lrg.jpg',
+                  slug: 'side',
+                },
+              ],
+            },
+            {
+              caption: '',
+              beforeAfter: [
+                {
+                  label: 'Front View',
+                  url: 'breastaug-p17-front-lrg.jpg',
+                  slug: 'front',
+                },
+                {
+                  label: 'Oblique View',
+                  url: 'breastaug-p17-oblique-lrg.jpg',
+                  slug: 'oblique',
+                },
+
+                {
+                  label: 'Side View',
+                  url: 'breastaug-p17-side-lrg.jpg',
                   slug: 'side',
                 },
               ],
@@ -1269,6 +1290,16 @@ export default {
                 },
               ],
             },
+            {
+              caption: '',
+              beforeAfter: [
+                {
+                  label: 'Front View',
+                  url: 'breastrevision-p04-front-lrg.jpg',
+                  slug: 'front',
+                },
+              ],
+            },
           ],
         },
         {
@@ -1598,6 +1629,36 @@ export default {
                 {
                   label: 'Side View',
                   url: 'abdominoplasty-p09-side-lrg.jpg',
+                  slug: 'side',
+                },
+              ],
+            },
+            {
+              caption: '',
+              beforeAfter: [
+                {
+                  label: 'Front View',
+                  url: 'abdominoplasty-p10-front-lrg.jpg',
+                  slug: 'front',
+                },
+                {
+                  label: 'Side View',
+                  url: 'abdominoplasty-p10-side-lrg.jpg',
+                  slug: 'side',
+                },
+              ],
+            },
+            {
+              caption: '',
+              beforeAfter: [
+                {
+                  label: 'Front View',
+                  url: 'abdominoplasty-p11-front-lrg.jpg',
+                  slug: 'front',
+                },
+                {
+                  label: 'Side View',
+                  url: 'abdominoplasty-p11-side-lrg.jpg',
                   slug: 'side',
                 },
               ],

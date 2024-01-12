@@ -3,6 +3,13 @@ const appConfig = useAppConfig()
 const target = ref(null)
 const targetIsVisible = ref(false)
 
+useHead({
+  link: [
+    { rel: 'preload', as: 'image', href: '/img/home/header-1600x1200.webp' },
+    { rel: 'preload', as: 'image', href: '/img/home/header-600x450.webp' },
+  ],
+})
+
 const { stop } = useIntersectionObserver(
   target,
   ([{ isIntersecting }], observerElement) => {
@@ -23,7 +30,18 @@ const imageBg = computed(() => {
 
 <template>
   <div class="home-splash">
-    <div class="bg-image" :style="imageBg"></div>
+    <!--    <div class="bg-image" :style="imageBg"></div>-->
+    <img
+      class="bg-img"
+      src="/img/home/header-600x450.webp"
+      srcset="
+        /img/home/header-600x450.webp    600w,
+        /img/home/header-1600x1200.webp 1600w
+      "
+      sizes="100vw"
+      alt="Plastic Surgeon model"
+    />
+    <!--    <img class="bg-img" src="/img/home/header-1600x1200.webp" />-->
     <div class="mask">
       <div class="content" ref="target">
         <div :class="targetIsVisible ? 'ctas visible' : 'ctas'">
@@ -53,10 +71,12 @@ const imageBg = computed(() => {
   aspect-ratio: 2/1;
   font-size: 200%;
   position: relative;
-  //box-shadow:
-  //  0 2px 4px -1px rgba(0, 0, 0, 0.1),
-  //  0 4px 5px 0 rgba(0, 0, 0, 0.1),
-  //  0 1px 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.bg-img {
+  aspect-ratio: 2/1;
+  width: 100%;
+  object-fit: cover;
 }
 
 .bg-image {
@@ -111,16 +131,6 @@ const imageBg = computed(() => {
     width: fit-content;
     margin-bottom: 25vw;
   }
-
-  //h4 {
-  //  position: relative;
-  //  top: -200px;
-  //  transition: all 1s 0.3s;
-  //  opacity: 0;
-  //  font-size: clamp(15px, 3vw, 25px);
-  //  font-weight: 300;
-  //  text-shadow: 1px 1px 1px $font-primary-shadow;
-  //}
 }
 
 .ctas__btn.visible {
@@ -130,26 +140,30 @@ const imageBg = computed(() => {
 
 .ctas.visible {
   h1 {
-    //  margin-bottom: 6vw;
     opacity: 1;
   }
 
   .ctas__btn {
-    left: 0;
-    top: 0;
     opacity: 1;
   }
-
-  //h4 {
-  //  left: 0;
-  //  top: 0;
-  //  opacity: 1;
-  //}
 }
 
 @include upToSm {
+  .bg-img {
+    aspect-ratio: 3/2.5;
+  }
   .home-splash {
     aspect-ratio: 3/2.5;
+  }
+  .ctas {
+    h1 {
+      opacity: 1;
+    }
+
+    .ctas__btn {
+      opacity: 1;
+      margin-bottom: 2vw;
+    }
   }
 }
 </style>
