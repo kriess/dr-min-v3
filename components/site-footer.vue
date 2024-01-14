@@ -5,9 +5,9 @@ import { loadScript } from 'vue-plugin-load-script'
 
 const status = ref('loading')
 
-// lifecycle hooks
-onMounted(() => {
-  console.log('footer mounted')
+// methods
+const loadGoogleRecaptcha = () => {
+  console.log('loadGoogleRecaptcha')
   const link =
     'https://www.google.com/recaptcha/enterprise.js?render=6LepurAoAAAAAAO-f4JhmuJ5P7JA3uZ2N347jn0Q'
   // const link = 'https://www.google.com/recaptcha/api.js?render=explicit&onload=onRecaptchaLoadCallback'
@@ -25,6 +25,12 @@ onMounted(() => {
     .catch(() => {
       console.log('failed to load recaptcha script')
     })
+}
+
+// lifecycle hooks
+onMounted(() => {
+  console.log('footer mounted')
+  setTimeout(loadGoogleRecaptcha, 5000)
 })
 
 const year = computed(() => {
@@ -44,7 +50,7 @@ const telephoneLink = computed(() => {
         <v-row no-gutters class="bio">
           <v-col cols="12" sm="12" md="4" class="bio__left-col">
             <div class="bio__name">
-              <h3 class="text-h4">Caroline Min MD</h3>
+              <h4 class="text-h4">Caroline Min MD</h4>
               <h4 class="text-h6">Board Certified Plastic Surgeon</h4>
               <v-img
                 class="asps-logo"

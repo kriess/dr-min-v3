@@ -264,7 +264,7 @@ const sendEmail = async (e) => {
 
 .form-wrapper {
   position: relative;
-  margin: 3vw 25vw;
+  margin: 3vw clamp(15vw, 15vw, 25vw);
   padding: 3vw;
   background-color: rgba(211, 117, 107, 0.85); // $primary;
   opacity: 0;

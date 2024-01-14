@@ -27,14 +27,14 @@ const subMenuCss = computed(() => {
         </v-btn>
       </div>
       <div class="drawer-nav-items__icon">
-        <v-btn
-          v-if="props.navItem.subNavItems"
-          variant="flat"
-          :icon="subMenuIsVisible ? 'mdi-menu-up' : 'mdi-menu-down'"
-          color="primary"
-          block
+        <icons-chevron-down
+          v-if="props.navItem.subNavItems && !subMenuIsVisible"
           @click="subMenuIsVisible = !subMenuIsVisible"
-        ></v-btn>
+        ></icons-chevron-down>
+        <icons-chevron-up
+          v-if="props.navItem.subNavItems && subMenuIsVisible"
+          @click="subMenuIsVisible = !subMenuIsVisible"
+        ></icons-chevron-up>
       </div>
     </div>
     <div :class="subMenuCss">

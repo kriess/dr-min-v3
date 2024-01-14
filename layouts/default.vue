@@ -56,6 +56,9 @@ useSchemaOrg([
 ])
 
 useHead({
+  htmlAttrs: {
+    lang: 'en',
+  },
   titleTemplate: '%s - Dr. Caroline Min',
   link: [{ rel: 'icon', href: '/icon.png' }],
   meta: [

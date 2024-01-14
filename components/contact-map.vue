@@ -1,18 +1,31 @@
 <script setup>
-import { loadScript } from "vue-plugin-load-script";
+import { loadScript } from 'vue-plugin-load-script'
+
 const mapRef = ref(null)
 let config = useRuntimeConfig()
+const target = ref(null)
 let map
 let marker
 
-// lifecycle hooks
-onMounted(async () => {
+const { stop } = useIntersectionObserver(
+  target,
+  ([{ isIntersecting }], observerElement) => {
+    if (isIntersecting) {
+      loadGoogleMap()
+    }
+  },
+)
+
+// methods
+const loadGoogleMap = (view) => {
   const mapLink = '/scripts/map-init.js'
-  loadScript(mapLink).then(() => {
-    initMap()
-  }).catch(() => {
-    console.log('failed to get google maps init file')
-  });
+  loadScript(mapLink)
+    .then(() => {
+      initMap()
+    })
+    .catch(() => {
+      console.log('failed to get google maps init file')
+    })
 
   async function initMap() {
     const domEl = mapRef.value // document.getElementById('map')
@@ -33,8 +46,9 @@ onMounted(async () => {
       title: 'essentia ESTHETICS',
     })
   }
+}
 
-})
+// lifecycle hooks
 onUnmounted(() => {
   map = null
   marker = null
@@ -43,7 +57,7 @@ onUnmounted(() => {
 
 <template>
   <div class="contact-map">
-    <div class="map-container">
+    <div class="map-container" ref="target">
       <div id="map" ref="mapRef" class="map"></div>
     </div>
   </div>
@@ -52,12 +66,13 @@ onUnmounted(() => {
 <style lang="scss" scoped>
 .contact-map {
   position: relative;
+
   .map-container {
     padding: 0;
   }
+
   .map {
     aspect-ratio: 16/14;
-    //border-radius: $main-border-radius;
     overflow: hidden;
   }
 }

@@ -5,7 +5,7 @@ const targetIsVisible = ref(false)
 
 useHead({
   link: [
-    { rel: 'preload', as: 'image', href: '/img/home/header-1600x1200.webp' },
+    // { rel: 'preload', as: 'image', href: '/img/home/header-1600x1200.webp' },
     { rel: 'preload', as: 'image', href: '/img/home/header-600x450.webp' },
   ],
 })

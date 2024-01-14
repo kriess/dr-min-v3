@@ -20,10 +20,7 @@ export default defineNuxtConfig({
     pageTransition: { name: 'page', mode: 'out-in' },
   },
 
-  css: [
-    'vuetify/styles',
-    // '@mdi/font/css/materialdesignicons.min.css'
-  ],
+  css: ['~/assets/styles/site-wide.css', 'vuetify/styles'],
 
   build: {
     transpile: ['vuetify'],
@@ -141,18 +138,19 @@ export default defineNuxtConfig({
   // https://github.com/invictus-codes/nuxt-vuetify
   vuetify: {
     vuetifyOptions: {
-      theme: {
-        defaultTheme: 'myCustomLightTheme',
-        themes: {
-          myCustomLightTheme,
-        },
-      },
+      theme: false,
+      // theme: {
+      //   defaultTheme: 'myCustomLightTheme',
+      //   themes: {
+      //     myCustomLightTheme,
+      //   },
+      // },
     },
 
     moduleOptions: {
       /* nuxt-vuetify module options */
       treeshaking: true,
-      useIconCDN: true,
+      useIconCDN: false,
 
       /* vite-plugin-vuetify options */
       styles: 'sass',

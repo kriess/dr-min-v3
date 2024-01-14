@@ -23,6 +23,16 @@ const isService = computed(() => {
   return route.fullPath.includes('/services')
 })
 
+const menuIconColor = computed(() => {
+  if (!isHome.value && !isService.value) {
+    return '#D3756B'
+  }
+  if (y.value > 50) {
+    return '#D3756B'
+  }
+  return '#ffffff'
+})
+
 const headerSelectors = computed(() => {
   const selectors = []
   if (y.value > 50) {
@@ -100,14 +110,12 @@ const telephoneLink = computed(() => {
                   </v-btn>
                 </template>
               </template>
-              <!--              <v-btn density="compact" icon="mdi-cellphone" variant="plain" class="ctas__btn" :href="telephoneLink" title="Call to schedule a consultation"></v-btn>-->
-              <!--              <v-btn density="compact" icon="mdi-email" variant="plain" class="ctas__btn" href="/contact-info/" title="Email to schedule a consultation"></v-btn>-->
             </v-toolbar-items>
             <div class="hidden-md-and-up mobile-meni-icon">
-              <v-app-bar-nav-icon
-                title="Open and Close Menu"
+              <icons-menu
                 @click="drawer = !drawer"
-              ></v-app-bar-nav-icon>
+                :color="menuIconColor"
+              ></icons-menu>
             </div>
           </div>
         </div>
@@ -128,14 +136,7 @@ const telephoneLink = computed(() => {
             <div class="logo-name">Caroline Min, M.D</div>
             <div class="logo-description">Board Certified Plastic Surgeon</div>
           </div>
-          <v-btn
-            variant="flat"
-            density="compact"
-            icon="mdi-menu-right"
-            color="primary"
-            size="large"
-            @click="drawer = !drawer"
-          ></v-btn>
+          <icons-chevron-right @click="drawer = !drawer"></icons-chevron-right>
         </div>
 
         <v-btn
@@ -165,7 +166,7 @@ const telephoneLink = computed(() => {
               {{ appConfig.phone }}
             </a>
           </li>
-          <li>Fax: 626-737-9020</li>
+          <li class="phone-link">Fax: 626-737-9020</li>
           <li>info@drcarolinemin.com</li>
         </ul>
       </div>
@@ -301,6 +302,7 @@ const telephoneLink = computed(() => {
 
 /* need to have dropdown menu classes at root level */
 .sub-nav-list {
+  background-color: #fff !important;
   width: auto;
 }
 
@@ -342,6 +344,7 @@ const telephoneLink = computed(() => {
   }
 }
 
+.phone-link,
 .phone-link:link,
 .phone:visited {
   color: #fff;

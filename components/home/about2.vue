@@ -121,7 +121,6 @@ const { stop } = useIntersectionObserver(
 }
 
 .content {
-  // border-left: 2px solid $primary;
   width: 61.5%;
   padding: 0 5vw;
   opacity: 0;
