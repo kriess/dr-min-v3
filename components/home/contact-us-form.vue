@@ -102,8 +102,9 @@ const sendEmail = async (e) => {
 <template>
   <div class="contact-us-form">
     <div
-      class="contact-us-form__bg"
-      style="background-image: url('/img/raw/essentia-office.webp')"
+      :class="
+        targetIsVisible ? 'contact-us-form__bg visible' : 'contact-us-form__bg'
+      "
     >
       <div class="mask"></div>
       <div
@@ -213,9 +214,10 @@ const sendEmail = async (e) => {
     background-size: cover;
     height: auto;
     padding: 5vw 0;
-    //display: grid;
-    //justify-content: center;
-    //align-content: center;
+
+    &.visible {
+      background-image: url('/img/raw/essentia-office.webp');
+    }
   }
 
   :deep(.v-text-field input),
@@ -285,6 +287,12 @@ const sendEmail = async (e) => {
 
 @include upToMd {
   .contact-us-form {
+    .contact-us-form__bg {
+      &.visible {
+        background-image: url('/img/raw/essentia-office-800x393.webp');
+      }
+    }
+
     .form-fields-grid {
       grid-template-columns: 1fr;
     }
@@ -294,7 +302,7 @@ const sendEmail = async (e) => {
     }
   }
   .form-wrapper {
-    margin: 3vw 10vw;
+    margin: 3vw 15vw;
   }
 }
 </style>
