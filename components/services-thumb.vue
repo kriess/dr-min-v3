@@ -25,12 +25,13 @@ const goToProcedurePage = (id) => {
       class="services-thumb-card"
     >
       <v-card-text>
-        <v-img
-          class="thumb"
-          cover
-          :alt="`Services performed by Dr. Caroline Min - ${procedure.title}`"
-          :src="`/img/services/thumbs/${procedure.thumbUrl || 'temp.jpg'}`"
-        ></v-img>
+        <div class="img-container">
+          <img
+            class="img"
+            :alt="`Services performed by Dr. Caroline Min - ${procedure.title}`"
+            :src="`/img/services/thumbs/${procedure.thumbUrl || 'temp.jpg'}`"
+          />
+        </div>
         <div class="procedure-title">{{ procedure.title }}</div>
         <div class="summary">{{ procedure.summary }}</div>
         <div class="text-center ctas">
@@ -64,39 +65,48 @@ const goToProcedurePage = (id) => {
 </template>
 
 <style lang="scss" scoped>
+.img-container {
+  overflow: hidden;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  outline: 1px solid #eee;
+  margin-bottom: 15px;
+  aspect-ratio: 16/12;
+  border-radius: $main-border-radius;
+}
+
+.img {
+  height: 100%;
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  transition: 0.6s;
+  filter: grayscale(0%);
+  opacity: 0.9;
+}
+
 .services-thumb {
   cursor: pointer;
   width: 100%;
   height: 100%;
+}
 
-  .services-thumb-card {
-    height: 100%;
-    border: 1px solid $tertiary;
-  }
+.services-thumb-card {
+  height: 100%;
+  border: 1px solid $tertiary;
+}
 
-  .thumb {
-    outline: 1px solid #eee;
-    margin-bottom: 15px;
-    aspect-ratio: 16/12;
-    border-radius: $main-border-radius;
-  }
-
-  :deep(.v-img__img--cover) {
-    transition: 0.6s;
-    filter: grayscale(0%);
-    opacity: 0.9;
-  }
-
-  .procedure-title {
-    font-size: 130%;
-    color: $primary;
-    font-weight: 500;
-    margin-bottom: 5px;
-  }
+.procedure-title {
+  font-size: 130%;
+  color: $primary;
+  font-weight: 500;
+  margin-bottom: 5px;
 }
 
 .services-thumb:hover {
-  :deep(.v-img__img--cover) {
+  .img {
     filter: grayscale(0%);
     opacity: 1;
     transform: scale(1.05);
@@ -105,8 +115,6 @@ const goToProcedurePage = (id) => {
 
 .ctas {
   text-align: center;
-  // display: flex;
-  // flex-direction: column;
 }
 
 .ctas__btn {
