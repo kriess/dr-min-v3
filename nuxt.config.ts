@@ -37,7 +37,6 @@ export default defineNuxtConfig({
   modules: [
     '@vite-pwa/nuxt',
     'nuxt-schema-org',
-    'nuxt-simple-robots',
     'nuxt-simple-sitemap',
     '@vueuse/nuxt',
     '@invictus.codes/nuxt-vuetify',

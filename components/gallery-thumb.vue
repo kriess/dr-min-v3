@@ -1,5 +1,7 @@
 <script lang="ts" setup>
 const props = defineProps<{
+  section: string
+  procedure: string
   gallery: object
   caseNumber: number
 }>()
@@ -39,62 +41,32 @@ const changeView = (type) => {
 
 <template>
   <div class="gallery-thumb">
-    <v-card @click="dialog = true" class="gallery-thumb-card" flat>
-      <v-card-text>
-        <v-img
-          cover
-          :alt="`Before/after photos of procedure performed by Dr. Caroline Min - ${beforeAfter[0].caption}`"
-          :src="`/img/photo-gallery/optimized/${beforeAfter[0].url}`"
-        ></v-img>
-        <div class="text-center ctas">
-          <v-btn
-            variant="flat"
-            class="ctas__btn text-center"
-            title="More Views/Info"
-            size="small"
-            @click="dialog = true"
-          >
-            More Views
-          </v-btn>
-        </div>
-        <!--        <div class="case-number text-center">Case {{ props.caseNumber }}</div>-->
-        <!-- {{ props.gallery }} -->
-      </v-card-text>
-    </v-card>
-
-    <v-dialog
-      v-if="dialog"
-      v-model="dialog"
-      width="800"
-      class="photo-gallery-dialog"
+    <nuxt-link
+      :to="`/photo-gallery/${props.section}/${props.procedure}/${props.caseNumber}/`"
     >
-      <v-card>
+      <v-card class="gallery-thumb-card" flat>
         <v-card-text>
-          <div v-if="beforeAfter.length > 1" class="change-view-btns">
+          <img
+            class="img"
+            :alt="`Before/after photos of procedure performed by Dr. Caroline Min - ${beforeAfter[0].caption}`"
+            :src="`/img/photo-gallery/optimized/${beforeAfter[0].url}`"
+          />
+          <div class="text-center ctas">
             <v-btn
               variant="flat"
-              rounded="sm"
+              class="ctas__btn text-center"
+              title="More Views/Info"
               size="small"
-              v-for="pic in beforeAfter"
-              :key="pic.slug"
-              @click="changeView(pic.slug)"
+              :to="`/photo-gallery/${props.section}/${props.procedure}/${props.caseNumber}/`"
             >
-              {{ pic.label }}
+              View Case
             </v-btn>
           </div>
-          <v-img
-            cover
-            :src="`/img/photo-gallery/optimized/${currentView.url}`"
-          ></v-img>
-          <div class="caption-text">
-            {{ currentView.label }}: {{ currentView.caption }}
-          </div>
+          <!--        <div class="case-number text-center">Case {{ props.caseNumber }}</div>-->
+          <!-- {{ props.gallery }} -->
         </v-card-text>
-        <v-card-actions>
-          <v-btn color="primary" block @click="dialog = false">Close</v-btn>
-        </v-card-actions>
       </v-card>
-    </v-dialog>
+    </nuxt-link>
   </div>
 </template>
 
@@ -138,5 +110,9 @@ const changeView = (type) => {
   text-transform: capitalize;
   color: #fff;
   background-color: $tertiary-action;
+}
+
+.img {
+  width: 100%;
 }
 </style>

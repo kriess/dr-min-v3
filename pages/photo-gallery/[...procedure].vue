@@ -4,7 +4,7 @@ const gallery = useGallery()
 const route = useRoute()
 const router = useRouter()
 const pageTitle = 'Before & After Gallery'
-const canonicalUrl = `${runtimeConfig.public.siteDomain}${route.fullPath}/`
+const canonicalUrl = `${runtimeConfig.public.siteDomain}${route.fullPath}`
 
 useHead({
   title: pageTitle,
@@ -24,25 +24,6 @@ useHead({
 })
 
 // methods
-const goToNewSection = (id) => {
-  const section = getSection(id)
-  const procedure = section.procedures[0]
-  router.push({
-    query: {
-      section: id,
-      procedure: procedure.slug,
-    },
-  })
-}
-const goToNewProcedure = (id) => {
-  const procedure = getProcedure(id)
-  router.push({
-    query: {
-      section: activeSection.value.slug,
-      procedure: procedure.slug,
-    },
-  })
-}
 const getSection = (id) => {
   return gallery.sections.find((i) => i.slug === id)
 }
@@ -52,10 +33,16 @@ const getProcedure = (id) => {
 
 // computed
 const sectionId = computed(() => {
-  return route.query.section || 'face'
+  return route.params.procedure[0] || 'face'
 })
 const procedureId = computed(() => {
-  return route.query.procedure || 'facelift'
+  const section = sectionId.value
+  if (!route.params.procedure[1] || route.params.procedure[1].length < 1) {
+    if (section === 'face') return 'facelift'
+    else if (section === 'breast') return 'breast-augmentation'
+    else if (section === 'body') return 'abdominoplasty'
+  }
+  return route.params.procedure[1]
 })
 const activeSection = computed(() => {
   return getSection(sectionId.value)
@@ -63,19 +50,6 @@ const activeSection = computed(() => {
 const activeProcedure = computed(() => {
   return getProcedure(procedureId.value)
 })
-
-// console.log('activeSection', activeSection.value)
-// console.log('activeProcedure', activeProcedure.value)
-
-// lifecycle hooks
-// onMounted(() => {
-//   router.push({
-//     query: {
-//       section: sectionId.value,
-//       procedure: procedureId.value,
-//     },
-//   })
-// })
 </script>
 
 <template>
@@ -99,7 +73,7 @@ const activeProcedure = computed(() => {
         :key="section.slug"
         :value="section.slug"
         :variant="sectionId === section.slug ? 'tonal' : 'text'"
-        @click="goToNewSection(section.slug)"
+        :to="`/photo-gallery/${section.slug}/`"
       >
         {{ section.title }}
       </v-btn>
@@ -117,16 +91,16 @@ const activeProcedure = computed(() => {
           :key="procedure.slug"
           :value="procedure.slug"
         >
-          <div
+          <nuxt-link
             :class="
               procedureId === procedure.slug
                 ? 'btn-sub-section active'
                 : 'btn-sub-section'
             "
-            @click="goToNewProcedure(procedure.slug)"
+            :to="`/photo-gallery/${activeSection.slug}/${procedure.slug}/`"
           >
             {{ procedure.title }}
-          </div>
+          </nuxt-link>
         </v-slide-group-item>
       </v-slide-group>
     </v-sheet>
@@ -137,6 +111,10 @@ const activeProcedure = computed(() => {
         :sub-section="procedureId"
       ></gallery-grid>
     </div>
+
+    <!--    <div>{{ route.params.procedure.length }}</div>-->
+    <!--    <div>sectionId = {{ sectionId }}</div>-->
+    <!--    <div>procedureId = {{ procedureId }}</div>-->
   </section>
 </template>
 
@@ -177,6 +155,8 @@ const activeProcedure = computed(() => {
   }
 
   .btn-sub-section {
+    color: #333;
+    text-decoration: none;
     cursor: pointer;
     display: inline-block;
     margin: 10px;

@@ -23,7 +23,6 @@
     "@nuxtjs/google-fonts": "^3.0.2",
     "@vite-pwa/nuxt": "^0.3.6",
     "nuxt-schema-org": "^3.2.3",
-    "nuxt-simple-robots": "^4.0.0-rc.7",
     "nuxt-simple-sitemap": "^4.1.17"
   },
   "config": {

@@ -1,6 +1,5 @@
 <script lang="ts" setup>
-import GalleryThumbSeparateImages from '~/components/gallery-thumb-separate-images.vue'
-
+const route = useRoute()
 const props = defineProps<{
   section: string
   subSection: string
@@ -17,6 +16,13 @@ const galleries = computed(() => {
   // console.log('gallery grid - procedure', procedure)
   return procedure?.galleries
 })
+
+const isCase = computed(() => {
+  return route.params.procedure[2] && route.params.procedure[2].length
+})
+const caseNumber = computed(() => {
+  return route.params.procedure[2]
+})
 </script>
 
 <template>
@@ -25,26 +31,37 @@ const galleries = computed(() => {
     <!--    <p>subSection = {{ props.subSection }}</p>-->
     <!--    <p>galleries = {{ galleries }}</p>-->
 
-    <template v-if="galleries">
-      <div class="gallery-thumb-container">
-        <template v-for="(g, index) in galleries">
-          <template v-if="g.type === 'separate-images'">
-            <!--            <gallery-thumb-separate-images-->
-            <!--              :key="`${g.slug}-${index}`"-->
-            <!--              :gallery="g"-->
-            <!--              :case-number="index + 1"-->
-            <!--            ></gallery-thumb-separate-images>-->
-          </template>
-          <template v-else>
-            <gallery-thumb
-              :key="`${g.slug}-${index}`"
-              :gallery="g"
-              :case-number="index + 1"
-            ></gallery-thumb>
-          </template>
-        </template>
-      </div>
+    <template v-if="isCase">
+      <gallery-main
+        :section="props.section"
+        :procedure="props.subSection"
+        :case-number="caseNumber"
+      ></gallery-main>
     </template>
+    <div v-else>
+      <template v-if="galleries">
+        <div class="gallery-thumb-container">
+          <template v-for="(g, index) in galleries">
+            <template v-if="g.type === 'separate-images'">
+              <!--            <gallery-thumb-separate-images-->
+              <!--              :key="`${g.slug}-${index}`"-->
+              <!--              :gallery="g"-->
+              <!--              :case-number="index + 1"-->
+              <!--            ></gallery-thumb-separate-images>-->
+            </template>
+            <template v-else>
+              <gallery-thumb
+                :section="props.section"
+                :procedure="props.subSection"
+                :key="`${g.slug}-${index}`"
+                :gallery="g"
+                :case-number="index + 1"
+              ></gallery-thumb>
+            </template>
+          </template>
+        </div>
+      </template>
+    </div>
   </div>
 </template>
 
@@ -53,6 +70,7 @@ const galleries = computed(() => {
   width: 100%;
   min-height: 300px;
 }
+
 .gallery-thumb-container {
   width: auto;
   display: grid;

@@ -60,7 +60,7 @@ useHead({
     lang: 'en',
   },
   titleTemplate: '%s - Dr. Caroline Min',
-  link: [{ rel: 'icon', href: '/icon.png' }],
+  link: [{ rel: 'icon', href: '/img/icon.png' }],
   meta: [
     { name: 'mobile-web-app-capable', content: 'yes' },
     {

@@ -9,6 +9,16 @@ const props = withDefaults(defineProps<Props>(), {
   showHeader: true,
 })
 
+const target = ref(null)
+const targetIsVisible = ref(false)
+
+const { stop } = useIntersectionObserver(
+  target,
+  ([{ isIntersecting }], observerElement) => {
+    targetIsVisible.value = isIntersecting
+  },
+)
+
 // reactive data
 const recaptchaRef = ref<HTMLElement | null>(null)
 const dialog = ref(false)
@@ -91,9 +101,16 @@ const sendEmail = async (e) => {
 
 <template>
   <div class="contact-us-form">
-    <div class="contact-us-form__bg visible">
+    <div
+      :class="
+        targetIsVisible ? 'contact-us-form__bg visible' : 'contact-us-form__bg'
+      "
+    >
       <div class="mask"></div>
-      <div ref="target" class="form-wrapper visible">
+      <div
+        ref="target"
+        :class="targetIsVisible ? 'form-wrapper visible' : 'form-wrapper'"
+      >
         <h1 v-if="props.showHeader" class="text-center mb-10 section-title">
           Contact Us
         </h1>
