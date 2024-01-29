@@ -2,7 +2,7 @@
 const runtimeConfig = useRuntimeConfig()
 const route = useRoute()
 const title = 'Blepharoplasty - Eyelid Lift'
-const canonicalUrl = `${runtimeConfig.public.siteDomain}${route.fullPath}/`
+const canonicalUrl = `${runtimeConfig.public.siteDomain}${route.fullPath}`
 
 const faqs = [
   {

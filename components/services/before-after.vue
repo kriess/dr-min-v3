@@ -13,7 +13,7 @@ const props = withDefaults(defineProps<Props>(), {
   procedure: 'facelift',
 })
 
-const path = `/photo-gallery?section=${props.section}&procedure=${props.procedure}`
+const path = `/photo-gallery/${props.section}/${props.procedure}/`
 const target = ref(null)
 const targetIsVisible = ref(false)
 

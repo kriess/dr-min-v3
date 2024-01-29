@@ -2,7 +2,7 @@
 const runtimeConfig = useRuntimeConfig()
 const route = useRoute()
 const title = 'Brow Lift'
-const canonicalUrl = `${runtimeConfig.public.siteDomain}${route.fullPath}/`
+const canonicalUrl = `${runtimeConfig.public.siteDomain}${route.fullPath}`
 
 const faqs = [
   {

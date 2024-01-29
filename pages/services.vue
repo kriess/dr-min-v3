@@ -5,7 +5,7 @@ const runtimeConfig = useRuntimeConfig()
 const pageTitle = 'Services'
 const services = useServices()
 const route = useRoute()
-const canonicalUrl = `${runtimeConfig.public.siteDomain}${route.fullPath}/`
+const canonicalUrl = `${runtimeConfig.public.siteDomain}${route.fullPath}`
 const router = useRouter()
 
 useHead({
@@ -27,14 +27,6 @@ useHead({
 })
 
 // methods
-const goToNewSection = (id) => {
-  const section = getSection(id)
-  router.push({
-    query: {
-      section: id,
-    },
-  })
-}
 const getSection = (id) => {
   return services.sections.find((i) => i.slug === id)
 }
@@ -52,15 +44,6 @@ onMounted(() => {
     window.history.scrollRestoration = 'auto'
   }
 })
-
-// lifecycle hooks
-// onMounted(() => {
-//   router.push({
-//     query: {
-//       section: sectionId.value,
-//     },
-//   })
-// })
 </script>
 
 <template>
