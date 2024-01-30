@@ -3,7 +3,7 @@
 ## Making Updates
 
 1. Update the PHP mailer form.
-2. Just go to cgi-bin/send-email.php, amke changes, then right click and select deployment -> upload.
+2. Just go to cgi-bin/send-email.php, make changes, then right click and select deployment -> upload.
 
 Or updating the general site.
 
@@ -19,27 +19,6 @@ The frontend codebase using nuxt 3, vue 3, and vuetify 3.
 
 - [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction)
 - [Vuetify 3 documentation](https://vuetifyjs.com/en/)
-
-## Generate static site
-
-https://nuxt.com/docs/getting-started/deployment#crawl-based-pre-rendering
-
-```bash 
-yarn generate
-
-npx serve .output/public
-```
-
-- Then go to .output/public.
-- Right click on that folder in WebStorm
-- Select deployment, upload to v2
-
-## Adding new before/after pics
-
-- Get the new pics
-- Size them to 320x384
-- Open an existing pic
-- Copy the new ones on to an old pic and export to web.
 
 ## Setup
 
@@ -58,28 +37,43 @@ pnpm install
 
 ## Development Server
 
-Start the development server on http://localhost:8080. The default port of 3000 is changed in `package.json` with
+Update your host file and add an entry to map local host to dev.drcarolinein.com.
+
+```bazaar
+127.0.0.1 	dev.drcarolinemin.com 
+```
+
+Start the development server. The default port of 3000 is changed in `package.json` with
 this: `"dev": "nuxt dev --port=8080",`.
 
 ```bash
 yarn dev
 ```
 
-## Production
-
-Build the application for production:
-
-```bash
-yarn build
-```
-
-Locally preview production build:
-
-```bash
-yarn preview
-```
+View the site on: http://dev.drcarolinemin.com:8080/
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+
+## Generate static site for Production
+
+https://nuxt.com/docs/getting-started/deployment#crawl-based-pre-rendering
+
+```bash 
+yarn generate
+
+npx serve .output/public
+```
+
+- Then go to .output/public.
+- Right click on that folder in WebStorm
+- Select deployment
+
+## Adding new before/after pics
+
+- Get the new pics
+- Size them to 320x384
+- Open an existing pic
+- Copy the new ones on to an old pic and export to web.
 
 ## Husky and Commitlint
 
@@ -156,12 +150,3 @@ This collection of utilities https://vueuse.org/ comes in very handy.
 ## Pinia
 
 [Pinia](https://pinia.vuejs.org/ssr/nuxt.html) is a lightweight store that allows state to be shared across pages, etc.
-
-## Social MEdia
-
-Example Google Review link
-
-What is the `ludocid` and `lsig`? See this for info https://serpapi.com/search-api.
-
-`https://www.google.com/search?hl=en-US&gl=us&q=J.+Timothy+Katzen,+MD+Beverly+Hills,+9735+Wilshire+Blvd+%23407,+Beverly+Hills,+CA+90212&ludocid=2451073845676584090&lsig=AB86z5Xc-KaMKMwWL8w8BNC6jFdT#ip=1`
-
