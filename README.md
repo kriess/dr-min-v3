@@ -43,6 +43,7 @@ Update your host file and add an entry to map local host to dev.drcarolinemin.co
 127.0.0.1 	dev.drcarolinemin.com 
 ```
 
+Viewing the dev environment on dev.drcarolinemin.com will allow the Google reCAPTCHA and Maps code to work properly.
 Start the development server. The default port of 3000 is changed in `package.json` with
 this: `"dev": "nuxt dev --port=8080",`.
 
@@ -51,8 +52,6 @@ yarn dev
 ```
 
 View the site on: http://dev.drcarolinemin.com:8080/
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
 
 ## Generate static site for Production
 
@@ -65,7 +64,7 @@ npx serve .output/public
 ```
 
 - Then go to .output/public.
-- Right click on that folder in WebStorm
+- Right-click on that folder in WebStorm
 - Select deployment
 
 ## Adding new before/after pics
