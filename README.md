@@ -37,7 +37,7 @@ pnpm install
 
 ## Development Server
 
-Update your host file and add an entry to map local host to dev.drcarolinein.com.
+Update your host file and add an entry to map local host to dev.drcarolinemin.com.
 
 ```bazaar
 127.0.0.1 	dev.drcarolinemin.com 
