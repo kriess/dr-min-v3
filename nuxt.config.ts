@@ -82,9 +82,9 @@ export default defineNuxtConfig({
           type: 'image/png',
         },
         {
-          src: 'img/icons/icon-maskable512.webp',
+          src: 'img/icons/icon-maskable512.png',
           sizes: '512x512',
-          type: 'image/webp',
+          type: 'image/png',
           purpose: 'maskable',
         },
       ],

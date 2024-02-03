@@ -50,8 +50,8 @@ const telephoneLink = computed(() => {
         <v-row no-gutters class="bio">
           <v-col cols="12" sm="12" md="4" class="bio__left-col">
             <div class="bio__name">
-              <h4 class="text-h4">Caroline Min MD</h4>
-              <h4 class="text-h6">Board Certified Plastic Surgeon</h4>
+              <h5 class="text-h4">Caroline Min MD</h5>
+              <h5 class="text-h6">Board Certified Plastic Surgeon</h5>
               <v-img
                 class="asps-logo"
                 width="60%"
