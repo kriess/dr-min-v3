@@ -227,12 +227,12 @@ const telephoneLink = computed(() => {
           <v-col cols="12" sm="12" md="9">
             <div class="copy">
               <p>
-                Plastic Surgery Pasadena - Dr. Caroline Min, MD, specializes in
+                Plastic Surgery Pasadena - Dr. Caroline Min, specializes in
                 plastic surgery procedures serving Pasadena, Los Angeles,
                 Beverly Hills, and the surrounding areas.
               </p>
               &copy;
-              {{ year }} Dr. Caroline Min, MD All Rights Reserved.
+              {{ year }} Dr. Caroline Min All Rights Reserved.
             </div>
           </v-col>
           <v-col cols="12" sm="12" md="3">

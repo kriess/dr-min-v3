@@ -5,6 +5,10 @@ const route = useRoute()
 const canonicalUrl = `${runtimeConfig.public.siteDomain}${route.fullPath}`
 
 useHead({
+  bodyAttrs: {
+    itemtype: 'https://schema.org/ProfilePage',
+    itemscope: 'itemscope',
+  },
   title: pageTitle,
   link: [{ rel: 'canonical', hid: 'canonical', href: canonicalUrl }],
   meta: [
@@ -23,11 +27,15 @@ useHead({
   <section class="biography page">
     <PageTopVisuals
       :title="pageTitle"
-      alt="Dr. Caroline Min, MD - board certified plastic surgeon"
+      alt="Dr. Caroline Min - board certified plastic surgeon"
       image-src="/img/headshots/min-suit.jpg"
     ></PageTopVisuals>
 
-    <div class="content-area">
+    <div
+      class="content-area"
+      itemtype="https://schema.org/mainContentOfPage"
+      itemscope
+    >
       <div class="text-descriptions text-body-1">
         <p>
           Dr. Caroline Min was born and raised in New York City to parents who

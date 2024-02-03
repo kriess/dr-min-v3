@@ -41,13 +41,19 @@ const services = [
       :style="`background-image: url(${item.imageSrc})`"
     >
       <NuxtLink class="nuxt-link" :to="item.link">
-        <div class="item__wrapper">
+        <div
+          class="item__wrapper"
+          itemscope
+          itemtype="https://schema.org/ImageObject"
+        >
           <div class="item__label">
             <h4 class="item__title">{{ item.label }}</h4>
           </div>
           <div class="item__content">
             <h4 class="item__title">{{ item.label }}</h4>
-            {{ item.content }}
+            <span itemscope itemtype="https://schema.org/caption">
+              {{ item.content }}
+            </span>
           </div>
         </div>
       </NuxtLink>
@@ -121,6 +127,7 @@ const services = [
   transition: width 0.5s linear;
 
   .item__content {
+    text-wrap: balance;
     top: 700px;
     position: relative;
     text-align: center;

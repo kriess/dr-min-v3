@@ -101,6 +101,7 @@ const imgSrc = computed(() => {
 }
 
 .item__content {
+  text-wrap: balance;
   top: 700px;
   position: relative;
   text-align: center;
@@ -156,6 +157,7 @@ const imgSrc = computed(() => {
     filter: grayscale(0%);
 
     .item__content {
+      text-wrap: balance;
       position: relative;
       text-align: center;
       padding: 0 2vw;

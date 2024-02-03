@@ -5,7 +5,7 @@ const canonicalUrl = `${runtimeConfig.public.siteDomain}/`
 const pageTitle = 'Home'
 
 useHead({
-  titleTemplate: 'Dr. Caroline Min',
+  titleTemplate: 'Pasadena Plastic Surgeon, Dr. Caroline Min',
   link: [{ rel: 'canonical', hid: 'canonical', href: canonicalUrl }],
   meta: [
     {

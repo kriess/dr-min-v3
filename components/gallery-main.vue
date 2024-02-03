@@ -49,6 +49,7 @@ const currentCase = computed(() => {
 .case-pic {
   display: block;
   margin: 10px auto;
+  width: 100%;
   max-width: 680px;
 }
 </style>

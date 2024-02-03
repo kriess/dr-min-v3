@@ -27,6 +27,8 @@ const props = withDefaults(defineProps<Props>(), {
           :alt="alt"
           :src="imageSrc"
           class="main-img"
+          itemtype="https://schema.org/primaryImageOfPage"
+          itemscope
         />
         <div class="page-title-visual">
           <h1 class="page-title-text">{{ title }}</h1>

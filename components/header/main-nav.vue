@@ -62,6 +62,8 @@ const telephoneLink = computed(() => {
               @click="goHome"
               style="cursor: pointer"
               :class="headerSelectors"
+              itemtype="https://schema.org/PlasticSurgery"
+              itemscope="itemscope"
             >
               <div class="logo-name">Caroline Min, M.D</div>
               <div class="logo-description">
@@ -80,6 +82,8 @@ const telephoneLink = computed(() => {
                         v-bind="props"
                         :to="item.href"
                         append-icon="mdi-menu-down"
+                        itemtype="https://schema.org/SiteNavigationElement"
+                        itemscope="itemscope"
                       >
                         {{ item.title }}
                       </v-btn>
@@ -105,7 +109,13 @@ const telephoneLink = computed(() => {
                   </v-menu>
                 </template>
                 <template v-else>
-                  <v-btn variant="plain" class="nav-btn" :to="item.href">
+                  <v-btn
+                    variant="plain"
+                    class="nav-btn"
+                    :to="item.href"
+                    itemtype="https://schema.org/SiteNavigationElement"
+                    itemscope="itemscope"
+                  >
                     {{ item.title }}
                   </v-btn>
                 </template>

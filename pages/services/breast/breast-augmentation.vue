@@ -38,7 +38,39 @@ useHead({
     {
       name: 'description',
       content:
-        'Breast augmentation is one of the most popular cosmetic surgery procedures in the United States. It can give women with small or unevenly sized breasts a fuller, firmer, better-proportioned look. ',
+        'Breast augmentation is one of the most popular cosmetic surgery procedures in the United States. It can give women with small or unevenly sized breasts a fuller, firmer, better-proportioned look.',
+    },
+    {
+      name: 'keywords',
+      content:
+        'breast augmentation, augmentation mammaplasty, breast augmentation surgery, breast implant, breast implants, breast enlargement, breast enhancement, breast enhancements, boob job, breast, breasts, plastic surgery, cosmetic surgery',
+    },
+    {
+      property: 'og:title',
+      content: 'Breast Augmentation, Pasadena',
+    },
+    {
+      property: 'og:image',
+      content:
+        'https://drcarolinemin.com/img/services/thumbs/breastsurgery.jpg',
+    },
+    {
+      name: 'twitter:title',
+      content: 'Breast Augmentation, Pasadena',
+    },
+    {
+      name: 'twitter:card',
+      content: 'summary_large_image',
+    },
+    {
+      name: 'twitter:image',
+      content:
+        'https://drcarolinemin.com/img/services/thumbs/breastsurgery.jpg',
+    },
+    {
+      name: 'twitter:description',
+      content:
+        'Breast augmentation is one of the most popular cosmetic surgery procedures in the United States. It can give women with small or unevenly sized breasts a fuller, firmer, better-proportioned look.',
     },
   ],
 })

@@ -3,10 +3,11 @@ const drawer = ref(false)
 const appConfig = useAppConfig()
 const runtimeConfig = useRuntimeConfig()
 const siteDomain = runtimeConfig.public.siteDomain
+const mainTitle = 'Pasadena Plastic Surgeon, Dr. Caroline Min'
 
 useSchemaOrg([
   defineWebSite({
-    name: 'Dr. Caroline Min, MD - Board Certified Plastic Surgeon',
+    name: mainTitle,
     alternateName: 'Dr. Caroline Min',
   }),
   defineLocalBusiness({
@@ -16,7 +17,7 @@ useSchemaOrg([
       'MedicalBusiness',
       'PlasticSurgery',
     ],
-    name: 'Dr. Caroline Min, MD - Board Certified Plastic Surgeon',
+    name: mainTitle,
     image: {
       '@type': 'ImageObject',
       url: siteDomain + '/img/headshots/min-white-coat.jpg',
@@ -27,7 +28,7 @@ useSchemaOrg([
     telephone: '+1-' + appConfig.phone,
     additionalType: 'https://en.wikipedia.org/wiki/Plastic_surgery',
     description:
-      'Dr. Caroline Min is a female board certified plastic surgeon specializing in cosmetic surgery; including Facelift, Breast Augmentation, Tummy Tuck, Mommy Makeover, and Breast Lift. Contact Dr. Caroline Min to schedule a consultation.',
+      'Dr. Caroline Min is a female board certified plastic surgeon based in Pasadena specializing in cosmetic surgery; including Facelift, Breast Augmentation, Tummy Tuck, Mommy Makeover, and Breast Lift. Contact Dr. Caroline Min to schedule a consultation.',
     openingHoursSpecification: [
       {
         '@type': 'OpeningHoursSpecification',
@@ -56,16 +57,25 @@ useSchemaOrg([
 ])
 
 useHead({
+  bodyAttrs: {
+    itemtype: 'https://schema.org/WebPage',
+    itemscope: 'itemscope',
+  },
   htmlAttrs: {
     lang: 'en',
   },
-  titleTemplate: '%s - Dr. Caroline Min',
-  link: [{ rel: 'icon', href: '/img/icon.png' }],
+  // <link rel="manifest" href="manifest.json" />
+  titleTemplate: '%s - Pasadena Plastic Surgeon, Dr. Caroline Min',
+  link: [
+    { rel: 'icon', href: '/img/icon.png' },
+    { rel: 'manifest', href: '/manifest.webmanifest' },
+  ],
   meta: [
+    { name: 'theme-color', content: '#D3756B' },
     { name: 'mobile-web-app-capable', content: 'yes' },
     {
       name: 'apple-mobile-web-app-title',
-      content: 'Dr. Caroline Min, MD | Pasadena Plastic Surgeon',
+      content: mainTitle,
     },
     {
       property: 'og:type',
@@ -73,13 +83,12 @@ useHead({
     },
     {
       property: 'og:title',
-      content:
-        'Dr. Caroline Min, MD is a highly qualified female plastic surgeon with over 16 years of experience.',
+      content: mainTitle,
     },
     {
       property: 'og:description',
       content:
-        'Dr. Caroline Min is a female board certified plastic surgeon specializing in cosmetic surgery; including Facelift, Breast Augmentation, Tummy Tuck, Mommy Makeover, and Breast Lift. Contact Dr. Caroline Min to schedule a consultation.',
+        'Dr. Caroline Min is a female board certified plastic surgeon based in Pasadena specializing in cosmetic surgery; including Facelift, Breast Augmentation, Tummy Tuck, Mommy Makeover, and Breast Lift. Contact Dr. Caroline Min to schedule a consultation.',
     },
     {
       property: 'og:image',
@@ -88,6 +97,10 @@ useHead({
     {
       property: 'og:url',
       content: siteDomain,
+    },
+    {
+      property: 'og:site_name',
+      content: mainTitle,
     },
     {
       name: 'twitter:card',
@@ -100,12 +113,13 @@ useHead({
     {
       name: 'description',
       content:
-        'Plastic Surgery Pasadena - Dr. Caroline Min, MD, specializes in plastic surgery procedures serving Pasadena, Los Angeles, Beverly Hills, and the surrounding areas.',
+        mainTitle +
+        ', specializes in plastic surgery procedures serving Pasadena, Los Angeles, Beverly Hills, and the surrounding areas.',
     },
     {
       name: 'keywords',
       content:
-        'Pasadena, Plastic Surgery, Plastic Surgeon, Dr. Caroline Min, Facelift, Tummy Tuck, Abdominoplasty, Eyelid Surgery, Eyelid Lift, Brow Lift, Blepharoplasty, Breast Augmentation, Liposuction, Facial Liposuction, Chin Surgery, Buccal Fat Removal, Inverted Nipple Correction, Labiaplasty, Mommy Makeover, Arm Lift, Thigh Lift, Otoplasty, Rhinoplasty, Nose Surgery,  Breast Lift, Breast Reduction, Male Breast Reduction, BOTOX, Microdermabrasion, Neck Lift, Buttock Augmentation, Body Contouring, Laser Hair Removal, Female Plastic Surgeon',
+        'Pasadena, Plastic Surgery, Plastic Surgeon, Facelift, Tummy Tuck, Abdominoplasty, Eyelid Surgery, Eyelid Lift, Brow Lift, Blepharoplasty, Breast Augmentation, Liposuction, Facial Liposuction, Chin Surgery, Buccal Fat Removal, Inverted Nipple Correction, Labiaplasty, Mommy Makeover, Arm Lift, Thigh Lift, Otoplasty, Rhinoplasty, Nose Surgery,  Breast Lift, Breast Reduction, Male Breast Reduction, BOTOX, Microdermabrasion, Neck Lift, Buttock Augmentation, Body Contouring, Laser Hair Removal, Female Plastic Surgeon',
     },
   ],
 })

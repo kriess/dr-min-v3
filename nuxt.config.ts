@@ -58,33 +58,42 @@ export default defineNuxtConfig({
       name: 'Dr. Caroline Min',
       short_name: 'Dr. Min',
       theme_color: myCustomLightTheme.colors.primary,
-      // icons: [
-      //   {
-      //     src: 'pwa-192x192.png',
-      //     sizes: '192x192',
-      //     type: 'image/png',
-      //   },
-      //   {
-      //     src: 'pwa-512x512.png',
-      //     sizes: '512x512',
-      //     type: 'image/png',
-      //   },
-      //   {
-      //     src: 'pwa-512x512.png',
-      //     sizes: '512x512',
-      //     type: 'image/png',
-      //     purpose: 'any maskable',
-      //   },
-      // ],
+      background_color: myCustomLightTheme.colors.primary, // '#fff',
+      description: 'Pasadena Plastic Surgeon, Dr. Caroline Min',
+      icons: [
+        {
+          src: 'img/icons/icon48.png',
+          sizes: '48x48',
+          type: 'image/png',
+        },
+        {
+          src: 'img/icons/icon72.png',
+          sizes: '72x72',
+          type: 'image/png',
+        },
+        {
+          src: 'img/icons/icon96.png',
+          sizes: '96x96',
+          type: 'image/png',
+        },
+        {
+          src: 'img/icons/icon144.png',
+          sizes: '144x144',
+          type: 'image/png',
+        },
+        {
+          src: 'img/icons/icon-maskable512.webp',
+          sizes: '512x512',
+          type: 'image/webp',
+          purpose: 'maskable',
+        },
+      ],
     },
     workbox: {
-      globPatterns: ['**/*.{js,css,html,png,svg,ico}'],
+      globPatterns: ['**/*.{js,css,html,png,svg,ico,webp}'],
     },
     client: {
       installPrompt: false,
-      // you don't need to include this: only for testing purposes
-      // if enabling periodic sync for update use 1 hour or so (periodicSyncForUpdates: 3600)
-      periodicSyncForUpdates: 20,
     },
     devOptions: {
       enabled: true,
@@ -103,7 +112,7 @@ export default defineNuxtConfig({
 
   site: {
     url: 'https://drcarolinemin.com',
-    name: 'Dr. Caroline Min, MD',
+    name: 'Dr. Caroline Min',
   },
 
   sourcemap: {
@@ -123,11 +132,7 @@ export default defineNuxtConfig({
   vite: {
     css: {
       preprocessorOptions: {
-        // sass: {
-        //   additionalData: '@import "@/assets/styles/main.sass";',
-        // },
         scss: {
-          // additionalData: '@import "./assets/styles/main.scss";',
           additionalData: '@use "@/assets/styles/main.scss" as *;',
         },
       },
@@ -138,12 +143,6 @@ export default defineNuxtConfig({
   vuetify: {
     vuetifyOptions: {
       theme: false,
-      // theme: {
-      //   defaultTheme: 'myCustomLightTheme',
-      //   themes: {
-      //     myCustomLightTheme,
-      //   },
-      // },
     },
 
     moduleOptions: {

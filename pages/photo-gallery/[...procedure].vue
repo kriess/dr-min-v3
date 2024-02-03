@@ -58,7 +58,7 @@ const activeProcedure = computed(() => {
       :title="pageTitle"
       image-src="/img/headshots/ourservices.jpg"
       image-width="60%"
-      alt="Dr. Caroline Min, MD - board certified plastic surgeon - before/after photos"
+      alt="Dr. Caroline Min - board certified plastic surgeon - before/after photos"
     ></PageTopVisuals>
 
     <v-btn-toggle
