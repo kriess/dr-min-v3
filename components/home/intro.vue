@@ -16,7 +16,7 @@ const { stop } = useIntersectionObserver(
       <div
         :class="targetIsVisible ? 'title-container visible' : 'title-container'"
       >
-        <h2 class="title">Elevate your natural beauty</h2>
+        <h2 class="title">Enhance your natural beauty</h2>
       </div>
       <div :class="targetIsVisible ? 'content visible' : 'content'">
         <p>
@@ -24,7 +24,7 @@ const { stop } = useIntersectionObserver(
           soft, natural results with aesthetic procedures tailored to each
           unique individual. Artistry and technical skill are combined with a
           feminine touch to ensure that you are never overdone, pulled too tight
-          or unrecognizable when you look in the mirror. Elevate your natural
+          or unrecognizable when you look in the mirror. Enhance your natural
           beauty with a gentle, refined approach to be the best version of you.
           Turn back the clock and gain self confidence in a warm, caring
           environment where your safety and satisfaction are the top priority.

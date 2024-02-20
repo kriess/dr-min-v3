@@ -48,29 +48,31 @@ if ( strpos( $referrer, $domain ) !== false ) {
     if(!preg_match("/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/", $email)){
       $error = 'Invalid email';
     }
-    if(strlen($message) === 0 || strlen($message) > 500) {
+    if(strlen($message) === 0 || strlen($message) > 5000) {
       $error = 'Invalid message';
     }
 
     // validation
     if (strlen($error) > 0) {
         $data->error = $error;
+
+        header('Content-Type: application/json; charset=utf-8');
+        echo json_encode( $data->error );
     } else {
         // use wordwrap() if lines are longer than 70 characters
-        $msg = wordwrap($msg, $message);
+        $msg = wordwrap($message);
         $headers = "FROM: info@drcarolinemin.com\r\n";
         $bdy = "From: " . $firstName . " " . $lastName . "\n";
         $bdy .= "Email: " . $email . "\n";
         $bdy .= "Phone: " . $phone . "\n\n";
-        $bdy .= "Message: " . $message . "\n\n";
+        $bdy .= "Message: " . $msg . "\n\n";
 
         // send email
         mail($sendToEmail, "Message from drcarolinemin.com", $bdy, $headers);
+
+        header('Content-Type: application/json; charset=utf-8');
+        echo json_encode( $data );
     }
-
-    header('Content-Type: application/json; charset=utf-8');
-    echo json_encode( $data );
-
 } else {
     header('Content-Type: application/json; charset=utf-8');
     echo "{}";

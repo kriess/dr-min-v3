@@ -9,6 +9,8 @@ const props = withDefaults(defineProps<Props>(), {
   showHeader: true,
 })
 
+const appConfig = useAppConfig()
+
 // reactive data
 const recaptchaRef = ref<HTMLElement | null>(null)
 const dialog = ref(false)
@@ -82,8 +84,10 @@ const sendEmail = async (e) => {
     const data = await response.json()
     console.log('res data', data)
 
-    if (response.ok) {
+    if (response.ok && data.postRes.success) {
       dialogMessage.value = 'Your email was submitted successfully.  Thank you!'
+    } else {
+      dialogMessage.value = `There was an issue with the email submission.  Please call the office at ${appConfig.phone} to schedule a consult with Dr. Min.  Our tech staff will look into the email submission issue soon.`
     }
   })
 }

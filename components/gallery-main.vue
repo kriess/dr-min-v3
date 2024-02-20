@@ -21,7 +21,7 @@ const currentCase = computed(() => {
     <!--    <div>{{ props.caseNumber }}</div>-->
     <!--    <div>{{ currentCase }}</div>-->
 
-    <div class="caption-text">{{ currentCase.beforeAfter[0].caption }}</div>
+    <div class="caption-text">{{ currentCase.caption }}</div>
     <div v-for="view in currentCase.beforeAfter" class="mb-10">
       <!--      <h3 class="text-center">{{ view.label }}</h3>-->
       <img

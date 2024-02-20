@@ -1229,6 +1229,16 @@ export default {
                 },
               ],
             },
+            {
+              caption: '',
+              beforeAfter: [
+                {
+                  label: 'Front View',
+                  url: 'breastred-p11-front-lrg.jpg',
+                  slug: 'front',
+                },
+              ],
+            },
           ],
         },
         {
@@ -1296,6 +1306,17 @@ export default {
                 {
                   label: 'Front View',
                   url: 'breastrevision-p04-front-lrg.jpg',
+                  slug: 'front',
+                },
+              ],
+            },
+            {
+              caption:
+                'This is a 52 year old female who desired removal of her implants but did not want them replaced.  She underwent capsulectomy with removal of her implants and breast lift.  She is shown 3 years after her surgery.',
+              beforeAfter: [
+                {
+                  label: 'Front View',
+                  url: 'breastrevision-p05-front-lrg.jpg',
                   slug: 'front',
                 },
               ],
@@ -1659,6 +1680,28 @@ export default {
                 {
                   label: 'Side View',
                   url: 'abdominoplasty-p11-side-lrg.jpg',
+                  slug: 'side',
+                },
+              ],
+            },
+            {
+              caption:
+                'This is a 56 year old woman who underwent tummy tuck and liposuction of the hips.  She is shown 3 months after her surgery.',
+              beforeAfter: [
+                {
+                  label: 'Front View',
+                  url: 'abdominoplasty-p12-front-lrg.jpg',
+                  slug: 'front',
+                },
+                {
+                  label: 'Oblique View',
+                  url: 'abdominoplasty-p12-oblique-lrg.jpg',
+                  slug: 'oblique',
+                },
+
+                {
+                  label: 'Side View',
+                  url: 'abdominoplasty-p12-side-lrg.jpg',
                   slug: 'side',
                 },
               ],
