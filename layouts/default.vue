@@ -39,11 +39,7 @@ useSchemaOrg([
     ],
     address: {
       '@type': 'PostalAddress',
-      streetAddress: '547 E Union St.',
-      addressLocality: 'Pasadena',
-      addressRegion: 'CA',
-      postalCode: '91101',
-      addressCountry: 'United States',
+      ...appConfig.address,
     },
     geo: {
       '@type': 'GeoCoordinates',

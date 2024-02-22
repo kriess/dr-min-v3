@@ -165,8 +165,12 @@ const telephoneLink = computed(() => {
         </div>
 
         <ul class="mt-10 text-center">
-          <li>547 E Union St.</li>
-          <li>Pasadena, California 91101</li>
+          <li>
+            {{ appConfig.address.streetAddress }}
+            {{ appConfig.address.addressLocality }},
+            {{ appConfig.address.addressRegion }}
+            {{ appConfig.address.postalCode }}
+          </li>
         </ul>
 
         <ul class="mt-10 text-center">

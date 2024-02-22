@@ -1,5 +1,12 @@
 export default defineAppConfig({
   releaseId: (Math.random() * 10000000).toFixed(0),
+  address: {
+    streetAddress: '547 Union St',
+    addressLocality: 'Pasadena',
+    addressRegion: 'CA',
+    postalCode: '91101',
+    addressCountry: 'United States',
+  },
   phone: '626-737-9001',
   testimonials: [
     {
@@ -54,13 +61,3 @@ export default defineAppConfig({
     },
   ],
 })
-
-/*
-
-
-
-
-
-
-
-*/

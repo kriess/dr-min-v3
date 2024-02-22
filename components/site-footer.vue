@@ -73,8 +73,12 @@ const telephoneLink = computed(() => {
               <div class="bio__contact">
                 <div>
                   <ul>
-                    <li>547 E Union St.</li>
-                    <li>Pasadena, California 91101</li>
+                    <li>
+                      {{ appConfig.address.streetAddress }}
+                      {{ appConfig.address.addressLocality }},
+                      {{ appConfig.address.addressRegion }}
+                      {{ appConfig.address.postalCode }}
+                    </li>
                     <li>
                       Tel:
                       <a class="phone-link" :href="telephoneLink">

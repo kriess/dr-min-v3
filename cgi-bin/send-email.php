@@ -22,15 +22,18 @@ function httpPost($data)
 
 if ( strpos( $referrer, $domain ) !== false ) {
     $error = '';
-    // $sendToEmail = 'info@v2.drcarolinemin.com';
-    $sendToEmail = 'info@drcarolinemin.com';
-    // $sendToEmail = 'ken_riess@yahoo.com';
+    // $sendToEmail = 'drmin@drcarolinemin.com';
+    // $sendToEmail = 'info@drcarolinemin.com';
+    // $sendToEmail = 'kengriess@gmail.com';
+    $sendToEmail = 'cminmd@yahoo.com';
     // $sendToEmail = 'carolineminmd@gmail.com';
+    $sendBackupEmail = 'ken_riess@yahoo.com';
 
     $data = json_decode(file_get_contents("php://input"));
-    $data->postRes = httpPost($data);
-    $data->sendToEmail  = $sendToEmail;
-    $data->referrer     = $referrer;
+    $data->postRes          = httpPost($data);
+    $data->sendToEmail      = $sendToEmail;
+    $data->sendBackupEmail  = $sendBackupEmail;
+    $data->referrer         = $referrer;
     $data->ua   = $ua;
     $firstName  = htmlspecialchars(stripslashes(trim( $data->firstName )));
     $lastName   = htmlspecialchars(stripslashes(trim( $data->lastName )));
@@ -61,7 +64,7 @@ if ( strpos( $referrer, $domain ) !== false ) {
     } else {
         // use wordwrap() if lines are longer than 70 characters
         $msg = wordwrap($message);
-        $headers = "FROM: info@drcarolinemin.com\r\n";
+        $headers = "FROM: site@drcarolinemin.com\r\n";
         $bdy = "From: " . $firstName . " " . $lastName . "\n";
         $bdy .= "Email: " . $email . "\n";
         $bdy .= "Phone: " . $phone . "\n\n";
@@ -69,6 +72,9 @@ if ( strpos( $referrer, $domain ) !== false ) {
 
         // send email
         mail($sendToEmail, "Message from drcarolinemin.com", $bdy, $headers);
+        mail($sendBackupEmail, "Message from drcarolinemin.com", $bdy, $headers);
+
+        error_log( (string)$bdy );
 
         header('Content-Type: application/json; charset=utf-8');
         echo json_encode( $data );

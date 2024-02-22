@@ -1,4 +1,6 @@
-<script setup></script>
+<script setup>
+const appConfig = useAppConfig()
+</script>
 
 <template>
   <div class="header-banner-contact">
@@ -6,7 +8,7 @@
       <v-col class="hidden-sm-and-down" cols="12" sm="4">
         <v-sheet class="banner-item">
           <ul>
-            <li>547 E Union St.</li>
+            <li>{{ appConfig.streetAddress }}</li>
             <li>Pasadena, California 91101</li>
           </ul>
         </v-sheet>
