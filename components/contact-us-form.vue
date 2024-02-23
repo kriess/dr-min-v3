@@ -91,6 +91,10 @@ const sendEmail = async (e) => {
     }
   })
 }
+
+const telephoneLink = computed(() => {
+  return `tel:1-${appConfig.phone}`
+})
 </script>
 
 <template>
@@ -103,6 +107,15 @@ const sendEmail = async (e) => {
         <h1 v-if="props.showHeader" class="text-center mb-10 section-title">
           Contact Us
         </h1>
+
+        <p class="cta-text">
+          Please call us at
+          <a class="phone-link" :href="telephoneLink">
+            {{ appConfig.phone }}
+          </a>
+          to schedule a consult with Dr. Min in Pasadena, or fill out the form
+          to send an email. Thank you.
+        </p>
 
         <v-form ref="form" v-model="isValid" @submit="sendEmail">
           <div class="form-fields-grid">
@@ -222,6 +235,12 @@ const sendEmail = async (e) => {
     grid-template-columns: 1fr 1fr;
   }
 
+  .cta-text {
+    margin: 0 2vw 6vw 2vw;
+    font-weight: 300;
+    line-height: 22px;
+  }
+
   .message-container {
     grid-column: 1 / span 2;
   }
@@ -275,6 +294,12 @@ const sendEmail = async (e) => {
   :deep(.v-field__outline) {
     --v-field-border-opacity: 0.9;
   }
+}
+
+.phone-link,
+.phone-link:link,
+.phone:visited {
+  color: #fff;
 }
 
 @include upToMd {
