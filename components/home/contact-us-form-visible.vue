@@ -8,7 +8,7 @@ const props = withDefaults(defineProps<Props>(), {
   title: 'Page Title',
   showHeader: true,
 })
-
+const appConfig = useAppConfig()
 const target = ref(null)
 const targetIsVisible = ref(false)
 

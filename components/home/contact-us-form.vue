@@ -8,7 +8,7 @@ const props = withDefaults(defineProps<Props>(), {
   title: 'Page Title',
   showHeader: true,
 })
-
+const appConfig = useAppConfig()
 // reactive data
 const recaptchaRef = ref<HTMLElement | null>(null)
 const dialog = ref(false)
@@ -87,6 +87,10 @@ const sendEmail = async (e) => {
     }
   })
 }
+
+const telephoneLink = computed(() => {
+  return `tel:1-${appConfig.phone}`
+})
 </script>
 
 <template>
@@ -97,6 +101,15 @@ const sendEmail = async (e) => {
         <h1 v-if="props.showHeader" class="text-center mb-10 section-title">
           Contact Us
         </h1>
+
+        <p class="cta-text">
+          Please call us at
+          <a class="phone-link" :href="telephoneLink">
+            {{ appConfig.phone }}
+          </a>
+          to schedule a consultation with Dr. Min in Pasadena, or fill out the
+          form to send an email. Thank you.
+        </p>
 
         <v-form ref="form" v-model="isValid" @submit="sendEmail">
           <div class="form-fields-grid">
@@ -209,6 +222,12 @@ const sendEmail = async (e) => {
     font-size: 1.1rem;
   }
 
+  .cta-text {
+    margin: 0 2vw 30px 2vw;
+    font-weight: 300;
+    line-height: 22px;
+  }
+
   .form-fields-grid {
     display: grid;
     grid-gap: 20px;
@@ -227,6 +246,7 @@ const sendEmail = async (e) => {
     position: relative;
     font-size: min(9vw, 40px);
     color: $text-on-dark;
+    margin-bottom: 20px !important;
   }
 }
 
@@ -266,6 +286,12 @@ const sendEmail = async (e) => {
   :deep(.v-field__outline) {
     --v-field-border-opacity: 0.9;
   }
+}
+
+.phone-link,
+.phone-link:link,
+.phone:visited {
+  color: #fff;
 }
 
 @include upToMd {
