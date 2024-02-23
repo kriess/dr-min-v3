@@ -231,12 +231,14 @@ const telephoneLink = computed(() => {
           <v-col cols="12" sm="12" md="9">
             <div class="copy">
               <p>
-                Plastic Surgery Pasadena - Dr. Caroline Min, specializes in
-                plastic surgery procedures serving Pasadena, Los Angeles,
-                Beverly Hills, and the surrounding areas.
+                Plastic & Cosmetic Surgery in Pasadena, CA. Dr Caroline Min, MD
+                specializes in plastic surgery procedures such breast
+                augmentation, tummy tucks, and facelifts. Her practice is
+                located in Pasadena and serves, Los Angeles, Beverly Hills, and
+                the surrounding areas.
               </p>
               &copy;
-              {{ year }} Dr. Caroline Min All Rights Reserved.
+              {{ year }} Dr. Caroline Min, MD All Rights Reserved.
             </div>
           </v-col>
           <v-col cols="12" sm="12" md="3">

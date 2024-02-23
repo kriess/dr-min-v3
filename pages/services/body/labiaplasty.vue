@@ -2,7 +2,7 @@
 const runtimeConfig = useRuntimeConfig()
 const route = useRoute()
 const canonicalUrl = `${runtimeConfig.public.siteDomain}${route.fullPath}`
-const title = 'Labiaplasty'
+const title = 'Labia Surgery & Vaginal Reconstruction Surgery'
 
 /**
 
@@ -41,7 +41,7 @@ useHead({
     {
       name: 'description',
       content:
-        'Many women suffer from enlarged labia minora (the inner genital lips). Some may not like the appearance of their large, uneven or thick labia, which can sometimes extend beyond the vaginal opening.',
+        'Elevate your natural beauty with the help of Dr Caroline Min MD. Click or call now for labia surgery and vaginal reconstruction surgery across Pasadena, CA!',
     },
   ],
 })
@@ -52,6 +52,7 @@ useHead({
     <div class="services-section">
       <div class="services-title">{Labiaplasty{ title }</div>
       <services-body-main-thumb
+        alt="Labiaplasty by Dr. Caroline Min: Board Certified Plastic Surgeon"
         src="/img/services/thumbs/labiaplasty.jpg"
       ></services-body-main-thumb>
 

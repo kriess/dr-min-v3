@@ -19,7 +19,7 @@ const { stop } = useIntersectionObserver(
         <div class="head-shot">
           <img
             class="headshot"
-            alt="Pasadena Plastic Surgeon, Dr. Caroline Min"
+            alt="Dr. Caroline Min - Board Certified Plastic Surgeon "
             src="/img/headshots/min-white-coat.webp"
           />
         </div>
@@ -28,20 +28,20 @@ const { stop } = useIntersectionObserver(
         <h4 class="sub-title">About</h4>
         <h1 class="main-title">Dr. Caroline Min</h1>
         <p class="mb-5">
-          Dr. Caroline Min is a board certified female plastic surgeon who is
-          dedicated to achieving natural looking results with cosmetic surgery
-          and non surgical procedures. With a wealth of expertise and
-          experience, she is dedicated to helping you attain your aesthetic
-          goals. Each consultation is characterized by a thorough and unhurried
-          approach, ensuring that patients feel heard and understood. She will
-          work closely with you to develop an individualized plan of treatment.
-          Dr. Min will never recommend an unnecessary procedure and throughout
-          her career, she has cultivated a reputation for integrity and honesty.
-          Whether you are having a minor procedure or a more involved surgery,
-          she strives to provide each patient with an exceptional experience.
-          She will ensure that patients are fully educated and prepared before
-          any procedure and will be there for you afterwards during every aspect
-          of recovery.
+          Dr. Caroline Min is a board certified female plastic surgeon, located
+          in Pasadena, who is dedicated to achieving natural looking results
+          with cosmetic surgery and non surgical procedures. With a wealth of
+          expertise and experience, she is dedicated to helping you attain your
+          aesthetic goals. Each consultation is characterized by a thorough and
+          unhurried approach, ensuring that patients feel heard and understood.
+          She will work closely with you to develop an individualized plan of
+          treatment. Dr. Min will never recommend an unnecessary procedure and
+          throughout her career, she has cultivated a reputation for integrity
+          and honesty. Whether you are having a minor procedure or a more
+          involved surgery, she strives to provide each patient with an
+          exceptional experience. She will ensure that patients are fully
+          educated and prepared before any procedure and will be there for you
+          afterwards during every aspect of recovery.
         </p>
         <!--        <p class="">-->
         <!--          Dr. Min enjoys spending time with her two children and her two rescue-->
@@ -66,17 +66,17 @@ const { stop } = useIntersectionObserver(
     <div class="logos">
       <img
         src="/img/school-logos-200-tall/mit-logo.webp"
-        alt="MIT School logo"
+        alt="Massachusetts Institute of Technology School logo"
         height="100"
       />
       <img
         src="/img/school-logos-200-tall/nyu-logo.jpg"
-        alt="NYU School logo"
+        alt="NYU School of Mecicine logo"
         height="100"
       />
       <img
         src="/img/school-logos-200-tall/stanford-logo.webp"
-        alt="Stanford School logo"
+        alt="Stanford University School logo"
         height="100"
       />
       <img

@@ -2,7 +2,7 @@
 const runtimeConfig = useRuntimeConfig()
 const route = useRoute()
 const canonicalUrl = `${runtimeConfig.public.siteDomain}${route.fullPath}`
-const title = 'Breast Implant Removal'
+const title = 'Silicon Breast Implant Removal'
 
 /**
 
@@ -32,7 +32,7 @@ useHead({
     {
       name: 'description',
       content:
-        'Breast implant removal, also known as explantation, is a surgical procedure to remove breast implants. It may be done for various reasons, including personal choice, changes in health, or the desire to address complications or aesthetic concerns related to the implants.',
+        'Dr Caroline Min MD has successfully performed many breast implant removal surgeries across Pasadena, CA. Contact her today and regain your self confidence!',
     },
   ],
 })
@@ -42,6 +42,7 @@ useHead({
     <div class="services-section">
       <div class="services-title">{{ title }}</div>
       <services-body-main-thumb
+        alt="Breast Implant Removal by Dr. Caroline Min: Board Certified Plastic Surgeon"
         src="/img/services/thumbs/breast-implant-removal.webp"
       ></services-body-main-thumb>
       <p>

@@ -3,7 +3,8 @@ const drawer = ref(false)
 const appConfig = useAppConfig()
 const runtimeConfig = useRuntimeConfig()
 const siteDomain = runtimeConfig.public.siteDomain
-const mainTitle = 'Pasadena Plastic Surgeon, Dr. Caroline Min'
+const mainTitle =
+  'Plastic & Cosmetic Surgery in Pasadena, CA | Dr Caroline Min MD'
 
 useSchemaOrg([
   defineWebSite({
@@ -61,7 +62,7 @@ useHead({
     lang: 'en',
   },
   // <link rel="manifest" href="manifest.json" />
-  titleTemplate: '%s - Pasadena Plastic Surgeon, Dr. Caroline Min',
+  titleTemplate: '%s in Pasadena, CA | Dr Caroline Min MD',
   link: [
     { rel: 'icon', href: '/img/icon.png' },
     { rel: 'manifest', href: '/manifest.webmanifest' },
@@ -84,7 +85,7 @@ useHead({
     {
       property: 'og:description',
       content:
-        'Dr. Caroline Min is a female board certified plastic surgeon based in Pasadena specializing in cosmetic surgery; including Facelift, Breast Augmentation, Tummy Tuck, Mommy Makeover, and Breast Lift. Contact Dr. Caroline Min to schedule a consultation.',
+        'Dr. Caroline Min is a female board certified plastic surgeon specializing in plastic and cosmetic surgery throughout the Pasadena, CA area. Click or call now!',
     },
     {
       property: 'og:image',
@@ -109,13 +110,12 @@ useHead({
     {
       name: 'description',
       content:
-        mainTitle +
-        ', specializes in plastic surgery procedures serving Pasadena, Los Angeles, Beverly Hills, and the surrounding areas.',
+        'Dr. Caroline Min is a female board certified plastic surgeon specializing in plastic and cosmetic surgery throughout the Pasadena, CA area. Click or call now!',
     },
     {
       name: 'keywords',
       content:
-        'Pasadena, Plastic Surgery, Plastic Surgeon, Facelift, Tummy Tuck, Abdominoplasty, Eyelid Surgery, Eyelid Lift, Brow Lift, Blepharoplasty, Breast Augmentation, Liposuction, Facial Liposuction, Chin Surgery, Buccal Fat Removal, Inverted Nipple Correction, Labiaplasty, Mommy Makeover, Arm Lift, Thigh Lift, Otoplasty, Rhinoplasty, Nose Surgery,  Breast Lift, Breast Reduction, Male Breast Reduction, BOTOX, Microdermabrasion, Neck Lift, Buttock Augmentation, Body Contouring, Laser Hair Removal, Female Plastic Surgeon',
+        'Plastic Surgery, Cosmetic Surgery, Plastic Surgeon, Facelift, Tummy Tuck, Abdominoplasty, Eyelid Surgery, Eyelid Lift, Brow Lift, Blepharoplasty, Breast Augmentation, Liposuction, Facial Liposuction, Chin Surgery, Buccal Fat Removal, Inverted Nipple Correction, Labiaplasty, Mommy Makeover, Arm Lift, Thigh Lift, Otoplasty, Rhinoplasty, Nose Surgery,  Breast Lift, Breast Reduction, Male Breast Reduction, BOTOX, Microdermabrasion, Neck Lift, Buttock Augmentation, Body Contouring, Laser Hair Removal, Female Plastic Surgeon',
     },
   ],
 })

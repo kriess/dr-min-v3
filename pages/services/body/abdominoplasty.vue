@@ -2,7 +2,7 @@
 const runtimeConfig = useRuntimeConfig()
 const route = useRoute()
 const canonicalUrl = `${runtimeConfig.public.siteDomain}${route.fullPath}`
-const title = 'Tummy Tuck'
+const title = 'Tummy Tuck Procedures & Abdominoplasty Surgery'
 
 /**
 
@@ -57,7 +57,7 @@ useHead({
     {
       name: 'description',
       content:
-        'Tummy tuck surgery, also known as abdominoplasty, removes unwanted excess fat and skin.',
+        'For tummy tuck procedures and Abdominoplasty Surgery in Pasadena, CA, turn to female board-certified plastic surgeon Dr Caroline Min. Click here to learn more!',
     },
   ],
 })
@@ -68,6 +68,7 @@ useHead({
     <div class="services-section">
       <div class="services-title">{{ title }}</div>
       <services-body-main-thumb
+        alt="Tummy Tuck by Dr. Caroline Min: Board Certified Plastic Surgeon"
         src="/img/services/thumbs/abdominoplasty.jpg"
       ></services-body-main-thumb>
       <p>

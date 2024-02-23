@@ -2,7 +2,7 @@
 const runtimeConfig = useRuntimeConfig()
 const route = useRoute()
 const canonicalUrl = `${runtimeConfig.public.siteDomain}${route.fullPath}`
-const title = 'Breast Reduction'
+const title = 'Breast Reduction Surgery & Corrections'
 
 const faqs = [
   {
@@ -48,7 +48,7 @@ useHead({
     {
       name: 'description',
       content:
-        'Large breasts can cause pain, improper posture, rashes, breathing problems, skeletal deformities, and low self-esteem. ',
+        'Dr Caroline Min MD has many happy patients across Pasadena, CA who have successfully undergone breast reduction surgery. Contact her today to get started!',
     },
   ],
 })
@@ -59,6 +59,7 @@ useHead({
     <div class="services-section">
       <div class="services-title">Breast Reduction</div>
       <services-body-main-thumb
+        alt="Breast Reduction by Dr. Caroline Min: Board Certified Plastic Surgeon"
         src="/img/services/thumbs/breastreduction.jpg"
       ></services-body-main-thumb>
       <p>

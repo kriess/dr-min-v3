@@ -20,14 +20,15 @@ const { stop } = useIntersectionObserver(
       </div>
       <div :class="targetIsVisible ? 'content visible' : 'content'">
         <p>
-          Welcome to Dr. Min’s practice. Our philosophy is to focus on providing
-          soft, natural results with aesthetic procedures tailored to each
-          unique individual. Artistry and technical skill are combined with a
-          feminine touch to ensure that you are never overdone, pulled too tight
-          or unrecognizable when you look in the mirror. Enhance your natural
-          beauty with a gentle, refined approach to be the best version of you.
-          Turn back the clock and gain self confidence in a warm, caring
-          environment where your safety and satisfaction are the top priority.
+          Welcome to Dr. Min’s Plastic & Cosmetic Surgery practice in Pasadena.
+          Our philosophy is to focus on providing soft, natural results with
+          aesthetic procedures tailored to each unique individual. Artistry and
+          technical skill are combined with a feminine touch to ensure that you
+          are never overdone, pulled too tight or unrecognizable when you look
+          in the mirror. Enhance your natural beauty with a gentle, refined
+          approach to be the best version of you. Turn back the clock and gain
+          self confidence in a warm, caring environment where your safety and
+          satisfaction are the top priority.
         </p>
       </div>
     </div>

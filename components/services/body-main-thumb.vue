@@ -2,6 +2,7 @@
 const appConfig = useAppConfig()
 
 interface Props {
+  alt?: string
   src?: string
   caption?: string
 }
@@ -32,7 +33,7 @@ const telephoneLink = computed(() => {
       :class="targetIsVisible ? 'thumb-container visible' : 'thumb-container'"
       ref="target"
     >
-      <img alt="" class="thumb" :src="props.src" />
+      <img :alt="props.alt" class="thumb" :src="props.src" />
     </div>
     <p class="caption">
       {{ props.caption }}

@@ -9,25 +9,25 @@ const services = [
     link: '/services/face/',
     label: 'Face',
     imageSrc: `/img/home/services/face.webp?${appConfig.releaseId}`,
-    content: `Tired of looking tired? Discover what facial rejuvenation can do to refresh your look. `,
+    content: `Tired of looking tired? Discover what facial rejuvenation procedures like a Facelift or Brow Lift can do to refresh your look.`,
   },
   {
     link: '/services/breast/',
     label: 'Breast',
     imageSrc: `/img/home/services/breast.webp?${appConfig.releaseId}`,
-    content: `Whether you are looking for an augmentation, reduction, lift or a combination, learn about breast enhancement options.`,
+    content: `Whether you are looking for an breast augmentation, breast reduction, breast lift or a combination, learn about breast enhancement options.`,
   },
   {
     link: '/services/body/',
     label: 'Body',
     imageSrc: `/img/home/services/body.webp?${appConfig.releaseId}`,
-    content: `Discover what can be done to remove unwanted fat and excess skin or boost your curves.`,
+    content: `Discover how Tummy Tucks and Mommy Makeovers can remove unwanted fat and excess skin, or boost your curves.`,
   },
   {
     link: '/services/non-surgical/',
     label: 'Non-Surgical',
     imageSrc: `/img/home/services/skin.webp?${appConfig.releaseId}`,
-    content: `Not yet ready for surgery but need a refresh?  Learn about non surgical options.`,
+    content: `Not yet ready for surgery but need a refresh?  Learn about non surgical options such as Lip Fillers and Botox injections.`,
   },
 ]
 </script>
@@ -51,33 +51,13 @@ const services = [
           </div>
           <div class="item__content">
             <h4 class="item__title">{{ item.label }}</h4>
-            <span itemscope itemtype="https://schema.org/caption">
+            <h5 itemscope itemtype="https://schema.org/caption">
               {{ item.content }}
-            </span>
+            </h5>
           </div>
         </div>
       </NuxtLink>
     </div>
-    <!--    <div class="hidden-md-and-up hidden-sm-and-down">-->
-    <!--      <div-->
-    <!--        v-for="(item, index) in services"-->
-    <!--        :key="index"-->
-    <!--        class=""-->
-    <!--        :style="`background-image: url(${item.imageSrc})`"-->
-    <!--      >-->
-    <!--        <NuxtLink class="nuxt-link" :to="item.link">-->
-    <!--          <div class="item__wrapper">-->
-    <!--            <div class="item__label">-->
-    <!--              <h4 class="item__title">{{ item.label }}</h4>-->
-    <!--            </div>-->
-    <!--            <div class="item__content">-->
-    <!--              <h4 class="item__title">{{ item.label }}</h4>-->
-    <!--              {{ item.content }}-->
-    <!--            </div>-->
-    <!--          </div>-->
-    <!--        </NuxtLink>-->
-    <!--      </div>-->
-    <!--    </div>-->
   </div>
 </template>
 
@@ -88,6 +68,10 @@ const services = [
   overflow: hidden;
   display: flex;
   width: 100%;
+}
+
+h5 {
+  font-weight: 400;
 }
 
 .item__wrapper {

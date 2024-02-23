@@ -45,15 +45,15 @@ const imageBg = computed(() => {
     <div class="mask">
       <div class="content" ref="target">
         <div :class="targetIsVisible ? 'ctas visible' : 'ctas'">
-          <h1>Soft Natural Beauty</h1>
-          <!--          <h4>Board Certified Plastic Surgeon</h4>-->
+          <h4>Soft Natural Beauty</h4>
+          <h1>Pasadena Plastic Surgery</h1>
           <v-btn
             variant="flat"
             :class="targetIsVisible ? 'ctas__btn visible' : 'ctas__btn'"
             href="/contact-info/"
             title="Email to schedule a consultation"
           >
-            Ask Dr. Min a Question
+            Schedule a Consultation
           </v-btn>
         </div>
       </div>
@@ -68,13 +68,13 @@ const imageBg = computed(() => {
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  aspect-ratio: 2/1;
+  aspect-ratio: 2/1.3;
   font-size: 200%;
   position: relative;
 }
 
 .bg-img {
-  aspect-ratio: 2/1;
+  aspect-ratio: 2/1.3;
   width: 100%;
   object-fit: cover;
 }
@@ -114,14 +114,27 @@ const imageBg = computed(() => {
     position: relative;
     transition: all 1.5s ease;
     opacity: 0;
-    font-size: clamp(35px, 6vw, 60px);
-    line-height: clamp(40px, 8vw, 70px);
+    font-size: clamp(12px, 2.5vw, 18px);
+    line-height: clamp(12px, 2.5vw, 18px);
+    font-weight: 300;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 1px $font-primary-shadow;
+  }
+
+  h4 {
+    position: relative;
+    transition: all 1.5s ease;
+    opacity: 0;
+    font-size: clamp(33px, 5.5vw, 60px);
+    line-height: clamp(33px, 5.5vw, 60px);
     font-weight: 300;
     margin-bottom: 10px;
     text-shadow: 1px 1px 1px $font-primary-shadow;
   }
 
   .ctas__btn {
+    font-size: clamp(12px, 2.5vw, 18px);
+    line-height: clamp(12px, 2.5vw, 18px);
     position: relative;
     transition: all 1.5s 0.25s;
     opacity: 0;
@@ -143,6 +156,10 @@ const imageBg = computed(() => {
     opacity: 1;
   }
 
+  h4 {
+    opacity: 1;
+  }
+
   .ctas__btn {
     opacity: 1;
   }
@@ -150,13 +167,17 @@ const imageBg = computed(() => {
 
 @include upToSm {
   .bg-img {
-    aspect-ratio: 3/2.5;
+    aspect-ratio: 3/2.9;
   }
   .home-splash {
-    aspect-ratio: 3/2.5;
+    aspect-ratio: 3/2.9;
   }
   .ctas {
     h1 {
+      opacity: 1;
+    }
+
+    h4 {
       opacity: 1;
     }
 
