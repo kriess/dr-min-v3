@@ -5,9 +5,9 @@ const target = ref(null)
 const targetIsVisible = ref(false)
 const appConfig = useAppConfig()
 
-const { stop } = useIntersectionObserver(
+const {stop} = useIntersectionObserver(
   target,
-  ([{ isIntersecting }], observerElement) => {
+  ([{isIntersecting}], observerElement) => {
     targetIsVisible.value = isIntersecting
   },
 )
@@ -19,25 +19,29 @@ const getBg = () => {
 
   if (siteSection === 'body') {
     return {
-      backgroundPosition: 'bottom center',
+      backgroundAttachment: 'fixed',
+      backgroundPosition: 'top',
       backgroundImage: `url(/img/header/section/body.webp?${appConfig.releaseId})`,
     }
   }
   if (siteSection === 'face') {
     return {
-      backgroundPosition: 'bottom center',
+      backgroundAttachment: 'fixed',
+      backgroundPosition: 'top',
       backgroundImage: `url(/img/header/section/face.webp?${appConfig.releaseId})`,
     }
   }
   if (siteSection === 'breast') {
     return {
-      backgroundPosition: 'bottom center',
+      backgroundAttachment: 'fixed',
+      backgroundPosition: 'top',
       backgroundImage: `url(/img/header/section/breast.webp?${appConfig.releaseId})`,
     }
   }
   if (siteSection === 'non-surgical') {
     return {
-      backgroundPosition: 'bottom center',
+      backgroundAttachment: 'fixed',
+      backgroundPosition: 'top',
       backgroundImage: `url(/img/header/section/skin.webp?${appConfig.releaseId})`,
     }
   }
