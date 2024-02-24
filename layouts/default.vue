@@ -1,10 +1,14 @@
 <script lang="ts" setup>
+const {gtag} = useGtag()
 const drawer = ref(false)
 const appConfig = useAppConfig()
 const runtimeConfig = useRuntimeConfig()
 const siteDomain = runtimeConfig.public.siteDomain
 const mainTitle =
   'Plastic & Cosmetic Surgery in Pasadena, CA | Dr Caroline Min MD'
+
+gtag('js', new Date());
+gtag('config', 'G-H2RG9FR9ZE');
 
 useSchemaOrg([
   defineWebSite({
@@ -64,12 +68,12 @@ useHead({
   // <link rel="manifest" href="manifest.json" />
   titleTemplate: '%s in Pasadena, CA | Dr Caroline Min MD',
   link: [
-    { rel: 'icon', href: '/img/icon.png' },
-    { rel: 'manifest', href: '/manifest.webmanifest' },
+    {rel: 'icon', href: '/img/icon.png'},
+    {rel: 'manifest', href: '/manifest.webmanifest'},
   ],
   meta: [
-    { name: 'theme-color', content: '#D3756B' },
-    { name: 'mobile-web-app-capable', content: 'yes' },
+    {name: 'theme-color', content: '#D3756B'},
+    {name: 'mobile-web-app-capable', content: 'yes'},
     {
       name: 'apple-mobile-web-app-title',
       content: mainTitle,
@@ -103,10 +107,10 @@ useHead({
       name: 'twitter:card',
       content: 'summary_large_image',
     },
-    { property: 'og:image:width', content: '150' },
-    { property: 'og:image:height', content: '200' },
-    { property: 'og:image:type', content: 'image/jpg' },
-    { property: 'og:locale', content: 'en_US' },
+    {property: 'og:image:width', content: '150'},
+    {property: 'og:image:height', content: '200'},
+    {property: 'og:image:type', content: 'image/jpg'},
+    {property: 'og:locale', content: 'en_US'},
     {
       name: 'description',
       content:
@@ -125,7 +129,7 @@ useHead({
   <v-app class="dr-min-app">
     <header-main-nav></header-main-nav>
     <v-main class="nuxt-slot">
-      <slot />
+      <slot/>
     </v-main>
     <site-footer></site-footer>
   </v-app>
