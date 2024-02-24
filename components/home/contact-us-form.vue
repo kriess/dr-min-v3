@@ -53,7 +53,7 @@ const sendEmail = async (e) => {
     console.log('dfsdfsdfsd')
     const token = await grecaptcha.enterprise.execute(
       '6LepurAoAAAAAAO-f4JhmuJ5P7JA3uZ2N347jn0Q',
-      { action: 'SUBMIT_EMAIL' },
+      {action: 'SUBMIT_EMAIL'},
     )
     // IMPORTANT: The 'token' that results from execute is an encrypted response sent by
     // reCAPTCHA Enterprise to the end user's browser.
@@ -75,7 +75,7 @@ const sendEmail = async (e) => {
 
     const requestOptions = {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: {'Content-Type': 'application/json'},
       body: JSON.stringify(formValues),
     }
     const response = await fetch('/cgi-bin/send-email.php', requestOptions)
@@ -108,7 +108,7 @@ const telephoneLink = computed(() => {
             {{ appConfig.phone }}
           </a>
           to schedule a consultation with Dr. Min in Pasadena, or fill out the
-          form to send an email. Thank you.
+          form to send us an email. Thank you.
         </p>
 
         <v-form ref="form" v-model="isValid" @submit="sendEmail">

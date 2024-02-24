@@ -5,8 +5,8 @@ const canonicalUrl = `${runtimeConfig.public.siteDomain}/`
 const pageTitle = 'Home'
 
 useHead({
-  titleTemplate: 'Pasadena Plastic Surgeon, Dr. Caroline Min',
-  link: [{ rel: 'canonical', hid: 'canonical', href: canonicalUrl }],
+  titleTemplate: 'Plastic & Cosmetic Surgery in Pasadena, CA | Dr Caroline Min MD',
+  link: [{rel: 'canonical', hid: 'canonical', href: canonicalUrl}],
   meta: [
     {
       name: 'description',
