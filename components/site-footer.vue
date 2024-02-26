@@ -74,14 +74,33 @@ const telephoneLink = computed(() => {
                 <div>
                   <ul>
                     <li>
-                      {{ appConfig.address.streetAddress }}
-                      {{ appConfig.address.addressLocality }},
-                      {{ appConfig.address.addressRegion }}
-                      {{ appConfig.address.postalCode }}
+                      <span data-yext-field="address.line1" data-yext-id="5506">
+                        {{ appConfig.address.streetAddress }}
+                      </span>
+                      <span data-yext-field="address.city" data-yext-id="5506">
+                        {{ appConfig.address.addressLocality }},
+                      </span>
+                      <span
+                        data-yext-field="address.region"
+                        data-yext-id="5506"
+                      >
+                        {{ appConfig.address.addressRegion }}
+                      </span>
+                      <span
+                        data-yext-field="address.postalCode"
+                        data-yext-id="5506"
+                      >
+                        {{ appConfig.address.postalCode }}
+                      </span>
                     </li>
                     <li>
                       Tel:
-                      <a class="phone-link" :href="telephoneLink">
+                      <a
+                        class="phone-link"
+                        :href="telephoneLink"
+                        data-yext-field="phone"
+                        data-yext-id="5506"
+                      >
                         {{ appConfig.phone }}
                       </a>
                     </li>
