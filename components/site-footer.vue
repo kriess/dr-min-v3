@@ -1,15 +1,15 @@
 <script setup>
 // import recaptchaScriptIsReady from '~/scripts/google/captcha';
-const appConfig = useAppConfig()
-import { loadScript } from 'vue-plugin-load-script'
+const appConfig = useAppConfig();
+import { loadScript } from "vue-plugin-load-script";
 
-const status = ref('loading')
+const status = ref("loading");
 
 // methods
 const loadGoogleRecaptcha = () => {
-  console.log('loadGoogleRecaptcha')
+  console.log("loadGoogleRecaptcha");
   const link =
-    'https://www.google.com/recaptcha/enterprise.js?render=6LepurAoAAAAAAO-f4JhmuJ5P7JA3uZ2N347jn0Q'
+    "https://www.google.com/recaptcha/enterprise.js?render=6LepurAoAAAAAAO-f4JhmuJ5P7JA3uZ2N347jn0Q";
   // const link = 'https://www.google.com/recaptcha/api.js?render=explicit&onload=onRecaptchaLoadCallback'
   loadScript(link)
     .then(() => {
@@ -23,24 +23,24 @@ const loadGoogleRecaptcha = () => {
       // }
     })
     .catch(() => {
-      console.log('failed to load recaptcha script')
-    })
-}
+      console.log("failed to load recaptcha script");
+    });
+};
 
 // lifecycle hooks
 onMounted(() => {
-  console.log('footer mounted')
-  setTimeout(loadGoogleRecaptcha, 5000)
-})
+  console.log("footer mounted");
+  setTimeout(loadGoogleRecaptcha, 5000);
+});
 
 const year = computed(() => {
-  const today = new Date()
-  return today.getFullYear()
-})
+  const today = new Date();
+  return today.getFullYear();
+});
 
 const telephoneLink = computed(() => {
-  return `tel:1-${appConfig.phone}`
-})
+  return `tel:1-${appConfig.phone}`;
+});
 </script>
 
 <template>
@@ -74,13 +74,14 @@ const telephoneLink = computed(() => {
                 <div>
                   <ul>
                     <li>
-                      <span data-yext-field="address.line1" data-yext-id="5506">
+                      <span class="address-street" data-yext-field="address.line1" data-yext-id="5506">
                         {{ appConfig.address.streetAddress }}
                       </span>
-                      <span data-yext-field="address.city" data-yext-id="5506">
+                      <span class="address-locality" data-yext-field="address.city" data-yext-id="5506">
                         {{ appConfig.address.addressLocality }},
                       </span>
                       <span
+                        class="address-region"
                         data-yext-field="address.region"
                         data-yext-id="5506"
                       >
@@ -358,5 +359,10 @@ const telephoneLink = computed(() => {
 .phone-link:link,
 .phone:visited {
   color: #333;
+}
+
+.address-street, .address-region {
+  display: inline-block;
+  margin-right: 7px;
 }
 </style>

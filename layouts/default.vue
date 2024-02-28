@@ -125,20 +125,31 @@ useHead({
   script: [
     {
       children: `if (!yext) {
-    window.yCookieOptInQ = window.yCookieOptInQ || [];
-    window.yPixelOptInQ = window.yPixelOptInQ || [];
-    var yext = {
-      'cookie': { 'optIn': function() { window.yCookieOptInQ.push(arguments); } },
-      'pixel': { 'optIn': function() { window.yPixelOptInQ.push(arguments); } }
-    };
-  }
-  yext.pixel.optIn(true);
-  yext.cookie.optIn(true);`,
+        window.yCookieOptInQ = window.yCookieOptInQ || [];
+        window.yPixelOptInQ = window.yPixelOptInQ || [];
+        var yext = {
+          'cookie': { 'optIn': function() { window.yCookieOptInQ.push(arguments); } },
+          'pixel': { 'optIn': function() { window.yPixelOptInQ.push(arguments); } }
+        };
+        }
+        yext.pixel.optIn(true);
+        yext.cookie.optIn(true);`,
     },
     {
       src: 'https://knowledgetags.yextapis.com/embed?key=TRClk0LrMx9dnhL2aiNB3i6sXEF9na-xu61g_MmmJsy0-qtVNnRTQ6WAqwvxK9Nz&account_id=me&entity_id=5506&locale=en&v=20210504',
       async: true,
       type: 'text/javascript',
+    },
+    {
+      src: 'https://www.googletagmanager.com/gtag/js?id=G-H2RG9FR9ZE',
+      async: true,
+      type: 'text/javascript',
+    },
+    {
+      children: `window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-H2RG9FR9ZE');`,
     },
   ],
 })
