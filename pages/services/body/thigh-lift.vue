@@ -11,6 +11,10 @@ useHead({
   link: [{ rel: 'canonical', hid: 'canonical', href: canonicalUrl }],
   meta: [
     {
+      property: 'og:url',
+      content: canonicalUrl,
+    },
+    {
       name: 'description',
       content:
         'A thigh lift is performed to remove excess skin and fat from the upper legs. Candidates typically suffer from loose, inelastic skin after extreme weight loss due to diet, exercise or bariatric surgery. ',

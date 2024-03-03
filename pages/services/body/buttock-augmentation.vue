@@ -30,6 +30,10 @@ useHead({
   link: [{ rel: 'canonical', hid: 'canonical', href: canonicalUrl }],
   meta: [
     {
+      property: 'og:url',
+      content: canonicalUrl,
+    },
+    {
       name: 'description',
       content:
         'The Brazilian Butt Lift, also known as BBL, is an increasingly popular\n' +

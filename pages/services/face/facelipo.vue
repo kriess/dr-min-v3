@@ -12,6 +12,10 @@ useHead({
   link: [{ rel: 'canonical', hid: 'canonical', href: canonicalUrl }],
   meta: [
     {
+      property: 'og:url',
+      content: canonicalUrl,
+    },
+    {
       name: 'description',
       content:
         'Facial liposuction sculpts the face by removing areas of fat from the lower cheek, jawline, chin or neck. For older patients looking to tone the cheeks or jowls liposuction can be an effective and less invasive alternative to a face or neck lift.',

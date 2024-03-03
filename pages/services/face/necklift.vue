@@ -12,6 +12,10 @@ useHead({
   link: [{ rel: 'canonical', hid: 'canonical', href: canonicalUrl }],
   meta: [
     {
+      property: 'og:url',
+      content: canonicalUrl,
+    },
+    {
       name: 'description',
       content:
         'A neck lift is performed to remove excess fat beneath the chin and tighten loose skin in the neck. The procedure can produce dramatic results in the patient whose chin and/or neck has sagged with age or after weight loss.',

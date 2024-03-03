@@ -111,6 +111,10 @@ useHead({
   link: [{ rel: 'canonical', hid: 'canonical', href: canonicalUrl }],
   meta: [
     {
+      property: 'og:url',
+      content: canonicalUrl,
+    },
+    {
       name: 'description',
       content:
         'In time, gravity, sun exposure, and the stresses of daily life take their toll on our faces: wrinkles appear, skin sags, folds and fat deposits form on the neck and jawline. ',

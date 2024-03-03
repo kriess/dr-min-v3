@@ -11,6 +11,10 @@ useHead({
   link: [{ rel: 'canonical', hid: 'canonical', href: canonicalUrl }],
   meta: [
     {
+      property: 'og:url',
+      content: canonicalUrl,
+    },
+    {
       name: 'description',
       content:
         "BOTOX® Cosmetic is commonly used to reduce or eliminate the appearance of facial wrinkles. It is injected under the skin into areas surrounding the eyes, forehead and mouth to smooth crow's feet, frown and worry lines, and lines on the neck.",

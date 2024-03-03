@@ -42,6 +42,10 @@ useHead({
   link: [{ rel: 'canonical', hid: 'canonical', href: canonicalUrl }],
   meta: [
     {
+      property: 'og:url',
+      content: canonicalUrl,
+    },
+    {
       name: 'description',
       content:
         'Elevate your natural beauty with the help of Dr Caroline Min MD. Click or call now for labia surgery and vaginal reconstruction surgery across Pasadena, CA!',

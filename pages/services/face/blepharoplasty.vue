@@ -79,6 +79,10 @@ useHead({
   link: [{ rel: 'canonical', hid: 'canonical', href: canonicalUrl }],
   meta: [
     {
+      property: 'og:url',
+      content: canonicalUrl,
+    },
+    {
       name: 'description',
       content:
         'Eyelid surgery, also known as blepharoplasty, can rejuvenate puffy, sagging, tired-looking eyes by removing excess fat, skin and muscle from the eyelids. ',

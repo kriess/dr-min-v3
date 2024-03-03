@@ -43,6 +43,10 @@ useHead({
   link: [{ rel: 'canonical', hid: 'canonical', href: canonicalUrl }],
   meta: [
     {
+      property: 'og:url',
+      content: canonicalUrl,
+    },
+    {
       name: 'description',
       content:
         'Enlarged male breasts (gynecomastia) affect nearly 40-60% of men, often with no known cause. This condition can be highly embarrassing as well as physically uncomfortable.',

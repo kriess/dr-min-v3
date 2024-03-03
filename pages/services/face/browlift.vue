@@ -58,6 +58,10 @@ useHead({
   link: [{ rel: 'canonical', hid: 'canonical', href: canonicalUrl }],
   meta: [
     {
+      property: 'og:url',
+      content: canonicalUrl,
+    },
+    {
       name: 'description',
       content:
         'A brow lift can revitalize the upper face by lifting sagging eyebrows that may make you look angry, tired and sad. The eye area tends to look heavy if the brows are droopy and in a low position. ',

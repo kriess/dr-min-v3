@@ -49,6 +49,10 @@ useHead({
   link: [{ rel: 'canonical', hid: 'canonical', href: canonicalUrl }],
   meta: [
     {
+      property: 'og:url',
+      content: canonicalUrl,
+    },
+    {
       name: 'description',
       content:
         'Dr Caroline Min MD has many happy patients across Pasadena, CA who have successfully undergone breast reduction surgery. Contact her today to get started!',

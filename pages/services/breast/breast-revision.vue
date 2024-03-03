@@ -31,6 +31,10 @@ useHead({
   link: [{ rel: 'canonical', hid: 'canonical', href: canonicalUrl }],
   meta: [
     {
+      property: 'og:url',
+      content: canonicalUrl,
+    },
+    {
       name: 'description',
       content:
         'Revision breast augmentation is performed for patients who are not satisfied with their results after previously undergoing breast augmentation. ',

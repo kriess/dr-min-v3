@@ -47,6 +47,10 @@ useHead({
   link: [{ rel: 'canonical', hid: 'canonical', href: canonicalUrl }],
   meta: [
     {
+      property: 'og:url',
+      content: canonicalUrl,
+    },
+    {
       name: 'description',
       content:
         "A breast lift, or mastopexy, is performed to return youthful shape and lift to breasts that have sagged as a result of weight loss, pregnancy, loss of the skin's natural elasticity or simply the effects of aging and gravity.",

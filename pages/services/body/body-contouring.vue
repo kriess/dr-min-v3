@@ -57,6 +57,10 @@ useHead({
   link: [{ rel: 'canonical', hid: 'canonical', href: canonicalUrl }],
   meta: [
     {
+      property: 'og:url',
+      content: canonicalUrl,
+    },
+    {
       name: 'description',
       content:
         'Candidates for body contouring typically suffer from loose (inelastic) skin on many or most areas of the body usually as a result of significant weight loss due to diet, exercise or bariatric surgery. ',

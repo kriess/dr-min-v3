@@ -50,6 +50,10 @@ useHead({
   link: [{ rel: 'canonical', hid: 'canonical', href: canonicalUrl }],
   meta: [
     {
+      property: 'og:url',
+      content: canonicalUrl,
+    },
+    {
       name: 'description',
       content:
         "One of our practice's increasingly popular programs addresses the changes to the female breasts and midsection after childbirth.",

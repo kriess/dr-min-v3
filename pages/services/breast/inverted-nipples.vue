@@ -31,6 +31,10 @@ useHead({
   link: [{ rel: 'canonical', hid: 'canonical', href: canonicalUrl }],
   meta: [
     {
+      property: 'og:url',
+      content: canonicalUrl,
+    },
+    {
       name: 'description',
       content:
         'Nipple and areola reconstruction can provide a boost in self-confidence to patients who have inverted or stretched nipples. The inverted nipples can be surgically altered to create a more prominent and projected appearance.',

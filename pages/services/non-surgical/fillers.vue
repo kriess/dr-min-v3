@@ -11,6 +11,10 @@ useHead({
   link: [{ rel: 'canonical', hid: 'canonical', href: canonicalUrl }],
   meta: [
     {
+      property: 'og:url',
+      content: canonicalUrl,
+    },
+    {
       name: 'description',
       content:
         'Facial fillers are designed to smooth wrinkles, sculpt lips and shape facial contours. It is a clear, synthetic gel made with hyaluronic acid, a natural substance that is found throughout your body. ',

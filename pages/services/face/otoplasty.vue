@@ -35,6 +35,10 @@ useHead({
   link: [{ rel: 'canonical', hid: 'canonical', href: canonicalUrl }],
   meta: [
     {
+      property: 'og:url',
+      content: canonicalUrl,
+    },
+    {
       name: 'description',
       content:
         'Otoplasty is ear surgery that is done to improve the appearance of large prominent ears that stick out. Patients with prominent ears are often teased during childhood for having “dumbo ears” and are very self-conscious about it. ',

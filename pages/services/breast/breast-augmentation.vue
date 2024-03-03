@@ -53,6 +53,10 @@ useHead({
       content: 'Breast Augmentation, Pasadena',
     },
     {
+      property: 'og:url',
+      content: canonicalUrl,
+    },
+    {
       property: 'og:image',
       content:
         'https://drcarolinemin.com/img/services/thumbs/breastsurgery.jpg',

@@ -33,6 +33,10 @@ useHead({
   link: [{ rel: 'canonical', hid: 'canonical', href: canonicalUrl }],
   meta: [
     {
+      property: 'og:url',
+      content: canonicalUrl,
+    },
+    {
       name: 'description',
       content:
         'Dr Caroline Min MD has successfully performed many breast implant removal surgeries across Pasadena, CA. Contact her today and regain your self confidence!',

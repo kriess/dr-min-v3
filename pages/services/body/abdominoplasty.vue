@@ -58,6 +58,10 @@ useHead({
   link: [{ rel: 'canonical', hid: 'canonical', href: canonicalUrl }],
   meta: [
     {
+      property: 'og:url',
+      content: canonicalUrl,
+    },
+    {
       name: 'description',
       content:
         'For tummy tuck procedures and Abdominoplasty Surgery in Pasadena, CA, turn to female board-certified plastic surgeon Dr Caroline Min. Click here to learn more!',

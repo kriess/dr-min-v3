@@ -53,6 +53,10 @@ useHead({
   link: [{ rel: 'canonical', hid: 'canonical', href: canonicalUrl }],
   meta: [
     {
+      property: 'og:url',
+      content: canonicalUrl,
+    },
+    {
       name: 'description',
       content:
         'Liposuction (also known as liposculpture) is one of the most popular cosmetic surgery procedures performed today. Liposuction permanently removes stubborn fat deposits that have not responded to diet and exercise. ',
