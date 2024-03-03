@@ -2,7 +2,10 @@
 const runtimeConfig = useRuntimeConfig()
 const route = useRoute()
 const title = 'Facelift'
-const canonicalUrl = `${runtimeConfig.public.siteDomain}${route.fullPath}`
+let canonicalUrl = `${runtimeConfig.public.siteDomain}${route.fullPath}`
+if (!canonicalUrl.endsWith('/')) {
+  canonicalUrl = canonicalUrl + '/'
+}
 
 const faqs = [
   {

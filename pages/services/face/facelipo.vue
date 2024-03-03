@@ -1,7 +1,10 @@
 <script setup>
 const runtimeConfig = useRuntimeConfig()
 const route = useRoute()
-const canonicalUrl = `${runtimeConfig.public.siteDomain}${route.fullPath}`
+let canonicalUrl = `${runtimeConfig.public.siteDomain}${route.fullPath}`
+if (!canonicalUrl.endsWith('/')) {
+  canonicalUrl = canonicalUrl + '/'
+}
 const title = 'Facial Liposuction'
 
 useHead({

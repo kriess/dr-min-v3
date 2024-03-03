@@ -3,7 +3,10 @@ const runtimeConfig = useRuntimeConfig()
 const appConfig = useAppConfig()
 const pageTitle = 'Testimonials'
 const route = useRoute()
-const canonicalUrl = `${runtimeConfig.public.siteDomain}${route.fullPath}`
+let canonicalUrl = `${runtimeConfig.public.siteDomain}${route.fullPath}`
+if (!canonicalUrl.endsWith('/')) {
+  canonicalUrl = canonicalUrl + '/'
+}
 
 useHead({
   title: pageTitle,

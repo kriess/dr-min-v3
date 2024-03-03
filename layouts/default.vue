@@ -97,7 +97,7 @@ useHead({
     },
     {
       property: 'og:url',
-      content: siteDomain,
+      content: siteDomain + '/',
     },
     {
       property: 'og:site_name',

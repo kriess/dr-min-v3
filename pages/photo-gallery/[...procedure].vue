@@ -4,7 +4,10 @@ const gallery = useGallery()
 const route = useRoute()
 const router = useRouter()
 const pageTitle = 'Before & After Gallery'
-const canonicalUrl = `${runtimeConfig.public.siteDomain}${route.fullPath}`
+let canonicalUrl = `${runtimeConfig.public.siteDomain}${route.fullPath}`
+if (!canonicalUrl.endsWith('/')) {
+  canonicalUrl = canonicalUrl + '/'
+}
 
 useHead({
   title: pageTitle,

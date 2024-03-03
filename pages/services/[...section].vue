@@ -4,7 +4,10 @@ const pageTitle = 'Services'
 const services = useServices()
 const route = useRoute()
 const router = useRouter()
-const canonicalUrl = `${runtimeConfig.public.siteDomain}${route.fullPath}`
+let canonicalUrl = `${runtimeConfig.public.siteDomain}${route.fullPath}`
+if (!canonicalUrl.endsWith('/')) {
+  canonicalUrl = canonicalUrl + '/'
+}
 
 useHead({
   title: pageTitle,

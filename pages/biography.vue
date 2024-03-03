@@ -2,7 +2,10 @@
 const runtimeConfig = useRuntimeConfig()
 const pageTitle = 'Biography'
 const route = useRoute()
-const canonicalUrl = `${runtimeConfig.public.siteDomain}${route.fullPath}`
+let canonicalUrl = `${runtimeConfig.public.siteDomain}${route.fullPath}`
+if (!canonicalUrl.endsWith('/')) {
+  canonicalUrl = canonicalUrl + '/'
+}
 
 useHead({
   bodyAttrs: {

@@ -5,7 +5,10 @@ const runtimeConfig = useRuntimeConfig()
 const pageTitle = 'Services'
 const services = useServices()
 const route = useRoute()
-const canonicalUrl = `${runtimeConfig.public.siteDomain}${route.fullPath}`
+let canonicalUrl = `${runtimeConfig.public.siteDomain}${route.fullPath}`
+if (!canonicalUrl.endsWith('/')) {
+  canonicalUrl = canonicalUrl + '/'
+}
 const router = useRouter()
 
 useHead({
