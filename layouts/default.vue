@@ -10,6 +10,7 @@ const mainTitle =
 gtag('js', new Date())
 gtag('config', 'G-H2RG9FR9ZE')
 
+/*
 useSchemaOrg([
   defineWebSite({
     name: mainTitle,
@@ -56,6 +57,7 @@ useSchemaOrg([
     // logo: "TBD",
   }),
 ])
+*/
 
 useHead({
   bodyAttrs: {

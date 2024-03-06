@@ -8,17 +8,17 @@ if (!canonicalUrl.endsWith('/')) {
 }
 
 useHead({
-  bodyAttrs: {
-    itemtype: 'https://schema.org/ProfilePage',
-    itemscope: 'itemscope',
-  },
+  // bodyAttrs: {
+  //   itemtype: 'https://schema.org/ProfilePage',
+  //   itemscope: 'itemscope',
+  // },
   title: pageTitle,
   link: [{ rel: 'canonical', hid: 'canonical', href: canonicalUrl }],
   meta: [
     {
       name: 'description',
       content:
-        'Dr. Caroline Min is a plastic & reconstructive surgeon who performs\n' +
+        'Dr. Caroline Min is a board certified plastic & reconstructive surgeon who performs\n' +
         ' cosmetic surgery of the face, breast and body as well as general\n' +
         ' reconstructive plastic surgery.',
     },

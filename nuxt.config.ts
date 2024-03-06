@@ -17,7 +17,7 @@ const myCustomLightTheme = {
 
 export default defineNuxtConfig({
   app: {
-    pageTransition: {name: 'page', mode: 'out-in'},
+    pageTransition: { name: 'page', mode: 'out-in' },
   },
 
   css: ['~/assets/styles/site-wide.css', 'vuetify/styles'],
@@ -35,13 +35,12 @@ export default defineNuxtConfig({
   },
 
   gtag: {
-    id: 'G-H2RG9FR9ZE'
+    id: 'G-H2RG9FR9ZE',
   },
 
   modules: [
     'nuxt-gtag',
     '@vite-pwa/nuxt',
-    'nuxt-schema-org',
     'nuxt-simple-sitemap',
     '@vueuse/nuxt',
     '@invictus.codes/nuxt-vuetify',
@@ -50,7 +49,7 @@ export default defineNuxtConfig({
         config.plugins.push(
           vuetify({
             autoImport: true,
-            styles: {configFile: './assets/styles/vuetify.scss'},
+            styles: { configFile: './assets/styles/vuetify.scss' },
           }),
         ),
       )
