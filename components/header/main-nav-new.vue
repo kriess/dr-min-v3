@@ -67,7 +67,7 @@ const telephoneLink = computed(() => {
       <div class="header-container">
         <div @click="goHome" style="cursor: pointer">
           <div class="logo-name">Caroline Min, M.D</div>
-          <div class="logo-description">Board Certified Plastic Surgeon</div>
+          <div class="logo-description">Board Certified Female Plastic Surgeon</div>
         </div>
         <div class="ctas">
           <v-btn variant="plain" class="ctas__btn" :href="telephoneLink">

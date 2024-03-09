@@ -47,7 +47,7 @@ const headerSelectors = computed(() => {
             <div @click="goHome" style="cursor: pointer">
               <div class="logo-name">Caroline Min, M.D</div>
               <div class="logo-description">
-                Board Certified Plastic Surgeon
+                Board Certified Female Plastic Surgeon
               </div>
             </div>
             <v-toolbar-items>
@@ -113,6 +113,7 @@ const headerSelectors = computed(() => {
     font-weight: 500;
     font-size: 32px;
   }
+
   .logo-description {
     letter-spacing: 1.1px;
     font-size: 15px;
@@ -122,7 +123,9 @@ const headerSelectors = computed(() => {
   }
 
   :deep(.v-toolbar) {
-    transition: color 0.1s ease, background-color 0.5s ease;
+    transition:
+      color 0.1s ease,
+      background-color 0.5s ease;
     background-color: transparent;
     color: $tertiary-action;
   }
@@ -174,14 +177,18 @@ const headerSelectors = computed(() => {
     font-weight: 500;
     font-size: 1.2rem;
     letter-spacing: normal;
+
     :deep(.v-btn__append) {
       margin: 0;
     }
+
     :deep(.v-icon) {
       zoom: 0.75;
     }
+
     &.drawer {
       text-align: left;
+
       :deep(.v-btn__content) {
         width: 100%;
         justify-content: left;
@@ -194,10 +201,12 @@ const headerSelectors = computed(() => {
 .sub-nav-list {
   width: auto;
 }
+
 .sub-nav-list-item {
   padding: 0;
   margin: 0;
 }
+
 .sub-nav-btn {
   font-weight: 700;
   opacity: 1;

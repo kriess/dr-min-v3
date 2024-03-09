@@ -16,7 +16,7 @@ const appConfig = useAppConfig()
       <v-col cols="12" sm="12" md="4">
         <v-sheet class="banner-item">
           <h1 class="dr-title">Caroline Min MD</h1>
-          <h2 class="dr-sub-title">Board Certified Plastic Surgeon</h2>
+          <h2 class="dr-sub-title">Board Certified Female Plastic Surgeon</h2>
         </v-sheet>
       </v-col>
       <v-col class="hidden-sm-and-down" cols="12" sm="4">

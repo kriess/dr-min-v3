@@ -40,7 +40,7 @@ const telephoneLink = computed(() => {
     </p>
     <div class="schedule-consult">
       <div class="consult-title">
-        <NuxtLink class="telephone-link" to="/contact-info/">
+        <NuxtLink class="consult-link" to="/contact-info/">
           <span class="hidden-sm-and-down">
             Schedule a Consultation with Dr. Min
           </span>
@@ -91,6 +91,7 @@ const telephoneLink = computed(() => {
   }
 
   .consult-title {
+    font-weight: 400;
     white-space: nowrap;
   }
 
@@ -101,11 +102,24 @@ const telephoneLink = computed(() => {
   }
 }
 
+a.consult-link:link,
+a.consult-link:visited,
+a.consult-link:active {
+  color: #fff;
+  text-decoration: none;
+}
+
 a.telephone-link:link,
 a.telephone-link:visited,
 a.telephone-link:active {
+  font-weight: 700;
   color: #fff;
   text-decoration: none;
+}
+
+a.telephone-link:hover,
+a.consult-link:hover {
+  text-decoration: underline;
 }
 
 @include upToSm {

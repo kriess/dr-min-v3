@@ -19,7 +19,7 @@ const { stop } = useIntersectionObserver(
         <div class="head-shot">
           <img
             class="headshot"
-            alt="Dr. Caroline Min - Board Certified Plastic Surgeon "
+            alt="Dr. Caroline Min - Board Certified Female Plastic Surgeon "
             src="/img/headshots/min-white-coat.webp"
           />
         </div>
@@ -28,7 +28,7 @@ const { stop } = useIntersectionObserver(
         <h4 class="sub-title">About</h4>
         <h1 class="main-title">Dr. Caroline Min</h1>
         <p class="mb-5">
-          Dr. Caroline Min is a board certified female plastic surgeon, located
+          Dr. Caroline Min is a female board certified plastic surgeon, located
           in Pasadena, who is dedicated to achieving natural looking results
           with cosmetic surgery and non surgical procedures. With a wealth of
           expertise and experience, she is dedicated to helping you attain your

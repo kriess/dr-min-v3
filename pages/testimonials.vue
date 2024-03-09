@@ -31,7 +31,7 @@ useHead({
     <PageTopVisuals
       :title="pageTitle"
       image-src="/img/headshots/min-casual.jpg"
-      alt="Dr. Caroline Min - board certified plastic surgeon - patient testimonials"
+      alt="Dr. Caroline Min - female board certified plastic surgeon - patient testimonials"
     ></PageTopVisuals>
 
     <div class="testimonials-container content-area">

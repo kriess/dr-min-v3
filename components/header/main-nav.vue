@@ -67,10 +67,10 @@ const telephoneLink = computed(() => {
             >
               <div class="logo-name">Caroline Min, M.D</div>
               <div class="logo-description">
-                Board Certified Plastic Surgeon
+                Board Certified Female Plastic Surgeon
               </div>
             </div>
-            <v-toolbar-items class="hidden-sm-and-down">
+            <v-toolbar-items class="hidden-sm-and-down flex align-center">
               <template v-for="item in navItems">
                 <template v-if="item.subNavItems">
                   <v-menu open-on-hover close-on-content-click>
@@ -120,8 +120,32 @@ const telephoneLink = computed(() => {
                   </v-btn>
                 </template>
               </template>
+              <a :href="telephoneLink" class="telephone-link">
+                <icons-phone
+                  title="Call to schedule a consult"
+                  :color="menuIconColor"
+                ></icons-phone>
+              </a>
+              <NuxtLink class="consult-link" to="/contact-info/">
+                <icons-email
+                  title="Email to schedule a consult"
+                  :color="menuIconColor"
+                ></icons-email>
+              </NuxtLink>
             </v-toolbar-items>
             <div class="hidden-md-and-up mobile-meni-icon">
+              <a :href="telephoneLink" class="telephone-link">
+                <icons-phone
+                  title="Call to schedule a consult"
+                  :color="menuIconColor"
+                ></icons-phone>
+              </a>
+              <NuxtLink class="consult-link" to="/contact-info/">
+                <icons-email
+                  title="Email to schedule a consult"
+                  :color="menuIconColor"
+                ></icons-email>
+              </NuxtLink>
               <icons-menu
                 @click="drawer = !drawer"
                 :color="menuIconColor"
@@ -144,7 +168,9 @@ const telephoneLink = computed(() => {
         <div class="drawer-header">
           <div class="drawer-branding">
             <div class="logo-name">Caroline Min, M.D</div>
-            <div class="logo-description">Board Certified Plastic Surgeon</div>
+            <div class="logo-description">
+              Board Certified Female Plastic Surgeon
+            </div>
           </div>
           <icons-chevron-right @click="drawer = !drawer"></icons-chevron-right>
         </div>
@@ -278,10 +304,10 @@ const telephoneLink = computed(() => {
 }
 
 .nav-btn {
-  padding-left: 5px;
-  padding-right: 5px;
-  margin-left: 5px;
-  margin-right: 5px;
+  padding-left: 4px;
+  padding-right: 4px;
+  margin-left: 4px;
+  margin-right: 4px;
   opacity: 1;
   text-transform: capitalize;
   font-weight: 500;

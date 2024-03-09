@@ -59,7 +59,7 @@ useHead({
     <div class="services-section">
       <div class="services-title">{Labiaplasty{ title }</div>
       <services-body-main-thumb
-        alt="Labiaplasty by Dr. Caroline Min: Board Certified Plastic Surgeon"
+        alt="Labiaplasty by Dr. Caroline Min: Board Certified Female Plastic Surgeon"
         src="/img/services/thumbs/labiaplasty.jpg"
       ></services-body-main-thumb>
 

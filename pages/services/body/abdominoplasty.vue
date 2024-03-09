@@ -75,7 +75,7 @@ useHead({
     <div class="services-section">
       <div class="services-title">{{ title }}</div>
       <services-body-main-thumb
-        alt="Tummy Tuck by Dr. Caroline Min: Board Certified Plastic Surgeon"
+        alt="Tummy Tuck by Dr. Caroline Min: Board Certified Female Plastic Surgeon"
         src="/img/services/thumbs/abdominoplasty.jpg"
       ></services-body-main-thumb>
       <p>

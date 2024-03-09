@@ -5,9 +5,9 @@ const target = ref(null)
 const targetIsVisible = ref(false)
 const appConfig = useAppConfig()
 
-const {stop} = useIntersectionObserver(
+const { stop } = useIntersectionObserver(
   target,
-  ([{isIntersecting}], observerElement) => {
+  ([{ isIntersecting }], observerElement) => {
     targetIsVisible.value = isIntersecting
   },
 )
@@ -85,7 +85,8 @@ const procedures = computed(() => {
         :class="targetIsVisible ? 'section-title visible' : 'section-title'"
         ref="target"
       >
-        {{ procedureTitle ?? siteSection }}
+        <template v-if="procedureTitle">Pasadena {{ procedureTitle }}</template>
+        <template v-else>{{ siteSection }} Procedures</template>
       </h1>
 
       <v-sheet class="procedures" v-if="procedureTitle">

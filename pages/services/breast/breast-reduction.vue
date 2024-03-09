@@ -64,11 +64,16 @@ useHead({
 <template>
   <div class="services-details">
     <div class="services-section">
-      <div class="services-title">Breast Reduction</div>
+      <div class="services-title">Breast Reduction in Pasadena, CA</div>
       <services-body-main-thumb
-        alt="Breast Reduction by Dr. Caroline Min: Board Certified Plastic Surgeon"
+        alt="Breast Reduction by Dr. Caroline Min: Board Certified Female Plastic Surgeon"
         src="/img/services/thumbs/breastreduction.jpg"
       ></services-body-main-thumb>
+      <p>
+        Dr. Caroline Min is a female board certified plastic surgeon located in
+        Pasadena, CA. She offers breast reduction surgery suited to your
+        specific needs.
+      </p>
       <p>
         Large breasts, a condition known as macromastia, can be associated with
         a range of physical and emotional challenges, prompting many women to
@@ -83,16 +88,16 @@ useHead({
         breasts, particularly when engaging in physical exertion.
       </p>
       <p>
-        Performed under general anesthesia, the procedure removes fat and
-        glandular tissue and tightens skin to produce smaller, lighter and
-        perkier breasts that are in a better proportion to the rest of the body.
-        The decision to undergo breast reduction surgery is highly personal and
-        should be based on a thorough consultation with a qualified plastic
-        surgeon. During this consultation, the surgeon will assess the patient's
-        health, discuss individual concerns and goals, and provide information
-        about the surgical process, recovery, and potential risks. Overall,
-        breast reduction surgery is a transformative option for women seeking
-        relief from the physical and emotional burdens associated with
+        Performed under general anesthesia in Pasadena, CA, the procedure
+        removes fat and glandular tissue and tightens skin to produce smaller,
+        lighter and perkier breasts that are in a better proportion to the rest
+        of the body. The decision to undergo breast reduction surgery is highly
+        personal and should be based on a thorough consultation with a qualified
+        plastic surgeon. During this consultation, the surgeon will assess the
+        patient's health, discuss individual concerns and goals, and provide
+        information about the surgical process, recovery, and potential risks.
+        Overall, breast reduction surgery is a transformative option for women
+        seeking relief from the physical and emotional burdens associated with
         excessively large breasts, promoting a healthier and more confident
         lifestyle. Dr. Min has many happy patients who have successfully
         undergone breast reduction surgery.

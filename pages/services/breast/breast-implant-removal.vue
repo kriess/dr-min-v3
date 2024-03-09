@@ -49,7 +49,7 @@ useHead({
     <div class="services-section">
       <div class="services-title">{{ title }}</div>
       <services-body-main-thumb
-        alt="Breast Implant Removal by Dr. Caroline Min: Board Certified Plastic Surgeon"
+        alt="Breast Implant Removal by Dr. Caroline Min: Board Certified Female Plastic Surgeon"
         src="/img/services/thumbs/breast-implant-removal.webp"
       ></services-body-main-thumb>
       <p>

@@ -17,7 +17,7 @@ const { stop } = useIntersectionObserver(
         <h4 class="sub-title">About</h4>
         <h1 class="main-title">Dr. Caroline Min</h1>
         <p class="">
-          Dr. Caroline Min is a board certified female plastic surgeon
+          Dr. Caroline Min is a female board certified plastic surgeon
           specializing in cosmetic surgery. She has completed additional
           fellowship training in aesthetic surgery and has the skills and
           expertise to help you achieve your goals for plastic surgery. Your

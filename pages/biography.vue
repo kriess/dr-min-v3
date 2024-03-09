@@ -30,7 +30,7 @@ useHead({
   <section class="biography page">
     <PageTopVisuals
       :title="pageTitle"
-      alt="Dr. Caroline Min - board certified plastic surgeon"
+      alt="Dr. Caroline Min - female board certified plastic surgeon"
       image-src="/img/headshots/min-suit.jpg"
     ></PageTopVisuals>
 
